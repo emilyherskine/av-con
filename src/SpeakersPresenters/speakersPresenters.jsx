@@ -42,6 +42,8 @@ import CraigLancaster from "./PresenterSpeakerImages/CraigLancaster.jpg";
 import StephenMoreau from "./PresenterSpeakerImages/StephenMoreau.png";
 import ConorKeeling from "./PresenterSpeakerImages/ConorKeeling.png";
 import DamienMolloy from "./PresenterSpeakerImages/DamienMolloy.png";
+import DavidMackey from "./PresenterSpeakerImages/DavidMackey.png";
+import LauraCarolan from "./PresenterSpeakerImages/LauraCarolan.jpeg";
 
 export default function SpeakersPresentors() {
     return (
@@ -441,6 +443,25 @@ export default function SpeakersPresentors() {
                             He has flown in the UK, Australia, South Africa and has recently returned from Hungary where he flew over 540km in three flights. Damien holds an EASA SPL along with an instructor rating, cross country privilege and aerobatic privilege and is an FAI Silver Badge holder. 
                             Damien was instrumental in introducing the Air Cadet Scheme in 2014 which saw 36 Transition Year Students embark on their aviation careers through gliding. 
                             He has also given talks to secondary students during Science Week at the Explorium science museum in South Dublin."
+                            />
+                        </Grid>
+                        <Grid item xs={12} md={4} lg={4} xl={4} style={{ padding: '3%' }}>
+                            <Speaker 
+                            SpeakerImage={DavidMackey}
+                            SpeakerName="David Mackey"
+                            SpeakerBio="David is a Helicopter Pilot currently flying the Sikorsky S92 Search and Rescue Helicopter based at Waterford Airport. His aviation career began initially with an Irish Air Corps Apprenticeship before he was selected for an Air Corps Pilot Cadetship.
+                            David was commissioned in 1999 as an Air Corps Helicopter Pilot and has flown the Gazelle, Alouette III, EC135 and AW139 Helicopters carrying out Army Support, Air Ambulance, Emergency Aeromedical Service, VIP, Garda Air Support, Fire Fighting and ARW roles. 
+                            He completed a Helicopter Instructor Course with the Royal Canadian Airforce and further Instructor and Examiner Training with Eurocopter and Leonardo Helicopters. 
+                            David was one of the team of Air Corps pilots and technicians to introduce the EC135 to service and he was also one of the first Night Vision Goggle flight instructors for the Irish Air Corps. 
+                            He has completed a BSc Degree in Aviation Management and was a qualified CRM/Human Factors Instructor. David completed over 20 years with the Irish Air Corps retiring as Comdt. and Examiner on AW139 helicopter.
+                            He also has over 6 years' experience as civilian Helicopter Instructor and Examiner with the Qatar Emiri Air Force, helping them to integrate the AW139 helicopter to their Military and Search and Rescue roles. He has spent the last 3 years with CHC Ireland on Search and Rescue duty and hopes to continue this role next year as Bristow Ireland take over the SAR Contract and introduce the AW189 helicopter to all bases in Ireland."
+                            />
+                        </Grid>
+                        <Grid item xs={12} md={4} lg={4} xl={4} style={{ padding: '3%' }}>
+                            <Speaker 
+                            SpeakerImage={LauraCarolan}
+                            SpeakerName="Laura Carolan"
+                            SpeakerBio="Laura is part of Cabin Crew for the last 20 years and a Cabin Service Manager since 2015. She loves her job as Cabin Crew, Every flight is a chance to meet amazing people, explore new places and make someone's journey a little brighter."
                             />
                         </Grid>
                     </Grid>
