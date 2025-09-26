@@ -10,7 +10,6 @@ import PaulButlerLennox from "./PresenterSpeakerImages/PaulButlerLennox.jpeg";
 import IanKiely from "./PresenterSpeakerImages2024/IanKiely.JPG";
 import RobertConwayKenny from "./PresenterSpeakerImages/RobertConwayKenny.png";
 import MelvinKelly from "./PresenterSpeakerImages/MelvinKelly.png";
-import DiarmuidORiordan from "./PresenterSpeakerImages/DiarmuidO’Riordan.jpg";
 import GerryCreighton from "./PresenterSpeakerImages/GerryCreighton.jpeg";
 import PaulKennedy from "./PresenterSpeakerImages/PaulKennedy.jpg";
 import AlanCorr from "./PresenterSpeakerImages/AlanCorr.png";
@@ -184,17 +183,6 @@ export default function SpeakersPresentors() {
                             Before joining JSA, Melvin spent eight years with Avolon and five years with Nordic Aviation Capital. His roles involved leading negotiations for aircraft leases, supporting the delivery of new aircraft, and managing aircraft transitions between operators. His professional background also includes tenure at Vueling Airlines, Lufthansa Technik, and Team Aer Lingus. 
                             Throughout his career, Melvin has gained extensive hands-on experience with a diverse range of Airbus and Boeing aircraft. He holds an EASA Part 66 B1 and C Aircraft Engineers Licence, underscoring his technical expertise. 
                             Melvin possesses a comprehensive understanding of aircraft maintenance, airline operations, and aircraft leasing, developed from both the lessor's and the airline's perspectives."
-                            />
-                        </Grid>
-                        <Grid item xs={12} md={4} lg={4} xl={4} style={{ padding: '3%' }}>
-                            <Speaker 
-                            SpeakerImage={DiarmuidORiordan}
-                            SpeakerName="Diarmuid O'Riordan"
-                            SpeakerBio="Diarmuid's professional journey began in a structured and disciplined environment, where he quickly progressed through a series of specialised roles. He became a trusted figure in both operational and instructional capacities, earning multiple accolades for his academic and leadership achievements. His early career laid a solid foundation for future roles that would span both civilian and international sectors. 
-                            After transitioning into a new domain, he immersed himself in frontline operational duties before moving into key instructional roles within a major organisation. This period saw him navigating both short- and long-distance responsibilities, further expanding his practical expertise. 
-                            Taking time away from this role, he pursued a position abroad, where he assumed senior responsibilities in a complex and high-stakes operational setting. There, he oversaw advanced training delivery and worked within a multinational context, contributing to an organisation managing a high volume of activity across challenging conditions. 
-                            Despite a demanding schedule, he continued to stay active in his original profession, working across a wide range of missions and collaborating with a diverse list of partners. This included operations under extreme environmental conditions and in areas requiring careful coordination and adaptability. His assignments took him across multiple continents, involving both people-focused and logistics-based tasks that often pushed the boundaries of traditional expectations. 
-                            In parallel, Diarmuid established a successful enterprise focused on high-end professional development and consultancy. His organisation has since become a recognised name in its field, offering tailored solutions to a wide array of clients across both the public and private sectors."
                             />
                         </Grid>
                         <Grid item xs={12} md={4} lg={4} xl={4} style={{ padding: '3%' }}>
