@@ -43,6 +43,7 @@ import ConorKeeling from "./PresenterSpeakerImages/ConorKeeling.png";
 import DamienMolloy from "./PresenterSpeakerImages/DamienMolloy.png";
 import DavidMackey from "./PresenterSpeakerImages/DavidMackey.png";
 import LauraCarolan from "./PresenterSpeakerImages/LauraCarolan.jpeg";
+import GrahamCaffrey from "./PresenterSpeakerImages/GrahamCaffrey.jpg";
 
 export default function SpeakersPresentors() {
     return (
@@ -450,6 +451,16 @@ export default function SpeakersPresentors() {
                             SpeakerImage={LauraCarolan}
                             SpeakerName="Laura Carolan"
                             SpeakerBio="Laura is part of Cabin Crew for the last 20 years and a Cabin Service Manager since 2015. She loves her job as Cabin Crew, Every flight is a chance to meet amazing people, explore new places and make someone's journey a little brighter."
+                            />
+                        </Grid>
+                        <Grid item xs={12} md={4} lg={4} xl={4} style={{ padding: '3%' }}>
+                            <Speaker 
+                            SpeakerImage={GrahamCaffrey}
+                            SpeakerName="Graham Caffrey"
+                            SpeakerBio="Graham has over 16 years' experience within the insurance industry holding varies different roles such as Executive Director, Underwriter and Multinational Broker. Over the past 8 years he has been dedicated 100% to Aviation Insurance.
+                            Graham has been responsible for broking, servicing and advising Airports, MRO's and lessors with portfolios of over 350 aircraft. He has also advised his clients throughout the process of acquiring new aircraft while issuing certificates of insurance and reviewing insurance obligations within lease agreements and Sale Purchase Agreements.
+                            Graham is a Certified Insurance Practitioner, graduated from the Insurance Institute of Ireland and recently graduated from Law Society of Ireland studying “Aviation Leasing & Finance”. Based in Dublin Graham offers a unique proposition as he is one of a few aviation insurance experts.
+                            He has a keen interest in future air mobility and works closely with all his clients helping them control their total cost of risk. He focusses on both current and emerging risk within the aviation sector weather its retention and attraction of staff or protecting aircraft assets while on or off lease. He provides clients with inhouse Aviation Insurance training and continuously focusses on educating the wider aviation industry on insurance."
                             />
                         </Grid>
                     </Grid>
