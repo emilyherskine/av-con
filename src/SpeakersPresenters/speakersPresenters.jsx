@@ -44,6 +44,7 @@ import DamienMolloy from "./PresenterSpeakerImages/DamienMolloy.png";
 import DavidMackey from "./PresenterSpeakerImages/DavidMackey.png";
 import LauraCarolan from "./PresenterSpeakerImages/LauraCarolan.jpeg";
 import GrahamCaffrey from "./PresenterSpeakerImages/GrahamCaffrey.jpg";
+import PaolaVercesi from "./PresenterSpeakerImages/PaolaVercesi.png";
 
 export default function SpeakersPresentors() {
     return (
@@ -461,6 +462,17 @@ export default function SpeakersPresentors() {
                             Graham has been responsible for broking, servicing and advising Airports, MRO's and lessors with portfolios of over 350 aircraft. He has also advised his clients throughout the process of acquiring new aircraft while issuing certificates of insurance and reviewing insurance obligations within lease agreements and Sale Purchase Agreements.
                             Graham is a Certified Insurance Practitioner, graduated from the Insurance Institute of Ireland and recently graduated from Law Society of Ireland studying “Aviation Leasing & Finance”. Based in Dublin Graham offers a unique proposition as he is one of a few aviation insurance experts.
                             He has a keen interest in future air mobility and works closely with all his clients helping them control their total cost of risk. He focusses on both current and emerging risk within the aviation sector weather its retention and attraction of staff or protecting aircraft assets while on or off lease. He provides clients with inhouse Aviation Insurance training and continuously focusses on educating the wider aviation industry on insurance."
+                            />
+                        </Grid>
+                        <Grid item xs={12} md={4} lg={4} xl={4} style={{ padding: '3%' }}>
+                            <Speaker 
+                            SpeakerImage={PaolaVercesi}
+                            SpeakerName="Paola Vercesi"
+                            SpeakerBio="Paola Vercesi is the Dublin Local Lead for NASA International Space Apps Challenge, the world's largest annual hackathon focused on space and Earth science. 
+                            She is a Research Associate at the School of Computing, National College of Ireland (NCI), where she previously completed postgraduate studies in Data Analytics. At NCI, she contributes to the Code4Europe Project and collaborates with the Cloud Competency Centre to strengthen connections between academic research and industry transformation.
+                            A strategic communication and marketing expert with experience in global brand launches, media relations, and cross-sector innovation, Paola has worked in technical and product communication for Ferrari and Maserati.
+                            She holds an MA in Political Science, an MBA from UCD Smurfit School, and Space Studies credentials from the International Space University. She is currently pursuing a Postgraduate Diploma in Geographical Information Systems at University College Cork.
+                            A space enthusiast since the age of two, Paola steps on stage with a message that reframes the conversation: Space is not just about machinery and mission requirements. It's a launchpad for interdisciplinary innovation, collaboration, and transformative engagement."
                             />
                         </Grid>
                     </Grid>
