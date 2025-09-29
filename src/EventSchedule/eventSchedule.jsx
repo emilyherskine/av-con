@@ -3,12 +3,19 @@ import AVConSchedule from "./EventScheduleImages/AVConEventSchedule2025.png";
 import Session1 from "./EventScheduleImages/Event1.png";
 import Session2 from "./EventScheduleImages/Event2.png";
 import Session3 from "./EventScheduleImages/Event3.png";
+import AVConFloorPlan2025 from "./EventScheduleImages/FloorPlan2025.jpeg";
 
 export default function EventSchedule() {
     return (
         <main>
             <div className="container">
                 <h1 className="title">AvCon Event Schedule</h1>
+                <div style={{
+                    paddingBottom: "5%",
+                    maxWidth: '100%',
+                    maxHeight: '100%',}}>
+                    <img src={AVConFloorPlan2025} alt="AVCon Event Schedule 2025" className="schedule-image" />
+                </div>
                 <div className="images-grid" style={{textAlign: 'center'}}>
                     <div>
                         <h3>The 2025 AvCon schedule is currently being finalised — stay tuned for updates!</h3>

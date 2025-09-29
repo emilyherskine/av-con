@@ -47,12 +47,12 @@ export default function Footer() {
                         <a href="./About" className="footer-link">
                             About Us
                         </a>
-                        {/* <a href="./SponsorsPartners" className="footer-link">
+                        <a href="./SponsorsPartners" className="footer-link">
                             Our Partners
                         </a>
                         <a href="./SponsorsPartners" className="footer-link">
                             Our Sponsors
-                        </a> */}
+                        </a>
                         <a
                             href="./AviationPathwayPortal"
                             className="footer-link">

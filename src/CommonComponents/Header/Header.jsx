@@ -95,11 +95,11 @@ export const Header = () => {
                                                     AVCON EZINE
                                                 </a>
                                             </li>
-                                            {/* <li>
+                                            <li>
                                                 <a href="./SponsorsPartners" onClick={closeMobileMenu}>
                                                     SPONSORS & PARTNERS
                                                 </a>
-                                            </li> */}
+                                            </li>
                                             <li>
                                                 <a href="./AviationPathwayPortal" onClick={closeMobileMenu}>
                                                     AVIATION PATHWAY PORTAL
@@ -186,10 +186,10 @@ export const Header = () => {
                                     <a className="uppercase link-text" href="./AvConEzine">
                                         AVCON EZINE
                                     </a>
-                                    {/* <br /><br />
+                                    <br /><br />
                                     <a className="uppercase link-text" href="./SponsorsPartners">
                                         SPONSORS & PARTNERS
-                                    </a> */}
+                                    </a>
                                     <br /><br />
                                     <a className="uppercase link-text" href="./AviationPathwayPortal">
                                         AVIATION PATHWAY PORTAL

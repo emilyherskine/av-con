@@ -4,15 +4,10 @@ import Sponsor from "./sponsor";
 
 // Sponsor images
 import SponsoredBy from "./SponsorImages/1.png";
-import S22 from "./SponsorImages/S22.png";
-import S23 from "./SponsorImages/S23.png";
-import S24 from "./SponsorImages/S24.jpeg";
 import AirCorpLogo from "./SponsorImages/AirCorpsLogo.jpeg";
 import TYHubLogo from "./SponsorImages/TYHubLogo.jpg";
-import ODohertysLogo from "./SponsorImages/ODohertysLogo.jpg";
+import All2025Sponsors from "./Sponsers.jpeg";
 
-// Sponsor Video
-import SponsorsPartners2025 from "./SponsorsPartners2025.mp4";
 
 
 // 🧩 Reusable Image Component
@@ -32,11 +27,6 @@ const SponsorImage = ({ src, alt }) => (
 );
 
 export default function SponsorsPartners() {
-
-  const exhibitionPartners = [S23];
-  const mainStagePartners = [S24];
-  const liveStreamPartners = [S22, TYHubLogo, ODohertysLogo];
-
   return (
     <main className="flex min-h-screen flex-col justify-between p-4 md:p-24">
       {/* Main Header */}
@@ -55,49 +45,12 @@ export default function SponsorsPartners() {
       <Grid container justifyContent="center" sx={{ mb: 4 }}>
         <SponsorImage src={SponsoredBy} alt="AvCon Sponsored By" />
       </Grid>
-      <Grid container justifyContent="center" padding="2rem">
-        <Grid item xs={12} md={10} lg={8}>
-          <video
-            src={SponsorsPartners2025}
-            autoPlay
-            loop
-            muted
-            playsInline
-            style={{ width: "100%", borderRadius: "8px", boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }}
-          />
-        </Grid>
+      <Grid container justifyContent="center" sx={{ mb: 4 }}>
+        <SponsorImage src={All2025Sponsors}/>
       </Grid>
 
 
-      {/* Exhibition Partners */}
-      <h6 style={{ textAlign: "center", padding:"2rem" }}>Exhibition Partners:</h6>
-      <Grid container spacing={2} justifyContent="center" padding="2rem">
-        {exhibitionPartners.map((img, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <SponsorImage src={img} alt={`Exhibition Partner ${index + 1}`} />
-          </Grid>
-        ))}
-      </Grid>
 
-      {/* Main Stage Partners */}
-      <h6 style={{ textAlign: "center", marginBottom: "2rem" }}>Main Stage Partners:</h6>
-      <Grid container spacing={2} justifyContent="center" padding="2rem">
-        {mainStagePartners.map((img, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <SponsorImage src={img} alt={`Main Stage Partner ${index + 1}`} />
-          </Grid>
-        ))}
-      </Grid>
-
-      {/* Live Stream Partners */}
-      <h6 style={{ textAlign: "center", marginBottom: "2rem" }}>Live Stream Partners:</h6>
-      <Grid container spacing={2} justifyContent="center" padding="2rem" alignItems="center">
-        {liveStreamPartners.map((img, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <SponsorImage src={img} alt={`Live Stream Partner ${index + 1}`} />
-          </Grid>
-        ))}
-      </Grid>
 
       {/* Collaboration */}
       <h6 style={{ textAlign: "center", marginBottom: "2rem" }}>
