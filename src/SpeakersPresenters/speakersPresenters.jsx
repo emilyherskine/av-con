@@ -45,6 +45,8 @@ import DavidMackey from "./PresenterSpeakerImages/DavidMackey.png";
 import LauraCarolan from "./PresenterSpeakerImages/LauraCarolan.jpeg";
 import GrahamCaffrey from "./PresenterSpeakerImages/GrahamCaffrey.jpg";
 import PaolaVercesi from "./PresenterSpeakerImages/PaolaVercesi.png";
+import AlanPhelan from "./PresenterSpeakerImages/AlanPhelan.jpg";
+import TamaraWierks from "./PresenterSpeakerImages/TamaraWierks.png";
 
 export default function SpeakersPresentors() {
     return (
@@ -473,6 +475,22 @@ export default function SpeakersPresentors() {
                             A strategic communication and marketing expert with experience in global brand launches, media relations, and cross-sector innovation, Paola has worked in technical and product communication for Ferrari and Maserati.
                             She holds an MA in Political Science, an MBA from UCD Smurfit School, and Space Studies credentials from the International Space University. She is currently pursuing a Postgraduate Diploma in Geographical Information Systems at University College Cork.
                             A space enthusiast since the age of two, Paola steps on stage with a message that reframes the conversation: Space is not just about machinery and mission requirements. It's a launchpad for interdisciplinary innovation, collaboration, and transformative engagement."
+                            />
+                        </Grid>
+                        <Grid item xs={12} md={4} lg={4} xl={4} style={{ padding: '3%' }}>
+                            <Speaker 
+                            SpeakerImage={AlanPhelan}
+                            SpeakerName="Alan Phelan"
+                            SpeakerBio="Alan Phelan is the Director of Engine Trading at Aircraft Finance Germany (www.afg.aero) and is the Founder & CEO of www.APTN.aero, the first professional network for aircraft technical professionals. He was formerly Senior Vice President of Marketing and Sales at HaoTong AeroTech and helped set up their technical operation in Dublin. He is an experienced aviation professional with over 30 years' experience in various senior sales, customer support, marketing and aircraft engine leasing roles, most recently with Lufthansa Technik in Hamburg and Dublin and previously with Airmotive Ireland, a jet engine overhaul facility that was located in Dublin. He has an in-depth knowledge of the aircraft leasing business holding the Law Society's Diploma in Aircraft Leasing and Finance and an MBA in Aviation from Embry Riddle. Alan is also a member of ISTAT."
+                            />
+                        </Grid>
+                        <Grid item xs={12} md={4} lg={4} xl={4} style={{ padding: '3%' }}>
+                            <Speaker 
+                            SpeakerImage={TamaraWierks}
+                            SpeakerName="Tamara Wierks"
+                            SpeakerBio="Tamara Wierks is the Learning and Development Director at Irish Manufacturing Research (IMR), where she leads initiatives to build Ireland's advanced manufacturing talent pipeline. With a passion for connecting people, technology, and purpose, Tamara drives programs that equip industry and research professionals with the skills needed for the digital and sustainable future of manufacturing.
+                            Her work focuses on fostering innovation through continuous learning, cross-sector collaboration, and leadership development. Before joining IMR, Tamara held senior roles in organisational development and talent strategy across the technology and manufacturing sectors, helping teams navigate transformation with a focus on culture, capability, and creativity.
+                            An advocate for lifelong learning and STEM education, Tamara works closely with industry, academia, and government partners to empower Ireland's workforce to thrive in an era of rapid technological change."
                             />
                         </Grid>
                     </Grid>
