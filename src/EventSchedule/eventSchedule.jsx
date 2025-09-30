@@ -3,7 +3,11 @@ import AVConSchedule from "./EventScheduleImages/AVConEventSchedule2025.png";
 import Session1 from "./EventScheduleImages/Event1.png";
 import Session2 from "./EventScheduleImages/Event2.png";
 import Session3 from "./EventScheduleImages/Event3.png";
-import AVConFloorPlan2025 from "./EventScheduleImages/FloorPlan2025.jpeg";
+import Schedule1 from "./EventScheduleImages/Schedule1.jpeg";
+import Schedule2 from "./EventScheduleImages/Schedule2.jpeg";
+import Schedule3 from "./EventScheduleImages/Schedule3.jpeg";
+import Schedule4 from "./EventScheduleImages/Schedule4.jpeg";
+import Schedule5 from "./EventScheduleImages/Schedule5.jpeg";
 
 export default function EventSchedule() {
     return (
@@ -14,30 +18,28 @@ export default function EventSchedule() {
                     paddingBottom: "5%",
                     maxWidth: '100%',
                     maxHeight: '100%',}}>
-                    <img src={AVConFloorPlan2025} alt="AVCon Event Schedule 2025" className="schedule-image" />
+                    <img src={Schedule5} alt="AVCon Event Schedule 2025" className="schedule-image" />
                 </div>
-                <div className="images-grid" style={{textAlign: 'center'}}>
-                    <div>
-                        <h3>The 2025 AvCon schedule is currently being finalised — stay tuned for updates!</h3>
-                    </div>
-                    <img src={AVConSchedule} alt="AVCon Event Schedule 2025" className="schedule-image" />
-                    <div>
-                        <h6>We're preparing another exciting line-up of speakers, workshops, and interactive experiences designed to inspire the next generation of aviation and aerospace talent.</h6>
-                        <br/><br/>
-                        <h6>In the meantime, take a look at the 2024 Event Schedule to see the incredible range of sessions and experiences from last year's event — including talks from industry leaders, tech demos, aircraft displays, and student spotlights.</h6>
-                    </div>
+                <div className="other-grid">
+                        <img src={Schedule1} alt="AVCon Schedule 1" className="schedule-image" />
+                        <img src={Schedule2} alt="AVCon Schedule 2" className="schedule-image" />
+                        <img src={Schedule3} alt="AVCon Schedule 3" className="schedule-image" />
+                        <img src={Schedule4} alt="AVCon Schedule 4" className="schedule-image" />
                 </div>
 
-                <h6 className="live-stream-title">Event Schedule 2024</h6>
-
-                <div className="images-grid">
-                    <img src={Session1} alt="AVCon Session 1" className="schedule-image" />
-                    <img src={Session2} alt="AVCon Session 2" className="schedule-image" />
-                    <img src={Session3} alt="AVCon Session 3" className="schedule-image" />
-                </div>
+                {/* <div>
+                    <div className="other-grid">
+                        <img src={AVConSchedule} alt="AVCon Event Schedule 2025" className="schedule-image" />
+                        <div>
+                            <h6>We're preparing another exciting line-up of speakers, workshops, and interactive experiences designed to inspire the next generation of aviation and aerospace talent.</h6>
+                            <br/><br/>
+                            <h6>In the meantime, take a look at the 2024 Event Schedule to see the incredible range of sessions and experiences from last year's event — including talks from industry leaders, tech demos, aircraft displays, and student spotlights.</h6>
+                        </div>
+                    </div>
+                </div> */}
 
                 <div className="live-stream">
-                    <h6 className="live-stream-title">Take a look at the 2024 LIVE STREAM on YouTube</h6>
+                    <h5 className="live-stream-title">Take a look at the 2024 LIVE STREAM on YouTube</h5>
                     <div className="video-container">
                         <iframe
                             src="https://www.youtube.com/embed/7_AYMtVLbhI?si=ulFkMd-tNUI6KD3z"
@@ -48,6 +50,14 @@ export default function EventSchedule() {
                             allowFullScreen
                         />
                     </div>
+                </div>
+
+                <h6 className="live-stream-title">Event Schedule 2024</h6>
+
+                <div className="images-grid">
+                    <img src={Session1} alt="AVCon Session 1" className="schedule-image" />
+                    <img src={Session2} alt="AVCon Session 2" className="schedule-image" />
+                    <img src={Session3} alt="AVCon Session 3" className="schedule-image" />
                 </div>
             </div>
 
@@ -69,6 +79,15 @@ export default function EventSchedule() {
                     gap: 1rem;
                     justify-items: center;
                     margin-bottom: 2rem;
+                    text-align: center;
+                }
+                .other-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1rem;
+                    justify-items: center;
+                    margin-bottom: 2rem;
+                    text-align: center;
                 }
 
                 .schedule-image {
@@ -108,10 +127,16 @@ export default function EventSchedule() {
                     .images-grid {
                         grid-template-columns: repeat(2, 1fr);
                     }
+                    .other-grid {
+                        grid-template-columns: 1fr;
+                    }
                 }
 
                 @media (max-width: 768px) {
                     .images-grid {
+                        grid-template-columns: 1fr;
+                    }
+                    .other-grid {
                         grid-template-columns: 1fr;
                     }
                 }
