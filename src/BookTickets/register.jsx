@@ -1,12 +1,10 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import Button from "@mui/material/Button";
 import BackgroundImage from "./BookTicketsImages/SHAN5640.jfif";
 import Flight from "./BookTicketsImages/SHAN6371.jfif";
 import HeroSection from "../CommonComponents/HeroSection/HeroSection";
 import './register.css';
-import MiddleBlockOfText from "../Home/MiddleBlockOfText/middleBlock";
 
 export default function Register() {
     return (
@@ -14,9 +12,9 @@ export default function Register() {
             <HeroSection
                 defaultTitle="Schools & Colleges – Register Now for AvCon 2025!"
                 defaultSubtitle="An immersive aviation experience built for the next generation of leaders. Reserve your place today."
-                smallScreenTitle="Register for AvCon 2025"
+                smallScreenTitle="AvCon 2025 Live Stream"
                 smallScreenSubtitle="For students, educators, and institutions – don’t miss this aviation event!"
-                buttonText="Register for AvCon 2025 Live Stream"
+                buttonText="Watch The AvCon 2025 Live Stream"
                 buttonLink="https://avcon.ie/BookTickets"
             />
 
@@ -41,26 +39,19 @@ export default function Register() {
                             </div>
                         </Grid>
                     </Grid>
-                    <MiddleBlockOfText />
-                    <br/><br/>
-                    <div>
-                        <h5>School Registration is Now Closed — But Don't Worry! You can still be part of the excitement — Live Stream Registration is now OPEN! Join us online and experience all the action from wherever you are!</h5>
-                    </div>
 
                     <div className="registration-section">
-                        <h3 className="text-center">Register For The Live Stream</h3>
-                        <Grid container spacing={2} justifyContent="center">
-                            <Grid item>
-                                <Button
-                                    variant="contained"
-                                    color="primary"
-                                    href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUOUVBNTU0MlM2RUVYNlhaVlE1NzU1N01GOS4u&route=shorturl"
-                                    target="_blank"
-                                    rel="noopener"
-                                >
-                                    Live Stream Registration
-                                </Button>
-                            </Grid>
+                        <h3 className="text-center">Watch The Live Stream</h3>
+                            <div className="event-image">
+                                <iframe
+                                    src="https://www.youtube.com/embed/CedeUKKaW9U?si=vJjNGDnsc925lOpU"
+                                    title="YouTube video player"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                />
+                            </div>
                             {/* <Grid item>
                                 <Button
                                     variant="contained"
@@ -83,7 +74,6 @@ export default function Register() {
                                     College Registration
                                 </Button>
                             </Grid> */}
-                        </Grid>
                         <br /><br />
                         <b>Important Notice: School and college registration for AvCon is now closed. Only Live Stream registration remains open. Please note this event is not open to the public. Entry will only be granted to those who have registered in advance and received official passes. For enquiries, please contact </b><a href="mailto:hello@avcon.ie">hello@avcon.ie</a>
                     </div>
@@ -108,13 +98,18 @@ export default function Register() {
                         <Grid item xs={12} sm={6}>
                             <div className="text-container">
                                 <h3>Watch the Live Stream</h3>
-                                <p>
-                                    If your school or college is already registered, you can still involve more students by registering to access our <strong>Live Stream</strong> of the event.
-                                    <br /><br />
-                                    Stay tuned for the full schedule - exciting panels, tech showcases, and guest speakers are on the way!
-                                    <br /><br />
-                                    <b>Questions?</b> Email us at: <a href="mailto:hello@avcon.ie">hello@avcon.ie</a>
-                                </p>
+                                <div className="event-image">
+                                    <div className="video-container">
+                                        <iframe
+                                            src="https://www.youtube.com/embed/CedeUKKaW9U?si=vJjNGDnsc925lOpU"
+                                            title="YouTube video player"
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerPolicy="strict-origin-when-cross-origin"
+                                            allowFullScreen
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </Grid>
                     </Grid>

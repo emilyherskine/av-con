@@ -28,9 +28,9 @@ export default function MiddleBlockOfText() {
                             className="btn-link"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Register for the live stream of AvCon 2025"
+                            aria-label="Watch The AvCon 2025 Live Stream"
                         >
-                            Register for the Live Stream
+                           Watch The AvCon 2025 Live Stream
                         </a>
                     </article>
                 </Grid>

@@ -25,10 +25,10 @@ export default function EventSchedule() {
                 </div>
 
                 <div className="live-stream">
-                    <h5 className="live-stream-title">Take a look at the 2024 LIVE STREAM on YouTube</h5>
+                    <h5 className="live-stream-title">Watch out for the 2025 LIVE STREAM on YouTube</h5>
                     <div className="video-container">
                         <iframe
-                            src="https://www.youtube.com/embed/7_AYMtVLbhI?si=ulFkMd-tNUI6KD3z"
+                            src="https://www.youtube.com/embed/CedeUKKaW9U?si=vJjNGDnsc925lOpU"
                             title="YouTube video player"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -37,14 +37,26 @@ export default function EventSchedule() {
                         />
                     </div>
                 </div>
-                <div>
-                    <div className="other-grid">
-                        <img src={AVConSchedule} alt="AVCon Event Schedule 2025" className="schedule-image" />
-                        <div>
-                            <h6>We're preparing another exciting line-up of speakers, workshops, and interactive experiences designed to inspire the next generation of aviation and aerospace talent.</h6>
-                            <br/><br/>
-                            <h6>In the meantime, take a look at the 2024 Event Schedule to see the incredible range of sessions and experiences from last year's event — including talks from industry leaders, tech demos, aircraft displays, and student spotlights.</h6>
+
+                <div className="images-grid">
+                    <div className="live-stream">
+                        <h5 className="live-stream-title">Take a look at the 2024 LIVE STREAM on YouTube</h5>
+                        <div className="video-container">
+                            <iframe
+                                src="https://www.youtube.com/embed/7_AYMtVLbhI?si=ulFkMd-tNUI6KD3z"
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                            />
                         </div>
+                    </div>
+                    <img src={AVConSchedule} alt="AVCon Event Schedule 2025" className="schedule-image" />
+                    <div>
+                        <h6>We're preparing another exciting line-up of speakers, workshops, and interactive experiences designed to inspire the next generation of aviation and aerospace talent.</h6>
+                        <br/><br/>
+                        <h6>In the meantime, take a look at the 2024 Event Schedule to see the incredible range of sessions and experiences from last year's event — including talks from industry leaders, tech demos, aircraft displays, and student spotlights.</h6>
                     </div>
                 </div>
             </div>

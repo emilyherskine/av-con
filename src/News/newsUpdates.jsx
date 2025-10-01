@@ -23,14 +23,12 @@ export default function News() {
             </h3>
             <div className="video-container" role="region" aria-label="YouTube Live Stream">
               <iframe
-                width="100%"
-                height="315"
-                src="https://www.youtube.com/embed/7_AYMtVLbhI?si=ulFkMd-tNUI6KD3z"
-                title="TY Hub YouTube Livestream"
+                src="https://www.youtube.com/embed/CedeUKKaW9U?si=vJjNGDnsc925lOpU"
+                title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
                 referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
               />
             </div>
 
