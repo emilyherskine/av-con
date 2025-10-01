@@ -1,8 +1,5 @@
 import React from "react";
 import AVConSchedule from "./EventScheduleImages/AVConEventSchedule2025.png";
-import Session1 from "./EventScheduleImages/Event1.png";
-import Session2 from "./EventScheduleImages/Event2.png";
-import Session3 from "./EventScheduleImages/Event3.png";
 import Schedule1 from "./EventScheduleImages/Schedule1.jpeg";
 import Schedule2 from "./EventScheduleImages/Schedule2.jpeg";
 import Schedule3 from "./EventScheduleImages/Schedule3.jpeg";
@@ -27,17 +24,6 @@ export default function EventSchedule() {
                         <img src={Schedule4} alt="AVCon Schedule 4" className="schedule-image" />
                 </div>
 
-                {/* <div>
-                    <div className="other-grid">
-                        <img src={AVConSchedule} alt="AVCon Event Schedule 2025" className="schedule-image" />
-                        <div>
-                            <h6>We're preparing another exciting line-up of speakers, workshops, and interactive experiences designed to inspire the next generation of aviation and aerospace talent.</h6>
-                            <br/><br/>
-                            <h6>In the meantime, take a look at the 2024 Event Schedule to see the incredible range of sessions and experiences from last year's event — including talks from industry leaders, tech demos, aircraft displays, and student spotlights.</h6>
-                        </div>
-                    </div>
-                </div> */}
-
                 <div className="live-stream">
                     <h5 className="live-stream-title">Take a look at the 2024 LIVE STREAM on YouTube</h5>
                     <div className="video-container">
@@ -51,13 +37,15 @@ export default function EventSchedule() {
                         />
                     </div>
                 </div>
-
-                <h6 className="live-stream-title">Event Schedule 2024</h6>
-
-                <div className="images-grid">
-                    <img src={Session1} alt="AVCon Session 1" className="schedule-image" />
-                    <img src={Session2} alt="AVCon Session 2" className="schedule-image" />
-                    <img src={Session3} alt="AVCon Session 3" className="schedule-image" />
+                <div>
+                    <div className="other-grid">
+                        <img src={AVConSchedule} alt="AVCon Event Schedule 2025" className="schedule-image" />
+                        <div>
+                            <h6>We're preparing another exciting line-up of speakers, workshops, and interactive experiences designed to inspire the next generation of aviation and aerospace talent.</h6>
+                            <br/><br/>
+                            <h6>In the meantime, take a look at the 2024 Event Schedule to see the incredible range of sessions and experiences from last year's event — including talks from industry leaders, tech demos, aircraft displays, and student spotlights.</h6>
+                        </div>
+                    </div>
                 </div>
             </div>
 
