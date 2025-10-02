@@ -18,11 +18,35 @@
   padding: 5%;
 }
 
-.event-image {
+.event-image img {
   width: 100%;
   max-width: 100%;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.video-container iframe {
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  border: 0;
 }
 
 .grid-container {
