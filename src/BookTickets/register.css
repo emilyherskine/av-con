@@ -5,17 +5,17 @@
 
 .event-container {
   text-align: center;
-  padding: 2rem 0;
+  padding: 0 0 1rem 0;
 }
 
 .text-container {
   text-align: left;
-  padding: 1rem;
+  padding:  0 0 1rem 0;
 }
 
 .text-center {
   text-align: center;
-  padding: 5%;
+  padding: 0 0 1rem 0;
 }
 
 .event-image img {

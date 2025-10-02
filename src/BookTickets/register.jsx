@@ -20,26 +20,6 @@ export default function Register() {
 
             <section className="event-container">
                 <Box className="grid-container">
-                    <Grid container spacing={4} alignItems="center">
-                        <Grid item xs={12} sm={6}>
-                            <div className="text-container">
-                                <h2>Welcome Schools & Colleges</h2>
-                                <p>
-                                    We're back for <strong>AvCon: The Future of Aviation 2025</strong>!
-                                    <br /><br />
-                                    Whether you're a student, educator, or school administrator, this event is tailored to ignite your passion for aviation and aerospace. 
-                                    <br /><br />
-                                    Explore the future of flight, meet industry leaders, and witness innovation first-hand.
-                                </p>
-                            </div>
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <div className="event-image">
-                                <img src={BackgroundImage} alt="AvCon Event" className="event-image" />
-                            </div>
-                        </Grid>
-                    </Grid>
-
                     <div className="registration-section">
                         <h3 className="text-center">Watch The Live Stream</h3>
                         <Grid item xs={12} sm={6}>
@@ -80,6 +60,26 @@ export default function Register() {
                         <br /><br />
                         <b>Important Notice: School and college registration for AvCon is now closed. Only Live Stream registration remains open. Please note this event is not open to the public. Entry will only be granted to those who have registered in advance and received official passes. For enquiries, please contact </b><a href="mailto:hello@avcon.ie">hello@avcon.ie</a>
                     </div>
+
+                    <Grid container spacing={4} alignItems="center">
+                        <Grid item xs={12} sm={6}>
+                            <div className="text-container">
+                                <h2>Welcome Schools & Colleges</h2>
+                                <p>
+                                    We're back for <strong>AvCon: The Future of Aviation 2025</strong>!
+                                    <br /><br />
+                                    Whether you're a student, educator, or school administrator, this event is tailored to ignite your passion for aviation and aerospace. 
+                                    <br /><br />
+                                    Explore the future of flight, meet industry leaders, and witness innovation first-hand.
+                                </p>
+                            </div>
+                        </Grid>
+                        <Grid item xs={12} sm={6}>
+                            <div className="event-image">
+                                <img src={BackgroundImage} alt="AvCon Event" className="event-image" />
+                            </div>
+                        </Grid>
+                    </Grid>
 
                     <Grid container spacing={4} alignItems="center" className="stream-section">
                         <Grid item xs={12} sm={6}>
