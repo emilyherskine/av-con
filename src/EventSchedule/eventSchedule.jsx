@@ -28,7 +28,7 @@ export default function EventSchedule() {
                     <h5 className="live-stream-title">Watch out for the 2025 LIVE STREAM on YouTube</h5>
                     <div className="video-container">
                         <iframe
-                            src="https://www.youtube.com/embed/CedeUKKaW9U?si=vJjNGDnsc925lOpU"
+                            src="https://www.youtube.com/embed/videoseries?si=Ktnu0lIaijjOEjgH&amp;list=PLKqYIkM4gVMV9yfE4WkiBRn141HuYwuGa"
                             title="YouTube video player"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

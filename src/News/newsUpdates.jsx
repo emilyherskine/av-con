@@ -23,7 +23,7 @@ export default function News() {
             </h3>
             <div className="video-container" role="region" aria-label="YouTube Live Stream">
               <iframe
-                src="https://www.youtube.com/embed/CedeUKKaW9U?si=vJjNGDnsc925lOpU"
+                src="https://www.youtube.com/embed/videoseries?si=Ktnu0lIaijjOEjgH&amp;list=PLKqYIkM4gVMV9yfE4WkiBRn141HuYwuGa"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
