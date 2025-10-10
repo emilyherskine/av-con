@@ -1,9 +1,5 @@
 import React from "react";
 import AVConSchedule from "./EventScheduleImages/AVConEventSchedule2025.png";
-import Schedule1 from "./EventScheduleImages/Schedule1.jpeg";
-import Schedule2 from "./EventScheduleImages/Schedule2.jpeg";
-import Schedule3 from "./EventScheduleImages/Schedule3.jpeg";
-import Schedule4 from "./EventScheduleImages/Schedule4.jpeg";
 import Schedule5 from "./EventScheduleImages/Schedule5.jpeg";
 
 export default function EventSchedule() {
@@ -11,21 +7,9 @@ export default function EventSchedule() {
         <main>
             <div className="container">
                 <h1 className="title">AvCon Event Schedule</h1>
-                <div style={{
-                    paddingBottom: "5%",
-                    maxWidth: '100%',
-                    maxHeight: '100%',}}>
-                    <img src={Schedule5} alt="AVCon Event Schedule 2025" className="schedule-image" />
-                </div>
-                <div className="other-grid">
-                        <img src={Schedule1} alt="AVCon Schedule 1" className="schedule-image" />
-                        <img src={Schedule2} alt="AVCon Schedule 2" className="schedule-image" />
-                        <img src={Schedule3} alt="AVCon Schedule 3" className="schedule-image" />
-                        <img src={Schedule4} alt="AVCon Schedule 4" className="schedule-image" />
-                </div>
 
                 <div className="live-stream">
-                    <h5 className="live-stream-title">Watch out for the 2025 LIVE STREAM on YouTube</h5>
+                    <h5 className="live-stream-title">Watch the 2025 LIVE STREAM on YouTube</h5>
                     <div className="video-container">
                         <iframe
                             src="https://www.youtube.com/embed/videoseries?si=Ktnu0lIaijjOEjgH&amp;list=PLKqYIkM4gVMV9yfE4WkiBRn141HuYwuGa"
@@ -36,6 +20,13 @@ export default function EventSchedule() {
                             allowFullScreen
                         />
                     </div>
+                </div>
+
+                <div style={{
+                    paddingBottom: "5%",
+                    maxWidth: '100%',
+                    maxHeight: '100%',}}>
+                    <img src={Schedule5} alt="AVCon Event Schedule 2025" className="schedule-image" />
                 </div>
 
                 <div className="images-grid">

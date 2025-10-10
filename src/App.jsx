@@ -16,6 +16,7 @@ import SponsorsPartners from "./SponsorsPartners/sponsorsPartners";
 import ExhibitorRegistration from "./ExhibitorRegistration/exhibitor";
 import AviationPathwayPortal from "./AvconPathwayPortal/pathwayPortal";
 import AvConEzine from "./AvConEzine/AvConEzine";
+import PhotoGallery from "./PhotoGallery/photoGallery";
 
 export default function App() {
     return (
@@ -29,6 +30,7 @@ export default function App() {
                     <Route path="/bookTickets" element={<BookTickets />} />
                     <Route path="/eventSchedule" element={<EventSchedule />} />
                     <Route path="/flightSim" element={<FlightSim />} />
+                    <Route path="/photoGallery" element={<PhotoGallery />} />
                     <Route path="/news" element={<News />} />
                     <Route
                         path="/speakersPresenters"

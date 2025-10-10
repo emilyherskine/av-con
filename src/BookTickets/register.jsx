@@ -1,6 +1,8 @@
 import React from "react";
-import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
+import { Link } from "react-router-dom";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 import BackgroundImage from "./BookTicketsImages/SHAN5640.jfif";
 import Flight from "./BookTicketsImages/SHAN6371.jfif";
 import HeroSection from "../CommonComponents/HeroSection/HeroSection";
@@ -10,31 +12,17 @@ export default function Register() {
     return (
         <main className="main-container">
             <HeroSection
-                defaultTitle="Schools & Colleges – Watch the AvCon 2025 Live Stream!"
+                defaultTitle="Schools now's your chance! Pre-Registration for 2026 Open!!"
                 defaultSubtitle="An immersive aviation experience built for the next generation of leaders. Reserve your place today."
-                smallScreenTitle="AvCon 2025 Live Stream"
-                smallScreenSubtitle="For students, educators, and institutions – don’t miss this aviation event!"
-                buttonText="Watch The AvCon 2025 Live Stream"
+                smallScreenTitle="Schools Pre-Registration for 2026"
+                smallScreenSubtitle="For students, educators, and institutions - don't miss this aviation event!"
+                buttonText="Schools Pre-Registration for 2026"
                 buttonLink="https://avcon.ie/BookTickets"
             />
 
             <section className="event-container">
                 <Box className="grid-container">
                     <div className="registration-section">
-                        <h3 className="text-center">Watch The Live Stream</h3>
-                        <Grid item xs={12} sm={6}>
-                            <div className="video-container">
-                                <iframe
-                                src="https://www.youtube.com/embed/videoseries?si=Ktnu0lIaijjOEjgH&amp;list=PLKqYIkM4gVMV9yfE4WkiBRn141HuYwuGa"
-                                title="YouTube video player"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                allowFullScreen
-                                />
-                            </div>
-                        </Grid>
-
                             {/* <Grid item>
                                 <Button
                                     variant="contained"
@@ -57,10 +45,7 @@ export default function Register() {
                                     College Registration
                                 </Button>
                             </Grid> */}
-                        <br /><br />
-                        <b>Important Notice: School and college registration for AvCon is now closed. Only Live Stream registration remains open. Please note this event is not open to the public. Entry will only be granted to those who have registered in advance and received official passes. For enquiries, please contact </b><a href="mailto:hello@avcon.ie">hello@avcon.ie</a>
                     </div>
-
                     <Grid container spacing={4} alignItems="center">
                         <Grid item xs={12} sm={6}>
                             <div className="text-container">
@@ -80,7 +65,23 @@ export default function Register() {
                             </div>
                         </Grid>
                     </Grid>
-
+                    <br/><br/>
+                        <Typography variant="h4" component="h4" className="info-subtitle uppercase">
+                            AvCon 2026 - Pre-Registration & Exhibitor Bookings Now Open!
+                        </Typography>
+                        <Typography paragraph>
+                            Join the early birds for Ireland's largest aviation and aerospace careers event.
+                            Schools can pre-register now for priority access.
+                            Exhibitors and sponsors — book your place and connect with the next generation of aviation, aerospace, STEM, and logistics talent.
+                        </Typography>
+                        <Link 
+                            to="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUNUUyVEVDSUtXWkJHV0RBOVlNSko4MFlTVC4u" 
+                            className="btn-link" 
+                            aria-label="Schools Pre-Registration for 2026"
+                        >
+                            <span className="uppercase">Schools Pre-Registration for 2026</span>
+                        </Link>
+                    <br/><br/>
                     <Grid container spacing={4} alignItems="center" className="stream-section">
                         <Grid item xs={12} sm={6}>
                             <div className="event-image">

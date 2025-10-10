@@ -70,7 +70,7 @@ export default function ExhibitorRegistration() {
                         <div className="exhibitor-cta">
                             <p><strong>🔽 Register Your Interest:</strong></p>
                             <a
-                                href="https://forms.office.com/r/L0KFq8UwSw"
+                                href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUQkdONTlJMlNQV1hVNU9DQ1NTM0NKTE1BVy4u"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -81,7 +81,8 @@ export default function ExhibitorRegistration() {
                     <div className="exhibitor-column">
                         <div className="exhibitor-contact">
                             <p><strong>📩 Questions? Contact:</strong></p>
-                            <a href="mailto:Louise@avcon.ie">Louise@avcon.ie</a>
+                            <a href="mailto:fiona@avcon.ie">fiona@avcon.ie</a>
+                            <a href="mailto:louise@avcon.ie">louise@avcon.ie</a>
                             <a href="mailto:sales@avcon.ie">sales@avcon.ie</a>
                         </div>
                     </div>

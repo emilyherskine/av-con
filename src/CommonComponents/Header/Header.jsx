@@ -77,6 +77,11 @@ export const Header = () => {
                                                     AVCON XTRA: THE FLIGHT SIM EVENT
                                                 </a>
                                             </li> */}
+                                            <li>
+                                                <a href="./PhotoGallery" onClick={closeMobileMenu}>
+                                                    AVCON PHOTO GALLERY
+                                                </a>
+                                            </li>
                                         </ul>
                                     </li>
 
@@ -120,7 +125,7 @@ export const Header = () => {
                                     </li>
                                     <li className="mobile-menu-section">
                                         <a href="./BookTickets" onClick={closeMobileMenu}>
-                                            AVCON 2025 LIVE STREAM!
+                                            AVCON 2026 PRE-REGISTRATION
                                         </a>
                                     </li>
                                 </ul>
@@ -159,6 +164,10 @@ export const Header = () => {
                                     <a className="uppercase link-text" href="./FlightSim">
                                         AVCON XTRA: THE FLIGHT SIM EVENT
                                     </a> */}
+                                    <br /><br />
+                                    <a className="uppercase link-text" href="./PhotoGallery">
+                                        AVCON PHOTO GALLERY
+                                    </a>
                                 </div>
                             )}
                         </div>
@@ -209,7 +218,7 @@ export const Header = () => {
                             className="link-text button-highlight"
                             href="./BookTickets"
                         >
-                            AVCON 2025 LIVE STREAM!
+                            AVCON 2026 PRE-REGISTRATION
                         </a>
                     </div>
                 )}

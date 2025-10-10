@@ -12,7 +12,7 @@ export default function AvconPathwayPortal() {
         defaultSubtitle="AvCon is thrilled to present its signature event dedicated to all things aviation"
         smallScreenTitle="Avcon Pathway Portal"
         smallScreenSubtitle="AvCon presenting an event for all things aviation"
-        buttonText="Watch The AvCon 2025 Live Stream"
+        buttonText="Schools Pre-Registration for 2026"
         buttonLink="https://avcon.ie/BookTickets"
       />
       <div className="event-container">

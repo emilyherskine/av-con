@@ -24,7 +24,7 @@ export default function MiddleBlockOfText() {
                             Join us online and experience this inspiring event from anywhere.
                         </Typography>
                         <a
-                            href="https://avcon.ie/BookTickets"
+                            href="https://avcon.ie/EventSchedule"
                             className="btn-link"
                             target="_blank"
                             rel="noopener noreferrer"

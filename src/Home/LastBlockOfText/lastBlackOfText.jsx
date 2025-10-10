@@ -23,12 +23,7 @@ export default function LastBlockOfText() {
                         <Typography variant="h3" component="h3" className="info-title">
                             Don't miss your chance to hear from industry leaders, explore career paths, and discover the future of aviation — all from your screen.
                         </Typography>
-                    </article>
-                </Grid>
-
-                {/* Right Column */}
-                <Grid item xs={12} md={6}>
-                    <article className="info-block text-light">
+                        <br/>
                         <Typography variant="h4" component="h4" className="info-subtitle uppercase">
                             Become an exhibitor
                         </Typography>
@@ -38,9 +33,30 @@ export default function LastBlockOfText() {
                         <Link 
                             to="/ExhibitorRegistration" 
                             className="btn-link" 
-                            aria-label="Join AvCon 2025 as a Sponsor or Exhibitor"
+                            aria-label="Join AvCon 2026 as a Sponsor or Exhibitor"
                         >
                             <span className="uppercase">Join AvCon 2025 as a Sponsor or Exhibitor</span>
+                        </Link>
+                    </article>
+                </Grid>
+
+                {/* Right Column */}
+                <Grid item xs={12} md={6}>
+                    <article className="info-block text-light">
+                        <Typography variant="h4" component="h4" className="info-subtitle uppercase">
+                            AvCon 2026 - Pre-Registration & Exhibitor Bookings Now Open!
+                        </Typography>
+                        <Typography paragraph>
+                            Join the early birds for Ireland's largest aviation and aerospace careers event.
+                            Schools can pre-register now for priority access.
+                            Exhibitors and sponsors — book your place and connect with the next generation of aviation, aerospace, STEM, and logistics talent.
+                        </Typography>
+                        <Link 
+                            to="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUNUUyVEVDSUtXWkJHV0RBOVlNSko4MFlTVC4u" 
+                            className="btn-link" 
+                            aria-label="Shcools Pre-Registration for 2026"
+                        >
+                            <span className="uppercase">Shcools Pre-Registration for 2026</span>
                         </Link>
                     </article>
                 </Grid>

@@ -12,10 +12,9 @@ export default function Home() {
         <main className="flex min-h-screen flex-col justify-between p-24">
             <HeroSection
                 defaultTitle="AN UNFORGETTABLE THRILL FOR AVIATION ENTHUSIASTS"
-                defaultSubtitle="AvCon 2025 Live Stream"
-                smallScreenTitle="AvCon 2025"
+                smallScreenTitle="Schools Pre-Registration for 2026"
                 smallScreenSubtitle="The Sky Isn't the Limit — It's Only the Beginning."
-                buttonText="Watch The AvCon 2025 Live Stream"
+                buttonText="Schools Pre-Registration for 2026"
                 buttonLink="https://avcon.ie/BookTickets"
             />
             <FirstImageAndText />
