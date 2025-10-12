@@ -9,7 +9,6 @@ import Event from "./Event/event";
 import BookTickets from "./BookTickets/register";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import EventSchedule from "./EventSchedule/eventSchedule";
-import FlightSim from "./FlightSim/flightSim";
 import News from "./News/newsUpdates";
 import SpeakersPresenters from "./SpeakersPresenters/speakersPresenters";
 import SponsorsPartners from "./SponsorsPartners/sponsorsPartners";
@@ -29,7 +28,6 @@ export default function App() {
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/bookTickets" element={<BookTickets />} />
                     <Route path="/eventSchedule" element={<EventSchedule />} />
-                    <Route path="/flightSim" element={<FlightSim />} />
                     <Route path="/photoGallery" element={<PhotoGallery />} />
                     <Route path="/news" element={<News />} />
                     <Route

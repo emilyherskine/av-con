@@ -28,7 +28,7 @@ export default function Footer() {
                     <p className="uppercase footer-heading">Events</p>
                     <div className="flex-col">
                         <a href="./Event" className="footer-link">
-                            AvCon 2025 Info
+                            AvCon 2026 Info
                         </a>
                         <a href="./BookTickets" className="footer-link">
                             Register Here

@@ -8,13 +8,13 @@ export default function EventSecondBlock() {
       <Grid container spacing={4}>
         <Grid item xs={12} md={5}>
           <p style={{ textAlign: 'left' }}>
-            Flight Simulators and Virtual Reality: Experience the thrill of being a pilot without leaving the ground! AvCon 2025 offers state-of-the-art flight simulators and virtual reality experiences, allowing attendees to take control and navigate the skies like never before.
+            Flight Simulators and Virtual Reality: Experience the thrill of being a pilot without leaving the ground! AvCon 2026 offers state-of-the-art flight simulators and virtual reality experiences, allowing attendees to take control and navigate the skies like never before.
             <br/><br/>
             Global Perspectives: Understand how aviation connects the world. Learn about international collaborations, the impact of technology on global travel, and the role of aviation in addressing environmental challenges.
             <br/><br/>
-            Unleash Your Imagination: AvCon 2025 encourages creativity and innovation. Engage in aviation-themed workshops, design challenges, and competitions that will spark your imagination and leave you with a newfound appreciation for the limitless possibilities of flight.
+            Unleash Your Imagination: AvCon 2026 encourages creativity and innovation. Engage in aviation-themed workshops, design challenges, and competitions that will spark your imagination and leave you with a newfound appreciation for the limitless possibilities of flight.
             <br/><br/>
-            AvCon 2025 is not just an event; it's an expedition into the future of aviation. Embark on this thrilling journey with us and discover the endless horizons that await in the sky. The future is yours to explore! #AvCon2025 #FutureOfAviation #InnovationInTheSkies
+            AvCon 2026 is not just an event; it's an expedition into the future of aviation. Embark on this thrilling journey with us and discover the endless horizons that await in the sky. The future is yours to explore! #AvCon2026 #FutureOfAviation #InnovationInTheSkies
           </p>
         </Grid>
         <Grid item xs={12} md={7}>

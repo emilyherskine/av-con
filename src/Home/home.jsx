@@ -18,6 +18,12 @@ export default function Home() {
                 buttonLink="https://avcon.ie/BookTickets"
             />
             <FirstImageAndText />
+            <div style={{padding: '0 2% 2%'}}>
+                <p>
+                    And this year, the story continues with the launch of our sister event - DFCon: The Future of Careers, connecting pathways from Sea to Sky, Cyber to Construction, and showcasing how Defence Forces inspired skills and technologies translate into everyday industries.
+                    Join us for Ireland's leading aviation and aerospace careers event, designed to inspire and connect 15-25-year-olds with real-world pathways in aviation, aerospace, space tech, UAS, simulation, sustainability, air traffic management, engineering, and beyond.
+                </p>
+            </div>
             <img
                 src={AVConBanner}
                 alt="AVCon Banner"

@@ -15,7 +15,7 @@ export default function MiddleBlockOfText() {
                 <Grid item xs={12} md={4}>
                     <article className="info-block text-light">
                         <Typography variant="h3" component="h3" className="info-title">
-                            Can't make it to AvCon in person? No problem!
+                            Couldn't make it to AvCon in person? No problem!
                         </Typography>
                         <Typography paragraph>
                             Wherever you are, you can still be part of AvCon - <strong>The Future of Aviation</strong>.
@@ -69,13 +69,13 @@ export default function MiddleBlockOfText() {
                         <Typography variant="h3" component="h3" className="info-subtitle">
                             Date
                         </Typography>
-                        <Typography paragraph>October 2nd, 2025</Typography>
+                        <Typography paragraph>TBD</Typography>
                         <a
                             href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=AvCon+2025&dates=20251002T090000Z/20251002T170000Z&details=Join+us+at+the+Irish+Air+Corps,+Casement+Aerodrome,+Baldonnel,+County+Dublin&location=Irish+Air+Corps,+Casement+Aerodrome,+Baldonnel,+County+Dublin+for+AvCon+2025"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-link"
-                            aria-label="Add AvCon 2025 to Google Calendar"
+                            aria-label="Add AvCon 2026 to Google Calendar"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

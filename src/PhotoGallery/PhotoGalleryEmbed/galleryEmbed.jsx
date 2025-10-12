@@ -7,6 +7,7 @@ export default function PhotoGalleryEmbed() {
   const galleries = {
     main: "https://drive.google.com/embeddedfolderview?id=1XbLfdd6JdLJArOiL2SRpINHCL_Eg_oVt#grid",
     extra: "https://drive.google.com/embeddedfolderview?id=1welPjMaCd3NCgvgOdlAbdf8asYXYQkXS#grid",
+    AirCorps2025: "https://www.flickr.com/photos/dfmagazine/albums/72177720329423083/player/",
   };
 
   return (
@@ -31,6 +32,12 @@ export default function PhotoGalleryEmbed() {
           >
             Extra Gallery
           </button>
+          <button
+            onClick={() => setActiveGallery("AirCorps2025")}
+            className={`gallery-btn ${activeGallery === "AirCorps2025" ? "active" : ""}`}
+          >
+            Air Corps 2025 Gallery
+          </button>
         </div>
 
         {/* Gallery iframe */}
@@ -39,6 +46,7 @@ export default function PhotoGalleryEmbed() {
             src={galleries[activeGallery]}
             className="gallery-iframe"
             title="AvCon Photo Gallery"
+            allowFullScreen
           ></iframe>
         </div>
 

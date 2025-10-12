@@ -25,7 +25,7 @@ export default function ExhibitorRegistration() {
 
             <section className="exhibitor-content">
                 <h2 className="exhibitor-heading">
-                    Be Part of AvCon 2025: Inspire, Engage, Connect
+                    Be Part of AvCon 2026: Inspire, Engage, Connect
                 </h2>
 
                 <div className="exhibitor-two-column">
@@ -36,13 +36,15 @@ export default function ExhibitorRegistration() {
 
                     <div className="exhibitor-column">
                         <p className="exhibitor-paragraph">
-                            <strong>AvCon – The Future of Aviation</strong> is Ireland’s leading aviation and aerospace careers event, connecting industry leaders with thousands of secondary and third-level students who are ready to explore future career pathways.
+                            <strong>AvCon - The Future of Aviation & Aerospace</strong> is Ireland's leading careers and industry event, connecting aviation, aerospace, and space innovators with thousands of students eager to explore their future pathways.
                         </p>
                         <p className="exhibitor-paragraph">
-                            In 2024, AvCon reached over <strong>14,000 students</strong> — with <strong>6,480 attending in person</strong> and <strong>4,400+ joining online</strong> via our Live Broadcast. This year, over <strong>8,000 students</strong> are already booked in, with global reach once again expected to exceed 14,000+ viewers through TYHub’s interactive Live Stream.
+                            In 2024, AvCon inspired over 14,000 students, with 6,480 attending in person and 4,400+ joining online through our live broadcast. In 2025, that momentum soared even higher - over 8,000 students experienced the event live at Casement Aerodrome, while thousands more tuned in from across Ireland, the UK, and Europe via TYHub.ie.
                         </p>
                         <p className="exhibitor-paragraph">
-                            AvCon brings together industry, education, and government to showcase real opportunities in aerospace, aviation, space, drones, sustainability, and emerging technologies. It’s more than just an event — it’s a platform to shape the future of a rapidly evolving sector.
+                            AvCon continues to unite industry, education, and government to highlight real career opportunities in aviation, aerospace, space, drones, sustainability, and emerging technologies.
+                            Now, we look ahead to 2026, where AvCon expands into a two-part experience - combining our signature student showcase with a new AvCon Industry Convention - and introducing DFCon: The Future of Careers, connecting pathways from Sea to Sky, Cyber to Construction.
+                            More than an event, AvCon and DFCon are movements - inspiring the next generation and shaping the future of Ireland's aviation, aerospace, and wider industry landscape.
                         </p>
                     </div>
                 </div>
@@ -63,7 +65,7 @@ export default function ExhibitorRegistration() {
                 </ul>
 
                 <p className="exhibitor-paragraph">
-                    Whether you're launching a programme, showcasing innovation, hiring talent, or simply want to inspire — there’s a place for you at AvCon 2025.
+                    Whether you're launching a programme, showcasing innovation, hiring talent, or simply want to inspire — there's a place for you at AvCon 2026.
                 </p>
                 <div className="exhibitor-two-column">
                     <div className="exhibitor-column">

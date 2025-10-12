@@ -33,9 +33,9 @@ export default function LastBlockOfText() {
                         <Link 
                             to="/ExhibitorRegistration" 
                             className="btn-link" 
-                            aria-label="Join AvCon 2026 as a Sponsor or Exhibitor"
+                            aria-label="Join AvCon as a Sponsor or Exhibitor"
                         >
-                            <span className="uppercase">Join AvCon 2025 as a Sponsor or Exhibitor</span>
+                            <span className="uppercase">Join AvCon as a Sponsor or Exhibitor</span>
                         </Link>
                     </article>
                 </Grid>

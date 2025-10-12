@@ -7,7 +7,7 @@ export default function EventFirstBlock() {
     <Box sx={{ padding: { xs: '0 2%', md: '0 5%' }, textAlign: 'center' }}>
       <Box sx={{ textAlign: 'center', padding: '1%' }}>
         <p>
-        Welcome to AvCon 2025 - an exhilarating journey into the future of aviation! Calling all Primary, Secondary, and 3rd Level Students, as well as aviation enthusiasts, to join us for a thrilling adventure that will take you soaring through the skies of innovation and discovery.
+        Welcome to AvCon 2026 - an exhilarating journey into the future of aviation! Calling all Primary, Secondary, and 3rd Level Students, as well as aviation enthusiasts, to join us for a thrilling adventure that will take you soaring through the skies of innovation and discovery.
         <br/><br/>
         </p>
         <hr/>
@@ -30,9 +30,9 @@ export default function EventFirstBlock() {
             <br/><br/>
             Hands-On Learning: Primary students will be captivated by interactive exhibits, showcasing the fundamental principles of flight in a fun and engaging way. Secondary students will delve deeper into the mechanics of aircraft design and aerodynamics, gaining insights that will fuel their curiosity for the skies.
             <br/><br/>
-            Career Pathways: For tertiary students and young aviation enthusiasts, AvCon 2025 provides a unique opportunity to connect with industry professionals, explore career options, and gain valuable insights into the diverse and exciting world of aviation careers.
+            Career Pathways: For tertiary students and young aviation enthusiasts, AvCon 2026 provides a unique opportunity to connect with industry professionals, explore career options, and gain valuable insights into the diverse and exciting world of aviation careers.
             <br/><br/>
-            Inspirational Speakers: AvCon 2025 brings together visionaries, pioneers, and experts from the aviation industry. Get ready to be inspired by captivating talks and discussions on the future of air travel, space exploration, and sustainable aviation.
+            Inspirational Speakers: AvCon 2026 brings together visionaries, pioneers, and experts from the aviation industry. Get ready to be inspired by captivating talks and discussions on the future of air travel, space exploration, and sustainable aviation.
             </p>
           </Box>
         </Grid>

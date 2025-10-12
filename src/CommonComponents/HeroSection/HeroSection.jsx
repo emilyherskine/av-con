@@ -19,7 +19,7 @@ export default function HeroSection({
             const screenWidth = window.innerWidth;
 
             if (screenWidth <= 600) {
-                setTitle(smallScreenTitle || "AvCon 2025");
+                setTitle(smallScreenTitle || "AvCon 2026");
                 setSubtitle(smallScreenSubtitle || "Welcome to the Future of Aviation!");
             } else {
                 setTitle(defaultTitle);

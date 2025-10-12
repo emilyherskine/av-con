@@ -1,0 +1,64 @@
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    width: 100%;
+    gap: 2rem; /* space between form and info */
+}
+
+.contact-form-wrapper {
+    flex: 1; /* take available space */
+}
+
+.contact-info {
+    flex: 1; /* take equal space as form */
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.contact-info h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-items: center;
+}
+
+.contact-grid a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #3b82f6;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.25s ease;
+    border: 1px solid #3b82f6;
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
+}
+
+.contact-grid a:hover {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+
+/* Two columns on larger screens */
+@media (min-width: 640px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Stack vertically on small screens */
+@media (max-width: 639px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}

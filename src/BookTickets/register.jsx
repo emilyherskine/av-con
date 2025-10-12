@@ -51,11 +51,10 @@ export default function Register() {
                             <div className="text-container">
                                 <h2>Welcome Schools & Colleges</h2>
                                 <p>
-                                    We're back for <strong>AvCon: The Future of Aviation 2025</strong>!
+                                    We're back for <strong>AvCon - The Future of Aviation & Aerospace 2026</strong>!
                                     <br /><br />
-                                    Whether you're a student, educator, or school administrator, this event is tailored to ignite your passion for aviation and aerospace. 
-                                    <br /><br />
-                                    Explore the future of flight, meet industry leaders, and witness innovation first-hand.
+                                    Following two phenomenal years that inspired thousands of students across Ireland and beyond, AvCon 2025 once again proved why it’s Ireland’s leading free aviation and aerospace careers event - connecting students, teachers, and schools with the people and technologies shaping the future of flight.
+                                    From aircraft displays and innovation zones to inspiring talks from engineers, pilots, recruiters, and space entrepreneurs, AvCon 2025 gave students a first-hand look at what’s possible - and the feedback from teachers, parents, and students has been incredible.
                                 </p>
                             </div>
                         </Grid>
@@ -81,7 +80,14 @@ export default function Register() {
                         >
                             <span className="uppercase">Schools Pre-Registration for 2026</span>
                         </Link>
-                    <br/><br/>
+                        <div>
+                            <br /><br />
+                            <p>
+                                Now, the journey continues. AvCon 2026 will be even bigger - expanding into a two-part experience that includes the AvCon Industry Convention and the student showcase day, hosted once again with the Irish Air Corps. And joining the mission is our sister event, DFCon - The Future of Careers, connecting pathways from Sea to Sky, Cyber to Construction, and showing how Defence Forces - inspired skills translate into real-world industries.
+                                Thanks to the amazing support of our partners, the SkyBound Fund has already helped schools across the country with transport costs, ensuring that inspiration remains free and accessible. We’re now building the SkyBound Fund 2026, aiming to help even more schools attend AvCon and DFCon - opening doors for students who might otherwise never have the chance to experience these opportunities.
+                                At AvCon, we believe that if students see it, they can dream it - and together, we’re helping them take the first step toward their future.
+                            </p>
+                        </div>
                     <Grid container spacing={4} alignItems="center" className="stream-section">
                         <Grid item xs={12} sm={6}>
                             <div className="event-image">

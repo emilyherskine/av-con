@@ -26,7 +26,7 @@ export default function EventSchedule() {
                     paddingBottom: "5%",
                     maxWidth: '100%',
                     maxHeight: '100%',}}>
-                    <img src={Schedule5} alt="AVCon Event Schedule 2025" className="schedule-image" />
+                    <img src={Schedule5} alt="AVCon Event Schedule 2026" className="schedule-image" />
                 </div>
 
                 <div className="images-grid">
@@ -43,7 +43,7 @@ export default function EventSchedule() {
                             />
                         </div>
                     </div>
-                    <img src={AVConSchedule} alt="AVCon Event Schedule 2025" className="schedule-image" />
+                    <img src={AVConSchedule} alt="AVCon Event Schedule 2026" className="schedule-image" />
                     <div>
                         <h6>We're preparing another exciting line-up of speakers, workshops, and interactive experiences designed to inspire the next generation of aviation and aerospace talent.</h6>
                         <br/><br/>

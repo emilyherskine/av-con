@@ -19,23 +19,16 @@ export default function FirstImageAndText() {
                 <Grid item xs={12} md={5}>
                     <div className="flex-container-col space-between ml-1 mr-1">
                         <h3 className="mb-2">
-                            AvCon 2025 - The Future of Aviation Is Landing
+                            AvCon 2026 - The Future of Aviation & Aerospace Is Taking Off
                         </h3>
                         <div className="flex-container-col space-between">
                             <p className="text-left mb-1">
                                 Where the next generation of talent meets the trailblazers of the skies.
                                 <br />
-                                Where careers take flight — and the industry connects with its future.
+                                Where ideas ignite, careers take flight, and the industry connects with its future.
                             </p>
                             <p className="text-left">
-                                <a
-                                    href="./BookTickets"
-                                    className="link-text underline-text"
-                                    target="_blank"
-                                    rel="noopener noreferrer">
-                                    Join us
-                                </a>
-                                &nbsp; for Ireland's leading aviation and aerospace careers event, built to engage 15-25-year-olds with real-world pathways in aviation, aerospace, space tech, UAS, simulation, sustainability, air traffic, engineering, and more.
+                                After two incredible years inspiring thousands of students and professionals, AvCon returns in 2026 even bigger than before - expanding into a two-part experience with AvCon: The Future of Aviation & Aerospace and the AvCon Industry Convention.
                             </p>
                         </div>
                     </div>
