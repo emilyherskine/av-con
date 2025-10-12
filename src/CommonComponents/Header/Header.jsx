@@ -68,6 +68,11 @@ export const Header = () => {
                                                 </a>
                                             </li>
                                             <li>
+                                                <a href="./AvConIndustryConvention" onClick={closeMobileMenu}>
+                                                    AVCON INDUSTRY CONVENTION
+                                                </a>
+                                            </li>
+                                            <li>
                                                 <a href="./SpeakersPresenters" onClick={closeMobileMenu}>
                                                     SPEAKERS & PRESENTERS
                                                 </a>
@@ -150,6 +155,10 @@ export const Header = () => {
                                 <div className="dropdown-content">
                                     <a className="uppercase link-text" href="./EventSchedule">
                                         EVENT SCHEDULE
+                                    </a>
+                                    <br /><br />
+                                    <a className="uppercase link-text" href="./AvConIndustryConvention">
+                                        AVCON INDUSTRY CONVENTION
                                     </a>
                                     <br /><br />
                                     <a className="uppercase link-text" href="./SpeakersPresenters">

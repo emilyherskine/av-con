@@ -14,6 +14,7 @@ import SpeakersPresenters from "./SpeakersPresenters/speakersPresenters";
 import SponsorsPartners from "./SponsorsPartners/sponsorsPartners";
 import ExhibitorRegistration from "./ExhibitorRegistration/exhibitor";
 import AviationPathwayPortal from "./AvconPathwayPortal/pathwayPortal";
+import AvConIndustryConvention from "./AvConIndustryConvention/avConIndustryConvention"
 import AvConEzine from "./AvConEzine/AvConEzine";
 import PhotoGallery from "./PhotoGallery/photoGallery";
 
@@ -29,6 +30,7 @@ export default function App() {
                     <Route path="/bookTickets" element={<BookTickets />} />
                     <Route path="/eventSchedule" element={<EventSchedule />} />
                     <Route path="/photoGallery" element={<PhotoGallery />} />
+                    <Route path="/avConIndustryConvention" element={<AvConIndustryConvention />} />
                     <Route path="/news" element={<News />} />
                     <Route
                         path="/speakersPresenters"
