@@ -5,6 +5,33 @@ const NewsContent = () => {
   return (
     <>
       <NewsArticle
+        title="Press Release – FOR IMMEDIATE RELEASE: AvCon 2025 – Ireland’s Largest Ever Aviation & Aerospace Careers Event Inspires a
+        New Generation"
+        summary={[
+          "AvCon 2025 – The Future of Aviation & Aerospace, hosted by the Irish Air Corps in collaboration with TYHub.ie, brought together a record-breaking 8,000 students and teachers in person, with thousands more joining via TYHub Live from across Ireland, Northern Ireland, the UK, and Europe — making it the largest aviation and aerospace careers event for students ever held in Ireland.",
+        ]}
+        fullContent={[
+          "AvCon 2025 – The Future of Aviation & Aerospace, hosted by the Irish Air Corps in collaboration with TYHub.ie, brought together a record-breaking 8,000 students and teachers in person, with thousands more joining via TYHub Live from across Ireland, Northern Ireland, the UK, and Europe — making it the largest aviation and aerospace careers event for students ever held in Ireland. The event, held in the historic Hangar 4 at Casement Aerodrome, has rapidly become a cornerstone in Ireland’s educational and industry calendar. AvCon bridges the gap between classroom learning and real-world careers, offering an unparalleled opportunity for students to explore pathways in aviation, aerospace, space technology, logistics, and engineering. The day opened with a special video address from An Taoiseach Micheál Martin, followed by a welcome from Brigadier General Rory O’Connor, General Officer Commanding the Irish Air Corps. Under the guidance of presenters Ally Garvey and Paul Butler Lennox, the six-hour AvCon Live broadcast featured over 50 national and international speakers and exhibitors, sharing insights from across the global aviation and aerospace community."
+        ]}
+        email="hello@avcon.ie"
+        tags="#Dare2Dream #AvCon2025 #SkyBoundFund #YouthInAviation #FutureOfFlight #STEM #PilotPath"
+      />
+      <NewsArticle
+        title="Press Release - FOR IMMEDIATE RELEASE: AvCon 2025 - Schools Reflect on AvCon 2025"
+        summary={[
+          "These testimonials underline AvCon’s unique impact - combining inspiration with opportunity, and ensuring students can see and experience what a career in aviation and aerospace truly involves.",
+        ]}
+        fullContent={[
+          "“Great event yesterday. The lads had a great day out. Thanks a mill!” - Kellie, St David’s College, Dublin",
+          "“Just to say a huge thank you for organising a wonderful event. My 50 students had a wonderful day.” - Margo McGann, Programme Coordinator, St Augustine’s College, Abbeyside, Dungarvan, Co. Waterford",
+          "“Some of our TY students attended AvCon at the Irish Air Corps, Casement Aerodrome in Baldonnel today! They learned about real-world pathways in aviation, aerospace, space tech, UAS, simulation, sustainability, air traffic, engineering, and more!” - St Brendan’s Community School, Birr, Co. Offaly",
+          "“AvCon is more than an event - it is a movement that connects education, innovation, and opportunity,” said Fiona Forkan, Founder of AvCon & TYHub.ie. “The enthusiasm from students, the dedication of teachers, and the commitment of our partners across industry and government show that Ireland’s next generation of aviation and aerospace talent is ready to take flight.”",
+          "Replays of the AvCon Live broadcast, including the Taoiseach’s message and the Air Corps opening, are now available via YouTube and www.AvCon.ie, alongside event highlights and galleries."
+        ]}
+        email="hello@avcon.ie"
+        tags="#Dare2Dream #AvCon2025 #SkyBoundFund #YouthInAviation #FutureOfFlight #STEM #PilotPath"
+      />
+      <NewsArticle
         title="🛫 Four Students Set to Fly in ‘Dare 2 Dream’ Challenge"
         summary={[
           "Four Irish secondary school students will soon take to the skies after completing the Dare 2 Dream Challenge, a collaboration between AFTA (Atlantic Flight Training Academy), Pilot Path Group, and TYHub.ie.",
