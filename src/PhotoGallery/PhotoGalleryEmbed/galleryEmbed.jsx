@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import "./PhotoGalleryEmbed.css";
 
 export default function PhotoGalleryEmbed() {
-  const [activeGallery, setActiveGallery] = useState("main");
+  const [activeGallery, setActiveGallery] = useState("Gallery");
 
   const galleries = {
-    main: "https://drive.google.com/embeddedfolderview?id=1XbLfdd6JdLJArOiL2SRpINHCL_Eg_oVt#grid",
-    extra: "https://drive.google.com/embeddedfolderview?id=1welPjMaCd3NCgvgOdlAbdf8asYXYQkXS#grid",
+    Gallery: "https://drive.google.com/embeddedfolderview?id=1XbLfdd6JdLJArOiL2SRpINHCL_Eg_oVt#grid",
+    BCFE: "https://drive.google.com/embeddedfolderview?id=1welPjMaCd3NCgvgOdlAbdf8asYXYQkXS#grid",
+    Avcon2024Gallery: "https://drive.google.com/embeddedfolderview?id=1cmSUxjwAACJafUwsUPOqpjyD9fvOhdXw#grid",
     AirCorps2025: "https://www.flickr.com/photos/dfmagazine/albums/72177720329423083/player/",
   };
 
@@ -15,28 +16,34 @@ export default function PhotoGalleryEmbed() {
       <div className="gallery-card">
         {/* Header strip */}
         <div className="gallery-header">
-          <h3>AvCon 2025 Official Photo Gallery</h3>
+          <h3>AvCon Official Photo Gallery</h3>
         </div>
 
         {/* Tab Buttons */}
         <div className="gallery-tabs">
           <button
-            onClick={() => setActiveGallery("main")}
-            className={`gallery-btn ${activeGallery === "main" ? "active" : ""}`}
+            onClick={() => setActiveGallery("Gallery")}
+            className={`gallery-btn ${activeGallery === "Gallery" ? "active" : ""}`}
           >
-            Main Gallery
+            2025 Shannon Irvine Gallery
           </button>
           <button
-            onClick={() => setActiveGallery("extra")}
-            className={`gallery-btn ${activeGallery === "extra" ? "active" : ""}`}
+            onClick={() => setActiveGallery("BCFE")}
+            className={`gallery-btn ${activeGallery === "BCFE" ? "active" : ""}`}
           >
-            Extra Gallery
+            2025 BCFE Gallery
+          </button>
+          <button
+            onClick={() => setActiveGallery("Avcon2024Gallery")}
+            className={`gallery-btn ${activeGallery === "Avcon2024Gallery" ? "active" : ""}`}
+          >
+            2024 Shannon Irvine Gallery
           </button>
           <button
             onClick={() => setActiveGallery("AirCorps2025")}
             className={`gallery-btn ${activeGallery === "AirCorps2025" ? "active" : ""}`}
           >
-            Air Corps 2025 Gallery
+            2025 Air Corps Gallery
           </button>
         </div>
 
