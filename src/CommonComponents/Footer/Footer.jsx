@@ -30,6 +30,12 @@ export default function Footer() {
                         <a href="./Event" className="footer-link">
                             AvCon 2026 Info
                         </a>
+                        <a href="./DFCon" className="footer-link">
+                            DFCon 2026
+                        </a>
+                        <a href="./AvConIndustryConvention" className="footer-link">
+                            AvCon Industry Convention
+                        </a>                       
                         <a href="./BookTickets" className="footer-link">
                             Register Here
                         </a>
@@ -57,6 +63,9 @@ export default function Footer() {
                             href="./AviationPathwayPortal"
                             className="footer-link">
                             Aviation Pathway Portal
+                        </a>
+                        <a href="./PhotoGallery" className="footer-link">
+                            AvCon Photo Gallery
                         </a>
                     </div>
                 </div>

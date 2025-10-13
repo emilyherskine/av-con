@@ -56,7 +56,7 @@ export default function LastBlockOfText() {
                             className="btn-link" 
                             aria-label="Shcools Pre-Registration for 2026"
                         >
-                            <span className="uppercase">Shcools Pre-Registration for 2026</span>
+                            <span className="uppercase">Schools Pre-Registration for 2026</span>
                         </Link>
                     </article>
                 </Grid>

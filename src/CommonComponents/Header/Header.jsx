@@ -84,6 +84,9 @@ export const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
+                                    <a href="./DFCon" onClick={closeMobileMenu}>
+                                            DFCON
+                                    </a>
 
                                     <li className="mobile-menu-section">
                                         <a href="./About" onClick={closeMobileMenu}>
@@ -134,7 +137,7 @@ export const Header = () => {
                     </div>
                 ) : (
                     <div className="desktop-menu">
-                        <a className="link-text" href="./">
+                        <a className="uppercase link-text" href="./">
                             HOME
                         </a>
                         <div
@@ -143,7 +146,7 @@ export const Header = () => {
                             onMouseLeave={handleEventDropdownToggle}
                         >
                             <a
-                                className="link-text"
+                                className="uppercase link-text"
                                 href="./Event"
                                 aria-haspopup="true"
                                 aria-expanded={showEventDropdown}
@@ -171,6 +174,9 @@ export const Header = () => {
                                 </div>
                             )}
                         </div>
+                        <a className="uppercase link-text" href="./DFCon">
+                            DFCON
+                        </a>
 
                         <div
                             className="desktop-dropdown"
