@@ -17,7 +17,7 @@ export default function Footer() {
                     AvCon - The Future of Aviation & Aerospace: Inspiring and educating future aviation & aerospace professionals through a dynamic, interactive event on October 2nd,  Casement Aerodrome, Baldonnel, Co Dublin & online via TYHub.ie
                 </p>
                 <a
-                    href="https://emily-h-erskine.github.io/portfolio/"
+                    href="https://emilyherskine.github.io/portfolio"
                     className="copyright">
                     Copyright © 2025 Emily-Huong Erskine
                 </a>
