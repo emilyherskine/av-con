@@ -15,13 +15,36 @@ export default function AvConEzine() {
       {/* 2025 Ezine Section */}
       <section className="ezine-section">
         <header>
-          <h2 className="ezine-title">AvCon 2025 Ezine - Altitude: Corporate & Careers</h2>
+          <h2 className="ezine-title">
+            AvCon Christmas Ezine 2025 – Celebrating Two Years of Inspiration
+          </h2>
         </header>
+
         <p className="ezine-description">
-          Your insider's guide to The Future of Aviation & Aerospace. Packed with event highlights, speaker line-ups, exhibitor spotlights, industry insights, and opportunities for students and professionals alike, this digital magazine connects education with innovation. Whether you’re joining us in person at Casement Aerodrome or online via TYHub.ie, the Ezine is your must-read companion for AvCon 2025.
+          Our special Christmas Edition of the AvCon Altitude Ezine brings together
+          another incredible year of aviation, aerospace, innovation, and inspiration.
+          This limited-edition publication celebrates the growing AvCon community and
+          our shared commitment to building pathways for the next generation.
         </p>
+
         <div className="iframe-container">
-          <iframe
+        <iframe
+          src="https://e.issuu.com/embed.html?d=christmas_avcon_2025_altitude_ezine_&u=tyhub"
+          title="AvCon Ezine Christmas 2025"
+          allowFullScreen
+          loading="lazy"
+          className="ezine-iframe"
+        />
+        </div>
+      </section>
+
+      {/* 2025 Ezinee Section */}
+      <section className="ezine-section">
+        <header>
+          <h3 className="ezine-title">2025 Ezine</h3>
+        </header>
+        <div className="iframe-container">
+        <iframe
             src="https://issuu.com/tyhub/docs/avcon_2025_ezine?fr=xKAE9_zU1NQ"
             title="Avcon Ezine 2025"
             allow="fullscreen"
