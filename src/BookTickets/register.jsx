@@ -1,114 +1,279 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import { Link } from "react-router-dom";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import HeroSection from "../CommonComponents/HeroSection/HeroSection";
 import BackgroundImage from "./BookTicketsImages/SHAN5640.jfif";
 import Flight from "./BookTicketsImages/SHAN6371.jfif";
-import HeroSection from "../CommonComponents/HeroSection/HeroSection";
-import './register.css';
+import "./register.css";
 
 export default function Register() {
     return (
         <main className="main-container">
+
             <HeroSection
-                defaultTitle="Schools now's your chance! Pre-Registration for 2026 Open!!"
-                defaultSubtitle="An immersive aviation experience built for the next generation of leaders. Reserve your place today."
-                smallScreenTitle="Schools Pre-Registration for 2026"
-                smallScreenSubtitle="For students, educators, and institutions - don't miss this aviation event!"
-                buttonText="Schools Pre-Registration for 2026"
-                buttonLink="https://avcon.ie/BookTickets"
+                defaultTitle="AvCon 2026 School Registration Now Open"
+                defaultSubtitle="Ireland's flagship free Student & Industry Convention returns Thursday, 8 October 2026."
+                smallScreenTitle="Schools Registration 2026"
+                smallScreenSubtitle="Bring your students into the future of aviation, aerospace and emerging industries."
+                buttonText="Register Your School"
+                buttonLink="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUNUUyVEVDSUtXWkJHV0RBOVlNSko4MFlTVC4u&route=shorturl"
             />
 
             <section className="event-container">
+
                 <Box className="grid-container">
-                    <div className="registration-section">
-                            {/* <Grid item>
-                                <Button
-                                    variant="contained"
-                                    color="secondary"
-                                    href="https://forms.office.com/r/jC8Laygn90"
-                                    target="_blank"
-                                    rel="noopener"
-                                >
-                                    In-Person Registration
-                                </Button>
-                            </Grid>
-                            <Grid item>
-                                <Button
-                                    variant="contained"
-                                    color="primary"
-                                    href="https://forms.office.com/r/xwSzALCh3b"
-                                    target="_blank"
-                                    rel="noopener"
-                                >
-                                    College Registration
-                                </Button>
-                            </Grid> */}
-                    </div>
+
+                    {/* Introduction */}
                     <Grid container spacing={4} alignItems="center">
-                        <Grid item xs={12} sm={6}>
+                        <Grid item xs={12} md={6}>
                             <div className="text-container">
                                 <h2>Welcome Schools & Colleges</h2>
+
                                 <p>
-                                    We're back for <strong>AvCon - The Future of Aviation & Aerospace 2026</strong>!
-                                    <br /><br />
-                                    Following two phenomenal years that inspired thousands of students across Ireland and beyond, AvCon 2025 once again proved why it’s Ireland’s leading free aviation and aerospace careers event - connecting students, teachers, and schools with the people and technologies shaping the future of flight.
-                                    From aircraft displays and innovation zones to inspiring talks from engineers, pilots, recruiters, and space entrepreneurs, AvCon 2025 gave students a first-hand look at what’s possible - and the feedback from teachers, parents, and students has been incredible.
+                                    AvCon 2026 will once again bring together
+                                    thousands of students, educators, industry
+                                    leaders and government representatives at
+                                    Casement Aerodrome, Baldonnel, Co. Dublin.
                                 </p>
+
+                                <p>
+                                    Students will explore the future of aviation,
+                                    aerospace, engineering, defence, drones,
+                                    space, sustainability and future mobility
+                                    through interactive experiences, live
+                                    demonstrations and conversations with
+                                    professionals.
+                                </p>
+
+                                <p>
+                                    Pre-register your school today to receive
+                                    priority updates, teacher information packs
+                                    and event announcements.
+                                </p>
+
+                                <a
+                                    href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUNUUyVEVDSUtXWkJHV0RBOVlNSko4MFlTVC4u&route=shorturl"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="btn-link"
+                                >
+                                    Schools Registration for AvCon 2026
+                                </a>
                             </div>
                         </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <div className="event-image">
-                                <img src={BackgroundImage} alt="AvCon Event" className="event-image" />
-                            </div>
+
+                        <Grid item xs={12} md={6}>
+                            <img
+                                src={BackgroundImage}
+                                alt="Students attending AvCon"
+                                className="event-image"
+                            />
                         </Grid>
                     </Grid>
-                    <br/><br/>
-                        <Typography variant="h4" component="h4" className="info-subtitle uppercase">
-                            AvCon 2026 - Pre-Registration & Exhibitor Bookings Now Open!
-                        </Typography>
-                        <Typography paragraph>
-                            Join the early birds for Ireland's largest aviation and aerospace careers event.
-                            Schools can pre-register now for priority access.
-                            Exhibitors and sponsors — book your place and connect with the next generation of aviation, aerospace, STEM, and logistics talent.
-                        </Typography>
-                        <Link 
-                            to="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUNUUyVEVDSUtXWkJHV0RBOVlNSko4MFlTVC4u" 
-                            className="btn-link" 
-                            aria-label="Schools Pre-Registration for 2026"
+
+
+                    {/* Why Attend */}
+                    <section className="content-section">
+
+                        <Typography
+                            variant="h4"
+                            className="info-subtitle uppercase"
                         >
-                            <span className="uppercase">Schools Pre-Registration for 2026</span>
-                        </Link>
-                        <div>
-                            <br /><br />
+                            Why Attend AvCon?
+                        </Typography>
+
+                        <p>
+                            AvCon gives students the opportunity to experience
+                            industry first-hand and discover exciting career
+                            pathways.
+                        </p>
+
+                        <ul>
+                            <li>Meet employers, educators and professionals.</li>
+                            <li>
+                                Discover apprenticeships, college routes and
+                                future careers.
+                            </li>
+                            <li>
+                                Experience interactive exhibits and live
+                                demonstrations.
+                            </li>
+                            <li>
+                                Explore emerging technologies shaping future
+                                industries.
+                            </li>
+                            <li>
+                                Build confidence by connecting directly with
+                                industry experts.
+                            </li>
+                        </ul>
+
+                    </section>
+
+
+                    {/* What Makes AvCon Different */}
+                    <Grid
+                        container
+                        spacing={4}
+                        alignItems="center"
+                        className="content-section"
+                    >
+
+                        <Grid item xs={12} md={6}>
+                            <img
+                                src={Flight}
+                                alt="AvCon aviation experience"
+                                className="event-image"
+                            />
+                        </Grid>
+
+
+                        <Grid item xs={12} md={6}>
+
+                            <h2>
+                                What Makes AvCon Different?
+                            </h2>
+
                             <p>
-                                Now, the journey continues. AvCon 2026 will be even bigger - expanding into a two-part experience that includes the AvCon Industry Convention and the student showcase day, hosted once again with the Irish Air Corps. And joining the mission is our sister event, DFCon - The Future of Careers, connecting pathways from Sea to Sky, Cyber to Construction, and showing how Defence Forces - inspired skills translate into real-world industries.
-                                Thanks to the amazing support of our partners, the SkyBound Fund has already helped schools across the country with transport costs, ensuring that inspiration remains free and accessible. We’re now building the SkyBound Fund 2026, aiming to help even more schools attend AvCon and DFCon - opening doors for students who might otherwise never have the chance to experience these opportunities.
-                                At AvCon, we believe that if students see it, they can dream it - and together, we’re helping them take the first step toward their future.
+                                AvCon isn't just another careers event.
+                                Hosted in partnership with the Irish Air Corps
+                                at Casement Aerodrome, students experience an
+                                immersive environment where education meets
+                                industry.
                             </p>
-                        </div>
-                    <Grid container spacing={4} alignItems="center" className="stream-section">
-                        <Grid item xs={12} sm={6}>
-                            <div className="event-image">
-                                <img src={Flight} alt="Flight Experience" className="event-image" />
-                            </div>
+
+                            <p>
+                                From aircraft and engineering to drones,
+                                sustainability, aerospace, defence and space
+                                technology, students gain real insight into
+                                industries creating tomorrow's opportunities.
+                            </p>
+
+                            <p>
+                                Thanks to the continued support of our partners
+                                and the SkyBound Fund, attendance remains free
+                                for schools and students.
+                            </p>
+
                         </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <div className="corporate-section">
-                                <h3>Corporate Attendees</h3>
-                                <p>
-                                    While AvCon is not open to the general public, we offer a limited number of <strong>Afterburner Corporate Access Passes</strong> for business leaders, sponsors, and partners.
-                                    <br /><br />
-                                    These passes provide exclusive event access, valuable networking, and branding opportunities - all while supporting the <strong>SkyBound Fund</strong> to keep the event free for students.
-                                    <br /><br />
-                                    <b>To secure your pass, email:</b> <a href="mailto:hello@avcon.ie">hello@avcon.ie</a>
-                                </p>
-                            </div>
-                        </Grid>
+
                     </Grid>
+
+
+
+                    {/* Registration */}
+                    <section className="content-section">
+
+                        <h2>
+                            Register Early
+                        </h2>
+
+                        <p>
+                            Demand continues to grow every year, with schools
+                            travelling from across Ireland to attend AvCon.
+                            Registering early ensures your school receives:
+                        </p>
+
+
+                        <ul>
+                            <li>Priority event updates</li>
+                            <li>Teacher information packs</li>
+                            <li>Travel information</li>
+                            <li>Programme announcements</li>
+                            <li>Registration notifications</li>
+                        </ul>
+
+
+                        <a
+                            href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUNUUyVEVDSUtXWkJHV0RBOVlNSko4MFlTVC4u&route=shorturl"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-link"
+                        >
+                            Register Your School
+                        </a>
+
+                    </section>
+
+
+
+                    {/* Live Stream */}
+                    <section className="content-section">
+
+                        <h2>
+                            Can't Attend In Person?
+                        </h2>
+
+                        <p>
+                            AvCon Live brings the experience directly into
+                            classrooms across Ireland and around the world.
+                            Students can take part in keynote talks, industry
+                            discussions, demonstrations and career inspiration
+                            wherever they are.
+                        </p>
+
+
+                        <a
+                            href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUN003TjMxSkxXUVVKV1JLT1AyTUlTOVQxOS4u&route=shorturl"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-link"
+                        >
+                            AvCon Live Stream Education Registration
+                        </a>
+
+                    </section>
+
+
+
+                    {/* Corporate */}
+                    <section className="corporate-section">
+
+                        <h2>
+                            Corporate & Industry Visitors
+                        </h2>
+
+                        <p>
+                            While AvCon is not open to the general public,
+                            limited Corporate Access Passes are available for
+                            business leaders, partners and sponsors.
+                        </p>
+
+
+                        <p>
+                            These passes provide event access, networking
+                            opportunities and support the SkyBound Fund,
+                            helping keep AvCon free for schools and students.
+                        </p>
+
+
+                        <strong>
+                            For enquiries:
+                        </strong>
+
+                        <a href="mailto:hello@avcon.ie">
+                            hello@avcon.ie
+                        </a>
+
+                    </section>
+
+
+
+                    <blockquote>
+                        Connecting Industry. Inspiring Talent. Shaping
+                        Tomorrow's Workforce.
+                        <br />
+                        <strong>
+                            The Sky is NOT the Limit. It's ONLY the Beginning.
+                        </strong>
+                    </blockquote>
+
+
                 </Box>
+
             </section>
+
         </main>
     );
 }

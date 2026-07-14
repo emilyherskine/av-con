@@ -1,85 +1,113 @@
 .main-container {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
+
 
 .event-container {
-  text-align: center;
-  padding: 0 0 1rem 0;
+    text-align: center;
+    padding-bottom: 3rem;
 }
 
-.text-container {
-  text-align: left;
-  padding:  0 0 1rem 0;
-}
-
-.text-center {
-  text-align: center;
-  padding: 0 0 1rem 0;
-}
-
-.event-image img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  display: block;
-}
-
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  border-radius: 8px;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.video-container iframe {
-  position: absolute;
-  align-items: center;
-  text-align: center;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  border: 0;
-}
 
 .grid-container {
-  padding: 0 2%;
-}
-
-@media (min-width: 768px) {
-  .grid-container {
     padding: 0 5%;
-  }
 }
 
-a {
-  color: #0066cc;
-  text-decoration: none;
+
+.text-container {
+    text-align: left;
 }
 
-a:hover {
-  text-decoration: underline;
+
+.event-image {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.registration-section,
-.corporate-section,
-.stream-section {
-  margin: 3rem 0;
+
+.content-section {
+    margin: 4rem 0;
+    text-align: left;
 }
 
-.registration-section h3,
-.corporate-section h3,
-.stream-section h3 {
-  margin-bottom: 1.5rem;
+
+.content-section h2,
+.corporate-section h2 {
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
-button {
-  font-weight: bold;
+
+.content-section p,
+.corporate-section p {
+    line-height: 1.7;
+}
+
+
+ul {
+    padding-left: 1.5rem;
+    line-height: 1.8;
+}
+
+
+.info-subtitle {
+    margin-bottom: 1rem;
+}
+
+
+.btn-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.9rem 1.8rem;
+    background: #0066cc;
+    color: white;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+
+.btn-link:hover {
+    background: #004a99;
+    color:white;
+}
+
+
+.corporate-section {
+    margin: 4rem 0;
+    text-align: left;
+}
+
+
+.corporate-section a {
+    display:block;
+    margin-top:0.5rem;
+}
+
+
+blockquote {
+    margin: 4rem auto 2rem;
+    text-align:center;
+    font-style:italic;
+    font-size:1.3rem;
+    max-width:700px;
+    line-height:1.6;
+}
+
+
+@media(max-width:768px){
+
+    .grid-container {
+        padding:0 1.5rem;
+    }
+
+    .content-section,
+    .corporate-section {
+        margin:2.5rem 0;
+    }
+
 }

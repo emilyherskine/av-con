@@ -68,8 +68,8 @@ export const Header = () => {
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="./AvConIndustryConvention" onClick={closeMobileMenu}>
-                                                    AVCON INDUSTRY CONVENTION
+                                                <a href="./AvConNetwork" onClick={closeMobileMenu}>
+                                                    THE AVCON NETWORK
                                                 </a>
                                             </li>
                                             <li>
@@ -84,9 +84,9 @@ export const Header = () => {
                                             </li>
                                         </ul>
                                     </li>
-                                    <a href="./DFCon" onClick={closeMobileMenu}>
+                                    {/* <a href="./DFCon" onClick={closeMobileMenu}>
                                             DFCON
-                                    </a>
+                                    </a> */}
 
                                     <li className="mobile-menu-section">
                                         <a href="./About" onClick={closeMobileMenu}>
@@ -128,7 +128,7 @@ export const Header = () => {
                                     </li>
                                     <li className="mobile-menu-section">
                                         <a href="./BookTickets" onClick={closeMobileMenu}>
-                                            AVCON 2026 PRE-REGISTRATION
+                                            AVCON 2026 SCHOOL REGISTRATION
                                         </a>
                                     </li>
                                 </ul>
@@ -160,8 +160,8 @@ export const Header = () => {
                                         EVENT SCHEDULE
                                     </a>
                                     <br /><br />
-                                    <a className="uppercase link-text" href="./AvConIndustryConvention">
-                                        AVCON INDUSTRY CONVENTION
+                                    <a className="uppercase link-text" href="./AvConNetwork">
+                                        THE AVCON NETWORK
                                     </a>
                                     <br /><br />
                                     <a className="uppercase link-text" href="./SpeakersPresenters">
@@ -174,9 +174,9 @@ export const Header = () => {
                                 </div>
                             )}
                         </div>
-                        <a className="uppercase link-text" href="./DFCon">
+                        {/* <a className="uppercase link-text" href="./DFCon">
                             DFCON
-                        </a>
+                        </a> */}
 
                         <div
                             className="desktop-dropdown"
@@ -224,7 +224,7 @@ export const Header = () => {
                             className="link-text button-highlight"
                             href="./BookTickets"
                         >
-                            AVCON 2026 PRE-REGISTRATION
+                            AVCON 2026 SCHOOL REGISTRATION
                         </a>
                     </div>
                 )}

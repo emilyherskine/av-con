@@ -1,64 +1,80 @@
 .contact-container {
-    display: flex;
-    flex-direction: row;
-    padding: 2%;
-    width: 100%;
-    gap: 2rem; /* space between form and info */
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    gap:2rem;
+    padding:3rem 2rem;
+    width:100%;
 }
 
-.contact-form-wrapper {
-    flex: 1; /* take available space */
-}
 
+.contact-card,
 .contact-info {
-    flex: 1; /* take equal space as form */
-    text-align: center;
-    border-radius: 1rem;
+    flex:1;
+    max-width:500px;
+    padding:2rem;
+    border-radius:1rem;
+    text-align:center;
 }
 
+
+.contact-card h3,
 .contact-info h3 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
+    font-size:1.75rem;
+    font-weight:700;
+    margin-bottom:1rem;
+}
+
+
+.contact-card p {
+    line-height:1.6;
+    margin-bottom:2rem;
+}
+
+
+.contact-button {
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    padding:0.9rem 1.5rem;
+    border-radius:0.5rem;
+    background:#3b82f6;
+    color:white;
+    font-weight:600;
+    text-decoration:none;
 }
 
 .contact-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    justify-items: center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1rem;
 }
+
 
 .contact-grid a {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #3b82f6;
-    text-decoration: none;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    transition: all 0.25s ease;
-    border: 1px solid #3b82f6;
-    text-align: center;
-    width: 100%;
-    max-width: 200px;
+    width:100%;
+    max-width:250px;
+    padding:.75rem 1rem;
+    border-radius:.5rem;
+    border:1px solid #3b82f6;
+    color:#3b82f6;
+    text-decoration:none;
 }
 
-.contact-grid a:hover {
-    background-color: #3b82f6;
-    color: #ffffff;
-}
+/* Mobile */
 
-/* Two columns on larger screens */
-@media (min-width: 640px) {
-    .contact-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+@media(max-width:768px){
 
-/* Stack vertically on small screens */
-@media (max-width: 639px) {
     .contact-container {
-        flex-direction: column;
+        flex-direction:column;
+        align-items:center;
     }
+
+
+    .contact-card,
+    .contact-info {
+        width:100%;
+    }
+
 }

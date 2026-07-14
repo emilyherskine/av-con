@@ -14,7 +14,7 @@ import SpeakersPresenters from "./SpeakersPresenters/speakersPresenters";
 import SponsorsPartners from "./SponsorsPartners/sponsorsPartners";
 import ExhibitorRegistration from "./ExhibitorRegistration/exhibitor";
 import AviationPathwayPortal from "./AvconPathwayPortal/pathwayPortal";
-import AvConIndustryConvention from "./AvConIndustryConvention/avConIndustryConvention"
+import AvConNetwork from "./AvConNetwork/avConNetwork";
 import AvConEzine from "./AvConEzine/AvConEzine";
 import PhotoGallery from "./PhotoGallery/photoGallery";
 import DFCon from "./DFCon/dfCon";
@@ -26,13 +26,13 @@ export default function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/event" element={<Event />} />
-                    <Route path="/dfCon" element={<DFCon />} />
+                    {/* <Route path="/dfCon" element={<DFCon />} /> */}
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/bookTickets" element={<BookTickets />} />
                     <Route path="/eventSchedule" element={<EventSchedule />} />
                     <Route path="/photoGallery" element={<PhotoGallery />} />
-                    <Route path="/avConIndustryConvention" element={<AvConIndustryConvention />} />
+                    <Route path="/avConNetwork" element={<AvConNetwork />} />
                     <Route path="/news" element={<News />} />
                     <Route
                         path="/speakersPresenters"

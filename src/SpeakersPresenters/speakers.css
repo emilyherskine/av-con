@@ -1,0 +1,53 @@
+.speakers-page {
+    min-height:100vh;
+    padding-bottom:4rem;
+}
+
+
+.speakers-intro {
+    max-width:1100px;
+    margin:0 auto;
+    padding:2rem 5%;
+    text-align:center;
+}
+
+
+.speakers-intro p {
+    font-size:1.1rem;
+    line-height:1.7;
+    margin-bottom:1rem;
+}
+
+
+.speakers-section {
+    padding:2rem 5%;
+}
+
+
+.speakers-section h2 {
+    text-align:center;
+    font-size:2rem;
+    margin-bottom:2rem;
+}
+
+
+.coming-soon {
+    text-align:center;
+    font-size:1.2rem;
+    opacity:.8;
+    padding:3rem;
+}
+
+
+@media(max-width:768px){
+
+    .speakers-intro {
+        padding:2rem;
+    }
+
+
+    .speakers-section {
+        padding:2rem;
+    }
+
+}

@@ -5,76 +5,70 @@ import "./Footer.css";
 export default function Footer() {
     return (
         <footer className="footer">
-            <div className="footer-col-1 footer-divider position">
-                <a href="/index.html">
+
+            <div className="footer-col footer-brand">
+                <a href="/">
                     <img
                         className="footer-logo"
                         src="./AVConLogoWhite.png"
-                        alt="AV Con logo"
+                        alt="AvCon logo"
                     />
                 </a>
+
                 <p className="footer-text">
-                    AvCon - The Future of Aviation & Aerospace: Inspiring and educating future aviation & aerospace professionals through a dynamic, interactive event on October 2nd,  Casement Aerodrome, Baldonnel, Co Dublin & online via TYHub.ie
+                    AvCon - The Future of Aviation & Aerospace: Connecting education, industry and government to inspire
+                    the next generation of aviation and aerospace talent.
                 </p>
+
                 <a
                     href="https://emilyherskine.github.io/portfolio"
-                    className="copyright">
-                    Copyright © 2025 Emily-Huong Erskine
+                    className="copyright"
+                >
+                    Copyright © 2026 Emily-Huong Erskine
                 </a>
             </div>
 
-            <div className="flex-container site-map">
-                <div className="flex-1 space-between">
-                    <p className="uppercase footer-heading">Events</p>
-                    <div className="flex-col">
-                        <a href="./Event" className="footer-link">
-                            AvCon 2026 Info
-                        </a>
-                        <a href="./DFCon" className="footer-link">
-                            DFCon 2026
-                        </a>
-                        <a href="./AvConIndustryConvention" className="footer-link">
-                            AvCon Industry Convention
-                        </a>                       
-                        <a href="./BookTickets" className="footer-link">
-                            Register Here
-                        </a>
-                        <a
-                            href="./ExhibitorRegistration"
-                            className="footer-link">
-                            Exhibitor Registration
-                        </a>
-                    </div>
+            <div className="footer-col footer-cta">
+
+                <h3 className="footer-heading uppercase">
+                    Join Us at AvCon 2026
+                </h3>
+
+                <p className="footer-text">
+                    Every young person deserves the opportunity to discover
+                    what's possible. Together we're connecting industry,
+                    inspiring talent and shaping tomorrow's workforce.
+                </p>
+
+                <div className="footer-event-details">
+                    <strong>Thursday, 8 October 2026</strong>
+                    <span>Casement Aerodrome, Baldonnel, Co. Dublin</span>
                 </div>
 
-                <div className="flex-1">
-                    <p className="uppercase footer-heading">Company</p>
-                    <div className="flex-col">
-                        <a href="./About" className="footer-link">
-                            About Us
-                        </a>
-                        <a href="./SponsorsPartners" className="footer-link">
-                            Our Partners
-                        </a>
-                        <a href="./SponsorsPartners" className="footer-link">
-                            Our Sponsors
-                        </a>
-                        <a
-                            href="./AviationPathwayPortal"
-                            className="footer-link">
-                            Aviation Pathway Portal
-                        </a>
-                        <a href="./PhotoGallery" className="footer-link">
-                            AvCon Photo Gallery
-                        </a>
-                    </div>
+                <div className="footer-register-buttons">
+                    <a href="https://forms.cloud.microsoft/r/EinwjqpRz7" className="footer-btn">
+                        Attend the Student Convention
+                    </a>
+
+                    <a
+                        href="https://forms.cloud.microsoft/r/ygzndwRAYy"
+                        className="footer-btn footer-btn-outline"
+                    >
+                        Join the Free Live Stream
+                    </a>
                 </div>
 
-                <div className="flex-1 space-between-col">
-                    <p className="uppercase footer-heading">Social</p>
-                    <SocialMediaLinks />
-                </div>
+                <p className="footer-tagline">
+                    Connecting Industry. Inspiring Talent. Shaping Tomorrow's Workforce.
+                </p>
+
             </div>
+
+            <div className="footer-col footer-social">
+                <h3 className="footer-heading uppercase">Follow Us</h3>
+                <SocialMediaLinks />
+            </div>
+
         </footer>
     );
 }

@@ -1,17 +1,17 @@
 import React from "react";
-import "./AvConIndustryConvention.css";
+import "./avConNetwork.css";
 
-export default function AvConIndustryConvention() {
+export default function AvConNetwork() {
     return (
         <main className="convention-main">
             <div className="convention-container">
-                <h1>AvCon Industry Convention - The Future of Aviation & Aerospace</h1>
+                <h1>The AvCon Network - The Future of Aviation & Aerospace</h1>
                 <h3>B2B | Network | Inspire | Employ | Connect</h3>
                 <p>
                     Welcome to the next evolution of AvCon.
                 </p>
                 <p>
-                    The AvCon Industry Convention is where innovation meets opportunity - a two-day international event hosted in Ireland, the hub of aviation and aerospace excellence. It’s where leaders, innovators, educators, and emerging talent come together to collaborate, inspire, and shape the future of a rapidly evolving global industry.
+                    The The AvCon Network is where innovation meets opportunity - a two-day international event hosted in Ireland, the hub of aviation and aerospace excellence. It’s where leaders, innovators, educators, and emerging talent come together to collaborate, inspire, and shape the future of a rapidly evolving global industry.
                 </p>
                 <p>
                     Being part of AvCon means more than just attending an event - it means joining a community of likeminded thinkers and doers who believe in action, collaboration, and creating real change. Across both days, the Industry Convention will spark meaningful conversations between sectors - from aviation, aerospace, and space technology to sustainability, defence, logistics, and emerging industries - demonstrating how shared innovation can power a new generation of progress.
