@@ -1,109 +1,86 @@
 .home-page {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
-
 
 .intro-section,
 .section,
 .convention-section,
 .final-section {
-    padding:3rem 5%;
+    padding: 3rem 5%;
 }
-
 
 .home-image,
 .banner-image {
-    width:100%;
-    border-radius:12px;
-    mix-blend-mode:luminosity;
+    width: 100%;
+    border-radius: 12px;
+    mix-blend-mode: luminosity;
 }
-
-
 
 .info-card {
-    padding:1.5rem;
-    height:100%;
-    text-align:center;
-    border-radius:12px;
-    border:1px solid rgba(255,255,255,.3);
+    padding: 1.5rem;
+    height: 100%;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
-
-
 
 .banner-wrapper {
-    position:relative;
+    position: relative;
 }
-
 
 .banner-content {
-    width:100%;
-    padding:2rem;
-    text-align:center;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
 }
-
-
 
 .highlight-grid {
-    margin-top:2rem;
+    margin-top: 2rem;
 }
-
 
 .highlight {
-    padding:1.2rem;
-    text-align:center;
-    font-weight:bold;
-    border-radius:10px;
-    border:1px solid rgba(255,255,255,.3);
+    padding: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
-
-
 
 .button-row {
-    display:flex;
-    justify-content:center;
-    gap:1rem;
-    flex-wrap:wrap;
-    margin:2rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
 }
-
-
 
 .btn-link {
-    background:#0066cc;
-    color:white;
-    padding:.75rem 1.4rem;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
 }
-
-
 
 .btn-link:hover {
-    background:#004c99;
+    background: #004c99;
 }
-
-
 
 .final-section {
-    text-align:center;
+    text-align: center;
 }
 
-
-
-@media(max-width:768px){
-
+@media (max-width: 768px) {
     .intro-section,
     .section,
     .convention-section,
     .final-section {
-        padding:2rem 5%;
+        padding: 2rem 5%;
     }
-
 
     .banner-content {
-        position:static;
+        position: static;
     }
-
 }

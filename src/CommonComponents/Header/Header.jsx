@@ -1,19 +1,168 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown.svg";
 import "./Header.css";
+import { eventLinks, aboutLinks, primaryLinks, IMAGES, RESPONSIVE_BREAKPOINTS } from "../../constants";
+import { debounce } from "../../utils";
 
+/**
+ * Dropdown Links Component
+ * Renders a list of links for dropdown menus
+ */
+const DropdownLinksList = ({ links, onClick }) => (
+    <>
+        {links.map((link) => (
+            <li key={link.label}>
+                <Link to={link.to} onClick={onClick}>
+                    {link.label}
+                </Link>
+            </li>
+        ))}
+    </>
+);
+
+/**
+ * Desktop Dropdown Component
+ * Handles hover-based dropdown menus for desktop view
+ */
+const DesktopDropdown = ({ label, to, links, isOpen, onEnter, onLeave }) => (
+    <div
+        className="desktop-dropdown"
+        onMouseEnter={onEnter}
+        onMouseLeave={onLeave}
+    >
+        <Link
+            className="uppercase link-text"
+            to={to}
+            aria-haspopup="true"
+            aria-expanded={isOpen}
+        >
+            {label}
+        </Link>
+        <img src={Dropdown} alt="Dropdown" className="dropdown-icon" />
+        {isOpen && (
+            <div className="dropdown-content">
+                {links.map((childLink) => (
+                    <div key={childLink.label} className="dropdown-link-row">
+                        <Link className="uppercase link-text" to={childLink.to}>
+                            {childLink.label}
+                        </Link>
+                    </div>
+                ))}
+            </div>
+        )}
+    </div>
+);
+
+/**
+ * Mobile Menu Component
+ * Handles mobile navigation with collapsible sections
+ */
+const MobileMenu = ({ isOpen, onClose }) => {
+    if (!isOpen) return null;
+
+    const mobileSections = [
+        { label: "HOME", to: "/" },
+        { label: "EVENT INFO", to: "/event", links: eventLinks },
+        { label: "ABOUT AVCON", to: "/about", links: aboutLinks },
+        { label: "CONTACT US", to: "/contact" },
+        { label: "EXHIBITOR REGISTRATION", to: "/exhibitorRegistration" },
+        { label: "AVCON 2026 SCHOOL REGISTRATION", to: "/bookTickets" },
+    ];
+
+    return (
+        <div className="mobile-menu">
+            <ul>
+                {mobileSections.map((section) => (
+                    <li key={section.label} className="mobile-menu-section">
+                        <Link to={section.to} onClick={onClose}>
+                            {section.label}
+                        </Link>
+                        {section.links && (
+                            <ul className="dropdown-menu">
+                                <DropdownLinksList links={section.links} onClick={onClose} />
+                            </ul>
+                        )}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+};
+
+/**
+ * Desktop Menu Component
+ * Renders desktop navigation with dropdown menus
+ */
+const DesktopMenu = ({
+    showEventDropdown,
+    onEventDropdownToggle,
+    showAboutDropdown,
+    onAboutDropdownToggle,
+}) => (
+    <div className="desktop-menu">
+        {primaryLinks.map((link) => {
+            if (link.label === "EVENT INFO") {
+                return (
+                    <DesktopDropdown
+                        key={link.label}
+                        label={link.label}
+                        to={link.to}
+                        links={eventLinks}
+                        isOpen={showEventDropdown}
+                        onEnter={onEventDropdownToggle}
+                        onLeave={onEventDropdownToggle}
+                    />
+                );
+            }
+
+            if (link.label === "ABOUT AVCON") {
+                return (
+                    <DesktopDropdown
+                        key={link.label}
+                        label={link.label}
+                        to={link.to}
+                        links={aboutLinks}
+                        isOpen={showAboutDropdown}
+                        onEnter={onAboutDropdownToggle}
+                        onLeave={onAboutDropdownToggle}
+                    />
+                );
+            }
+
+            return (
+                <Link key={link.label} className="link-text" to={link.to}>
+                    {link.label}
+                </Link>
+            );
+        })}
+
+        <Link
+            role="button"
+            className="link-text button-highlight"
+            to="/bookTickets"
+        >
+            AVCON 2026 SCHOOL REGISTRATION
+        </Link>
+    </div>
+);
+
+/**
+ * Header Component
+ * Main navigation component with responsive design
+ */
 export const Header = () => {
     const [showEventDropdown, setShowEventDropdown] = useState(false);
     const [showAboutDropdown, setShowAboutDropdown] = useState(false);
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isMobile, setIsMobile] = useState(() => window.innerWidth < RESPONSIVE_BREAKPOINTS.tablet);
     const [showMobileMenu, setShowMobileMenu] = useState(false);
 
     const handleEventDropdownToggle = () => {
-        setShowEventDropdown(!showEventDropdown);
+        setShowEventDropdown((prev) => !prev);
     };
 
     const handleAboutDropdownToggle = () => {
-        setShowAboutDropdown(!showAboutDropdown);
+        setShowAboutDropdown((prev) => !prev);
     };
 
     const handleMobileToggle = () => {
@@ -25,10 +174,10 @@ export const Header = () => {
     };
 
     useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth < 768);
+        const handleResize = debounce(() => {
+            setIsMobile(window.innerWidth < RESPONSIVE_BREAKPOINTS.tablet);
             closeMobileMenu();
-        };
+        }, 150);
 
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
@@ -36,13 +185,13 @@ export const Header = () => {
 
     return (
         <header className="header-container">
-                <a href="/">
-                    <img
-                        src="./AVConLogoWhiteNoBG.png"
-                        alt="AVCon logo"
-                        className="logo"
-                    />
-                </a>
+            <Link to="/">
+                <img
+                    src={IMAGES.logo}
+                    alt="AVCon logo"
+                    className="logo"
+                />
+            </Link>
 
             <div className="header-right">
                 {isMobile ? (
@@ -50,183 +199,15 @@ export const Header = () => {
                         <span className="menu-icon">
                             {showMobileMenu ? "✕" : "☰"}
                         </span>
-
-                        {showMobileMenu && (
-                            <div className="mobile-menu">
-                                <ul>
-                                    <li className="mobile-menu-section">
-                                        <a href="./" onClick={closeMobileMenu}>
-                                            HOME
-                                        </a>
-                                        <a href="./Event" onClick={closeMobileMenu}>
-                                            EVENT INFO
-                                        </a>
-                                        <ul className="dropdown-menu">
-                                            <li>
-                                                <a href="./EventSchedule" onClick={closeMobileMenu}>
-                                                    EVENT SCHEDULE
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="./AvConNetwork" onClick={closeMobileMenu}>
-                                                    THE AVCON NETWORK
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="./SpeakersPresenters" onClick={closeMobileMenu}>
-                                                    SPEAKERS & PRESENTERS
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="./PhotoGallery" onClick={closeMobileMenu}>
-                                                    AVCON PHOTO GALLERY
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    {/* <a href="./DFCon" onClick={closeMobileMenu}>
-                                            DFCON
-                                    </a> */}
-
-                                    <li className="mobile-menu-section">
-                                        <a href="./About" onClick={closeMobileMenu}>
-                                            ABOUT AVCON
-                                        </a>
-                                        <ul className="dropdown-menu">
-                                            <li>
-                                                <a href="./News" onClick={closeMobileMenu}>
-                                                    NEWS & UPDATES
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="./AvConEzine" onClick={closeMobileMenu}>
-                                                    AVCON EZINE
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="./SponsorsPartners" onClick={closeMobileMenu}>
-                                                    SPONSORS & PARTNERS
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="./AviationPathwayPortal" onClick={closeMobileMenu}>
-                                                    AVIATION PATHWAY PORTAL
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li className="mobile-menu-section">
-                                        <a href="./Contact" onClick={closeMobileMenu}>
-                                            CONTACT US
-                                        </a>
-                                    </li>
-                                    <li className="mobile-menu-section">
-                                        <a href="./ExhibitorRegistration" onClick={closeMobileMenu}>
-                                            EXHIBITOR REGISTRATION
-                                        </a>
-                                    </li>
-                                    <li className="mobile-menu-section">
-                                        <a href="./BookTickets" onClick={closeMobileMenu}>
-                                            AVCON 2026 SCHOOL REGISTRATION
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        )}
+                        <MobileMenu isOpen={showMobileMenu} onClose={closeMobileMenu} />
                     </div>
                 ) : (
-                    <div className="desktop-menu">
-                        <a className="uppercase link-text" href="./">
-                            HOME
-                        </a>
-                        <div
-                            className="desktop-dropdown"
-                            onMouseEnter={handleEventDropdownToggle}
-                            onMouseLeave={handleEventDropdownToggle}
-                        >
-                            <a
-                                className="uppercase link-text"
-                                href="./Event"
-                                aria-haspopup="true"
-                                aria-expanded={showEventDropdown}
-                            >
-                                EVENT INFO
-                            </a>
-                            <img src={Dropdown} alt="Dropdown" className="dropdown-icon" />
-                            {showEventDropdown && (
-                                <div className="dropdown-content">
-                                    <a className="uppercase link-text" href="./EventSchedule">
-                                        EVENT SCHEDULE
-                                    </a>
-                                    <br /><br />
-                                    <a className="uppercase link-text" href="./AvConNetwork">
-                                        THE AVCON NETWORK
-                                    </a>
-                                    <br /><br />
-                                    <a className="uppercase link-text" href="./SpeakersPresenters">
-                                        SPEAKERS & PRESENTERS
-                                    </a>
-                                    <br /><br />
-                                    <a className="uppercase link-text" href="./PhotoGallery">
-                                        AVCON PHOTO GALLERY
-                                    </a>
-                                </div>
-                            )}
-                        </div>
-                        {/* <a className="uppercase link-text" href="./DFCon">
-                            DFCON
-                        </a> */}
-
-                        <div
-                            className="desktop-dropdown"
-                            onMouseEnter={handleAboutDropdownToggle}
-                            onMouseLeave={handleAboutDropdownToggle}
-                        >
-                            <a
-                                className="uppercase link-text"
-                                href="./About"
-                                aria-haspopup="true"
-                                aria-expanded={showAboutDropdown}
-                            >
-                                ABOUT AVCON
-                            </a>
-                            <img src={Dropdown} alt="Dropdown" className="dropdown-icon" />
-                            {showAboutDropdown && (
-                                <div className="dropdown-content">
-                                    <a className="uppercase link-text" href="./News">
-                                        NEWS & UPDATES
-                                    </a>
-                                    <br /><br />
-                                    <a className="uppercase link-text" href="./AvConEzine">
-                                        AVCON EZINE
-                                    </a>
-                                    <br /><br />
-                                    <a className="uppercase link-text" href="./SponsorsPartners">
-                                        SPONSORS & PARTNERS
-                                    </a>
-                                    <br /><br />
-                                    <a className="uppercase link-text" href="./AviationPathwayPortal">
-                                        AVIATION PATHWAY PORTAL
-                                    </a>
-                                </div>
-                            )}
-                        </div>
-
-                        <a className="link-text" href="./Contact">
-                            CONTACT US
-                        </a>
-                        <a className="link-text" href="./ExhibitorRegistration">
-                            EXHIBITOR REGISTRATION
-                        </a>
-                        <a
-                            role="button"
-                            className="link-text button-highlight"
-                            href="./BookTickets"
-                        >
-                            AVCON 2026 SCHOOL REGISTRATION
-                        </a>
-                    </div>
+                    <DesktopMenu
+                        showEventDropdown={showEventDropdown}
+                        onEventDropdownToggle={handleEventDropdownToggle}
+                        showAboutDropdown={showAboutDropdown}
+                        onAboutDropdownToggle={handleAboutDropdownToggle}
+                    />
                 )}
             </div>
         </header>

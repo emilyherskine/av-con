@@ -21,7 +21,7 @@ export default function Speaker({ SpeakerImage, SpeakerName, SpeakerBio }) {
       }}>
         <img
           src={SpeakerImage}
-          alt="Speaker Image"
+          alt=""
           style={{
             width: '100%',
             height: '100%',

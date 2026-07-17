@@ -7,6 +7,39 @@ import BackgroundImage from "./BookTicketsImages/SHAN5640.jfif";
 import Flight from "./BookTicketsImages/SHAN6371.jfif";
 import "./register.css";
 
+const introParagraphs = [
+    "AvCon 2026 will once again bring together thousands of students, educators, industry leaders and government representatives at Casement Aerodrome, Baldonnel, Co. Dublin.",
+    "Students will explore the future of aviation, aerospace, engineering, defence, drones, space, sustainability and future mobility through interactive experiences, live demonstrations and conversations with professionals.",
+    "Pre-register your school today to receive priority updates, teacher information packs and event announcements.",
+];
+
+const whyAttendItems = [
+    "Meet employers, educators and professionals.",
+    "Discover apprenticeships, college routes and future careers.",
+    "Experience interactive exhibits and live demonstrations.",
+    "Explore emerging technologies shaping future industries.",
+    "Build confidence by connecting directly with industry experts.",
+];
+
+const whatMakesAvConParagraphs = [
+    "AvCon isn't just another careers event. Hosted in partnership with the Irish Air Corps at Casement Aerodrome, students experience an immersive environment where education meets industry.",
+    "From aircraft and engineering to drones, sustainability, aerospace, defence and space technology, students gain real insight into industries creating tomorrow's opportunities.",
+    "Thanks to the continued support of our partners and the SkyBound Fund, attendance remains free for schools and students.",
+];
+
+const registrationPoints = [
+    "Priority event updates",
+    "Teacher information packs",
+    "Travel information",
+    "Programme announcements",
+    "Registration notifications",
+];
+
+const corporateParagraphs = [
+    "While AvCon is not open to the general public, limited Corporate Access Passes are available for business leaders, partners and sponsors.",
+    "These passes provide event access, networking opportunities and support the SkyBound Fund, helping keep AvCon free for schools and students.",
+];
+
 export default function Register() {
     return (
         <main className="main-container">
@@ -29,28 +62,9 @@ export default function Register() {
                         <Grid item xs={12} md={6}>
                             <div className="text-container">
                                 <h2>Welcome Schools & Colleges</h2>
-
-                                <p>
-                                    AvCon 2026 will once again bring together
-                                    thousands of students, educators, industry
-                                    leaders and government representatives at
-                                    Casement Aerodrome, Baldonnel, Co. Dublin.
-                                </p>
-
-                                <p>
-                                    Students will explore the future of aviation,
-                                    aerospace, engineering, defence, drones,
-                                    space, sustainability and future mobility
-                                    through interactive experiences, live
-                                    demonstrations and conversations with
-                                    professionals.
-                                </p>
-
-                                <p>
-                                    Pre-register your school today to receive
-                                    priority updates, teacher information packs
-                                    and event announcements.
-                                </p>
+                                {introParagraphs.map((paragraph) => (
+                                    <p key={paragraph}>{paragraph}</p>
+                                ))}
 
                                 <a
                                     href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUNUUyVEVDSUtXWkJHV0RBOVlNSko4MFlTVC4u&route=shorturl"
@@ -90,23 +104,9 @@ export default function Register() {
                         </p>
 
                         <ul>
-                            <li>Meet employers, educators and professionals.</li>
-                            <li>
-                                Discover apprenticeships, college routes and
-                                future careers.
-                            </li>
-                            <li>
-                                Experience interactive exhibits and live
-                                demonstrations.
-                            </li>
-                            <li>
-                                Explore emerging technologies shaping future
-                                industries.
-                            </li>
-                            <li>
-                                Build confidence by connecting directly with
-                                industry experts.
-                            </li>
+                            {whyAttendItems.map((item) => (
+                                <li key={item}>{item}</li>
+                            ))}
                         </ul>
 
                     </section>
@@ -134,27 +134,9 @@ export default function Register() {
                             <h2>
                                 What Makes AvCon Different?
                             </h2>
-
-                            <p>
-                                AvCon isn't just another careers event.
-                                Hosted in partnership with the Irish Air Corps
-                                at Casement Aerodrome, students experience an
-                                immersive environment where education meets
-                                industry.
-                            </p>
-
-                            <p>
-                                From aircraft and engineering to drones,
-                                sustainability, aerospace, defence and space
-                                technology, students gain real insight into
-                                industries creating tomorrow's opportunities.
-                            </p>
-
-                            <p>
-                                Thanks to the continued support of our partners
-                                and the SkyBound Fund, attendance remains free
-                                for schools and students.
-                            </p>
+                            {whatMakesAvConParagraphs.map((paragraph) => (
+                                <p key={paragraph}>{paragraph}</p>
+                            ))}
 
                         </Grid>
 
@@ -177,11 +159,9 @@ export default function Register() {
 
 
                         <ul>
-                            <li>Priority event updates</li>
-                            <li>Teacher information packs</li>
-                            <li>Travel information</li>
-                            <li>Programme announcements</li>
-                            <li>Registration notifications</li>
+                            {registrationPoints.map((point) => (
+                                <li key={point}>{point}</li>
+                            ))}
                         </ul>
 
 
@@ -234,18 +214,9 @@ export default function Register() {
                             Corporate & Industry Visitors
                         </h2>
 
-                        <p>
-                            While AvCon is not open to the general public,
-                            limited Corporate Access Passes are available for
-                            business leaders, partners and sponsors.
-                        </p>
-
-
-                        <p>
-                            These passes provide event access, networking
-                            opportunities and support the SkyBound Fund,
-                            helping keep AvCon free for schools and students.
-                        </p>
+                        {corporateParagraphs.map((paragraph) => (
+                            <p key={paragraph}>{paragraph}</p>
+                        ))}
 
 
                         <strong>

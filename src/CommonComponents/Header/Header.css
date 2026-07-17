@@ -3,20 +3,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: nowrap;
     background-color: var(--background-dark);
     padding: 1rem 2rem;
     width: 100%;
 }
 
-/* Logo */
 .logo {
     width: 100%;
     max-width: 200px;
     height: auto;
 }
 
-/* Right side of header (nav area) */
 .header-right {
     display: flex;
     align-items: center;
@@ -24,20 +21,19 @@
     flex: 1;
 }
 
-/* Desktop Menu */
 .desktop-menu {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
-/* Link Styling */
 .link-text {
     text-transform: uppercase;
     text-align: center;
+    text-decoration: none;
 }
 
-/* Highlighted Button Link */
 .button-highlight {
     padding: 0.75rem 1rem;
     border: 1px solid var(--background-light);
@@ -52,7 +48,6 @@
     color: var(--background-dark);
 }
 
-/* Dropdowns */
 .desktop-dropdown {
     position: relative;
     display: flex;
@@ -68,10 +63,13 @@
     padding: 1rem;
     border: 1px solid white;
     z-index: 100;
-    min-width: 200px;
+    min-width: 220px;
 }
 
-/* Mobile Specific */
+.dropdown-link-row {
+    margin-bottom: 0.75rem;
+}
+
 .mobile-menu-toggle {
     display: none;
 }
@@ -81,7 +79,6 @@
     cursor: pointer;
 }
 
-/* Mobile Menu */
 .mobile-menu {
     display: none;
     position: fixed;
@@ -91,7 +88,7 @@
     bottom: 0;
     background-color: var(--background-dark-98);
     z-index: 1000;
-    overflow-y: hidden;
+    overflow-y: auto;
     padding: 5%;
 }
 
@@ -104,7 +101,6 @@
     margin-bottom: 1.5rem;
 }
 
-/* Responsive: Mobile Only */
 @media (max-width: 425px) {
     .desktop-menu {
         display: none;
@@ -122,9 +118,7 @@
     }
 
     .header-container {
-        flex-direction: row;
         align-items: flex-start;
-
     }
 
     .header-right {

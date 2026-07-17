@@ -1,59 +1,23 @@
 import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { RootLayout } from "./layouts";
+import { appRoutes } from "./config/routes";
 import "./App.module.css";
 import "./index.css";
-import RootLayout from "./RootLayout";
-import About from "./About/about";
-import Contact from "./Contact/contact";
-import Home from "./Home/home";
-import Event from "./Event/event";
-import BookTickets from "./BookTickets/register";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import EventSchedule from "./EventSchedule/eventSchedule";
-import News from "./News/newsUpdates";
-import SpeakersPresenters from "./SpeakersPresenters/speakersPresenters";
-import SponsorsPartners from "./SponsorsPartners/sponsorsPartners";
-import ExhibitorRegistration from "./ExhibitorRegistration/exhibitor";
-import AviationPathwayPortal from "./AvconPathwayPortal/pathwayPortal";
-import AvConNetwork from "./AvConNetwork/avConNetwork";
-import AvConEzine from "./AvConEzine/AvConEzine";
-import PhotoGallery from "./PhotoGallery/photoGallery";
-import DFCon from "./DFCon/dfCon";
 
+/**
+ * Main App Component
+ * Sets up routing and layout structure for the entire application
+ */
 export default function App() {
     return (
         <BrowserRouter>
             <RootLayout>
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/event" element={<Event />} />
-                    {/* <Route path="/dfCon" element={<DFCon />} /> */}
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/bookTickets" element={<BookTickets />} />
-                    <Route path="/eventSchedule" element={<EventSchedule />} />
-                    <Route path="/photoGallery" element={<PhotoGallery />} />
-                    <Route path="/avConNetwork" element={<AvConNetwork />} />
-                    <Route path="/news" element={<News />} />
-                    <Route
-                        path="/speakersPresenters"
-                        element={<SpeakersPresenters />}
-                    />
-                    <Route
-                        path="/sponsorsPartners"
-                        element={<SponsorsPartners />}
-                    />
-                    <Route
-                        path="/exhibitorRegistration"
-                        element={<ExhibitorRegistration />}
-                    />
-                    <Route
-                        path="/aviationPathwayPortal"
-                        element={<AviationPathwayPortal />}
-                    />
-                     <Route
-                        path="/avconEzine"
-                        element={<AvConEzine />}
-                    />
+                    {appRoutes.map((route) => (
+                        <Route key={route.path} path={route.path} element={route.element} />
+                    ))}
+                    <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
             </RootLayout>
         </BrowserRouter>
