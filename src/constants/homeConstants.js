@@ -35,5 +35,5 @@ export const HOME_CONFIG = {
     heroSubtitle: "Ireland's aviation and aerospace ecosystem bringing together industry, education and government to create opportunities, inspire careers and build the workforce of the future.",
     heroMobileTitle: "AvCon 2026",
     heroMobileSubtitle: "Connecting students, industry and the future of aviation.",
-    buttonText: "Schools Pre-Register 2026",
+    buttonText: "Schools Register 2026",
 };

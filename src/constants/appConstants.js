@@ -19,7 +19,7 @@ export const EXTERNAL_LINKS = {
     generalEnquiriesForm: "https://forms.cloud.microsoft/r/hhD9LkzA3rE",
     studentConventionForm: "https://forms.cloud.microsoft/r/EinwjqpRz7",
     liveStreamForm: "https://forms.cloud.microsoft/r/ygzndwRAYy",
-    exhibitorRegistrationForm: "https://forms.cloud.microsoft/r/tE5zN8mK2pQ",
+    exhibitorRegistrationForm: "https://forms.cloud.microsoft/r/UJFTLHDDve",
 };
 
 export const IMAGES = {

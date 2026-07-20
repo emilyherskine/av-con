@@ -10,7 +10,7 @@ import "./register.css";
 const introParagraphs = [
     "AvCon 2026 will once again bring together thousands of students, educators, industry leaders and government representatives at Casement Aerodrome, Baldonnel, Co. Dublin.",
     "Students will explore the future of aviation, aerospace, engineering, defence, drones, space, sustainability and future mobility through interactive experiences, live demonstrations and conversations with professionals.",
-    "Pre-register your school today to receive priority updates, teacher information packs and event announcements.",
+    "Register your school today to receive priority updates, teacher information packs and event announcements.",
 ];
 
 const whyAttendItems = [
