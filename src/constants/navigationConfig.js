@@ -22,3 +22,12 @@ export const primaryLinks = [
     { label: "CONTACT US", to: "/contact" },
     { label: "EXHIBITOR REGISTRATION", to: "/exhibitorRegistration" },
 ];
+
+export const mobileMenuSections = [
+    { label: "HOME", to: "/" },
+    { label: "EVENT INFO", to: "/event", links: eventLinks },
+    { label: "ABOUT AVCON", to: "/about", links: aboutLinks },
+    { label: "CONTACT US", to: "/contact" },
+    { label: "EXHIBITOR REGISTRATION", to: "/exhibitorRegistration" },
+    { label: "AVCON 2026 SCHOOL REGISTRATION", to: "/bookTickets" },
+];

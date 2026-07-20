@@ -1,5 +1,5 @@
 // Central export for all constants
-export { eventLinks, aboutLinks, primaryLinks } from "./navigationConfig";
+export { eventLinks, aboutLinks, primaryLinks, mobileMenuSections } from "./navigationConfig";
 export { 
     APP_CONFIG, 
     CONTACT_EMAILS, 
