@@ -1,31 +1,87 @@
 import React from "react";
 import HeroSection from "../CommonComponents/HeroSection/HeroSection";
 import PhotoGalleryEmbed from "./PhotoGalleryEmbed/galleryEmbed";
-
-const descriptionParagraphs = [
-    "Step inside the energy and excitement of AvCon 2025 - captured through the lenses of Shannon Irvine Photography & Team and the talented students from BCFE's Content Creation Course.",
-    "From aircraft displays and inspiring talks to unforgettable student moments, these images showcase the passion and innovation that make AvCon so special.",
-];
+import { Link } from "react-router-dom";
+import "./photoGallery.css";
 
 export default function PhotoGallery() {
     return (
-        <main className="bg-gray-50 min-h-screen">
+        <main className="photo-gallery-page">
+
             <HeroSection
                 defaultTitle="AvCon The Photo Gallery"
-                defaultSubtitle="Look at all the photos from AvCon past"
-                smallScreenTitle="AvCon The Photo Gallery"
-                smallScreenSubtitle="AvCon presenting an event for all things aviation"
+                defaultSubtitle="Experience the moments, people and innovation that bring AvCon to life."
+                smallScreenTitle="AvCon Photo Gallery"
+                smallScreenSubtitle="Explore highlights from AvCon events."
             />
 
-            <section className="max-w-4xl mx-auto px-4 py-10 text-center">
-                {descriptionParagraphs.map((paragraph) => (
-                    <p key={paragraph} className="text-lg text-gray-700 leading-relaxed">
-                        {paragraph}
-                    </p>
-                ))}
-                <br />
+
+            {/* Gallery Introduction */}
+            <section className="gallery-intro">
+
+                <h2>
+                    Capturing The AvCon Experience
+                </h2>
+
+                <p>
+                    Step inside the energy and excitement of AvCon through photographs
+                    captured by Shannon Irvine Photography & Team and talented students
+                    from BCFE's Content Creation Course.
+                </p>
+
+                <p>
+                    From aircraft displays and inspiring talks to unforgettable student
+                    experiences, these images showcase the passion, innovation and
+                    connections that make AvCon special.
+                </p>
+
             </section>
-            <PhotoGalleryEmbed />
+
+
+            {/* Gallery Embed */}
+            <section className="gallery-container">
+
+                <PhotoGalleryEmbed />
+
+            </section>
+
+
+            {/* Final CTA */}
+            <section className="gallery-cta">
+
+                <h2>
+                    Be Part of AvCon 2026
+                </h2>
+
+                <p>
+                    Join students, educators, industry professionals and aviation
+                    enthusiasts as we continue connecting industry, inspiring talent
+                    and shaping tomorrow's workforce.
+                </p>
+
+
+                <div className="cta-buttons">
+
+                    <Link 
+                        to="/BookTickets"
+                        className="btn-link"
+                    >
+                        Schools Register
+                    </Link>
+
+
+                    <Link 
+                        to="/ExhibitorRegistration"
+                        className="btn-link"
+                    >
+                        Industry Opportunities
+                    </Link>
+
+                </div>
+
+            </section>
+
+
         </main>
     );
 }

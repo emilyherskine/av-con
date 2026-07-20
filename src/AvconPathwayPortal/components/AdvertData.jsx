@@ -1,93 +1,106 @@
-import React from 'react';
-import ImageInfoCard from './ImageInfoCard';
-import IAA from '../AdvertImages/IAA.png';
-import UCD from '../AdvertImages/UCD.png';
-import '../AvconPathwayPortal.css';
+import React from "react";
+import ImageInfoCard from "./ImageInfoCard";
 
-export default function AdvertData() {
-  return (
-    <section className="advert-container" aria-labelledby="opportunities-heading">
-      <br/><br/>
-      <h2 id="opportunities-heading" className="section-title">Career & Training Opportunities</h2>
+import IAA from "../AdvertImages/IAA.png";
+import UCD from "../AdvertImages/UCD.png";
 
-      <p className="intro-text" id="opportunities-intro">
-        Explore current career openings, training programs, and professional development opportunities
-        within the aviation and aerospace industries. Click on each listing for more details.
-        <br /><br />
-      </p>
+import "../AvconPathwayPortal.css";
 
-      {/* Job Listings Grid */}
-      <div className="card-grid" role="list" aria-describedby="opportunities-intro">
-        <ImageInfoCard
-          imageUrl={IAA}
-          title="Irish Aviation Authority – Careers"
-          description="Responsible for safety, security, and consumer interest regulation in civil aviation in Ireland."
-          webURL="https://www.iaa.ie/careers"
-          linkLabel="View Careers Opportunities"
-          role="listitem"
-        />
-        <ImageInfoCard
-          imageUrl={IAA}
-          title="Irish Aviation Authority – Training Programs"
-          description="Offering world-class training through online and in-class programs led by industry experts."
-          webURL="https://www.iaa.ie/training"
-          linkLabel="Explore Training Options"
-          role="listitem"
-        />
-        <ImageInfoCard
-          imageUrl={UCD}
-          title="SAR & InSAR Remote Sensing Micro-credential"
-          description="5 ECTS | 12 Weeks | Online | Start Date: September 2025. Learn about advanced radar techniques in remote sensing."
-          webURL="https://www.ucd.ie/microcredentials/explorecourses/physics/sar-insar-remote-sensing/"
-          linkLabel="Apply for SAR & InSAR Course"
-          role="listitem"
-        />
-        <ImageInfoCard
-          imageUrl={UCD}
-          title="Engaging with ESA Micro-credential"
-          description="Level 9 | 5 ECTS | 6 Weeks | Online | Starts 23rd October 2025. Explore ESA’s aerospace technologies and missions."
-          webURL="https://www.ucd.ie/microcredentials/explorecourses/physics/engaging-with-esa/"
-          linkLabel="Apply for ESA Course"
-          role="listitem"
-        />
-      </div>
 
-      {/* Application Links */}
-      <div className="application-links" aria-label="Direct application links">
-        <h3>Direct Application Links</h3>
-        <ul>
-          <li>
-            <a
-              href="https://hub.ucd.ie/usis/!W_HU_MENU.P_PUBLISH?p_tag=DEEP&MAJOR=F293&TYPE=OCCA&TERM=202500"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="application-link"
-            >
-              Apply for SAR & InSAR Micro-credential
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://hub.ucd.ie/usis/!W_HU_MENU.P_PUBLISH?p_tag=DEEP&MAJOR=F273&TYPE=OCCA&TERM=202500"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="application-link"
-            >
-              Apply for Engaging with ESA Micro-credential
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://icbe.ie/training-programmes/aviation-skillnet/ "
-              target="_blank"
-              rel="noopener noreferrer"
-              className="application-link"
-            >
-              Apply for Aviation Courses on the ICBE Site, funding available via Aviation Skillnet. T&C's Apply
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-  );
+export default function AdvertData(){
+
+const opportunities=[
+
+{
+image:IAA,
+title:"Irish Aviation Authority – Careers",
+description:
+"Explore career opportunities within Ireland’s aviation regulator.",
+url:"https://www.iaa.ie/careers",
+button:"View Careers"
+},
+
+
+{
+image:IAA,
+title:"Irish Aviation Authority – Training",
+description:
+"Professional aviation training delivered through industry experts.",
+url:"https://www.iaa.ie/training",
+button:"Explore Training"
+},
+
+
+{
+image:UCD,
+title:"SAR & InSAR Remote Sensing Micro-credential",
+description:
+"5 ECTS | 12 Weeks | Online. Learn advanced radar techniques in remote sensing.",
+url:"https://www.ucd.ie/microcredentials/explorecourses/physics/sar-insar-remote-sensing/",
+button:"Apply Now"
+},
+
+
+{
+image:UCD,
+title:"Engaging with ESA Micro-credential",
+description:
+"Level 9 | 5 ECTS | 6 Weeks. Explore ESA technologies and missions.",
+url:"https://www.ucd.ie/microcredentials/explorecourses/physics/engaging-with-esa/",
+button:"Apply Now"
+}
+
+];
+
+
+return(
+
+<section 
+className="advert-container"
+id="opportunities"
+>
+
+
+<h2>
+Current Opportunities
+</h2>
+
+
+<p>
+Explore current aviation, aerospace and space opportunities.
+New pathways will continue to be added throughout the year.
+</p>
+
+
+<div className="card-grid">
+
+{
+opportunities.map((item,index)=>(
+
+<ImageInfoCard
+
+key={index}
+
+imageUrl={item.image}
+
+title={item.title}
+
+description={item.description}
+
+webURL={item.url}
+
+linkLabel={item.button}
+
+/>
+
+))
+}
+
+</div>
+
+
+</section>
+
+)
+
 }

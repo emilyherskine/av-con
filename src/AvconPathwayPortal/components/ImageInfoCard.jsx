@@ -1,23 +1,55 @@
 import React from "react";
-import '../AvconPathwayPortal.css';
 
-export default function ImageInfoCard({ imageUrl, title, description, webURL, linkLabel, role }) {
-  return (
-    <article className="card" role={role || 'region'} aria-label={title}>
-      <img src={imageUrl} alt={`${title} Logo`} className="card-img" />
-      <div className="card-body">
-        <h3 className="card-title">{title}</h3>
-        <p className="card-text">{description}</p>
-        <a
-          href={webURL}
-          className="card-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`${linkLabel} for ${title}`}
-        >
-          {linkLabel}
-        </a>
-      </div>
-    </article>
-  );
+
+export default function ImageInfoCard({
+imageUrl,
+title,
+description,
+webURL,
+linkLabel
+}){
+
+
+return(
+
+<article className="opportunity-card">
+
+
+<img
+src={imageUrl}
+alt={`${title} logo`}
+className="card-img"
+/>
+
+
+<div className="card-content">
+
+
+<h3>
+{title}
+</h3>
+
+
+<p>
+{description}
+</p>
+
+
+<a
+href={webURL}
+target="_blank"
+rel="noopener noreferrer"
+className="app-button"
+>
+{linkLabel}
+</a>
+
+
+</div>
+
+
+</article>
+
+)
+
 }
