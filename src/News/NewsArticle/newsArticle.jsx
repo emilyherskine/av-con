@@ -1,74 +1,192 @@
-import React, { useState } from 'react';
-import { Box, Button, Typography, Collapse, Divider } from '@mui/material';
-import './newsArticle.css';
+import React, {useState} from "react";
 
-const NewsArticle = ({
-  title,
-  summary = [],
-  fullContent = [],
-  tags = '',
-  galleryLink = '',
-  email = '',
-}) => {
-  const [expanded, setExpanded] = useState(false);
-  const toggleExpand = () => setExpanded(!expanded);
+import {
+    Box,
+    Button,
+    Typography,
+    Collapse,
+    Divider
+} from "@mui/material";
 
-  return (
-    <Box className="news-article-container">
-      <Typography variant="h4" className="news-article-title">
-        {title}
-      </Typography>
+import "./newsArticle.css";
 
-      <Divider sx={{ marginBottom: 3 }} />
 
-      {summary.map((para, index) => (
-        <Typography key={index} variant="body1" className="news-article-paragraph">
-          {para}
-        </Typography>
-      ))}
+export default function NewsArticle({
 
-      {galleryLink && (
-        <Typography variant="body1" className="news-article-paragraph">
-          📸 Check out the photo gallery from the launch{' '}
-          <a href={galleryLink} target="_blank" rel="noopener noreferrer">here</a>.
-        </Typography>
-      )}
+    title,
+    summary=[],
+    fullContent=[],
+    tags="",
+    galleryLink="",
+    email=""
 
-      <Collapse in={expanded}>
-        <Divider sx={{ margin: '24px 0' }} />
+}) {
 
-        {fullContent.map((para, index) => (
-          <Typography key={index} variant="body1" className="news-article-paragraph">
-            {para}
-          </Typography>
-        ))}
 
-        {email && (
-          <Typography variant="body1" className="news-article-paragraph">
-            ✉️ Want to get involved? Contact <a href={`mailto:${email}`}>{email}</a> to be part of the movement.
-          </Typography>
-        )}
+const [expanded,setExpanded] = useState(false);
 
-        {tags && (
-          <Typography variant="body1" className="news-article-tags">
-            {tags}
-          </Typography>
-        )}
-      </Collapse>
 
-      <Box className="news-article-button-container">
-        <Button
-          onClick={toggleExpand}
-          variant="contained"
-          color="primary"
-          className="news-article-button"
-          aria-label={expanded ? 'Collapse article' : 'Expand article'}
-        >
-          {expanded ? 'Show Less ▲' : 'Read More ▼'}
-        </Button>
-      </Box>
-    </Box>
-  );
-};
 
-export default NewsArticle;
+return (
+
+<Box className="news-article-container">
+
+
+<Typography 
+    variant="h4"
+    className="news-article-title"
+>
+    {title}
+</Typography>
+
+
+
+<Divider />
+
+
+
+<div className="article-summary">
+
+{
+
+summary.map((para,index)=>(
+
+<Typography
+    key={index}
+    className="news-article-paragraph"
+>
+{para}
+
+</Typography>
+
+))
+
+}
+
+</div>
+
+
+
+
+<Collapse in={expanded}>
+
+
+<Divider sx={{my:3}} />
+
+
+{
+
+fullContent.map((para,index)=>(
+
+<Typography
+
+key={index}
+
+className="news-article-paragraph"
+
+>
+
+{para}
+
+</Typography>
+
+))
+
+}
+
+
+
+{
+
+galleryLink &&
+
+<Typography className="news-article-paragraph">
+
+📸 View the photo gallery{" "}
+
+<a href={galleryLink} target="_blank" rel="noopener noreferrer">
+
+here
+
+</a>
+
+</Typography>
+
+}
+
+
+
+
+{
+
+email &&
+
+<Typography className="news-article-paragraph">
+
+✉️ Want to get involved? Contact{" "}
+
+<a href={`mailto:${email}`}>
+
+{email}
+
+</a>
+
+</Typography>
+
+}
+
+
+
+{
+
+tags &&
+
+<Typography className="news-article-tags">
+
+{tags}
+
+</Typography>
+
+}
+
+
+
+</Collapse>
+
+
+
+
+<Box className="news-article-button-container">
+
+<Button
+
+onClick={()=>setExpanded(!expanded)}
+
+variant="contained"
+
+>
+
+{
+
+expanded
+
+? "Show Less ▲"
+
+: "Read More ▼"
+
+}
+
+
+</Button>
+
+
+</Box>
+
+
+
+</Box>
+
+
+);
+
+}

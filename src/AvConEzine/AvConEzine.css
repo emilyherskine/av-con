@@ -1,68 +1,180 @@
-/* Main container styles */
 .main-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 100vh;
+
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+
 }
 
-/* Ezine section styling */
-.ezine-section {
-  margin-bottom: 40px;
+
+
+.ezine-intro {
+
+    text-align:center;
+    padding:4% 8%;
+    max-width:1000px;
+    margin:auto;
+
 }
 
-.ezine-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-align: center;
+
+
+.ezine-intro h2 {
+
+    font-size:2.5rem;
+    margin-bottom:1.5rem;
+
 }
 
-.ezine-description {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  text-align: center;
-  padding-left: 5%;
-  padding-right: 5%;
+
+
+.ezine-intro p {
+
+    line-height:1.7;
+    font-size:1.1rem;
+
 }
 
-/* Make sure the iframe container is responsive */
+
+
+
+.ezine-grid {
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+    gap:3rem;
+    padding:2% 5% 5%;
+
+}
+
+
+
+
+.ezine-card {
+
+    display:flex;
+    flex-direction:column;
+    background:rgba(255,255,255,0.05);
+    border-radius:15px;
+    padding:2rem;
+    border:1px solid rgba(255,255,255,0.2);
+
+}
+
+
+
+
+.ezine-card h3 {
+
+    font-size:1.6rem;
+    margin-top:.5rem;
+    text-align:center;
+
+}
+
+
+
+
+.ezine-card p {
+
+    line-height:1.6;
+    text-align:center;
+    margin-bottom:1.5rem;
+
+}
+
+
+
+
+.ezine-year {
+
+    display:block;
+    text-align:center;
+    font-size:.9rem;
+    font-weight:bold;
+    color:#00bfff;
+    text-transform:uppercase;
+
+}
+
+
+
+
 .iframe-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+    position:relative;
+    width:100%;
+    overflow:hidden;
+    border-radius:10px;
+
 }
+
+
 
 .ezine-iframe {
-  width: 100%;
-  max-width: 1000px;
-  height: 600px;
-  border: none;
+
+    width:100%;
+    height:550px;
+    border:none;
+
 }
 
-/* Mobile-first design: stack elements vertically */
-@media (max-width: 768px) {
-  .ezine-title {
-    font-size: 1.5rem;
-  }
 
-  .ezine-description {
-    font-size: 1rem;
-  }
 
-  .ezine-iframe {
-    height: 400px;
-  }
+
+.ezine-card:hover {
+
+    transform:translateY(-5px);
+    transition:.3s ease;
+
 }
 
-/* Larger screens: adjust for readability */
-@media (min-width: 1024px) {
-  .ezine-title {
-    font-size: 2.5rem;
-  }
 
-  .ezine-description {
-    font-size: 1.2rem;
-  }
+
+
+@media(max-width:768px){
+
+
+    .ezine-grid {
+
+        grid-template-columns:1fr;
+        padding:5%;
+
+    }
+
+
+    .ezine-card {
+
+        padding:1.2rem;
+
+    }
+
+
+    .ezine-intro h2 {
+
+        font-size:2rem;
+
+    }
+
+
+    .ezine-iframe {
+
+        height:400px;
+
+    }
+
+}
+
+
+
+@media(max-width:480px){
+
+
+    .ezine-iframe {
+
+        height:350px;
+
+    }
+
+
 }
