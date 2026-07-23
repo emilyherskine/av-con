@@ -1,6 +1,7 @@
 // Environment configuration
 // Use this for API endpoints, feature flags, and environment-specific settings
 
+/* istanbul ignore next -- the test runner always supplies NODE_ENV. */
 const ENV = process.env.NODE_ENV || "development";
 const IS_PRODUCTION = ENV === "production";
 

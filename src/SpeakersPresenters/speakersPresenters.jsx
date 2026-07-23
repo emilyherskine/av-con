@@ -7,31 +7,16 @@ import "./speakers.css";
 
 import AlexMerkelCarroll from "./PresenterSpeakerImages2026/AlexMerkelCarroll.png";
 
-export default function SpeakersPresentors() {
-
-    // -------------------------
-    // Presenters
-    // -------------------------
-    const presenters = [
-        // Example:
-        // {
-        //     image: SpeakerImage,
-        //     name: "Jane Smith",
-        //     bio: "Speaker biography..."
-        // }
-    ];
-
-    // -------------------------
-    // Speakers
-    // -------------------------
-    const speakers = [
+const defaultSpeakers = [
 
         {
             image: AlexMerkelCarroll,
             name: "Alex Merkel Carroll",
             bio: "Alex Merkel Carroll is a 16-year-old from Ireland with a passion for aviation and a goal of becoming an airline pilot. Through his TikTok account, @Alex | Aviation, he shares his aviation journey with more than 40,000 followers by creating vlogs, flying videos and aviation content. Alex is currently completing the WINGS course at the National Flight Centre, where he is flying the Cessna 152. Alongside his flight training, he has been involved with a range of organisations across the aviation industry, including Emerald Airlines, AirNav Ireland, Universal Aviation, Airline Flight Academy, Atlantic Flight Training Academy (AFTA), Dublin Airport and Cork Airport. Alongside flying, Alex enjoys creating social media content that gives people an insight into aviation and highlights the many opportunities available within the industry. After finishing school, Alex hopes to join an airline cadet programme while also exploring other routes into aviation and working towards his goal of becoming a commercial pilot."
         }
-    ];
+];
+
+export default function SpeakersPresentors({ presenters = [], speakers = defaultSpeakers }) {
 
     return (
         <main className="speakers-page">
@@ -78,6 +63,7 @@ export default function SpeakersPresentors() {
                 <Box>
                     <Grid container spacing={3}>
 
+                        {/* Presenters will be added when announced. */}
                         {presenters.length > 0 ? (
 
                             presenters.map((presenter, index) => (
@@ -130,6 +116,7 @@ export default function SpeakersPresentors() {
 
                     <Grid container spacing={3}>
 
+                        {/* Speakers are configured above. */}
                         {speakers.length > 0 ? (
 
                             speakers.map((speaker, index) => (
