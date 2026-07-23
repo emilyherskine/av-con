@@ -5,18 +5,33 @@ import HeroSection from "../CommonComponents/HeroSection/HeroSection";
 import Speaker from "./speaker";
 import "./speakers.css";
 
+import AlexMerkelCarroll from "./PresenterSpeakerImages2026/AlexMerkelCarroll.png";
+
 export default function SpeakersPresentors() {
 
-    // Add confirmed 2026 speakers here
+    // -------------------------
+    // Presenters
+    // -------------------------
     const presenters = [
         // Example:
         // {
         //     image: SpeakerImage,
-        //     name: "Speaker Name",
-        //     bio: "Speaker biography"
+        //     name: "Jane Smith",
+        //     bio: "Speaker biography..."
         // }
     ];
 
+    // -------------------------
+    // Speakers
+    // -------------------------
+    const speakers = [
+
+        {
+            image: AlexMerkelCarroll,
+            name: "Alex Merkel Carroll",
+            bio: "Alex Merkel Carroll is a 16-year-old from Ireland with a passion for aviation and a goal of becoming an airline pilot. Through his TikTok account, @Alex | Aviation, he shares his aviation journey with more than 40,000 followers by creating vlogs, flying videos and aviation content. Alex is currently completing the WINGS course at the National Flight Centre, where he is flying the Cessna 152. Alongside his flight training, he has been involved with a range of organisations across the aviation industry, including Emerald Airlines, AirNav Ireland, Universal Aviation, Airline Flight Academy, Atlantic Flight Training Academy (AFTA), Dublin Airport and Cork Airport. Alongside flying, Alex enjoys creating social media content that gives people an insight into aviation and highlights the many opportunities available within the industry. After finishing school, Alex hopes to join an airline cadet programme while also exploring other routes into aviation and working towards his goal of becoming a commercial pilot."
+        }
+    ];
 
     return (
         <main className="speakers-page">
@@ -28,6 +43,7 @@ export default function SpeakersPresentors() {
                 smallScreenSubtitle="Discover the people shaping the future of aviation and aerospace."
             />
 
+            {/* Introduction */}
 
             <section className="speakers-intro">
 
@@ -44,13 +60,14 @@ export default function SpeakersPresentors() {
                 </p>
 
                 <p>
-                    Speaker announcements coming soon.
+                    New speakers and presenters will be announced throughout the year.
                 </p>
 
             </section>
 
-
-            {/* Presenters */}
+            {/* ==========================
+                Presenters
+            ========================== */}
 
             <section className="speakers-section">
 
@@ -58,13 +75,12 @@ export default function SpeakersPresentors() {
                     AvCon Presenters
                 </h2>
 
-
                 <Box>
                     <Grid container spacing={3}>
 
                         {presenters.length > 0 ? (
 
-                            presenters.map((speaker, index) => (
+                            presenters.map((presenter, index) => (
 
                                 <Grid
                                     item
@@ -74,9 +90,9 @@ export default function SpeakersPresentors() {
                                 >
 
                                     <Speaker
-                                        SpeakerImage={speaker.image}
-                                        SpeakerName={speaker.name}
-                                        SpeakerBio={speaker.bio}
+                                        SpeakerImage={presenter.image}
+                                        SpeakerName={presenter.name}
+                                        SpeakerBio={presenter.bio}
                                     />
 
                                 </Grid>
@@ -100,8 +116,9 @@ export default function SpeakersPresentors() {
 
             </section>
 
-
-            {/* Speakers */}
+            {/* ==========================
+                Speakers
+            ========================== */}
 
             <section className="speakers-section">
 
@@ -109,14 +126,13 @@ export default function SpeakersPresentors() {
                     AvCon Speakers
                 </h2>
 
-
                 <Box>
 
                     <Grid container spacing={3}>
 
-                        {presenters.length > 0 ? (
+                        {speakers.length > 0 ? (
 
-                            presenters.map((speaker, index) => (
+                            speakers.map((speaker, index) => (
 
                                 <Grid
                                     item
@@ -153,7 +169,6 @@ export default function SpeakersPresentors() {
                 </Box>
 
             </section>
-
 
         </main>
     );
