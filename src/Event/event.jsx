@@ -1,6 +1,6 @@
-import EventIntroduction from "./EventIntroduction";
-import EventExperience from "./EventExperience";
-import EventClosing from "./EventClosing";
+import EventIntroduction from "./EventIntroduction/EventIntroduction";
+import EventExperience from "./EventExperience/EventExperience";
+import EventClosing from "./EventClosing/EventClosing";
 import HeroSection from "../CommonComponents/HeroSection/HeroSection";
 import "./event.css";
 

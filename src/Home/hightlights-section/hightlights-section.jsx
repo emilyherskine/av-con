@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../CommonComponents/Card/Card";
+import Card from "../../CommonComponents/Card/Card";
 
 import StudentsImg from "./HomePageImages/_HAN6084.jpeg";
 import CuttingEdgeImg from "./HomePageImages/_HAN6110.JPG";

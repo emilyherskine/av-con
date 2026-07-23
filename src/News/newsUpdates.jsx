@@ -2,8 +2,8 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
-import FacebookNews from "./facebookNews.jsx";
-import NewsContent from "./newsContent.jsx";
+import FacebookNews from "./facebookNews/facebookNews.jsx";
+import NewsContent from "./newsContent/newsContent.jsx";
 
 import "./newsUpdates.css";
 
