@@ -1,6 +1,6 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import "./event.css";
+import "../event.css";
 
 export default function EventClosing() {
   return (

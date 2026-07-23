@@ -1,7 +1,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import "./event.css";
+import "../event.css";
 
 export default function EventIntroduction() {
   return (

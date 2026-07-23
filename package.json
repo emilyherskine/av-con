@@ -31,7 +31,7 @@
     "react-bootstrap": "^2.10.4",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.47.0",
-    "react-scripts": "^0.0.0",
+    "react-scripts": "^5.0.1",
     "react-social-media-embed": "^2.3.6",
     "serve": "^14.2.1",
     "survey-core": "^1.9.115",
