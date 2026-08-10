@@ -4,10 +4,25 @@ import Grid from "@mui/material/Grid";
 import HeroSection from "../CommonComponents/HeroSection/HeroSection";
 import Speaker from "./speaker";
 import "./speakers.css";
+import GOC from "./PastSpeakersArchive/PresenterSpeakerImages2024/GOC.jpg";
+import GOCHighlight from "./KeyNoteSpeaker/GOCHighlight";
 
+import AllyGarvey from "./PresenterSpeakerImages2026/Ally.JPG";
 import AlexMerkelCarroll from "./PresenterSpeakerImages2026/AlexMerkelCarroll.png";
 import MaryHennigan from "./PresenterSpeakerImages2026/MaryHennigan.jpg";
 import MatthewGee from "./PresenterSpeakerImages2026/MatthewGee.jpg";
+import FahadIbneMasood from "./PresenterSpeakerImages2026/FahadIbneMasood.JPG";
+
+
+const defaultPresenters = [
+
+        {
+            image: AllyGarvey,
+            name: "Ally Garvey",
+            bio: "Working within the fashion and media industry for over 15 years, Ally Garvey thrives on delivering the latest showbiz news and the Hottest topics to a wide audience. Ally has worked on live tv for over a number of years now on a range of different broadcasting stations where quick thinking and wide range of conversational skills are a must. Ally's favourite environment to work in is a live audience, she loves to engage with co. presenters and the audience. Check out Ally's instagram page to get a glimpse of the many different events both on screen and off screen she has worked on."
+        },
+
+];
 
 const defaultSpeakers = [
 
@@ -25,11 +40,16 @@ const defaultSpeakers = [
             image: MatthewGee,
             name: "Matthew Gee",
             bio: "Matthew Gee, Head of Flight Operations, Six West | Principal, MG Aviation Consultancy. With over 30 years of comprehensive experience across the aviation landscape, Matthew is a professional, specialising in flight operations, regulatory compliance, and consultancy. He currently serves as the Head of Flight Operations at Six West, where he oversees complex operations for large transport aircraft on behalf of global lessors and airlines. Parallel to this role,, Matthew founded MG Aviation Consultancy, which provides auditing and expert witness services to the industry. His career spans the full industry lifecycle: from general aviation, flight training, and ground handling, to working in operations control at Aer Lingus, Aer Arann and First Choice Airways. Matthew then moved, into the aircraft leasing sector, to head up the ferry flight services department at a large technical service provider.  A licensed pilot with experience in turbine-powered aircraft, Matthew is also a qualified Senior and Lead Auditor, as well as an IS-BAO and IS-BAH auditor for IBAC. His industry experience is frequently sought in legal proceedings, globally. "
+        },
+        {
+            image: FahadIbneMasood,
+            name: "Fahad ibne Masood",
+            bio: "Fahad ibne Masood is a Faculty member in Aviation Technology and the Part 147 Exams Manager at Technological University Dublin (TU Dublin). He has over 27 years of international aerospace experience spanning flight operations, safety risk management, and emerging technologies. As a rated flight instructor and pilot with extensive flight operations experience, Fahad flew jet aircraft before specializing in aviation safety risk management, human factors, and accident investigation. In recent years, his focus has shifted to Advanced Air Mobility (AAM), AI, Quantum Computing and airspace modernization. He leads strategic advisory projects and collaborates with regulators and international bodies—including ICAO, the RAeS, and ISASI—on eVTOL integration and next-generation airspace risk management. Fahad holds an MBA, an M.Phil, and is a Member of the Royal Aeronautical Society (MRAeS)."
         }
 
 ];
 
-export default function SpeakersPresentors({ presenters = [], speakers = defaultSpeakers }) {
+export default function SpeakersPresentors({ presenters = defaultPresenters, speakers = defaultSpeakers }) {
 
     return (
         <main className="speakers-page">
@@ -124,6 +144,20 @@ export default function SpeakersPresentors({ presenters = [], speakers = default
                 <h2>
                     AvCon Speakers
                 </h2>
+
+                <GOCHighlight
+                    SpeakerImage={GOC}
+                    SpeakerName="GOC, Brigadier General Rory O'Connor"
+                    SpeakerBio={`"A Welcome Note to AvCon - the Future of Aviation from the Air Corps
+                        As we look ahead to the upcoming Aviation Convention hosted by the Irish Air Corps this November, we envision a groundbreaking event that celebrates the dynamic world of aviation. This convention is a milestone for the Irish Air Corps, students, schools, and the wider community.
+                        The Irish Air Corps, with its tradition of excellence, courage, and innovation, is excited to welcome everyone to our base. This event is more than a gathering; it's an inspiration for the next generation of aviators, engineers, and innovators.
+                        We have a stellar lineup of guest speakers, including aero engineers, pilots, technicians, and Air Traffic Controllers from the Air Corps. Their insights and experiences highlight the importance of collaboration and mentorship in aviation.
+                        For students and schools, this convention offers an unparalleled opportunity to learn from the best, engage with cutting-edge technology, and envision a future where their dreams take flight. Hands-on workshops, interactive exhibits, and panel discussions are designed to ignite curiosity and foster a passion for aviation.
+                        Participants will explore various aspects of aviation, from piloting and navigation to aerospace engineering and air traffic control, gaining firsthand experience and inspiration. This event also underscores the importance of STEM education in achieving their goals.
+                        We extend our heartfelt gratitude to the organisers, sponsors, guest speakers, and participants. Your support makes this event possible. To the students, seize this opportunity to ask questions, explore, and dream big.
+                        The sky is not the limit; it is just the beginning. Let this convention be the launchpad for your future in aviation.
+                        Thank you, and enjoy the convention!" - GOC, Brigadier General Rory O'Connor`}
+                />
 
                 <Box>
 
