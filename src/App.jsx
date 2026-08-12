@@ -9,8 +9,11 @@ import "./index.css";
 const theme = createTheme({
     palette: {
         text: {
-            primary: "var(--avcon-text)",
-            secondary: "var(--avcon-text-muted)",
+            // MUI applies color transformations (for example, alpha()) to palette
+            // values. Those utilities require a concrete color, not a CSS variable.
+            // Keep these in sync with the CSS custom properties in index.css.
+            primary: "#f4f7f9",
+            secondary: "#c5d0d8",
         },
     },
     typography: {
