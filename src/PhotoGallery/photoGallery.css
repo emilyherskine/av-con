@@ -57,7 +57,7 @@
 
     padding:5%;
 
-    border-top:1px solid rgba(255,255,255,0.2);
+    border-top:1px solid color-mix(in srgb, var(--avcon-white) 20%, transparent);
 
 }
 
@@ -108,9 +108,9 @@
 
     justify-content:center;
 
-    background:#0066cc;
+    background:var(--avcon-accent);
 
-    color:white;
+    color:var(--avcon-white);
 
     padding:.8rem 1.5rem;
 
@@ -127,7 +127,7 @@
 
 .btn-link:hover {
 
-    background:#004c99;
+    background:var(--avcon-accent-light);
 
     transform:translateY(-2px);
 

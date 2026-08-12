@@ -38,7 +38,7 @@
 
     padding:2rem;
     border-radius:12px;
-    border:1px solid rgba(255,255,255,0.2);
+    border:1px solid color-mix(in srgb, var(--avcon-white) 20%, transparent);
     height:100%;
 
 }
@@ -111,7 +111,7 @@
     padding:3rem;
     text-align:center;
     border-radius:15px;
-    background:rgba(0,102,204,0.15);
+    background:color-mix(in srgb, var(--avcon-accent) 15%, transparent);
 
 }
 
@@ -122,8 +122,8 @@
     display:inline-flex;
     margin-top:2rem;
     padding:.8rem 2rem;
-    background:#0066cc;
-    color:white;
+    background:var(--avcon-accent);
+    color:var(--avcon-white);
     border-radius:8px;
     text-decoration:none;
     font-weight:bold;
@@ -134,7 +134,7 @@
 
 .sponsor-button:hover {
 
-    background:#004c99;
+    background:var(--avcon-accent-light);
 
 }
 

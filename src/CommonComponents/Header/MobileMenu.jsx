@@ -7,7 +7,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
 
     return (
-        <div className="mobile-menu">
+        <nav id="mobile-navigation" className="mobile-menu" aria-label="Mobile navigation">
             <ul>
                 {mobileMenuSections.map((section) => (
                     <li key={section.label} className="mobile-menu-section">
@@ -22,7 +22,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
                     </li>
                 ))}
             </ul>
-        </div>
+        </nav>
     );
 };
 

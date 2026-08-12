@@ -5,23 +5,41 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
     overflow-x: hidden;
 
-    /* Color palette */
-    --background-dark: #041326;
-    --background-dark-98: rgba(4, 19, 38, 0.98);
-    --background-dark-90: rgba(4, 19, 38, 0.9);
-    --background-dark-hover: hsl(214, 71%, 16%);
-    --background-light: #ffffff;
-    --text-light: #ffffff;
-    --text-dark: #041326;
-    --light-grey: #b3b9bd;
-    --mid-grey: #98a1a6;
-    --mid-blue: #0c2840;
+    /* AvCon color palette */
+    --avcon-primary: #0b2d4d;
+    --avcon-primary-dark: #061b2d;
+    --avcon-accent: #4c9ac4;
+    --avcon-accent-light: #123d5c;
+    --avcon-text: #f4f7f9;
+    --avcon-text-muted: #c5d0d8;
+    --avcon-border: #28516d;
+    --avcon-surface: #0a243b;
+    --avcon-white: #ffffff;
+    --avcon-focus: #f4b400;
+
+    /* Typography scale */
+    --avcon-font-body: 1rem;
+    --avcon-font-small: 0.875rem;
+    --avcon-font-h4: 1.25rem;
+    --avcon-font-h3: 1.5rem;
+    --avcon-font-h2: clamp(1.75rem, 3vw, 2.5rem);
+    --avcon-font-h1: clamp(2.25rem, 5vw, 3.25rem);
+    --avcon-line-body: 1.7;
+    --avcon-line-heading: 1.2;
+
+    /* Shared visual system */
+    --avcon-radius-small: 0.5rem;
+    --avcon-radius-medium: 0.75rem;
+    --avcon-radius-large: 1rem;
+    --avcon-shadow: 0 0.75rem 2rem color-mix(in srgb, var(--avcon-primary-dark) 25%, transparent);
+    --avcon-transition: 0.2s ease;
 
     /* Typefaces */
     --font-sans: "Inter", sans-serif;
@@ -36,78 +54,7 @@
     --margin-large: 2rem;
 }
 
-/* Font styles */
-.title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 0.4rem;
-    color: var(--text-light);
-    margin-bottom: 0.2rem;
-}
-.sub-title {
-    font-size: 0.8rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-}
-
-h1 {
-    font-size: 2rem;
-    line-height: 1.2;
-}
-
-h2 {
-    font-size: 1.75rem;
-    line-height: 1.3;
-}
-
-h3 {
-    font-size: 1.5rem;
-    line-height: 1.4;
-}
-
-h4 {
-    font-size: 1.25rem;
-    line-height: 1.5;
-}
-
-h5 {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-h6 {
-    font-size: 1rem;
-    line-height: 1.7;
-}
-
-.title {
-    font-size: 3rem;
-}
-
-.sub-title {
-    font-size: 2.1rem;
-}
-
-p,
-.link-text {
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-.underline-text {
-    text-decoration: underline;
-}
-
-.text-large {
-    font-size: 2.1rem;
-}
-
-.text-thin {
-    font-size: 1.2rem;
-    font-weight: lighter;
-    color: var(--light-grey);
-}
-/* Padding Classes */
+/* Layout utilities */
 .pt-1 {
     padding-top: var(--padding-small);
 }
@@ -225,7 +172,7 @@ ul {
 }
 
 .mobile-menu a {
-    color: var(--text-light);
+    color: var(--avcon-text);
     text-decoration: none;
     display: block;
     padding: 0.5rem 0;
@@ -233,21 +180,7 @@ ul {
 
 /* Color Styles */
 .text-link.text-dark:hover {
-    color: var(--text-dark);
-}
-
-a {
-    color: var(--text-light);
-}
-
-a:hover {
-    color: var(--light-grey);
-}
-
-/* Font Styles */
-body {
-    font-family: var(--font-sans);
-    color: var(--text-light);
+    color: var(--avcon-primary-dark);
 }
 
 .text-right {
@@ -266,56 +199,104 @@ p > .text-large {
     font-size: 1.7rem;
 }
 
-.copyright {
-    font-size: 1.4rem;
-    color: var(--mid-grey);
-}
-
 .uppercase {
     text-transform: uppercase;
 }
 
-/* Button Styles */
-.btn-primary {
-    padding: 1.2rem 3.6rem;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 0.2rem;
-    border-radius: 2px;
-    background-color: var(--background-dark-90);
-    max-width: fit-content;
+/* Shared AvCon call-to-action treatment. */
+:is(
+    .btn-primary,
+    .btn-secondary,
+    .btn-tertiary,
+    .btn-link,
+    .app-button,
+    .industry-button,
+    .sponsor-button,
+    .contact-button,
+    .footer-btn,
+    .button-highlight,
+    .submit-button,
+    .goc-toggle-button,
+    .speaker-bio-toggle
+) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--avcon-accent);
+    border-radius: 8px;
+    background: var(--avcon-accent);
+    color: var(--avcon-white) !important;
+    font: inherit;
+    font-weight: 700;
+    line-height: 1.2;
     text-align: center;
-}
-.btn-primary:hover {
-    background-color: var(--background-dark-hover);
-}
-.btn-secondary {
-    padding: 1.2rem 4rem;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
-    border-radius: 2px;
-    background-color: var(--light-grey);
-    width: fit-content;
-    color: var(--text-dark);
-    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+        transform 0.2s ease;
 }
 
-.btn-tertiary {
-    padding: 1.2rem 4rem;
-    font-size: 16px;
-    border: 1px solid var(--mid-grey);
-    border-radius: 2px;
-    background-color: var(--background-dark);
-    width: fit-content;
-    text-align: center;
-}
-.btn-tertiary:hover {
-    background-color: var(--background-dark-hover);
+:is(
+    .btn-primary,
+    .btn-secondary,
+    .btn-tertiary,
+    .btn-link,
+    .app-button,
+    .industry-button,
+    .sponsor-button,
+    .contact-button,
+    .footer-btn,
+    .button-highlight,
+    .submit-button,
+    .goc-toggle-button,
+    .speaker-bio-toggle
+):hover {
+    background: var(--avcon-accent-light);
+    border-color: var(--avcon-accent-light);
+    color: var(--avcon-white) !important;
+    transform: translateY(-2px);
 }
 
-button:hover {
-    cursor: pointer;
+:is(
+    .btn-primary,
+    .btn-secondary,
+    .btn-tertiary,
+    .btn-link,
+    .app-button,
+    .industry-button,
+    .sponsor-button,
+    .contact-button,
+    .footer-btn,
+    .button-highlight,
+    .submit-button,
+    .goc-toggle-button,
+    .speaker-bio-toggle,
+    .registration-button,
+    .gallery-btn,
+    .carousel-button
+):focus-visible {
+    outline: 3px solid var(--avcon-focus);
+    outline-offset: 3px;
+}
+
+:is(
+    .btn-primary,
+    .btn-secondary,
+    .btn-tertiary,
+    .btn-link,
+    .app-button,
+    .industry-button,
+    .sponsor-button,
+    .contact-button,
+    .footer-btn,
+    .button-highlight,
+    .submit-button,
+    .goc-toggle-button,
+    .speaker-bio-toggle
+):active {
+    transform: translateY(0);
 }
 
 /* Custom Form Container */
@@ -381,148 +362,10 @@ button:hover {
     flex-basis: 70%;
 }
 
-.hero-content-position {
-    position: absolute;
-    top: 40%;
-    left: 5%;
-    z-index: 1;
-    max-width: 100%;
-}
-
-.hero-content-container {
-    height: auto;
-    position: absolute;
-    left: 5%;
-    top: 1%;
-}
-
-.site-map {
-    width: 100%;
-    flex-basis: fill;
-    margin-left: 0;
-}
-
-.exhibitor-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.exhibitor-inner-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.exhibitor-inner-container a {
-    align-self: center;
-}
-
-.exhibitor-container h3 {
-    font-size: 1.75rem;
-    font-weight: 500;
-}
-
-.exhibitor-container a {
-    color: var(--text-dark);
-    font-size: 1.25rem;
-    font-weight: 500;
-}
-.AppHeader {
-    background-color: var(--background-dark);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(5px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-/* ------ FORM STYLES ------ */
-.form {
-    padding: 20px;
-}
-
-.form-body {
-    text-align: left;
-    padding: 20px 10px;
-}
-
-.form-body > * {
-    padding: 5px;
-}
-
-.form__label {
-    width: 40%;
-}
-
-.form_input {
-    width: 60%;
-}
-
-.form__label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.form__input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.form__textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize: vertical;
-}
-
-.submit-button {
-    padding: 15px;
-    width: 100%;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.submit-button:hover {
-    background-color: #45a049;
-}
-
-.alert-message {
-    margin-top: 20px;
-}
-
-.registration-form {
-    max-width: 95%;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* ------ END OF FORM STYLES  ------ */
-
 /* ====== CARD STYLES ======= */
 /* Card styling */
 .card-container {
-    background-color: var(--background-dark);
+    background-color: var(--avcon-primary-dark);
     border-radius: 4px;
     margin: var(--margin-small);
     display: flex;
@@ -533,479 +376,13 @@ button:hover {
     transition: transform 0.2s; /* adds a short delay in effect */
 }
 
-.card {
-    flex-basis: 100%; /* Default for smaller screens */
-    flex-grow: 1;
-}
-
 .img-fluid {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-.card-heading {
-    font-size: 1.2rem;
-    line-height: inherit;
-    margin: var(--margin-small) 0 0 0;
-    text-transform: uppercase;
-}
-
-.card-description {
-    font-size: 1.2rem;
-    color: var(--text-light);
-    text-align: left;
-}
-
 /* Event Container */
 .event-container {
     padding: 2% 5%;
-}
-
-.event-title {
-    text-align: center;
-}
-
-.timeline {
-    margin-top: 20px;
-}
-
-.timeline-item {
-    position: relative;
-    padding: 10%;
-    border-left: 2px solid #98a1a6;
-    margin-bottom: 20px;
-}
-
-.timeline-date {
-    position: absolute;
-    left: -50px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #041326;
-    color: #ffffff;
-    padding: 8px;
-    border-radius: 4px;
-}
-
-.timeline-content {
-    margin-left: 20px;
-}
-
-/* Changes H1 depending on screen size */
-.short-text {
-    display: inline-block;
-}
-
-.full-text {
-    display: none;
-}
-
-@media screen and (min-width: 600px) {
-    .btn-primary,
-    .btn-secondary,
-    .btn-tertiary {
-        padding: 1.2rem 4rem;
-        font-size: 18px;
-        text-align: center;
-    }
-    .hero-content-position {
-        top: 20%;
-    }
-    .hero-content-container {
-        width: 70%;
-    }
-    .hero-image-container {
-        max-height: 100vh;
-    }
-    .title {
-        font-size: 3rem;
-        letter-spacing: 0.25rem;
-    }
-    .sub-title {
-        font-size: 1.6rem;
-        margin-bottom: var(--margin-medium);
-    }
-    h4 {
-        font-size: rem;
-    }
-    .avconXtra-position {
-        order: 2;
-        margin-bottom: var(--margin-large);
-    }
-
-/* ========= TABLET ========= */
-@media screen and (max-width: 768px) {
-    .event-container {
-        padding: 2% 3%;
-    }
-
-    .timeline-date {
-        left: 0;
-        top: 0;
-        transform: none;
-        margin-bottom: 10px;
-    }
-
-    .timeline-content {
-        margin-left: 0;
-    }
-    }
-}
-
-/* ========= LARGE TABLET, NOTEBOOKS, SM LAPTOPS ========= */
-@media screen and (min-width: 768px) {
-    :root {
-        --padding-small: 0.5rem;
-        --padding-medium: 1rem;
-        --padding-large: 1.25rem;
-
-        --margin-small: 0.5rem;
-        --margin-medium: 1rem;
-        --margin-large: 1.5rem;
-    }
-    .full-text {
-        display: inline-block;
-    }
-    .short-text {
-        display: none;
-    }
-    .hero-content-position {
-        position: absolute;
-
-        width: 90%;
-    }
-
-    .title {
-        font-size: 2.8rem;
-        letter-spacing: 0.3rem;
-        margin-bottom: var(--margin-small);
-    }
-    .sub-title {
-        font-size: 1.8rem;
-        margin-bottom: var(--margin-small);
-    }
-    .card {
-        gap: 2.5rem;
-        flex-basis: calc(40% - 1rem);
-        flex-grow: 1;
-        /* Two cards per row, with space between */
-    }
-    .btn-primary {
-        font-size: 1.2rem;
-    }
-    .btn-tertiary {
-        padding: var(--padding-medium) var(--padding-large);
-        font-size: 1rem;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 2.25rem;
-    }
-
-    h3 {
-        font-size: 2rem;
-    }
-
-    h4 {
-        font-size: 1.75rem;
-    }
-
-    h5 {
-        font-size: 1.5rem;
-    }
-
-    h6 {
-        font-size: 1rem;
-    }
-
-    p,
-    .link-text {
-        font-size: 0.75rem;
-    }
-
-    .custom-form-container {
-        width: 100%; /* Set width to 50% */
-        margin: 0 auto; /* Center the form */
-        margin-top: 5rem;
-    }
-    .card-container {
-        gap: 3rem;
-    }
-
-    .card-heading {
-        font-size: 1.5rem;
-    }
-
-    .site-map {
-        flex-basis: 65%;
-    }
-    .position {
-        order: 2;
-    }
-
-    .exhibitor-container {
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-    }
-    .exhibitor-inner-container {
-        display: flex;
-        flex-direction: column;
-    }
-    .exhibitor-container h3 {
-        font-size: 2.2rem;
-        font-weight: 600;
-        flex-basis: fill;
-    }
-    .exhibitor-container h4 {
-        font-size: 1.7rem;
-        font-weight: 600;
-    }
-    .exhibitor-container a {
-        /* color: var(--text-dark); */
-        font-size: 1.5rem;
-        font-weight: 600;
-        align-self: start;
-    }
-    .site-map {
-        margin-left: var(--margin-large);
-    }
-}
-
-/* ========= LARGE LAPTOPS  ========= */
-@media screen and (min-width: 992px) {
-    :root {
-        --padding-small: 0.75rem;
-        --padding-medium: 1.25rem;
-        --padding-large: 1.5rem;
-
-        --margin-small: 0.75rem;
-        --margin-medium: 1.25rem;
-        --margin-large: 1.5rem;
-    }
-
-    .card-container {
-        gap: 3rem;
-    }
-    .card {
-        flex-basis: calc(40% - 1rem);
-        flex-grow: 1;
-    }
-    .title {
-        letter-spacing: 0.5rem;
-    }
-    .full-text {
-        font-size: 2.2rem;
-    }
-    .sub-title {
-        font-size: 1.5rem;
-        margin-bottom: var(--margin-small);
-    }
-    .btn-primary {
-        padding: var(--padding-medium) 4rem;
-        font-size: 1.4rem;
-    }
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 2.25rem;
-    }
-
-    h3 {
-        font-size: 2rem;
-    }
-
-    h4 {
-        font-size: 1.75rem;
-    }
-
-    h5 {
-        font-size: 1.5rem;
-    }
-
-    h6 {
-        font-size: 1rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-    .link-text {
-        font-size: 0.8rem;
-    }
-    .underline-text {
-        text-decoration: underline;
-    }
-    .custom-form-container {
-        width: 85%; /* Set width to 50% */
-        margin: 0 auto; /* Center the form */
-        margin-top: 5rem;
-    }
-    .site-map {
-        flex-basis: 65%;
-    }
-    .avconXtra-container .position {
-        order: 1;
-    }
-}
-/* ========= DESKTOPS, 1024px and up ========= */
-@media screen and (min-width: 1024px) {
-    :root {
-        --padding-small: 1rem;
-        --padding-medium: 1.5rem;
-        --padding-large: 2rem;
-
-        --margin-small: 1rem;
-        --margin-medium: 1.5rem;
-        --margin-large: 2rem;
-    }
-
-    .container header .header-nav-area #nav_container,
-    .custom-form-container {
-        width: 95%; /* Set width to 95 of viewport% */
-        margin: 0 auto; /* Center the form */
-        margin-top: 6rem;
-    }
-
-    /* Target the actual injected form */
-    .custom-form-container form {
-        width: 100%; /* Make sure the form inside takes the full width of the container */
-    }
-    .hero-content-position {
-        width: 80%;
-        top: 15%;
-    }
-    .title {
-        font-size: 3.6rem;
-        letter-spacing: 0.4rem;
-    }
-    .sub-title {
-        font-size: 2rem;
-        margin-bottom: var(--margin-large);
-    }
-    .card-container {
-        gap: 2rem;
-    }
-
-    .card {
-        flex-basis: calc(30% - 0.5rem); /* Default for smaller screens */
-        flex-grow: 1;
-    }
-    .card-heading {
-        line-height: 1.7rem;
-    }
-}
-
-/* ========= EXTRA LARGE DEVICES (LARGE DESKTOPS, 1200px and up) ========= */
-@media screen and (min-width: 1200px) {
-    :root {
-        --padding-small: 1.25rem;
-        --padding-medium: 1.75rem;
-        --padding-large: 2.5rem;
-
-        --margin-small: 1.25rem;
-        --margin-medium: 1.75rem;
-        --margin-large: 2.5rem;
-    }
-    .hero-content-container {
-        width: 80%;
-    }
-    .title {
-        font-size: 3.6rem;
-        letter-spacing: 0.4rem;
-    }
-    .sub-title {
-        font-size: 2rem;
-        margin-bottom: var(--margin-small);
-    }
-    .btn-primary {
-        font-size: 1.6em;
-        letter-spacing: 0.4rem;
-    }
-    .btn-tertiary {
-        padding: var(--padding-small) 3rem;
-        font-size: 2rem;
-    }
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 2.25rem;
-    }
-
-    h3 {
-        font-size: 2rem;
-    }
-
-    h4 {
-        font-size: 1.75rem;
-    }
-
-    h5 {
-        font-size: 1.5rem;
-    }
-
-    h6 {
-        font-size: 1rem;
-    }
-
-    p {
-        font-size: 1.375rem;
-    }
-    .link-text {
-        font-size: 1rem;
-    }
-    .underline-text {
-        text-decoration: underline;
-    }
-    .custom-form-container {
-        width: 95%;
-        margin: 0 auto;
-        margin-top: 6rem;
-    }
-
-    .card {
-        flex-basis: calc(30% - 2rem);
-    }
-}
-
-@media screen and (min-width: 1600px) {
-    .link-text {
-        font-size: 1.5rem;
-        font-weight: 400;
-    }
-
-    /* :has = will select the container if it is a long title and not a short title */
-    .hero-content-container:has(.title-long) {
-        max-width: 75%;
-    }
-
-    .hero-content-position {
-        width: 85%;
-        top: 20%;
-    }
-    .title {
-        font-size: 4rem;
-        letter-spacing: 0.4rem;
-    }
-    .sub-title {
-        font-size: 2rem;
-        margin-bottom: var(--margin-large);
-    }
-    .link-text {
-        font-size: 1.2rem;
-    }
-    .btn-primary,
-    .btn-tertiary {
-        padding: 1.8rem 6rem;
-        font-size: 1.8rem;
-    }
 }

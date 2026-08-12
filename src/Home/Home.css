@@ -22,7 +22,7 @@
     height: 100%;
     text-align: center;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid color-mix(in srgb, var(--avcon-white) 30%, transparent);
 }
 
 .banner-wrapper {
@@ -44,7 +44,7 @@
     text-align: center;
     font-weight: bold;
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid color-mix(in srgb, var(--avcon-white) 30%, transparent);
 }
 
 .button-row {
@@ -56,8 +56,8 @@
 }
 
 .btn-link {
-    background: #0066cc;
-    color: white;
+    background: var(--avcon-accent);
+    color: var(--avcon-white);
     padding: 0.75rem 1.4rem;
     border-radius: 8px;
     text-decoration: none;
@@ -65,7 +65,7 @@
 }
 
 .btn-link:hover {
-    background: #004c99;
+    background: var(--avcon-accent-light);
 }
 
 .final-section {

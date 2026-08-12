@@ -1,6 +1,6 @@
 .news-article-container {
 
-    background:#111;
+    background:var(--avcon-primary-dark);
 
     border-radius:16px;
 
@@ -8,7 +8,7 @@
 
     margin-bottom:1.5rem;
 
-    border:1px solid rgba(255,255,255,.15);
+    border:1px solid color-mix(in srgb, var(--avcon-white) 15%, transparent);
 
     transition:.3s ease;
 

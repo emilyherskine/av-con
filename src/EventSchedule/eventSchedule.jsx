@@ -1,26 +1,20 @@
 import React from "react";
-import AVConSchedule from "./EventScheduleImages/AVConEventSchedule2025.png";
-import Schedule5 from "./EventScheduleImages/Schedule5.jpeg";
 import "./eventSchedule.css";
-
+import FloorPlan2026 from "./EventScheduleImages/AvCon 2026 Floorplan Draft.pdf";
 
 export default function EventSchedule() {
-
     return (
-
         <main className="schedule-page">
-
 
             {/* Header */}
             <section className="schedule-header">
-
                 <h1>
-                    AvCon Event Schedule
+                    AvCon 2026 Event Experience
                 </h1>
 
                 <p>
                     Discover the experiences, speakers, demonstrations and
-                    opportunities waiting at AvCon 2026.
+                    opportunities waiting for you at AvCon 2026.
                 </p>
 
                 <p>
@@ -28,21 +22,16 @@ export default function EventSchedule() {
                     brings together students, educators and industry leaders
                     for a day of inspiration, discovery and connection.
                 </p>
-
             </section>
-
 
 
             {/* 2026 Experience */}
             <section className="experience-section">
-
                 <h2>
                     AvCon 2026 Experience
                 </h2>
 
-
                 <div className="experience-grid">
-
 
                     <div className="experience-card">
                         <h3>
@@ -57,7 +46,6 @@ export default function EventSchedule() {
 
 
                     <div className="experience-card">
-
                         <h3>
                             Interactive Experiences
                         </h3>
@@ -66,12 +54,10 @@ export default function EventSchedule() {
                             Explore technology, aircraft displays,
                             demonstrations and hands-on activities.
                         </p>
-
                     </div>
 
 
                     <div className="experience-card">
-
                         <h3>
                             Career Pathways
                         </h3>
@@ -81,64 +67,57 @@ export default function EventSchedule() {
                             career opportunities across aviation, aerospace
                             and STEM.
                         </p>
-
                     </div>
 
+                </div>
+            </section>
+
+
+            {/* 2026 Floor Plan */}
+            <section className="floor-plan-section">
+
+                <h2>
+                    AvCon 2026 Floor Plan
+                </h2>
+
+                <p>
+                    Explore the AvCon 2026 floor plan to see where the
+                    different zones, stages, hubs, displays and visitor
+                    facilities are located throughout the event.
+                </p>
+
+                <div className="floor-plan-container">
+
+                    <iframe
+                        src={FloorPlan2026}
+                        title="AvCon 2026 Floor Plan"
+                        className="floor-plan-viewer"
+                    />
 
                 </div>
 
-            </section>
-
-
-
-
-            {/* 2026 Schedule */}
-            <section className="schedule-section">
-
-                <h2>
-                    AvCon 2026 Schedule Coming Soon
-                </h2>
-
-
-                <p>
-                    We are preparing another exciting programme filled with
-                    inspiring talks, workshops, industry showcases and
-                    experiences designed to connect students with future
-                    opportunities.
+                <p className="floor-plan-note">
+                    Use the viewer controls to zoom in and explore the
+                    different areas of the AvCon 2026 event space.
                 </p>
 
-
-                <img
-                    src={Schedule5}
-                    alt="AvCon Event Schedule 2026"
-                    className="schedule-image"
-                />
-
-
             </section>
-
-
 
 
             {/* Live Stream */}
             <section className="video-section">
 
-
                 <h2>
                     Watch Previous AvCon Live Streams
                 </h2>
 
-
-
                 <div className="video-grid">
-
 
                     <div>
 
                         <h3>
                             AvCon 2025 LIVE STREAM
                         </h3>
-
 
                         <div className="video-container">
 
@@ -154,14 +133,11 @@ export default function EventSchedule() {
                     </div>
 
 
-
-
                     <div>
 
                         <h3>
                             AvCon 2024 LIVE STREAM
                         </h3>
-
 
                         <div className="video-container">
 
@@ -176,42 +152,10 @@ export default function EventSchedule() {
 
                     </div>
 
-
                 </div>
 
-
             </section>
-
-
-
-
-            {/* Archive */}
-            <section className="archive-section">
-
-                <h2>
-                    Previous Event Schedule
-                </h2>
-
-
-                <p>
-                    Take a look back at previous AvCon programmes,
-                    featuring industry talks, technology demonstrations,
-                    aircraft displays and student experiences.
-                </p>
-
-
-                <img
-                    src={AVConSchedule}
-                    alt="AvCon 2024 Event Schedule"
-                    className="schedule-image"
-                />
-
-
-            </section>
-
 
         </main>
-
     );
-
 }

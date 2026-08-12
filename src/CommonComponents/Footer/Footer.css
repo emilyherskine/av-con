@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 2rem;
     padding: 2rem;
-    background: var(--background-dark);
+    background: var(--avcon-primary-dark);
 }
 
 .footer-col {
@@ -13,7 +13,7 @@
 .footer-brand,
 .footer-cta,
 .footer-social {
-    border-top: 1px solid var(--mid-grey);
+    border-top: 1px solid var(--avcon-border);
     padding-top: 1.5rem;
 }
 
@@ -25,7 +25,7 @@
 
 .footer-heading {
     font-size: 0.9rem;
-    color: var(--light-grey);
+    color: var(--avcon-text-muted);
     margin-bottom: 1rem;
 }
 
@@ -64,15 +64,15 @@
     padding: 0.85rem 1rem;
     border-radius: 8px;
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid color-mix(in srgb, var(--avcon-white) 40%, transparent);
     text-decoration: none;
     font-weight: 600;
 }
 
 .footer-btn-outline {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    color: white;
+    border: 1px solid color-mix(in srgb, var(--avcon-white) 40%, transparent);
+    color: var(--avcon-white);
 }
 
 .footer-tagline {
@@ -97,7 +97,7 @@
     .footer-cta,
     .footer-social {
         border-top: none;
-        border-left: 1px solid var(--mid-grey);
+        border-left: 1px solid var(--avcon-border);
         padding-top: 0;
         padding-left: 2rem;
     }

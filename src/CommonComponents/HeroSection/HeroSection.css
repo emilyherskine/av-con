@@ -1,20 +1,27 @@
 .hero-wrapper {
     position: relative;
-    margin-bottom: var(--margin-medium);
+    width: 100%;
+    height: clamp(32rem, 80vh, 48rem);
+    height: clamp(32rem, 80svh, 48rem);
+    margin: 0;
+    overflow: hidden;
+    background: var(--avcon-primary-dark);
 }
 
 .hero-image-container {
     display: block;
     width: 100%;
-    height: 80vh;
+    height: 100%;
+    min-height: 0;
 }
 
 .hero-background-img {
     width: 100%;
-    height: 80vh;
+    height: 100%;
     mix-blend-mode: luminosity;
     display: block;
     object-fit: cover;
+    object-position: center;
 }
 
 .hero-overlay {
@@ -24,16 +31,18 @@
     width: 100%;
     height: 100%;
     mix-blend-mode: darken;
-    background: linear-gradient(180deg, var(--background-dark) 0%, rgba(7, 16, 29, 0) 100%);
+    background: linear-gradient(180deg, var(--avcon-primary-dark) 0%, color-mix(in srgb, var(--avcon-primary-dark) 0%, transparent) 100%);
     z-index: 1;
 }
 
 .hero-content-position {
     position: absolute;
+    top: auto !important;
     bottom: 0;
     left: 0;
-    padding: 2rem;
-    color: white;
+    width: min(100%, 52rem);
+    padding: clamp(1.25rem, 4vw, 2rem);
+    color: var(--avcon-white);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -41,19 +50,23 @@
 }
 
 .title {
-    font-size: 3rem;
-    font-weight: bold;
-    max-width: 100%;
-    width: 100%;
-    max-width: 100%;
+    margin: 0;
+    color: var(--avcon-white);
+    font-size: clamp(2.25rem, 7vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
 }
 
 .sub-title {
-    font-size: 2.1rem;
-    margin-bottom: 1rem;
-    max-width: 100%;
-    width: 100%;
-    max-width: 100%;
+    max-width: 42rem;
+    margin: 0.75rem 0 1rem;
+    color: var(--avcon-text);
+    font-size: clamp(1.125rem, 3.5vw, 1.5rem);
+    font-weight: 500;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
 }
 
 .btn-link {
@@ -62,4 +75,21 @@
     width: 100%;
     max-width: fit-content;
 
+}
+
+@media (max-width: 767px) {
+    .hero-wrapper,
+    .hero-image-container {
+        height: clamp(28rem, 78vh, 38rem);
+        height: clamp(28rem, 78svh, 38rem);
+        min-height: 0;
+    }
+
+    .hero-content-position {
+        padding: 1.25rem;
+    }
+
+    .title {
+        font-size: clamp(2rem, 9vw, 2.75rem);
+    }
 }

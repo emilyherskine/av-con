@@ -16,8 +16,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: white;
+    background-color: color-mix(in srgb, var(--avcon-primary-dark) 50%, transparent);
+    color: var(--avcon-white);
     font-size: 2rem;
     padding: 0.5rem;
     border: none;
@@ -42,12 +42,12 @@
     height: 12px;
     width: 12px;
     margin: 0 4px;
-    background-color: #ccc;
+    background-color: var(--avcon-border);
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
 }
 
 .dot.active {
-    background-color: #007bff;
+    background-color: var(--avcon-accent);
 }

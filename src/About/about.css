@@ -91,8 +91,8 @@
 .initiative-card {
     padding: 1.5rem;
     border-radius: 1rem;
-    background: rgba(255,255,255,.05);
-    border: 1px solid var(--mid-grey);
+    background: color-mix(in srgb, var(--avcon-white) 5%, transparent);
+    border: 1px solid var(--avcon-border);
 }
 
 
@@ -114,7 +114,7 @@ blockquote {
     margin: 2rem auto;
     padding: 1rem 1.5rem;
     max-width: 700px;
-    border-left: 4px solid #2563eb;
+    border-left: 4px solid var(--avcon-accent);
     font-size: 1.5rem;
     font-style: italic;
 }
@@ -132,7 +132,7 @@ blockquote {
     text-align: center;
     padding: 3rem 2rem;
     border-radius: 1rem;
-    background: rgba(255,255,255,.05);
+    background: color-mix(in srgb, var(--avcon-white) 5%, transparent);
 }
 
 

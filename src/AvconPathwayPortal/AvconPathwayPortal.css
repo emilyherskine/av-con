@@ -42,8 +42,8 @@ margin:2rem 0;
 
 .intro-highlights span {
 
-background:#222;
-border:1px solid #444;
+background:var(--avcon-primary-dark);
+border:1px solid var(--avcon-border);
 padding:.8rem 1.5rem;
 border-radius:25px;
 
@@ -69,7 +69,7 @@ margin-top:2rem;
 
 padding:1.5rem;
 border-radius:12px;
-border:1px solid rgba(255,255,255,.25);
+border:1px solid color-mix(in srgb, var(--avcon-white) 25%, transparent);
 text-align:center;
 
 }
@@ -93,13 +93,13 @@ margin-top:2rem;
 
 .opportunity-card {
 
-background:#1a1a1a;
+background:var(--avcon-primary-dark);
 
 border-radius:12px;
 
 overflow:hidden;
 
-border:1px solid #444;
+border:1px solid var(--avcon-border);
 
 display:flex;
 
@@ -117,7 +117,7 @@ width:100%;
 
 object-fit:contain;
 
-background:white;
+background:var(--avcon-white);
 
 }
 
@@ -147,9 +147,9 @@ flex-grow:1;
 
 .app-button {
 
-background:#0066cc;
+background:var(--avcon-accent);
 
-color:white;
+color:var(--avcon-white);
 
 padding:.7rem 1.4rem;
 
@@ -169,7 +169,7 @@ margin-top:1rem;
 
 .app-button:hover {
 
-background:#004c99;
+background:var(--avcon-accent-light);
 
 }
 
@@ -177,7 +177,7 @@ background:#004c99;
 
 .industry-callout {
 
-background:#111;
+background:var(--avcon-primary-dark);
 
 }
 

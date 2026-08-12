@@ -1,9 +1,29 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { RootLayout } from "./layouts";
 import { appRoutes } from "./config/routes";
 import "./App.module.css";
 import "./index.css";
+
+const theme = createTheme({
+    palette: {
+        text: {
+            primary: "var(--avcon-text)",
+            secondary: "var(--avcon-text-muted)",
+        },
+    },
+    typography: {
+        fontFamily: '"Inter", sans-serif',
+        h1: { fontSize: "var(--avcon-font-h1)", fontWeight: 700, lineHeight: 1.2 },
+        h2: { fontSize: "var(--avcon-font-h2)", fontWeight: 700, lineHeight: 1.25 },
+        h3: { fontSize: "var(--avcon-font-h3)", fontWeight: 700, lineHeight: 1.3 },
+        h4: { fontSize: "var(--avcon-font-h4)", fontWeight: 700, lineHeight: 1.35 },
+        h5: { fontSize: "var(--avcon-font-body)", fontWeight: 700, lineHeight: 1.4 },
+        body1: { fontSize: "var(--avcon-font-body)", lineHeight: "var(--avcon-line-body)" },
+        body2: { fontSize: "var(--avcon-font-small)", lineHeight: "var(--avcon-line-body)" },
+    },
+});
 
 /**
  * Main App Component
@@ -11,15 +31,17 @@ import "./index.css";
  */
 export default function App() {
     return (
-        <BrowserRouter>
-            <RootLayout>
-                <Routes>
-                    {appRoutes.map((route) => (
-                        <Route key={route.path} path={route.path} element={route.element} />
-                    ))}
-                    <Route path="*" element={<Navigate to="/" replace />} />
-                </Routes>
-            </RootLayout>
-        </BrowserRouter>
+        <ThemeProvider theme={theme}>
+            <BrowserRouter>
+                <RootLayout>
+                    <Routes>
+                        {appRoutes.map((route) => (
+                            <Route key={route.path} path={route.path} element={route.element} />
+                        ))}
+                        <Route path="*" element={<Navigate to="/" replace />} />
+                    </Routes>
+                </RootLayout>
+            </BrowserRouter>
+        </ThemeProvider>
     );
 }

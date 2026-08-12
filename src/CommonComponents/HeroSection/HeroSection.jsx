@@ -48,7 +48,7 @@ export default function HeroSection({
             <div className="hero-overlay" />
 
             <div className="hero-content-position">
-                {title && <p className="title">{title}</p>}
+                {title && <h1 className="title">{title}</h1>}
                 {subtitle && <p className="sub-title">{subtitle}</p>}
 
                 {buttonText && buttonLink && (

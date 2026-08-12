@@ -164,6 +164,28 @@ onClick={()=>setExpanded(!expanded)}
 
 variant="contained"
 
+sx={{
+    minHeight: 44,
+    padding: "0.75rem 1.5rem",
+    border: "1px solid var(--avcon-accent)",
+    borderRadius: "8px",
+    backgroundColor: "var(--avcon-accent)",
+    color: "var(--avcon-white)",
+    fontWeight: 700,
+    lineHeight: 1.2,
+    textTransform: "none",
+    transition: "background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease",
+    "&:hover": {
+        backgroundColor: "var(--avcon-accent-light)",
+        borderColor: "var(--avcon-accent-light)",
+        transform: "translateY(-2px)",
+    },
+    "&:focus-visible": {
+        outline: "3px solid var(--avcon-focus)",
+        outlineOffset: "3px",
+    },
+}}
+
 >
 
 {

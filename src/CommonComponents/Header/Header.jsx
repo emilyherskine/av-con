@@ -54,12 +54,21 @@ export const Header = () => {
 
             <div className="header-right">
                 {isMobile ? (
-                    <div className="mobile-menu-toggle" onClick={handleMobileToggle}>
-                        <span className="menu-icon">
-                            {showMobileMenu ? "✕" : "☰"}
-                        </span>
+                    <>
+                        <button
+                            type="button"
+                            className="mobile-menu-toggle"
+                            onClick={handleMobileToggle}
+                            aria-expanded={showMobileMenu}
+                            aria-controls="mobile-navigation"
+                            aria-label={showMobileMenu ? "Close navigation menu" : "Open navigation menu"}
+                        >
+                            <span className="menu-icon">
+                                {showMobileMenu ? "✕" : "☰"}
+                            </span>
+                        </button>
                         <MobileMenu isOpen={showMobileMenu} onClose={closeMobileMenu} />
-                    </div>
+                    </>
                 ) : (
                     <DesktopMenu
                         showEventDropdown={showEventDropdown}

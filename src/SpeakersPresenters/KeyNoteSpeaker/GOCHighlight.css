@@ -6,8 +6,8 @@
     padding: 2rem 5%;
     margin: 1rem auto;
     max-width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: var(--avcon-white);
+    box-shadow: 0 4px 20px color-mix(in srgb, var(--avcon-primary-dark) 10%, transparent);
   }
   
   .goc-image-wrapper {
@@ -35,13 +35,13 @@
   .goc-name {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #00274D;
+    color: var(--avcon-primary);
     margin: 1rem 0 0.5rem;
   }
   
   .goc-bio {
     font-size: 1rem;
-    color: #333;
+    color: var(--avcon-primary-dark);
     line-height: 1.5;
     transition: max-height 0.3s ease;
     overflow: hidden;
@@ -59,7 +59,7 @@
     margin-top: 1rem;
     background: none;
     border: none;
-    color: #0056b3;
+    color: var(--avcon-accent-light);
     cursor: pointer;
     font-size: 1rem;
     text-decoration: underline;

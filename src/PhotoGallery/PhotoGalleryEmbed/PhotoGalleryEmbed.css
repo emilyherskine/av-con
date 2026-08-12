@@ -3,18 +3,18 @@
   }
   
   .gallery-card {
-    background: var(--background-dark-98);
+    background: var(--avcon-primary-dark);
     overflow: visible;
   }
   
   .gallery-header {
-    background: var(--mid-blue);
+    background: var(--avcon-primary);
     text-align: center;
     padding: 1rem;
   }
   
   .gallery-header h3 {
-    color: var(--text-light);
+    color: var(--avcon-text);
     font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -24,9 +24,9 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
-    background: var(--mid-blue);
+    background: var(--avcon-primary);
     padding: 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid color-mix(in srgb, var(--avcon-white) 8%, transparent);
   }
   
   .gallery-btn {
@@ -34,40 +34,40 @@
     border-radius: 0.75rem;
     font-size: 0.95rem;
     font-weight: 500;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: var(--mid-blue);
-    color: var(--text-light);
+    border: 1px solid color-mix(in srgb, var(--avcon-white) 20%, transparent);
+    background: var(--avcon-primary);
+    color: var(--avcon-text);
   }
   
   .gallery-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: color-mix(in srgb, var(--avcon-white) 10%, transparent);
   }
   
   .gallery-btn.active {
-    background: #6366f1;
-    color: #fff;
-    border-color: #6366f1;
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.5);
+    background: var(--avcon-accent);
+    color: var(--avcon-white);
+    border-color: var(--avcon-accent);
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--avcon-accent) 50%, transparent);
   }
   
   .gallery-iframe-container {
     padding: 1.5rem;
-    background: var(--background-dark-98);
+    background: var(--avcon-primary-dark);
   }
   
   .gallery-iframe {
     width: 100%;
     height: 700px;
     border: none;
-    background: var(--background-dark-98);
+    background: var(--avcon-primary-dark);
   }
   
   .gallery-footer {
-    background: var(--mid-blue);
+    background: var(--avcon-primary);
     text-align: center;
     font-size: 0.9rem;
-    color: var(--light-grey);
+    color: var(--avcon-text-muted);
     padding: 0.75rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid color-mix(in srgb, var(--avcon-white) 8%, transparent);
   }
   

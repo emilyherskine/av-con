@@ -35,7 +35,7 @@ export default function Speaker({ SpeakerImage, SpeakerName, SpeakerBio }) {
         {isExpanded ? SpeakerBio : `${SpeakerBio.substring(0, maxBioLength)}...`}
       </p>
       {SpeakerBio.length > maxBioLength && (
-        <button onClick={handleToggle} style={{ cursor: 'pointer', background: 'none', border: 'none', color: '#D3D3D3', textDecoration: 'underline', padding: '5%' }}>
+        <button className="speaker-bio-toggle" onClick={handleToggle}>
           {isExpanded ? 'Show Less' : 'Expand for More'}
         </button>
       )}

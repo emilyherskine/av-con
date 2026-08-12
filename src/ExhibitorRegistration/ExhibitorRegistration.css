@@ -46,7 +46,7 @@
 
     padding:2rem;
     border-radius:12px;
-    border:1px solid rgba(255,255,255,.2);
+    border:1px solid color-mix(in srgb, var(--avcon-white) 20%, transparent);
 
 }
 
@@ -80,7 +80,7 @@
     padding:.8rem 1.5rem;
 
     border-radius:8px;
-    border:1px solid white;
+    border:1px solid var(--avcon-white);
 
     text-decoration:none;
 
@@ -92,9 +92,9 @@
 
 .industry-button:hover {
 
-    background:#0056b3;
+    background:var(--avcon-accent-light);
 
-    color:white;
+    color:var(--avcon-white);
 
 }
 
@@ -117,7 +117,7 @@
 
 .contact-box a {
 
-    color:#007bff;
+    color:var(--avcon-accent);
 
 }
 
