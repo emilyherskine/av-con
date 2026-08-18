@@ -12,6 +12,9 @@ import AlexMerkelCarroll from "./PresenterSpeakerImages2026/AlexMerkelCarroll.pn
 import MaryHennigan from "./PresenterSpeakerImages2026/MaryHennigan.jpg";
 import MatthewGee from "./PresenterSpeakerImages2026/MatthewGee.jpg";
 import FahadIbneMasood from "./PresenterSpeakerImages2026/FahadIbneMasood.JPG";
+import AnthonyAttoumani from "./PresenterSpeakerImages2026/AnthonyAttoumani.jpg";
+import PatriciaMoore from "./PresenterSpeakerImages2026/PatriciaMoore.jpg";
+import MuireannBagley from "./PresenterSpeakerImages2026/MuireannBagley.jpg";
 
 
 const defaultPresenters = [
@@ -45,6 +48,21 @@ const defaultSpeakers = [
             image: FahadIbneMasood,
             name: "Fahad ibne Masood",
             bio: "Fahad ibne Masood is a Faculty member in Aviation Technology and the Part 147 Exams Manager at Technological University Dublin (TU Dublin). He has over 27 years of international aerospace experience spanning flight operations, safety risk management, and emerging technologies. As a rated flight instructor and pilot with extensive flight operations experience, Fahad flew jet aircraft before specializing in aviation safety risk management, human factors, and accident investigation. In recent years, his focus has shifted to Advanced Air Mobility (AAM), AI, Quantum Computing and airspace modernization. He leads strategic advisory projects and collaborates with regulators and international bodies—including ICAO, the RAeS, and ISASI—on eVTOL integration and next-generation airspace risk management. Fahad holds an MBA, an M.Phil, and is a Member of the Royal Aeronautical Society (MRAeS)."
+        },
+        {
+            image: AnthonyAttoumani,
+            name: "Anthony Attoumani",
+            bio: "Anthony is a passionate and senior aeronautical engineer with over 15 years of experience in the design, development, qualification and certification of aviation products. After graduating a Master Degree in Aerospace Engineering, option Avionics and Mechatronics, Anthony commenced my career in Airbus Group as Reliability Availability Maintainability and Safety Engineer. Subsequently, he progressed to management roles including Head of Design Process or Overall Cabin Design Chief Engineer in ATR, Vice President Engineering Business Development in Eirtech and Head of Design Organisation in Atlantic Aviation Group. This allowed him to deal with projects in more than 20 Countries including most European Countries, North America, Brazil, UAE, China, India, Japan, Australia. Throughout his career, Anthony had the opportunity to work on numerous Minor and Major Changes (Supplemental Type Certificates) going from basic cabin reconfigurations for Airlines, to complex conversions into Maritime Patrol Aircraft for MoD's. After dealing with both Technical and Commercial aspects of the Aviation Industry, and being able to rely on a large network of Aviation Partners, it made sense for him to set up his company: Infinity Aviation Support. As Chief Executive Officer, Anthony aims to support Aviation Stakeholders and ensure successful completeness of all their projects."
+        },
+        {
+            image: PatriciaMoore,
+            name: "Patricia Moore",
+            bio: "Dr Patricia Moore is Co-founder and Director of the Irish Space Association (ISA), an industry-led cluster advancing the development of Ireland’s rapidly growing space sector. She is also Managing Director of Promethio, a Dublin-based technology and consultancy company that works with clients and partners in emerging and deep-tech sectors, with a focus on organisations developing or applying space-based systems and services. Patricia’s career spans both industry and academia. She has previously served as CTO of the space technology and business development consultancy Mindseed, and as an Assistant Professor in the School of Electronic Engineering at Dublin City University (DCU). She holds both a PhD and a BEng in Engineering from DCU."
+        },
+        {
+            image: MuireannBagley,
+            name: "Muireann Bagley",
+            bio: "Muireann Bagley is a 6th-year student with her sights firmly set on a career in the skies. After her first flying lesson at just 11 years of age, she set herself the goal of earning her Private Pilot’s Licence during her TY year. She passed all written exams on the first attempt with a 95% average grade and completed her PPL flight test at Navan Airfield on her 17th birthday, the earliest possible date, becoming one of Ireland’s youngest private pilots. She earned a Delta Air Lines scholarship to the National Flight Academy Summer Camp in Florida, and during TY she graduated from DCU’s Early University Entrance Engineering programme. She also attended the Centre for Talented Youth Ireland in DCU and explored courses from aeronautical engineering to advanced maths. When not in the cockpit, Muireann can usually be found on the golf course — though she admits her landings are better than her putting. At Avcon, Muireann will share her journey from the classroom to the cockpit, and her top tips for aspiring young aviators."
         }
 
 ];
