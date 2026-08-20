@@ -22,6 +22,9 @@ export default function EventSchedule() {
                     brings together students, educators and industry leaders
                     for a day of inspiration, discovery and connection.
                 </p>
+                <div className="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/rjl6q8Y0h5w?si=o6VOZ_5PlR2E_aLz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
             </section>
 
 
@@ -120,14 +123,7 @@ export default function EventSchedule() {
                         </h3>
 
                         <div className="video-container">
-
-                            <iframe
-                                src="https://www.youtube.com/embed/videoseries?si=Ktnu0lIaijjOEjgH&amp;list=PLKqYIkM4gVMV9yfE4WkiBRn141HuYwuGa"
-                                title="AvCon 2025 Live Stream"
-                                frameBorder="0"
-                                allowFullScreen
-                            />
-
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=X0ZMQCI5w-k9s84C&amp;list=PLKqYIkM4gVMV9yfE4WkiBRn141HuYwuGa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
 
                     </div>
@@ -140,14 +136,7 @@ export default function EventSchedule() {
                         </h3>
 
                         <div className="video-container">
-
-                            <iframe
-                                src="https://www.youtube.com/embed/7_AYMtVLbhI?si=ulFkMd-tNUI6KD3z"
-                                title="AvCon 2024 Live Stream"
-                                frameBorder="0"
-                                allowFullScreen
-                            />
-
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=IOMb30T0FMtjvWkD&amp;list=PLKqYIkM4gVMUO04DAeqTrWWMyYJhc9ccg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
 
                     </div>

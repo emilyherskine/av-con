@@ -74,6 +74,14 @@ export default function Register() {
                                 >
                                     Schools Registration for AvCon 2026
                                 </a>
+                                <a
+                                    href="https://forms.cloud.microsoft/r/bKq0qMmnFY"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="btn-link"
+                                >
+                                    College Registration for AvCon 2026
+                                </a>
                             </div>
                         </Grid>
 
@@ -164,15 +172,37 @@ export default function Register() {
                             ))}
                         </ul>
 
-
-                        <a
-                            href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUNUUyVEVDSUtXWkJHV0RBOVlNSko4MFlTVC4u&route=shorturl"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn-link"
+                        <Grid
+                            container
+                            spacing={0.5}
+                            alignItems="center"
+                            className="content-section"
                         >
-                            Register Your School
-                        </a>
+
+                            <Grid item xs={6} md={3}>
+                                <a
+                                    href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUNUUyVEVDSUtXWkJHV0RBOVlNSko4MFlTVC4u&route=shorturl"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="btn-link"
+                                >
+                                    Register Your School
+                                </a>
+                            </Grid>
+
+                            <Grid item xs={6} md={3}>
+                                <a
+                                    href="https://forms.cloud.microsoft/r/bKq0qMmnFY"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="btn-link"
+                                >
+                                    Register Your College
+                                </a>
+
+                            </Grid>
+
+                        </Grid>
 
                     </section>
 
@@ -195,7 +225,7 @@ export default function Register() {
 
 
                         <a
-                            href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUN003TjMxSkxXUVVKV1JLT1AyTUlTOVQxOS4u&route=shorturl"
+                            href="https://streamyard.com/watch/fXQZNAES3G5A"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-link"

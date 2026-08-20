@@ -35,7 +35,7 @@ export default function GOCHighlight({ SpeakerImage, SpeakerName, SpeakerBio }) 
           <button
             onClick={handleToggle}
             aria-label={isExpanded ? "Collapse bio" : "Expand full bio"}
-            className="goc-toggle-button"
+            className="speaker-bio-toggle"
           >
             {isExpanded ? "Show Less ▲" : "Read More ▼"}
           </button>

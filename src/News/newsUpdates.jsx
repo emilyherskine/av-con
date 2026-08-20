@@ -121,19 +121,7 @@ export default function News() {
 
 
                             <div className="video-container">
-
-                                <iframe
-
-                                src="https://www.youtube.com/embed/videoseries?si=Ktnu0lIaijjOEjgH&amp;list=PLKqYIkM4gVMV9yfE4WkiBRn141HuYwuGa"
-
-                                title="AvCon Live"
-
-                                frameBorder="0"
-
-                                allowFullScreen
-
-                                />
-
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=X0ZMQCI5w-k9s84C&amp;list=PLKqYIkM4gVMV9yfE4WkiBRn141HuYwuGa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
 
 

@@ -55,17 +55,6 @@
     max-height: 1000px;
   }
   
-  .goc-toggle-button {
-    margin-top: 1rem;
-    background: none;
-    border: none;
-    color: var(--avcon-accent-light);
-    cursor: pointer;
-    font-size: 1rem;
-    text-decoration: underline;
-    padding: 0;
-  }
-  
   /* Responsive Design */
   
   @media (max-width: 768px) {
