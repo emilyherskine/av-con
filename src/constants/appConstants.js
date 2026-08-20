@@ -18,6 +18,7 @@ export const EXTERNAL_LINKS = {
     portfolioUrl: "https://emilyherskine.github.io/portfolio",
     generalEnquiriesForm: "https://forms.cloud.microsoft/r/hhD9LkzA3rE",
     studentConventionForm: "https://forms.cloud.microsoft/r/EinwjqpRz7",
+    collegeRegistrationForm: "https://forms.cloud.microsoft/r/bKq0qMmnFY",
     liveStreamForm: "https://streamyard.com/watch/fXQZNAES3G5A",
     exhibitorRegistrationForm: "https://forms.cloud.microsoft/r/UJFTLHDDve",
 };
