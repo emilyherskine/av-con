@@ -7,7 +7,6 @@ import "./event.css";
 export default function Event() {
   return (
     <main className="event-page">
-
       <HeroSection
         defaultTitle="AvCon 2026"
         defaultSubtitle="Ireland's largest aviation, aerospace and STEM careers convention. Connecting Industry. Inspiring Talent. Shaping Tomorrow's Workforce."
@@ -17,13 +16,11 @@ export default function Event() {
         buttonLink="https://avcon.ie/BookTickets"
       />
 
-
       <EventIntroduction />
 
       <EventExperience />
 
       <EventClosing />
-
     </main>
   );
 }

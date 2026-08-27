@@ -1,160 +1,330 @@
-.sponsors-page {
+/* =========================================
+   SPONSORS PAGE
+   ========================================= */
 
-    padding:5%;
+.sponsors-page {
+  width: 100%;
+
+  margin-inline: auto;
+
+  padding-block: var(--section-space);
+  padding-inline: var(--page-gutter);
 }
 
+/* =========================================
+   PAGE TITLE
+   ========================================= */
 
 .page-title {
+  margin: 0 0 var(--space-6);
 
-    text-align:center;
-    margin-bottom:2rem;
+  color: var(--avcon-text);
 
+  text-align: center;
 }
 
+/* =========================================
+   INTRODUCTION
+   ========================================= */
 
 .sponsors-intro {
+  width: 100%;
+  max-width: 60rem;
 
-    text-align:center;
-    max-width:1000px;
-    margin:auto;
-    line-height:1.7;
+  margin-inline: auto;
 
+  color: var(--avcon-text-muted);
+
+  font-size: var(--avcon-font-body);
+  line-height: var(--avcon-line-body);
+
+  text-align: center;
 }
 
-
+/* =========================================
+   SHARED PAGE SECTIONS
+   ========================================= */
 
 .partner-section,
 .sponsors-section,
 .collaboration-section {
+  width: 100%;
 
-    margin-top:4rem;
-    text-align:center;
+  margin-top: var(--section-space);
 
+  text-align: center;
 }
 
-
+/* =========================================
+   PARTNER CARDS
+   ========================================= */
 
 .partner-card {
+  display: flex;
+  flex-direction: column;
 
-    padding:2rem;
-    border-radius:12px;
-    border:1px solid color-mix(in srgb, var(--avcon-white) 20%, transparent);
-    height:100%;
+  width: 100%;
+  height: 100%;
 
+  padding: var(--space-6);
+
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
+
+  background: var(--avcon-surface);
+
+  color: var(--avcon-text);
+
+  box-shadow: var(--avcon-shadow);
+
+  transition:
+    border-color var(--avcon-transition),
+    transform var(--avcon-transition),
+    box-shadow var(--avcon-transition);
 }
 
+.partner-card:hover {
+  border-color: var(--avcon-accent);
+
+  transform: translateY(-2px);
+}
 
 .partner-card h3 {
+  margin: 0 0 var(--space-3);
 
-    margin-bottom:1rem;
+  color: var(--avcon-text);
 
+  font-size: var(--avcon-font-h3);
+  line-height: 1.3;
 }
 
+.partner-card p {
+  margin-bottom: 0;
+}
 
-
+/* =========================================
+   SPONSOR IMAGES
+   ========================================= */
 
 .sponsor-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    margin:2rem;
-    display:flex;
-    justify-content:center;
+  width: 100%;
 
+  margin-block: var(--space-6);
 }
-
-
 
 .sponsor-image {
+  display: block;
 
-    width:100%;
-    max-width:500px;
-    opacity:0.8;
-    transition:0.3s ease;
+  width: 100%;
+  max-width: 31.25rem;
+  height: auto;
 
+  opacity: 0.9;
+
+  transition:
+    opacity var(--avcon-transition),
+    transform var(--avcon-transition);
 }
-
-
 
 .sponsor-image:hover {
-
-    opacity:1;
-    transform:scale(1.02);
-
+  opacity: 1;
+  transform: scale(1.02);
 }
 
-
-
+/* =========================================
+   COLLABORATION SECTION
+   ========================================= */
 
 .collaboration-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:1rem;
+  gap: var(--space-3);
 
+  width: 100%;
 }
-
-
 
 .collaboration-logo {
+  display: block;
 
-    width:250px;
-    max-width:80%;
-    border-radius:8px;
+  width: 100%;
+  max-width: 15.625rem;
+  height: auto;
 
+  border-radius: var(--avcon-radius-small);
 }
 
-
+/* =========================================
+   SPONSOR CTA
+   ========================================= */
 
 .sponsor-cta {
+  width: 100%;
 
-    margin-top:5rem;
-    padding:3rem;
-    text-align:center;
-    border-radius:15px;
-    background:color-mix(in srgb, var(--avcon-accent) 15%, transparent);
+  margin-top: var(--section-space);
+  padding: var(--space-7) var(--space-6);
 
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-large);
+
+  background: var(--avcon-surface);
+
+  color: var(--avcon-text);
+
+  text-align: center;
+
+  box-shadow: var(--avcon-shadow);
 }
 
+.sponsor-cta h2,
+.sponsor-cta h3 {
+  color: var(--avcon-text);
+}
 
+.sponsor-cta p {
+  max-width: 45rem;
+
+  margin-inline: auto;
+}
+
+/* =========================================
+   SPONSOR CTA BUTTON
+   ========================================= */
 
 .sponsor-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-    display:inline-flex;
-    margin-top:2rem;
-    padding:.8rem 2rem;
-    background:var(--avcon-accent);
-    color:var(--avcon-white);
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
+  min-width: 12rem;
+  min-height: 48px;
 
+  margin-top: var(--space-5);
+  padding: var(--space-2) var(--space-6);
+
+  border: 1px solid var(--avcon-accent);
+  border-radius: var(--avcon-radius-small);
+
+  background: var(--avcon-accent);
+  color: var(--avcon-white) !important;
+
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.3;
+
+  text-align: center;
+  text-decoration: none;
+
+  transition:
+    background-color var(--avcon-transition),
+    border-color var(--avcon-transition),
+    transform var(--avcon-transition),
+    box-shadow var(--avcon-transition);
 }
-
-
 
 .sponsor-button:hover {
+  background: var(--avcon-accent-light);
+  border-color: var(--avcon-accent-light);
 
-    background:var(--avcon-accent-light);
+  transform: translateY(-2px);
 
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
+.sponsor-button:active {
+  transform: translateY(0);
+}
 
+.sponsor-button:focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 3px;
+}
 
+/* =========================================
+   TABLET
+   ========================================= */
 
-@media(max-width:768px){
+@media (max-width: 768px) {
+  .sponsors-page {
+    padding-block: var(--section-space-mobile);
+    padding-inline: var(--page-gutter);
+  }
 
-    .sponsors-page {
+  .partner-card {
+    padding: var(--space-5);
+  }
 
-        padding:8% 4%;
+  .sponsor-cta {
+    padding: var(--space-6) var(--space-5);
+  }
+}
 
-    }
+/* =========================================
+   MOBILE
+   ========================================= */
 
+@media (max-width: 480px) {
+  .sponsors-page {
+    padding-inline: 1.25rem;
+  }
 
-    .partner-card {
+  .page-title {
+    margin-bottom: var(--space-5);
+  }
 
-        padding:1.5rem;
+  .sponsors-intro {
+    text-align: left;
+  }
 
-    }
+  .partner-section,
+  .sponsors-section,
+  .collaboration-section {
+    margin-top: var(--space-7);
+  }
 
+  .partner-card {
+    padding: var(--space-4);
+  }
 
+  .sponsor-image-wrapper {
+    margin-block: var(--space-5);
+  }
+
+  .collaboration-logo {
+    max-width: 12.5rem;
+  }
+
+  .sponsor-cta {
+    margin-top: var(--space-7);
+    padding: var(--space-5) var(--space-4);
+  }
+
+  .sponsor-button {
+    width: 100%;
+    min-height: 48px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .partner-card,
+  .sponsor-image,
+  .sponsor-button {
+    transition: none;
+  }
+
+  .partner-card:hover,
+  .sponsor-image:hover,
+  .sponsor-button:hover {
+    transform: none;
+  }
 }

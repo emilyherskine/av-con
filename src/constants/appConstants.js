@@ -1,42 +1,43 @@
 // Application constants - centralized configuration values
 
 export const APP_CONFIG = {
-    appName: "AvCon",
-    year: new Date().getFullYear(),
-    eventDate: "Thursday, 8 October 2026",
-    eventLocation: "Casement Aerodrome, Baldonnel, Co. Dublin",
-    tagline: "Connecting Industry. Inspiring Talent. Shaping Tomorrow's Workforce.",
+  appName: "AvCon",
+  year: new Date().getFullYear(),
+  eventDate: "Thursday, 8 October 2026",
+  eventLocation: "Casement Aerodrome, Baldonnel, Co. Dublin",
+  tagline:
+    "Connecting Industry. Inspiring Talent. Shaping Tomorrow's Workforce.",
 };
 
 export const CONTACT_EMAILS = {
-    general: "hello@avcon.ie",
-    fiona: "fiona@avcon.ie",
-    sales: "sales@avcon.ie",
+  general: "hello@avcon.ie",
+  fiona: "fiona@avcon.ie",
+  sales: "sales@avcon.ie",
 };
 
 export const EXTERNAL_LINKS = {
-    portfolioUrl: "https://emilyherskine.github.io/portfolio",
-    generalEnquiriesForm: "https://forms.cloud.microsoft/r/hhD9LkzA3rE",
-    studentConventionForm: "https://forms.cloud.microsoft/r/EinwjqpRz7",
-    collegeRegistrationForm: "https://forms.cloud.microsoft/r/bKq0qMmnFY",
-    liveStreamForm: "https://streamyard.com/watch/fXQZNAES3G5A",
-    exhibitorRegistrationForm: "https://forms.cloud.microsoft/r/UJFTLHDDve",
+  portfolioUrl: "https://emilyherskine.github.io/portfolio",
+  generalEnquiriesForm: "https://forms.cloud.microsoft/r/hhD9LkzA3rE",
+  studentConventionForm: "https://forms.cloud.microsoft/r/EinwjqpRz7",
+  collegeRegistrationForm: "https://forms.cloud.microsoft/r/bKq0qMmnFY",
+  liveStreamForm: "https://streamyard.com/watch/fXQZNAES3G5A",
+  exhibitorRegistrationForm: "https://forms.cloud.microsoft/r/UJFTLHDDve",
 };
 
 export const IMAGES = {
-    logo: "./AVConLogoWhiteNoBG.png",
-    logoWhite: "./AVConLogoWhite.png",
+  logo: "./AVConLogoWhiteNoBG.png",
+  logoWhite: "./AVConLogoWhite.png",
 };
 
 export const SOCIAL_MEDIA = {
-    facebook: "https://www.facebook.com/avcon.ie",
-    linkedin: "https://www.linkedin.com/company/avcon-ireland",
-    twitter: "https://twitter.com/avcon_ie",
-    instagram: "https://www.instagram.com/avcon.ie",
+  facebook: "https://www.facebook.com/avcon.ie",
+  linkedin: "https://www.linkedin.com/company/avcon-ireland",
+  twitter: "https://twitter.com/avcon_ie",
+  instagram: "https://www.instagram.com/avcon.ie",
 };
 
 export const RESPONSIVE_BREAKPOINTS = {
-    mobile: 600,
-    tablet: 768,
-    desktop: 1024,
+  mobile: 600,
+  tablet: 768,
+  desktop: 1024,
 };

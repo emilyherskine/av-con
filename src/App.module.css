@@ -1,229 +1,443 @@
+/* =========================================
+   HEADER NAVIGATION
+   ========================================= */
+
 @media only screen and (min-width: 1024px) {
-    .container header .header-nav-area #nav_container {
-        display: flex;
-    }
+  .container header .header-nav-area #nav_container {
+    display: flex;
+  }
 }
+
+/* =========================================
+   BASE DOCUMENT STYLES
+   ========================================= */
 
 body {
-    font-family: var(--font-sans);
-    background: var(--avcon-primary-dark);
-    color: var(--avcon-text);
-    font-size: var(--avcon-font-body);
-    line-height: var(--avcon-line-body);
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+
+  background: var(--avcon-primary-dark);
+  color: var(--avcon-text);
+
+  font-family: var(--font-sans);
+  font-size: var(--avcon-font-body);
+  line-height: var(--avcon-line-body);
 }
+
+/* =========================================
+   LINKS
+   ========================================= */
 
 a {
-    color: var(--avcon-text) !important;
-    text-decoration: none;
-}
-a:hover {
-    color: var(--avcon-border) !important;
+  color: var(--avcon-text) !important;
+  text-decoration: none;
+
+  transition:
+    color var(--avcon-transition),
+    text-decoration-color var(--avcon-transition);
 }
 
+a:hover {
+  color: var(--avcon-accent) !important;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   PARAGRAPHS
+   ========================================= */
+
 p {
-    font-size: var(--avcon-font-body);
-    line-height: var(--avcon-line-body);
-    color: var(--avcon-text-muted);
+  margin: 0 0 var(--space-4);
+
+  color: var(--avcon-text-muted);
+
+  font-size: var(--avcon-font-body);
+  line-height: var(--avcon-line-body);
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 p > .text-dark {
-    color: var(--avcon-primary-dark);
+  color: var(--avcon-text);
 }
 
-/* Headings */
+/* =========================================
+   HEADINGS
+   ========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+
+  color: var(--avcon-text);
+  font-weight: 700;
+}
+
 h1 {
-    font-size: var(--avcon-font-h1);
-    line-height: var(--avcon-line-heading);
-    font-weight: 700;
-    color: var(--avcon-text);
+  margin-bottom: var(--space-5);
+
+  font-size: var(--avcon-font-h1);
+  line-height: var(--avcon-line-heading);
 }
 
 h2 {
-    font-size: var(--avcon-font-h2);
-    line-height: 1.25;
-    font-weight: 700;
-    color: var(--avcon-text);
+  margin-bottom: var(--space-4);
+
+  font-size: var(--avcon-font-h2);
+  line-height: 1.25;
 }
 
 h3 {
-    font-size: var(--avcon-font-h3);
-    line-height: 1.3;
-    font-weight: 700;
-    color: var(--avcon-text);
+  margin-bottom: var(--space-3);
+
+  font-size: var(--avcon-font-h3);
+  line-height: 1.3;
 }
 
 h4 {
-    font-size: var(--avcon-font-h4);
-    line-height: 1.35;
-    font-weight: 700;
-    color: var(--avcon-text);
+  margin-bottom: var(--space-3);
+
+  font-size: var(--avcon-font-h4);
+  line-height: 1.35;
 }
 
 h5 {
-    font-size: var(--avcon-font-body);
-    line-height: 1.4;
-    font-weight: 700;
-    color: var(--avcon-text);
+  margin-bottom: var(--space-2);
+
+  font-size: var(--avcon-font-body);
+  line-height: 1.4;
 }
 
 h6 {
-    font-size: var(--avcon-font-small);
-    line-height: 1.4;
-    font-weight: 700;
-    color: var(--avcon-text);
+  margin-bottom: var(--space-2);
+
+  font-size: var(--avcon-font-small);
+  line-height: 1.4;
 }
+
+/* =========================================
+   MEDIA
+   ========================================= */
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+img {
+  display: block;
+}
+
+/* =========================================
+   FORMS
+   ========================================= */
 
 button,
 input,
 textarea,
 select {
-    font: inherit;
-}
-
-img,
-svg,
-video {
-    max-width: 100%;
-}
-
-img,
-video {
-    height: auto;
-}
-
-:where(a, button, input, textarea, select, [tabindex]):focus-visible {
-    outline: 3px solid var(--avcon-focus);
-    outline-offset: 3px;
-}
-
-:where(button, [role="button"]) {
-    cursor: pointer;
-}
-
-:where(button, input, textarea, select):disabled {
-    cursor: not-allowed;
-    opacity: 0.6;
+  font: inherit;
 }
 
 :where(input, textarea, select) {
-    min-height: 44px;
-    padding: 0.75rem;
-    border: 1px solid var(--avcon-border);
-    border-radius: var(--avcon-radius-small);
-    background: var(--avcon-surface);
-    color: var(--avcon-text);
+  width: 100%;
+  min-height: 48px;
+
+  padding: var(--space-2) var(--space-3);
+
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-small);
+
+  background: var(--avcon-surface);
+  color: var(--avcon-text);
+
+  line-height: 1.5;
 }
 
 :where(textarea) {
-    min-height: 8rem;
+  min-height: 8rem;
+  resize: vertical;
 }
 
-:where(input, textarea)::placeholder {
-    color: var(--avcon-text-muted);
-    opacity: 1;
+:where(input, textarea, select)::placeholder {
+  color: var(--avcon-text-muted);
+  opacity: 1;
 }
 
-::selection {
-    background: var(--avcon-accent);
-    color: var(--avcon-white);
+:where(input, textarea, select):hover {
+  border-color: var(--avcon-accent);
 }
 
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-    }
+:where(input, textarea, select):focus {
+  border-color: var(--avcon-accent);
 }
 
-@media (max-width: 767px) {
-    h1 {
-        font-size: var(--avcon-font-h1) !important;
-        line-height: var(--avcon-line-heading) !important;
-    }
-
-    h2 {
-        font-size: var(--avcon-font-h2) !important;
-        line-height: 1.25 !important;
-    }
-
-    h3 {
-        font-size: var(--avcon-font-h3) !important;
-        line-height: 1.3 !important;
-    }
-
-    h4 {
-        font-size: var(--avcon-font-h4) !important;
-        line-height: 1.35 !important;
-    }
-}
-
-.AppHeader {
-    background-color: var(--avcon-primary-dark);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    color: var(--avcon-text);
-}
-
-.App-link {
-    color: var(--avcon-text);
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.registration-form {
-    max-width: 80%;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid var(--avcon-border);
-    border-radius: 8px;
-    box-shadow: 0 0 10px color-mix(in srgb, var(--avcon-primary-dark) 10%, transparent);
-}
+/* =========================================
+   FORM LABELS
+   ========================================= */
 
 .form__label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+  display: block;
+
+  margin-bottom: var(--space-1);
+
+  color: var(--avcon-text);
+
+  font-weight: 700;
+  line-height: 1.4;
 }
+
+/* =========================================
+   FORM CONTAINER
+   ========================================= */
+
+.registration-form {
+  width: 100%;
+  max-width: 56rem;
+
+  margin-inline: auto;
+  padding: var(--space-6);
+
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
+
+  background: var(--avcon-surface);
+
+  box-shadow: var(--avcon-shadow);
+}
+
+/* =========================================
+   FORM INPUTS
+   ========================================= */
 
 .form__input,
 .form__textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid var(--avcon-border);
-    border-radius: 4px;
-    box-sizing: border-box;
+  width: 100%;
+  margin-bottom: var(--space-4);
+
+  box-sizing: border-box;
 }
 
 .form__textarea {
-    resize: vertical;
+  resize: vertical;
 }
+
+/* =========================================
+   SUBMIT BUTTON
+   ========================================= */
 
 .submit-button {
-    width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 48px;
+
+  padding: var(--space-2) var(--space-5);
+
+  border: 1px solid var(--avcon-accent);
+  border-radius: var(--avcon-radius-small);
+
+  background: var(--avcon-accent);
+  color: var(--avcon-white) !important;
+
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--avcon-transition),
+    border-color var(--avcon-transition),
+    transform var(--avcon-transition),
+    box-shadow var(--avcon-transition);
 }
 
+.submit-button:hover {
+  background: var(--avcon-accent-light);
+  border-color: var(--avcon-accent-light);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+/* =========================================
+   FOCUS STATES
+   ========================================= */
+
+:where(
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  [tabindex]:not([tabindex="-1"])
+):focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   DISABLED CONTROLS
+   ========================================= */
+
+:where(button, input, textarea, select):disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* =========================================
+   ALERT MESSAGE
+   ========================================= */
+
 .alert-message {
-    margin-top: 20px;
+  width: 100%;
+
+  margin-top: var(--space-5);
+  padding: var(--space-3) var(--space-4);
+
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-small);
+
+  background: var(--avcon-surface);
+  color: var(--avcon-text-muted);
+
+  line-height: 1.6;
+}
+
+/* =========================================
+   TEXT SELECTION
+   ========================================= */
+
+::selection {
+  background: var(--avcon-accent);
+  color: var(--avcon-white);
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: var(--avcon-font-h1);
+    line-height: var(--avcon-line-heading);
+  }
+
+  h2 {
+    font-size: var(--avcon-font-h2);
+    line-height: 1.25;
+  }
+
+  h3 {
+    font-size: var(--avcon-font-h3);
+    line-height: 1.3;
+  }
+
+  h4 {
+    font-size: var(--avcon-font-h4);
+    line-height: 1.35;
+  }
+
+  .registration-form {
+    max-width: 100%;
+    padding: var(--space-5);
+  }
+}
+
+/* =========================================
+   VERY SMALL SCREENS
+   ========================================= */
+
+@media (max-width: 480px) {
+  .registration-form {
+    padding: var(--space-4);
+  }
+
+  :where(input, textarea, select) {
+    min-height: 48px;
+  }
+
+  .submit-button {
+    min-height: 48px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================
+   APP HEADER
+   ========================================= */
+
+.AppHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+
+  background-color: var(--avcon-primary-dark);
+  color: var(--avcon-text);
+
+  font-size: 18px;
+}
+
+.App-link {
+  color: var(--avcon-accent);
+}
+
+/* =========================================
+   APP LOGO ANIMATION
+   ========================================= */
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

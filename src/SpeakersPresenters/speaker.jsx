@@ -9,34 +9,51 @@ export default function Speaker({ SpeakerImage, SpeakerName, SpeakerBio }) {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-      <div style={{
-        width: '350px',
-        height: '350px',
-        overflow: 'hidden',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginBottom: '1rem'
-      }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        textAlign: "center",
+      }}
+    >
+      <div
+        style={{
+          width: "350px",
+          height: "350px",
+          overflow: "hidden",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginBottom: "1rem",
+        }}
+      >
         <img
           src={SpeakerImage}
           alt=""
           style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            objectPosition: 'top'
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "top",
           }}
         />
       </div>
       <h6>{SpeakerName}</h6>
-      <p style={{ maxHeight: isExpanded ? 'none' : '60px', overflow: 'hidden', transition: 'max-height 0.3s ease' }}>
-        {isExpanded ? SpeakerBio : `${SpeakerBio.substring(0, maxBioLength)}...`}
+      <p
+        style={{
+          maxHeight: isExpanded ? "none" : "60px",
+          overflow: "hidden",
+          transition: "max-height 0.3s ease",
+        }}
+      >
+        {isExpanded
+          ? SpeakerBio
+          : `${SpeakerBio.substring(0, maxBioLength)}...`}
       </p>
       {SpeakerBio.length > maxBioLength && (
         <button className="speaker-bio-toggle" onClick={handleToggle}>
-          {isExpanded ? 'Show Less' : 'Expand for More'}
+          {isExpanded ? "Show Less" : "Expand for More"}
         </button>
       )}
     </div>

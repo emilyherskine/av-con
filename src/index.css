@@ -1,265 +1,567 @@
-/* Reset all elements' default padding and margin to zero */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* =========================================
+   GLOBAL RESET
+   ========================================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 320px;
+  background: var(--avcon-primary-dark);
+  color: var(--avcon-text);
+  font-family: var(--font-sans);
+  font-size: var(--avcon-font-body);
+  line-height: var(--avcon-line-body);
+  text-rendering: optimizeLegibility;
 }
 
 :root {
-    overflow-x: hidden;
+  overflow-x: hidden;
 
-    /* AvCon color palette */
-    --avcon-primary: #0b2d4d;
-    --avcon-primary-dark: #061b2d;
-    --avcon-accent: #4c9ac4;
-    --avcon-accent-light: #123d5c;
-    --avcon-text: #f4f7f9;
-    --avcon-text-muted: #c5d0d8;
-    --avcon-border: #28516d;
-    --avcon-surface: #0a243b;
-    --avcon-white: #ffffff;
-    --avcon-focus: #f4b400;
+  /* =========================================
+     AVCON COLOUR PALETTE
+     ========================================= */
 
-    /* Typography scale */
-    --avcon-font-body: 1rem;
-    --avcon-font-small: 0.875rem;
-    --avcon-font-h4: 1.25rem;
-    --avcon-font-h3: 1.5rem;
-    --avcon-font-h2: clamp(1.75rem, 3vw, 2.5rem);
-    --avcon-font-h1: clamp(2.25rem, 5vw, 3.25rem);
-    --avcon-line-body: 1.7;
-    --avcon-line-heading: 1.2;
+  --avcon-primary: #0b2d4d;
+  --avcon-primary-dark: #061b2d;
 
-    /* Shared visual system */
-    --avcon-radius-small: 0.5rem;
-    --avcon-radius-medium: 0.75rem;
-    --avcon-radius-large: 1rem;
-    --avcon-shadow: 0 0.75rem 2rem color-mix(in srgb, var(--avcon-primary-dark) 25%, transparent);
-    --avcon-transition: 0.2s ease;
+  --avcon-accent: #4c9ac4;
+  --avcon-accent-light: #123d5c;
 
-    /* Typefaces */
-    --font-sans: "Inter", sans-serif;
+  --avcon-text: #f4f7f9;
+  --avcon-text-muted: #c5d0d8;
 
-    /* Spacing */
-    --padding-small: 0.5rem;
-    --padding-medium: 0.75rem;
-    --padding-large: 1.25rem;
+  --avcon-border: #28516d;
 
-    --margin-small: 0.75rem;
-    --margin-medium: 1.25rem;
-    --margin-large: 2rem;
+  --avcon-surface: #0a243b;
+  --avcon-white: #ffffff;
+
+  /* High-visibility keyboard focus */
+  --avcon-focus: #f4b400;
+
+  /* =========================================
+     TYPOGRAPHY
+     ========================================= */
+
+  --avcon-font-body: 1rem;
+  --avcon-font-small: 0.875rem;
+
+  --avcon-font-h4: 1.25rem;
+  --avcon-font-h3: 1.5rem;
+  --avcon-font-h2: clamp(1.75rem, 3vw, 2.5rem);
+  --avcon-font-h1: clamp(2.25rem, 5vw, 3.25rem);
+
+  --avcon-line-body: 1.7;
+  --avcon-line-heading: 1.2;
+
+  --font-sans: "Inter", sans-serif;
+
+  /* =========================================
+     SPACING SYSTEM
+     ========================================= */
+
+  --space-1: 0.5rem; /* 8px */
+  --space-2: 0.75rem; /* 12px */
+  --space-3: 1rem; /* 16px */
+  --space-4: 1.25rem; /* 20px */
+  --space-5: 1.5rem; /* 24px */
+  --space-6: 2rem; /* 32px */
+  --space-7: 3rem; /* 48px */
+  --space-8: 4rem; /* 64px */
+  --space-9: 5rem; /* 80px */
+
+  /* Responsive page gutter */
+  --page-gutter: clamp(1.25rem, 5vw, 5rem);
+
+  /* Responsive section spacing */
+  --section-space: clamp(2.5rem, 5vw, 4rem);
+  --section-space-mobile: 2rem;
+
+  /* =========================================
+     COMPONENT SPACING
+     ========================================= */
+
+  --padding-small: var(--space-1);
+  --padding-medium: var(--space-3);
+  --padding-large: var(--space-5);
+
+  --margin-small: var(--space-2);
+  --margin-medium: var(--space-4);
+  --margin-large: var(--space-6);
+
+  /* =========================================
+     BORDERS / RADIUS
+     ========================================= */
+
+  --avcon-radius-small: 0.5rem;
+  --avcon-radius-medium: 0.75rem;
+  --avcon-radius-large: 1rem;
+
+  /* =========================================
+     SHADOWS / TRANSITIONS
+     ========================================= */
+
+  --avcon-shadow: 0 0.75rem 2rem rgba(6, 27, 45, 0.25);
+
+  --avcon-transition: 0.2s ease;
 }
 
-/* Layout utilities */
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+/*
+  Skip navigation link.
+
+  It remains visually hidden until keyboard focus
+  brings it into view.
+*/
+
+.skip-link {
+  position: fixed;
+  top: var(--space-3);
+  left: var(--page-gutter);
+  z-index: 2000;
+
+  padding: var(--space-2) var(--space-3);
+
+  border: 2px solid var(--avcon-focus);
+  border-radius: var(--avcon-radius-small);
+
+  background: var(--avcon-white);
+  color: var(--avcon-primary-dark) !important;
+
+  font-weight: 700;
+  text-decoration: none;
+
+  transform: translateY(-200%);
+
+  transition: transform var(--avcon-transition);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+/*
+  Consistent keyboard focus.
+
+  This provides a clear visible indicator for
+  keyboard and assistive technology users.
+*/
+
+:is(
+  a,
+  button,
+  input,
+  select,
+  textarea,
+  summary,
+  [tabindex]:not([tabindex="-1"])
+):focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   LAYOUT UTILITIES
+   ========================================= */
+
 .pt-1 {
-    padding-top: var(--padding-small);
+  padding-top: var(--space-1);
 }
 
 .pt-2 {
-    padding-top: var(--padding-medium);
+  padding-top: var(--space-2);
 }
 
 .pt-3 {
-    padding-top: var(--padding-large);
+  padding-top: var(--space-3);
 }
 
 .pb-1 {
-    padding-bottom: var(--padding-small);
+  padding-bottom: var(--space-1);
 }
 
 .pb-2 {
-    padding-bottom: var(--padding-medium);
+  padding-bottom: var(--space-2);
 }
 
 .pb-3 {
-    padding-bottom: var(--padding-large);
+  padding-bottom: var(--space-3);
 }
 
 .pl-1 {
-    padding-left: var(--padding-small);
+  padding-left: var(--space-1);
 }
 
 .pl-2 {
-    padding-left: var(--padding-medium);
+  padding-left: var(--space-2);
 }
 
 .pl-3 {
-    padding-left: var(--padding-large);
+  padding-left: var(--space-3);
 }
 
 .pr-1 {
-    padding-right: var(--padding-small);
+  padding-right: var(--space-1);
 }
 
 .pr-2 {
-    padding-right: var(--padding-medium);
+  padding-right: var(--space-2);
 }
 
 .pr-3 {
-    padding-right: var(--padding-large);
+  padding-right: var(--space-3);
 }
 
-/* Margin Classes */
+/* =========================================
+   MARGIN UTILITIES
+   ========================================= */
+
 .mb-1 {
-    margin-bottom: var(--margin-small);
+  margin-bottom: var(--space-2);
 }
 
 .mb-2 {
-    margin-bottom: var(--margin-medium);
+  margin-bottom: var(--space-4);
 }
 
 .mb-3 {
-    margin-bottom: var(--margin-large);
+  margin-bottom: var(--space-6);
 }
 
 .mt-1 {
-    margin-top: var(--margin-small);
+  margin-top: var(--space-2);
 }
 
 .mt-2 {
-    margin-top: var(--margin-medium);
+  margin-top: var(--space-4);
 }
 
 .mt-3 {
-    margin-top: var(--margin-large);
+  margin-top: var(--space-6);
 }
 
 .ml-1 {
-    margin-left: var(--margin-small);
+  margin-left: var(--space-2);
 }
 
 .ml-2 {
-    margin-left: var(--margin-medium);
+  margin-left: var(--space-4);
 }
 
 .ml-3 {
-    margin-left: var(--margin-large);
+  margin-left: var(--space-6);
 }
 
 .mr-1 {
-    margin-right: var(--margin-small);
+  margin-right: var(--space-2);
 }
 
 .mr-2 {
-    margin-right: var(--margin-medium);
+  margin-right: var(--space-4);
 }
 
 .mr-3 {
-    margin-right: var(--margin-large);
+  margin-right: var(--space-6);
 }
 
-/* Hamburger menu styles */
-ul {
-    list-style-type: none;
-    padding: 0;
+/* =========================================
+   LISTS / NAVIGATION
+   ========================================= */
+
+/*
+  Only remove list styling from navigation
+  components rather than every <ul> on the website.
+*/
+
+.dropdown-menu,
+.mobile-menu {
+  list-style: none;
 }
 
 .dropdown-menu li {
-    padding-top: var(--padding-medium);
-    padding-bottom: var(--padding-medium);
+  padding-block: var(--space-2);
 }
 
 .mobile-menu li ul {
-    padding-left: 1rem;
+  padding-left: var(--space-3);
 }
 
 .mobile-menu li ul li {
-    padding: 0.5rem 0;
+  padding-block: var(--space-1);
 }
 
 .mobile-menu a {
-    color: var(--avcon-text);
-    text-decoration: none;
-    display: block;
-    padding: 0.5rem 0;
+  display: block;
+  padding-block: var(--space-1);
+
+  color: var(--avcon-text);
+  text-decoration: none;
 }
 
-/* Color Styles */
+/* =========================================
+   TEXT UTILITIES
+   ========================================= */
+
 .text-link.text-dark:hover {
-    color: var(--avcon-primary-dark);
+  color: var(--avcon-primary-dark);
 }
 
 .text-right {
-    text-align: right;
+  text-align: right;
 }
 
 .text-left {
-    text-align: left;
+  text-align: left;
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
-p > .text-large {
-    font-size: 1.7rem;
+.text-large {
+  font-size: var(--avcon-font-h3);
 }
 
 .uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
-/* Shared AvCon call-to-action treatment. */
+/* =========================================
+   SHARED BUTTON SYSTEM
+   ========================================= */
+
 :is(
-    .btn-primary,
-    .btn-secondary,
-    .btn-tertiary,
-    .btn-link,
-    .app-button,
-    .industry-button,
-    .sponsor-button,
-    .contact-button,
-    .footer-btn,
-    .button-highlight,
-    .submit-button,
-    .goc-toggle-button,
-    .speaker-bio-toggle
+  .btn-primary,
+  .btn-secondary,
+  .btn-tertiary,
+  .btn-link,
+  .app-button,
+  .industry-button,
+  .sponsor-button,
+  .contact-button,
+  .footer-btn,
+  .button-highlight,
+  .submit-button,
+  .goc-toggle-button,
+  .speaker-bio-toggle,
+  .registration-button,
+  .gallery-btn,
+  .carousel-button
 ) {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    min-height: 44px;
-    padding: 0.75rem 1.5rem;
-    border: 1px solid var(--avcon-accent);
-    border-radius: 8px;
-    background: var(--avcon-accent);
-    color: var(--avcon-white) !important;
-    font: inherit;
-    font-weight: 700;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease,
-        transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--space-1);
+
+  /*
+    48px provides a more comfortable touch target
+    than the previous 44px.
+  */
+  min-height: 48px;
+
+  padding: var(--space-2) var(--space-5);
+
+  border: 1px solid var(--avcon-accent);
+  border-radius: var(--avcon-radius-small);
+
+  background: var(--avcon-accent);
+  color: var(--avcon-white) !important;
+
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.3;
+
+  text-align: center;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--avcon-transition),
+    border-color var(--avcon-transition),
+    color var(--avcon-transition),
+    transform var(--avcon-transition),
+    box-shadow var(--avcon-transition);
 }
 
 :is(
-    .btn-primary,
-    .btn-secondary,
-    .btn-tertiary,
-    .btn-link,
-    .app-button,
-    .industry-button,
-    .sponsor-button,
-    .contact-button,
-    .footer-btn,
-    .button-highlight,
-    .submit-button,
-    .goc-toggle-button,
-    .speaker-bio-toggle
+  .btn-primary,
+  .btn-secondary,
+  .btn-tertiary,
+  .btn-link,
+  .app-button,
+  .industry-button,
+  .sponsor-button,
+  .contact-button,
+  .footer-btn,
+  .button-highlight,
+  .submit-button,
+  .goc-toggle-button,
+  .speaker-bio-toggle,
+  .registration-button,
+  .gallery-btn,
+  .carousel-button
 ):hover {
-    background: var(--avcon-accent-light);
-    border-color: var(--avcon-accent-light);
-    color: var(--avcon-white) !important;
-    transform: translateY(-2px);
+  background: var(--avcon-accent-light);
+  border-color: var(--avcon-accent-light);
+  color: var(--avcon-white) !important;
+
+  transform: translateY(-2px);
 }
 
 :is(
+  .btn-primary,
+  .btn-secondary,
+  .btn-tertiary,
+  .btn-link,
+  .app-button,
+  .industry-button,
+  .sponsor-button,
+  .contact-button,
+  .footer-btn,
+  .button-highlight,
+  .submit-button,
+  .goc-toggle-button,
+  .speaker-bio-toggle,
+  .registration-button,
+  .gallery-btn,
+  .carousel-button
+):active {
+  transform: translateY(0);
+}
+
+/* =========================================
+   FLEX UTILITIES
+   ========================================= */
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.align-center {
+  justify-content: center;
+}
+
+.align-vertical-middle {
+  align-items: center;
+}
+
+.align-vertical-btm {
+  align-items: flex-end;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.space-between-col {
+  justify-content: space-between;
+}
+
+.hero-content-container .align-start {
+  align-items: flex-start;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.width-30 {
+  flex-basis: 30%;
+}
+
+.width-70 {
+  flex-basis: 70%;
+}
+
+/* =========================================
+   CARDS
+   ========================================= */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: var(--space-3);
+
+  margin: var(--margin-small);
+  padding: var(--space-3);
+
+  background-color: var(--avcon-primary-dark);
+  border-radius: var(--avcon-radius-small);
+
+  transition: transform var(--avcon-transition);
+}
+
+/* =========================================
+   IMAGES
+   ========================================= */
+
+.img-fluid {
+  display: block;
+
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================
+   EVENT CONTAINER
+   ========================================= */
+
+.event-container {
+  width: 100%;
+
+  margin-inline: auto;
+
+  padding-block: var(--section-space);
+  padding-inline: var(--page-gutter);
+}
+
+/* =========================================
+   RESPONSIVE SPACING
+   ========================================= */
+
+@media (max-width: 480px) {
+  :root {
+    --section-space: var(--section-space-mobile);
+  }
+
+  .event-container {
+    padding-inline: 1.25rem;
+  }
+
+  :is(
     .btn-primary,
     .btn-secondary,
     .btn-tertiary,
@@ -276,113 +578,26 @@ p > .text-large {
     .registration-button,
     .gallery-btn,
     .carousel-button
-):focus-visible {
-    outline: 3px solid var(--avcon-focus);
-    outline-offset: 3px;
+  ) {
+    min-height: 48px;
+    padding: var(--space-2) var(--space-4);
+  }
 }
 
-:is(
-    .btn-primary,
-    .btn-secondary,
-    .btn-tertiary,
-    .btn-link,
-    .app-button,
-    .industry-button,
-    .sponsor-button,
-    .contact-button,
-    .footer-btn,
-    .button-highlight,
-    .submit-button,
-    .goc-toggle-button,
-    .speaker-bio-toggle
-):active {
-    transform: translateY(0);
-}
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
 
-/* Custom Form Container */
-.custom-form-container {
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 3rem;
-}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-/* Flex Styles */
-.flex-container {
-    display: flex;
-    flex-direction: row;
-}
-
-.flex-col {
-    display: flex;
-    flex-direction: column;
-}
-
-.wrap {
-    flex-wrap: wrap;
-}
-
-.flex-col-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.align-center {
-    justify-content: center;
-}
-
-.align-vertical-middle {
-    align-items: center;
-}
-
-.align-vertical-btm {
-    align-items: end;
-}
-
-.space-between {
-    align-content: space-between;
-}
-
-.space-between-col {
-    justify-content: space-between;
-}
-.hero-content-container .align-start {
-    align-items: start;
-}
-
-.flex-1 {
-    flex-grow: 1;
-}
-
-.width-30 {
-    flex-basis: 30%;
-}
-
-.width-70 {
-    flex-basis: 70%;
-}
-
-/* ====== CARD STYLES ======= */
-/* Card styling */
-.card-container {
-    background-color: var(--avcon-primary-dark);
-    border-radius: 4px;
-    margin: var(--margin-small);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-
-    transition: transform 0.2s; /* adds a short delay in effect */
-}
-
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Event Container */
-.event-container {
-    padding: 2% 5%;
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

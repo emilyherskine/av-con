@@ -18,7 +18,7 @@ export default function EventExperience() {
       <h2>What You'll Experience</h2>
       <p>AvCon is designed to inspire, educate and connect.</p>
 
-      <br/>
+      <br />
 
       <Grid container spacing={3}>
         {experiences.map((item, index) => (

@@ -1,6 +1,6 @@
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from "web-vitals";
 
-const reportWebVitals = onPerfEntry => {
+const reportWebVitals = (onPerfEntry) => {
   if (typeof onPerfEntry === "function") {
     getCLS(onPerfEntry);
     getFID(onPerfEntry);

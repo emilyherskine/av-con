@@ -1,38 +1,138 @@
+/* =========================================
+   CARD
+   ========================================= */
+
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid var(--avcon-border);
-  border-radius: 8px;
-  overflow: hidden;
+
   width: 100%;
-  aspect-ratio: 1 / 1; /* Makes it a square */
-  box-shadow: 0 2px 6px color-mix(in srgb, var(--avcon-primary-dark) 8%, transparent);
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  background: var(--avcon-primary);
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
+
+  box-shadow: var(--avcon-shadow);
+
+  transition:
+    transform var(--avcon-transition),
+    border-color var(--avcon-transition),
+    box-shadow var(--avcon-transition);
 }
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--avcon-accent);
+}
+
+/* =========================================
+   CARD IMAGE
+   ========================================= */
 
 .card-image-wrapper {
   width: 100%;
   height: 60%;
+
   overflow: hidden;
+
+  background: var(--avcon-primary-dark);
 }
 
 .card-image {
+  display: block;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
   object-position: center;
 }
 
+/* =========================================
+   CARD CONTENT
+   ========================================= */
+
 .card-content {
-  padding: 60px 20px 90px;
-  height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  width: 100%;
+  height: 40%;
+
+  padding: var(--space-5);
+
+  box-sizing: border-box;
+
   text-align: left;
 }
 
 .card-title {
+  margin: 0;
+
+  color: var(--avcon-text);
+
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 1.3;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   CARD TEXT
+   ========================================= */
+
+.card-content p {
+  margin: var(--space-2) 0 0;
+
+  color: var(--avcon-text-muted);
+
+  font-size: var(--avcon-font-body);
+  line-height: var(--avcon-line-body);
+}
+
+/* =========================================
+   KEYBOARD ACCESSIBILITY
+   ========================================= */
+
+.card :where(a, button):focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+  .card-content {
+    padding: var(--space-4);
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .card-content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
 }

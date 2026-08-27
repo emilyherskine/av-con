@@ -1,89 +1,181 @@
+/* =========================================
+   GOC HIGHLIGHT
+   ========================================= */
+
 .goc-highlight {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 2rem 5%;
-    margin: 1rem auto;
-    max-width: 100%;
-    background-color: var(--avcon-white);
-    box-shadow: 0 4px 20px color-mix(in srgb, var(--avcon-primary-dark) 10%, transparent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  margin: var(--space-3) auto;
+  padding: var(--space-6) var(--page-gutter);
+
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-large);
+
+  background-color: var(--avcon-surface);
+  color: var(--avcon-text);
+
+  text-align: center;
+
+  box-shadow: var(--avcon-shadow);
+}
+
+/* =========================================
+   IMAGE
+   ========================================= */
+
+.goc-image-wrapper {
+  flex-shrink: 0;
+
+  width: min(100%, 21.875rem);
+  aspect-ratio: 1 / 1;
+
+  margin-bottom: var(--space-4);
+
+  overflow: hidden;
+
+  border: 3px solid var(--avcon-accent);
+  border-radius: 50%;
+
+  background-color: var(--avcon-primary-dark);
+}
+
+.goc-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+.goc-content {
+  width: 100%;
+  max-width: 43.75rem;
+}
+
+/* =========================================
+   NAME
+   ========================================= */
+
+.goc-name {
+  margin: 0 0 var(--space-2);
+
+  color: var(--avcon-text);
+
+  font-size: var(--avcon-font-h3);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* =========================================
+   BIO
+   ========================================= */
+
+.goc-bio {
+  margin: 0;
+
+  color: var(--avcon-text-muted);
+
+  font-size: var(--avcon-font-body);
+  line-height: var(--avcon-line-body);
+
+  overflow: hidden;
+
+  transition: max-height var(--avcon-transition);
+}
+
+.goc-bio.collapsed {
+  max-height: 4.5em;
+}
+
+.goc-bio.expanded {
+  max-height: 1000px;
+}
+
+/* =========================================
+   TABLET / MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+  .goc-highlight {
+    padding: var(--space-5) var(--page-gutter);
   }
-  
+
   .goc-image-wrapper {
-    width: 100%;
-    max-width: 350px;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+    width: min(100%, 18rem);
   }
-  
-  .goc-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
-  
-  .goc-content {
-    width: 100%;
-    max-width: 700px;
-  }
-  
+
   .goc-name {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--avcon-primary);
-    margin: 1rem 0 0.5rem;
+    font-size: var(--avcon-font-h3);
   }
-  
+
   .goc-bio {
-    font-size: 1rem;
-    color: var(--avcon-primary-dark);
-    line-height: 1.5;
-    transition: max-height 0.3s ease;
-    overflow: hidden;
+    font-size: var(--avcon-font-body);
   }
-  
-  .goc-bio.collapsed {
-    max-height: 4.5em;
+}
+
+/* =========================================
+   LARGE SCREENS
+   ========================================= */
+
+@media (min-width: 1200px) {
+  .goc-highlight {
+    flex-direction: row;
+    align-items: flex-start;
+
+    gap: var(--space-6);
+
+    padding: var(--space-6);
+    text-align: left;
   }
-  
-  .goc-bio.expanded {
-    max-height: 1000px;
+
+  .goc-image-wrapper {
+    margin-bottom: 0;
   }
-  
-  /* Responsive Design */
-  
-  @media (max-width: 768px) {
-    .goc-highlight {
-      padding: 1.5rem;
-    }
-  
-    .goc-name {
-      font-size: 1.5rem;
-    }
-  
-    .goc-bio {
-      font-size: 0.95rem;
-    }
+
+  .goc-content {
+    flex: 1 1 auto;
+    max-width: none;
   }
-  
-  @media (min-width: 1200px) {
-    .goc-highlight {
-      flex-direction: row;
-      text-align: left;
-      align-items: flex-start;
-      gap: 2rem;
-    }
-  
-    .goc-image-wrapper {
-      margin-bottom: 0;
-    }
-  
-    .goc-content {
-      max-width: 100%;
-    }
-  }  
+}
+
+/* =========================================
+   VERY SMALL SCREENS
+   ========================================= */
+
+@media (max-width: 480px) {
+  .goc-highlight {
+    padding: var(--space-5) var(--space-4);
+  }
+
+  .goc-image-wrapper {
+    width: min(100%, 15rem);
+  }
+
+  .goc-name {
+    font-size: var(--avcon-font-h4);
+  }
+
+  .goc-bio {
+    text-align: left;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .goc-bio {
+    transition: none;
+  }
+}

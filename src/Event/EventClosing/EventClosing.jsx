@@ -16,12 +16,14 @@ export default function EventClosing() {
         <li>Government agencies and education partners</li>
       </ul>
 
-      <br/><br/><br/>
+      <br />
+      <br />
+      <br />
 
       <h2>More Than an Event</h2>
       <p>
-        The AvCon Student Convention is the flagship event within the wider AvCon
-        ecosystem.
+        The AvCon Student Convention is the flagship event within the wider
+        AvCon ecosystem.
       </p>
       <p>
         Throughout the year, AvCon connects industry, education and government

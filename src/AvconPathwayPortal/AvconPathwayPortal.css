@@ -1,197 +1,287 @@
+/* =========================================
+   APP PAGE
+   ========================================= */
+
 .app-page {
-    display:flex;
-    flex-direction:column;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
 }
 
+/* =========================================
+   MAIN SECTIONS
+   ========================================= */
 
 .intro-section,
 .pathway-section,
 .advert-container,
 .industry-callout {
+  width: 100%;
 
-    padding:4% 6%;
-    text-align:center;
+  padding-block: var(--section-space);
+  padding-inline: var(--page-gutter);
 
+  box-sizing: border-box;
+
+  text-align: center;
 }
 
-
+/* =========================================
+   INTRO / SECTION TEXT
+   ========================================= */
 
 .intro-section p,
 .pathway-section p,
 .advert-container p {
+  max-width: 56rem;
 
-    max-width:900px;
-    margin:1rem auto;
-    line-height:1.7;
+  margin: var(--space-3) auto;
 
+  color: var(--avcon-text-muted);
+
+  font-size: var(--avcon-font-body);
+  line-height: var(--avcon-line-body);
 }
 
-
+/* =========================================
+   INTRO HIGHLIGHTS
+   ========================================= */
 
 .intro-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
 
-display:flex;
-justify-content:center;
-gap:1rem;
-flex-wrap:wrap;
-margin:2rem 0;
+  gap: var(--space-3);
 
+  margin-block: var(--space-5);
 }
-
-
 
 .intro-highlights span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-background:var(--avcon-primary-dark);
-border:1px solid var(--avcon-border);
-padding:.8rem 1.5rem;
-border-radius:25px;
+  min-height: 44px;
 
+  padding: var(--space-2) var(--space-5);
+
+  box-sizing: border-box;
+
+  background: var(--avcon-primary-dark);
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
+
+  color: var(--avcon-text);
+
+  line-height: 1.4;
 }
 
+/* =========================================
+   GRIDS
+   ========================================= */
 
+.pathway-grid,
+.card-grid {
+  display: grid;
 
-.pathway-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
-display:grid;
-grid-template-columns:
-repeat(auto-fit,minmax(250px,1fr));
+  gap: var(--space-5);
 
-gap:1.5rem;
-
-margin-top:2rem;
-
+  width: 100%;
+  margin-top: var(--space-5);
 }
 
-
+/* =========================================
+   PATHWAY CARDS
+   ========================================= */
 
 .pathway-card {
+  display: flex;
+  flex-direction: column;
 
-padding:1.5rem;
-border-radius:12px;
-border:1px solid color-mix(in srgb, var(--avcon-white) 25%, transparent);
-text-align:center;
+  height: 100%;
+  padding: var(--space-5);
 
+  box-sizing: border-box;
+
+  background: var(--avcon-primary);
+
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
+
+  text-align: center;
+
+  transition:
+    border-color var(--avcon-transition),
+    transform var(--avcon-transition),
+    box-shadow var(--avcon-transition);
 }
 
+.pathway-card:hover {
+  border-color: var(--avcon-accent);
 
-
-.card-grid {
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(280px,1fr));
-
-gap:2rem;
-
-margin-top:2rem;
-
+  transform: translateY(-2px);
 }
 
-
+/* =========================================
+   OPPORTUNITY CARDS
+   ========================================= */
 
 .opportunity-card {
+  display: flex;
+  flex-direction: column;
 
-background:var(--avcon-primary-dark);
+  height: 100%;
 
-border-radius:12px;
+  overflow: hidden;
 
-overflow:hidden;
+  background: var(--avcon-primary-dark);
 
-border:1px solid var(--avcon-border);
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
 
-display:flex;
-
-flex-direction:column;
-
+  transition:
+    border-color var(--avcon-transition),
+    transform var(--avcon-transition),
+    box-shadow var(--avcon-transition);
 }
 
+.opportunity-card:hover {
+  border-color: var(--avcon-accent);
 
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   CARD IMAGE
+   ========================================= */
 
 .card-img {
+  display: block;
 
-height:120px;
+  width: 100%;
+  height: 7.5rem;
 
-width:100%;
+  object-fit: contain;
+  object-position: center;
 
-object-fit:contain;
-
-background:var(--avcon-white);
-
+  background: var(--avcon-white);
 }
 
-
+/* =========================================
+   CARD CONTENT
+   ========================================= */
 
 .card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 
-padding:1.5rem;
+  padding: var(--space-5);
 
-display:flex;
+  box-sizing: border-box;
 
-flex-direction:column;
-
-flex-grow:1;
-
+  text-align: left;
 }
-
-
 
 .card-content p {
+  flex-grow: 1;
 
-flex-grow:1;
+  margin: 0 0 var(--space-3);
 
+  color: var(--avcon-text-muted);
+
+  line-height: var(--avcon-line-body);
 }
 
-
+/* =========================================
+   APP BUTTON
+   ========================================= */
 
 .app-button {
-
-background:var(--avcon-accent);
-
-color:var(--avcon-white);
-
-padding:.7rem 1.4rem;
-
-border-radius:8px;
-
-text-decoration:none;
-
-font-weight:bold;
-
-display:inline-block;
-
-margin-top:1rem;
-
+  margin-top: var(--space-3);
 }
 
-
-
-.app-button:hover {
-
-background:var(--avcon-accent-light);
-
-}
-
-
+/* =========================================
+   INDUSTRY CALLOUT
+   ========================================= */
 
 .industry-callout {
+  background: var(--avcon-primary-dark);
 
-background:var(--avcon-primary-dark);
-
+  border-top: 1px solid var(--avcon-border);
+  border-bottom: 1px solid var(--avcon-border);
 }
 
+/* =========================================
+   KEYBOARD ACCESSIBILITY
+   ========================================= */
 
-
-@media(max-width:768px){
-
-.intro-section,
-.pathway-section,
-.advert-container,
-.industry-callout {
-
-padding:8% 5%;
-
+.app-page :where(a, button):focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 3px;
 }
 
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+  .intro-section,
+  .pathway-section,
+  .advert-container,
+  .industry-callout {
+    padding-block: var(--section-space-mobile);
+    padding-inline: var(--page-gutter);
+  }
+
+  .pathway-grid,
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .pathway-card,
+  .card-content {
+    padding: var(--space-5);
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+  .intro-highlights {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .intro-highlights span {
+    width: 100%;
+  }
+
+  .card-img {
+    height: 7rem;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .pathway-card,
+  .opportunity-card {
+    transition: none;
+  }
+
+  .pathway-card:hover,
+  .opportunity-card:hover {
+    transform: none;
+  }
 }

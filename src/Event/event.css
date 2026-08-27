@@ -1,66 +1,175 @@
+/* =========================================
+   EVENT PAGE
+   ========================================= */
+
 .event-page {
-    display:flex;
-    flex-direction:column;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 100vh;
 }
 
+/* =========================================
+   EVENT SECTIONS
+   ========================================= */
 
 .event-section {
+  width: 100%;
 
-    padding: 4rem 5%;
-    text-align:center;
+  padding-block: var(--section-space);
+  padding-inline: var(--page-gutter);
 
+  text-align: center;
 }
-
 
 .event-section h2 {
+  margin: 0 0 var(--space-5);
 
-    font-size:2rem;
-    font-weight:800;
-    margin-bottom:1.5rem;
+  color: var(--avcon-text);
 
+  font-size: var(--avcon-font-h2);
+  font-weight: 700;
+  line-height: 1.25;
 }
-
 
 .event-section p {
+  color: var(--avcon-text-muted);
 
-    font-size:1.1rem;
-    line-height:1.7;
-
+  font-size: var(--avcon-font-body);
+  line-height: var(--avcon-line-body);
 }
 
+/* =========================================
+   EVENT IMAGE
+   ========================================= */
 
 .event-image {
+  display: block;
 
-    width:100%;
-    border-radius:10px;
-    mix-blend-mode:luminosity;
+  width: 100%;
+  height: auto;
 
+  border-radius: var(--avcon-radius-medium);
+
+  mix-blend-mode: luminosity;
 }
 
-
+/* =========================================
+   EXPERIENCE CARD
+   ========================================= */
 
 .experience-card {
+  display: flex;
+  flex-direction: column;
 
-    height:100%;
-    padding:1.5rem;
+  width: 100%;
+  height: 100%;
 
-    border:1px solid var(--avcon-white);
-    border-radius:10px;
+  padding: var(--space-5);
 
-    text-align:left;
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
 
-    line-height:1.6;
+  background: var(--avcon-surface);
+  color: var(--avcon-text);
 
+  text-align: left;
+  line-height: var(--avcon-line-body);
+
+  box-shadow: var(--avcon-shadow);
+
+  transition:
+    border-color var(--avcon-transition),
+    transform var(--avcon-transition),
+    box-shadow var(--avcon-transition);
 }
 
+.experience-card:hover {
+  border-color: var(--avcon-accent);
 
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   REGISTRATION BOX
+   ========================================= */
 
 .registration-box {
+  width: 100%;
 
-    margin-top:3rem;
-    padding:2rem;
+  margin-top: var(--section-space);
+  padding: var(--space-6);
 
-    border:1px solid var(--avcon-white);
-    border-radius:10px;
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
 
+  background: var(--avcon-surface);
+  color: var(--avcon-text);
+
+  box-shadow: var(--avcon-shadow);
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+  .event-section {
+    padding-block: var(--section-space-mobile);
+    padding-inline: var(--page-gutter);
+  }
+
+  .event-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .event-section p {
+    font-size: var(--avcon-font-body);
+  }
+
+  .experience-card {
+    padding: var(--space-5);
+  }
+
+  .registration-box {
+    margin-top: var(--section-space-mobile);
+    padding: var(--space-5);
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+  .event-section {
+    padding-inline: 1.25rem;
+  }
+
+  .event-image {
+    border-radius: var(--avcon-radius-small);
+  }
+
+  .experience-card {
+    padding: var(--space-4);
+  }
+
+  .registration-box {
+    padding: var(--space-4);
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-card {
+    transition: none;
+  }
+
+  .experience-card:hover {
+    transform: none;
+  }
 }

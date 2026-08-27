@@ -1,151 +1,326 @@
+/* =========================================
+   EXHIBITOR CONTENT
+   ========================================= */
+
 .exhibitor-content {
+  width: 100%;
 
-    max-width:1200px;
-    margin:auto;
-    padding:5%;
+  margin-inline: auto;
 
+  padding-block: var(--section-space);
+  padding-inline: var(--page-gutter);
 }
 
-
+/* =========================================
+   EXHIBITOR HEADING
+   ========================================= */
 
 .exhibitor-heading {
+  margin: 0 0 var(--space-5);
 
-    font-size:2.5rem;
-    font-weight:800;
-    margin-bottom:1.5rem;
+  color: var(--avcon-text);
 
+  font-size: var(--avcon-font-h1);
+  font-weight: 700;
+  line-height: var(--avcon-line-heading);
 }
 
-
+/* =========================================
+   EXHIBITOR PARAGRAPHS
+   ========================================= */
 
 .exhibitor-paragraph {
+  max-width: 60rem;
 
-    font-size:1.1rem;
-    line-height:1.7;
-    margin-bottom:1rem;
+  margin-bottom: var(--space-4);
 
+  color: var(--avcon-text-muted);
+
+  font-size: var(--avcon-font-body);
+  line-height: var(--avcon-line-body);
 }
 
+.exhibitor-paragraph:last-child {
+  margin-bottom: 0;
+}
 
-
+/* =========================================
+   CARD GRIDS
+   ========================================= */
 
 .opportunity-grid,
 .involvement-grid {
+  display: grid;
 
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:2rem;
-    margin:3rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 
+  gap: var(--space-6);
+
+  width: 100%;
+
+  margin-block: var(--section-space);
 }
 
-
+/* =========================================
+   OPPORTUNITY / INVOLVEMENT CARDS
+   ========================================= */
 
 .opportunity-card,
 .involvement-card {
+  display: flex;
+  flex-direction: column;
 
-    padding:2rem;
-    border-radius:12px;
-    border:1px solid color-mix(in srgb, var(--avcon-white) 20%, transparent);
+  width: 100%;
+  height: 100%;
 
+  padding: var(--space-6);
+
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
+
+  background: var(--avcon-surface);
+  color: var(--avcon-text);
+
+  box-shadow: var(--avcon-shadow);
+
+  transition:
+    border-color var(--avcon-transition),
+    transform var(--avcon-transition),
+    box-shadow var(--avcon-transition);
 }
 
+.opportunity-card:hover,
+.involvement-card:hover {
+  border-color: var(--avcon-accent);
 
+  transform: translateY(-2px);
+}
 
 .opportunity-card h3,
 .involvement-card h3 {
+  margin: 0 0 var(--space-3);
 
-    margin-bottom:1rem;
-    font-size:1.4rem;
+  color: var(--avcon-text);
 
+  font-size: var(--avcon-font-h3);
+  font-weight: 700;
+  line-height: 1.3;
 }
 
+.opportunity-card p,
+.involvement-card p {
+  margin-bottom: 0;
 
+  color: var(--avcon-text-muted);
 
+  line-height: var(--avcon-line-body);
+}
+
+/* =========================================
+   CONTENT SECTIONS
+   ========================================= */
 
 .content-section {
+  width: 100%;
 
-    margin:4rem 0;
-
+  margin-block: var(--section-space);
 }
 
-
-
-
+/* =========================================
+   INDUSTRY BUTTON
+   ========================================= */
 
 .industry-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-    display:inline-block;
-    margin-top:1rem;
-    padding:.8rem 1.5rem;
+  min-width: 10rem;
+  min-height: 48px;
 
-    border-radius:8px;
-    border:1px solid var(--avcon-white);
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-5);
 
-    text-decoration:none;
+  border: 1px solid var(--avcon-accent);
+  border-radius: var(--avcon-radius-small);
 
-    transition:.3s ease;
+  background: var(--avcon-accent);
+  color: var(--avcon-white) !important;
 
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.3;
+
+  text-align: center;
+  text-decoration: none;
+
+  transition:
+    background-color var(--avcon-transition),
+    border-color var(--avcon-transition),
+    transform var(--avcon-transition),
+    box-shadow var(--avcon-transition);
 }
-
-
 
 .industry-button:hover {
+  background: var(--avcon-accent-light);
+  border-color: var(--avcon-accent-light);
 
-    background:var(--avcon-accent-light);
+  transform: translateY(-2px);
 
-    color:var(--avcon-white);
-
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
+.industry-button:active {
+  transform: translateY(0);
+}
 
+.industry-button:focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 3px;
+}
 
-
+/* =========================================
+   CONTACT BOX
+   ========================================= */
 
 .contact-box {
+  width: 100%;
 
-    text-align:center;
-    padding:2rem;
-    border-radius:12px;
-    margin-top:3rem;
+  margin-top: var(--section-space);
+  padding: var(--space-6);
 
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
+
+  background: var(--avcon-surface);
+  color: var(--avcon-text);
+
+  text-align: center;
+
+  box-shadow: var(--avcon-shadow);
 }
-
-
-
-
 
 .contact-box a {
-
-    color:var(--avcon-accent);
-
+  color: var(--avcon-accent) !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
+.contact-box a:hover {
+  color: var(--avcon-text) !important;
+}
 
-
-
+/* =========================================
+   BLOCKQUOTE
+   ========================================= */
 
 blockquote {
+  width: 100%;
+  max-width: 55rem;
 
-    text-align:center;
-    margin:4rem auto;
-    font-style:italic;
-    font-size:1.3rem;
-    line-height:1.6;
+  margin: var(--section-space) auto;
 
+  padding-inline: var(--space-5);
+
+  border-left: 4px solid var(--avcon-accent);
+
+  color: var(--avcon-text-muted);
+
+  font-size: var(--avcon-font-h3);
+  font-style: italic;
+  line-height: 1.6;
+
+  text-align: center;
 }
 
+/* =========================================
+   TABLET
+   ========================================= */
 
+@media (max-width: 768px) {
+  .exhibitor-content {
+    padding-block: var(--section-space-mobile);
+    padding-inline: var(--page-gutter);
+  }
 
+  .opportunity-grid,
+  .involvement-grid {
+    gap: var(--space-5);
 
+    margin-block: var(--section-space-mobile);
+  }
 
-@media(max-width:768px){
+  .opportunity-card,
+  .involvement-card {
+    padding: var(--space-5);
+  }
 
-    .exhibitor-content {
+  .contact-box {
+    padding: var(--space-5);
+  }
 
-        padding:2rem 1.5rem;
+  blockquote {
+    padding-inline: var(--space-4);
 
-    }
+    font-size: var(--avcon-font-body);
+  }
+}
 
+/* =========================================
+   MOBILE
+   ========================================= */
 
+@media (max-width: 480px) {
+  .exhibitor-content {
+    padding-inline: 1.25rem;
+  }
+
+  .exhibitor-heading {
+    text-align: center;
+  }
+
+  .opportunity-grid,
+  .involvement-grid {
+    grid-template-columns: 1fr;
+
+    gap: var(--space-4);
+  }
+
+  .opportunity-card,
+  .involvement-card {
+    padding: var(--space-4);
+  }
+
+  .industry-button {
+    width: 100%;
+  }
+
+  .contact-box {
+    padding: var(--space-4);
+  }
+
+  blockquote {
+    margin-block: var(--space-7);
+
+    padding-inline: var(--space-3);
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .opportunity-card,
+  .involvement-card,
+  .industry-button {
+    transition: none;
+  }
+
+  .opportunity-card:hover,
+  .involvement-card:hover,
+  .industry-button:hover {
+    transform: none;
+  }
 }

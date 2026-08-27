@@ -6,7 +6,7 @@
  * @returns {boolean}
  */
 export const isMobileScreen = (breakpoint = 768) => {
-    return window.innerWidth < breakpoint;
+  return window.innerWidth < breakpoint;
 };
 
 /**
@@ -16,11 +16,11 @@ export const isMobileScreen = (breakpoint = 768) => {
  * @returns {Function}
  */
 export const debounce = (func, delay) => {
-    let timeoutId;
-    return (...args) => {
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => func(...args), delay);
-    };
+  let timeoutId;
+  return (...args) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => func(...args), delay);
+  };
 };
 
 /**
@@ -30,19 +30,19 @@ export const debounce = (func, delay) => {
  * @returns {string}
  */
 export const formatDate = (date, format = "MM/DD/YYYY") => {
-    const d = new Date(date);
-    const day = String(d.getDate()).padStart(2, "0");
-    const month = String(d.getMonth() + 1).padStart(2, "0");
-    const year = d.getFullYear();
-    
-    return format.replace("MM", month).replace("DD", day).replace("YYYY", year);
+  const d = new Date(date);
+  const day = String(d.getDate()).padStart(2, "0");
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const year = d.getFullYear();
+
+  return format.replace("MM", month).replace("DD", day).replace("YYYY", year);
 };
 
 /**
  * Scroll to top of page smoothly
  */
 export const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 /**
@@ -51,6 +51,6 @@ export const scrollToTop = () => {
  * @returns {string|null}
  */
 export const getQueryParam = (param) => {
-    const params = new URLSearchParams(window.location.search);
-    return params.get(param);
+  const params = new URLSearchParams(window.location.search);
+  return params.get(param);
 };

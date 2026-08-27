@@ -3,6 +3,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Sponsor from "./sponsor";
+import ContentCard from "../CommonComponents/ContentCard/ContentCard";
 import "./SponsorsPartners.css";
 
 // Images
@@ -10,6 +11,21 @@ import SponsoredBy from "./SponsorImages/1.png";
 import AirCorpLogo from "./SponsorImages/AirCorpsLogo.jpeg";
 import TYHubLogo from "./SponsorImages/TYHubLogo.jpg";
 import All2025Sponsors from "./Sponsers.jpeg";
+
+const partnerCards = [
+    {
+        title: "Inspire Future Talent",
+        description: "Help students discover exciting careers across aviation, aerospace, engineering and emerging technologies.",
+    },
+    {
+        title: "Connect With Students",
+        description: "Showcase your organisation and connect directly with the next generation of industry talent.",
+    },
+    {
+        title: "Shape Tomorrow",
+        description: "Support workforce development and help build Ireland's future aviation ecosystem.",
+    },
+];
 
 
 const SponsorImage = ({ src, alt }) => (
@@ -77,62 +93,11 @@ export default function SponsorsPartners() {
 
 
                 <Grid container spacing={3}>
-
-                    <Grid item xs={12} md={4}>
-                        <Box className="partner-card">
-
-                            <h3>
-                                Inspire Future Talent
-                            </h3>
-
-                            <p>
-                                Help students discover exciting careers across
-                                aviation, aerospace, engineering and emerging
-                                technologies.
-                            </p>
-
-                        </Box>
-                    </Grid>
-
-
-
-                    <Grid item xs={12} md={4}>
-
-                        <Box className="partner-card">
-
-                            <h3>
-                                Connect With Students
-                            </h3>
-
-                            <p>
-                                Showcase your organisation and connect directly
-                                with the next generation of industry talent.
-                            </p>
-
-                        </Box>
-
-                    </Grid>
-
-
-
-                    <Grid item xs={12} md={4}>
-
-                        <Box className="partner-card">
-
-                            <h3>
-                                Shape Tomorrow
-                            </h3>
-
-                            <p>
-                                Support workforce development and help build
-                                Ireland's future aviation ecosystem.
-                            </p>
-
-                        </Box>
-
-                    </Grid>
-
-
+                    {partnerCards.map((card) => (
+                        <Grid item xs={12} md={4} key={card.title}>
+                            <ContentCard {...card} className="partner-card" />
+                        </Grid>
+                    ))}
                 </Grid>
 
             </section>

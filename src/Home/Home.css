@@ -1,86 +1,295 @@
+/* =========================================
+   HOME PAGE
+   ========================================= */
+
 .home-page {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 100vh;
 }
+
+/* =========================================
+   SHARED SECTIONS
+   ========================================= */
 
 .intro-section,
 .section,
 .convention-section,
 .final-section {
-    padding: 3rem 5%;
+  width: 100%;
+
+  padding-block: var(--section-space);
+  padding-inline: var(--page-gutter);
 }
+
+/* =========================================
+   HOME / BANNER IMAGES
+   ========================================= */
 
 .home-image,
 .banner-image {
-    width: 100%;
-    border-radius: 12px;
-    mix-blend-mode: luminosity;
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: var(--avcon-radius-medium);
+
+  mix-blend-mode: luminosity;
 }
 
-.info-card {
-    padding: 1.5rem;
-    height: 100%;
-    text-align: center;
-    border-radius: 12px;
-    border: 1px solid color-mix(in srgb, var(--avcon-white) 30%, transparent);
-}
+/* =========================================
+   BANNER
+   ========================================= */
 
 .banner-wrapper {
-    position: relative;
+  position: relative;
+
+  width: 100%;
 }
 
 .banner-content {
-    width: 100%;
-    padding: 2rem;
-    text-align: center;
+  width: 100%;
+
+  padding: var(--space-6);
+
+  text-align: center;
 }
+
+/* =========================================
+   INFORMATION CARDS
+   ========================================= */
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  padding: var(--space-5);
+
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
+
+  background: var(--avcon-surface);
+  color: var(--avcon-text);
+
+  text-align: center;
+
+  box-shadow: var(--avcon-shadow);
+
+  transition:
+    border-color var(--avcon-transition),
+    transform var(--avcon-transition),
+    box-shadow var(--avcon-transition);
+}
+
+.info-card:hover {
+  border-color: var(--avcon-accent);
+
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   HIGHLIGHT GRID
+   ========================================= */
 
 .highlight-grid {
-    margin-top: 2rem;
+  width: 100%;
+
+  margin-top: var(--space-6);
 }
+
+/* =========================================
+   HIGHLIGHTS
+   ========================================= */
 
 .highlight {
-    padding: 1.2rem;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 10px;
-    border: 1px solid color-mix(in srgb, var(--avcon-white) 30%, transparent);
+  width: 100%;
+  height: 100%;
+
+  padding: var(--space-4);
+
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
+
+  background: var(--avcon-surface);
+  color: var(--avcon-text);
+
+  font-weight: 700;
+  line-height: 1.5;
+
+  text-align: center;
+
+  transition:
+    border-color var(--avcon-transition),
+    transform var(--avcon-transition);
 }
+
+.highlight:hover {
+  border-color: var(--avcon-accent);
+
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   BUTTON ROW
+   ========================================= */
 
 .button-row {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--space-3);
+
+  width: 100%;
+
+  margin-block: var(--space-6);
 }
 
+/* =========================================
+   BUTTONS
+   ========================================= */
+
 .btn-link {
-    background: var(--avcon-accent);
-    color: var(--avcon-white);
-    padding: 0.75rem 1.4rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 10rem;
+  min-height: 48px;
+
+  padding: var(--space-2) var(--space-5);
+
+  border: 1px solid var(--avcon-accent);
+  border-radius: var(--avcon-radius-small);
+
+  background: var(--avcon-accent);
+  color: var(--avcon-white) !important;
+
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.3;
+
+  text-align: center;
+  text-decoration: none;
+
+  transition:
+    background-color var(--avcon-transition),
+    border-color var(--avcon-transition),
+    color var(--avcon-transition),
+    transform var(--avcon-transition),
+    box-shadow var(--avcon-transition);
 }
 
 .btn-link:hover {
-    background: var(--avcon-accent-light);
+  background: var(--avcon-accent-light);
+  border-color: var(--avcon-accent-light);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
+
+.btn-link:active {
+  transform: translateY(0);
+}
+
+.btn-link:focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   FINAL SECTION
+   ========================================= */
 
 .final-section {
-    text-align: center;
+  text-align: center;
 }
 
-@media (max-width: 768px) {
-    .intro-section,
-    .section,
-    .convention-section,
-    .final-section {
-        padding: 2rem 5%;
-    }
+/* =========================================
+   TABLET
+   ========================================= */
 
-    .banner-content {
-        position: static;
-    }
+@media (max-width: 768px) {
+  .intro-section,
+  .section,
+  .convention-section,
+  .final-section {
+    padding-block: var(--section-space-mobile);
+    padding-inline: var(--page-gutter);
+  }
+
+  .banner-content {
+    position: static;
+
+    padding: var(--space-5) var(--page-gutter);
+  }
+
+  .info-card {
+    padding: var(--space-5);
+  }
+
+  .highlight-grid {
+    margin-top: var(--space-5);
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+  .intro-section,
+  .section,
+  .convention-section,
+  .final-section {
+    padding-inline: 1.25rem;
+  }
+
+  .banner-content {
+    padding-inline: 1.25rem;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+
+    margin-block: var(--space-5);
+  }
+
+  .btn-link {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .info-card,
+  .highlight {
+    padding: var(--space-4);
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .info-card,
+  .highlight,
+  .btn-link {
+    transition: none;
+  }
+
+  .info-card:hover,
+  .highlight:hover,
+  .btn-link:hover {
+    transform: none;
+  }
 }

@@ -1,2 +1,3 @@
 import SocialMediaLinks from "./SocialMediaLinks";
-test("SocialMediaLinks exports a component", () => expect(SocialMediaLinks).toBeDefined());
+test("SocialMediaLinks exports a component", () =>
+  expect(SocialMediaLinks).toBeDefined());

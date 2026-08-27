@@ -1,53 +1,237 @@
+/* =========================================
+   CAROUSEL
+   ========================================= */
+
 .carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-    overflow: hidden;
+  position: relative;
+
+  width: 100%;
+  max-width: 50rem;
+
+  margin-inline: auto;
+
+  overflow: hidden;
+
+  border-radius: var(--avcon-radius-medium);
+
+  background: var(--avcon-primary-dark);
+}
+
+/* =========================================
+   CAROUSEL SLIDES
+   ========================================= */
+
+.carousel-slide {
+  width: 100%;
 }
 
 .carousel-slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: var(--avcon-radius-medium);
 }
+
+/* =========================================
+   CAROUSEL NAVIGATION BUTTONS
+   ========================================= */
 
 .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: color-mix(in srgb, var(--avcon-primary-dark) 50%, transparent);
-    color: var(--avcon-white);
-    font-size: 2rem;
-    padding: 0.5rem;
-    border: none;
-    cursor: pointer;
-    z-index: 1;
+  position: absolute;
+  top: 50%;
+
+  z-index: 1;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  min-width: 48px;
+  min-height: 48px;
+
+  padding: 0;
+
+  border: 1px solid color-mix(in srgb, var(--avcon-white) 30%, transparent);
+
+  border-radius: 50%;
+
+  background-color: color-mix(
+    in srgb,
+    var(--avcon-primary-dark) 85%,
+    transparent
+  );
+
+  color: var(--avcon-white);
+
+  font: inherit;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+
+  transition:
+    background-color var(--avcon-transition),
+    border-color var(--avcon-transition),
+    transform var(--avcon-transition);
 }
 
+.carousel-button:hover {
+  background-color: var(--avcon-accent);
+  border-color: var(--avcon-accent);
+
+  transform: translateY(-50%) scale(1.04);
+}
+
+.carousel-button:active {
+  transform: translateY(-50%) scale(0.98);
+}
+
+.carousel-button:focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   PREVIOUS / NEXT POSITIONING
+   ========================================= */
+
 .carousel-button.prev {
-    left: 10px;
+  left: var(--space-3);
 }
 
 .carousel-button.next {
-    right: 10px;
+  right: var(--space-3);
 }
+
+/* =========================================
+   CAROUSEL DOTS
+   ========================================= */
 
 .carousel-dots {
-    text-align: center;
-    margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: var(--space-1);
+
+  width: 100%;
+
+  margin-top: var(--space-3);
 }
 
+/* Accessible 44px touch target */
 .dot {
-    height: 12px;
-    width: 12px;
-    margin: 0 4px;
-    background-color: var(--avcon-border);
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  min-height: 44px;
+
+  margin: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  cursor: pointer;
 }
 
-.dot.active {
-    background-color: var(--avcon-accent);
+/* Visual dot */
+.dot::before {
+  content: "";
+
+  width: 10px;
+  height: 10px;
+
+  border: 2px solid var(--avcon-border);
+  border-radius: 50%;
+
+  background-color: var(--avcon-border);
+
+  transition:
+    background-color var(--avcon-transition),
+    border-color var(--avcon-transition),
+    transform var(--avcon-transition);
+}
+
+.dot:hover::before {
+  border-color: var(--avcon-accent);
+  background-color: var(--avcon-accent);
+
+  transform: scale(1.15);
+}
+
+.dot.active::before {
+  border-color: var(--avcon-accent);
+  background-color: var(--avcon-accent);
+
+  transform: scale(1.2);
+}
+
+.dot:focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 2px;
+
+  border-radius: 50%;
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+  .carousel-button {
+    width: 44px;
+    min-width: 44px;
+    min-height: 44px;
+
+    font-size: 1.5rem;
+  }
+
+  .carousel-button.prev {
+    left: var(--space-2);
+  }
+
+  .carousel-button.next {
+    right: var(--space-2);
+  }
+
+  .dot {
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-button,
+  .dot::before {
+    transition: none;
+  }
+
+  .carousel-button:hover,
+  .carousel-button:active,
+  .dot:hover::before,
+  .dot.active::before {
+    transform: translateY(-50%);
+  }
 }

@@ -1,190 +1,307 @@
+/* =========================================
+   About Page
+========================================= */
+
 .about-main {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 1.5rem;
-    font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-space);
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--section-space) var(--page-gutter);
+
+  color: var(--avcon-text);
+  font-family: var(--font-sans);
 }
 
-
-/* Hero */
+/* =========================================
+   Hero
+========================================= */
 
 .about-hero {
-    text-align: center;
+  text-align: center;
 }
 
 .about-heading {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+  margin: 0 0 var(--space-3);
+  color: var(--avcon-text);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .about-subheading {
-    font-size: 1.3rem;
-    font-weight: 600;
-    opacity: .85;
+  margin: 0;
+  color: var(--avcon-text-muted);
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 600;
+  line-height: 1.5;
 }
 
-
-
-/* Introduction */
+/* =========================================
+   Introduction
+========================================= */
 
 .about-introduction {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
 }
-
 
 .about-video {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 1rem;
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-large);
+
+  background: var(--avcon-primary-dark);
 }
 
+.about-content {
+  min-width: 0;
+}
 
 .about-content h2,
 .about-section h2,
 .vision-section h2,
 .contact-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+  margin: 0 0 var(--space-3);
+  color: var(--avcon-text);
+  font-size: clamp(1.75rem, 4vw, 2rem);
+  font-weight: 700;
+  line-height: 1.3;
 }
-
 
 .about-main p {
-    line-height: 1.7;
-    font-size: 1.05rem;
+  color: var(--avcon-text-muted);
+  font-size: 1.05rem;
+  line-height: var(--avcon-line-body);
 }
 
-
-
-/* Sections */
+/* =========================================
+   Sections
+========================================= */
 
 .about-section {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
 }
-
 
 .section-highlight {
-    font-size: 1.3rem !important;
-    font-weight: 600;
+  color: var(--avcon-text) !important;
+  font-size: 1.3rem !important;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
-
-
-/* Cards */
+/* =========================================
+   Initiative Cards
+========================================= */
 
 .initiative-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
 }
-
 
 .initiative-card {
-    padding: 1.5rem;
-    border-radius: 1rem;
-    background: color-mix(in srgb, var(--avcon-white) 5%, transparent);
-    border: 1px solid var(--avcon-border);
-}
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--space-5);
 
+  background: var(--avcon-primary);
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
+
+  color: var(--avcon-text);
+
+  transition:
+    transform var(--avcon-transition),
+    border-color var(--avcon-transition),
+    box-shadow var(--avcon-transition);
+}
 
 .initiative-card h3 {
-    margin-bottom: .75rem;
-    font-size: 1.3rem;
+  margin: 0 0 var(--space-2);
+  color: var(--avcon-text);
+  font-size: 1.3rem;
+  line-height: 1.35;
 }
 
+.initiative-card p {
+  margin: 0;
+}
 
+/* Card Hover */
 
-/* Vision */
+.initiative-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--avcon-accent);
+  box-shadow: var(--avcon-shadow);
+}
+
+/* =========================================
+   Vision
+========================================= */
 
 .vision-section {
-    text-align: center;
+  text-align: center;
 }
 
+.vision-section blockquote {
+  max-width: 700px;
+  margin: var(--space-6) auto;
+  padding: var(--space-3) var(--space-5);
 
-blockquote {
-    margin: 2rem auto;
-    padding: 1rem 1.5rem;
-    max-width: 700px;
-    border-left: 4px solid var(--avcon-accent);
-    font-size: 1.5rem;
-    font-style: italic;
+  border-left: 4px solid var(--avcon-accent);
+
+  color: var(--avcon-text);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-style: italic;
+  line-height: 1.6;
+  text-align: left;
 }
-
 
 .vision-tagline {
-    font-weight: 700;
+  color: var(--avcon-accent) !important;
+  font-weight: 700;
 }
 
-
-
-/* Contact */
+/* =========================================
+   Contact
+========================================= */
 
 .contact-section {
-    text-align: center;
-    padding: 3rem 2rem;
-    border-radius: 1rem;
-    background: color-mix(in srgb, var(--avcon-white) 5%, transparent);
-}
+  padding: var(--space-7) var(--space-6);
 
+  background: var(--avcon-primary);
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-large);
+
+  text-align: center;
+}
 
 .contact-section a {
-    display: inline-block;
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+
+  color: var(--avcon-accent) !important;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
-
-
-/* Tablet */
-
-@media (min-width:768px) {
-
-    .about-introduction {
-        flex-direction: row;
-        align-items: center;
-    }
-
-
-    .about-video-container {
-        flex: 1;
-    }
-
-
-    .about-content {
-        flex: 1;
-    }
-
-
-    .initiative-grid {
-        grid-template-columns: repeat(3,1fr);
-    }
-
+.contact-section a:hover {
+  color: var(--avcon-text) !important;
 }
 
+/* =========================================
+   Keyboard Accessibility
+========================================= */
 
+.about-video:focus-visible,
+.contact-section a:focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 4px;
+}
 
-/* Desktop */
+.initiative-card:focus-within {
+  border-color: var(--avcon-accent);
+}
 
-@media (min-width:1024px) {
+/* =========================================
+   Tablet
+========================================= */
 
-    .about-heading {
-        font-size: 3.5rem;
-    }
+@media (min-width: 768px) {
+  .about-introduction {
+    flex-direction: row;
+    align-items: center;
+  }
 
+  .about-video-container,
+  .about-content {
+    flex: 1;
+    min-width: 0;
+  }
 
-    .about-main {
-        padding: 4rem 2rem;
-    }
+  .initiative-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
 
+/* =========================================
+   Desktop
+========================================= */
+
+@media (min-width: 1024px) {
+  .about-main {
+    padding: var(--section-space) var(--page-gutter);
+  }
+}
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 767px) {
+  .about-main {
+    padding: var(--section-space-mobile) var(--page-gutter);
+  }
+
+  .about-video {
+    height: 300px;
+  }
+
+  .contact-section {
+    padding: var(--space-6) var(--space-5);
+  }
+}
+
+/* =========================================
+   Small Mobile
+========================================= */
+
+@media (max-width: 480px) {
+  .about-video {
+    height: 250px;
+  }
+
+  .vision-section blockquote {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .contact-section {
+    padding: var(--space-5) var(--space-4);
+  }
+}
+
+/* =========================================
+   Reduced Motion
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .initiative-card {
+    transition: none;
+  }
+
+  .initiative-card:hover {
+    transform: none;
+  }
 }

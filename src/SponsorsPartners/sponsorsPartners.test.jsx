@@ -1,2 +1,3 @@
 import SponsorsPartners from "./sponsorsPartners";
-test("SponsorsPartners exports a component", () => expect(SponsorsPartners).toBeDefined());
+test("SponsorsPartners exports a component", () =>
+  expect(SponsorsPartners).toBeDefined());

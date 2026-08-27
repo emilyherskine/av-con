@@ -1,331 +1,412 @@
+/* =========================================
+   SCHEDULE PAGE
+   ========================================= */
+
 .schedule-page {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
-    box-sizing: border-box;
+  width: 100%;
+
+  margin-inline: auto;
+
+  padding-block: var(--section-space);
+  padding-inline: var(--page-gutter);
+
+  box-sizing: border-box;
 }
 
-
-/* ================================
-   Header
-================================ */
+/* =========================================
+   SCHEDULE HEADER
+   ========================================= */
 
 .schedule-header {
-    max-width: 950px;
-    margin: 0 auto 4.5rem;
-    text-align: center;
+  width: 100%;
+  max-width: 60rem;
+
+  margin-inline: auto;
+  margin-bottom: var(--space-7);
+
+  text-align: center;
 }
 
 .schedule-header h1 {
-    margin: 0 0 1.25rem;
-    font-size: clamp(2.25rem, 5vw, 3.25rem);
-    line-height: 1.15;
-    font-weight: 700;
+  margin: 0 0 var(--space-4);
+
+  color: var(--avcon-text);
+
+  font-size: var(--avcon-font-h1);
+  font-weight: 700;
+  line-height: var(--avcon-line-heading);
 }
 
 .schedule-header p {
-    max-width: 900px;
-    margin: 1rem auto;
-    font-size: 1.1rem;
-    line-height: 1.75;
+  max-width: 56rem;
+
+  margin: var(--space-3) auto 0;
+
+  color: var(--avcon-text-muted);
+
+  font-size: var(--avcon-font-body);
+  line-height: var(--avcon-line-body);
 }
 
-
-/* ================================
-   General Sections
-================================ */
+/* =========================================
+   GENERAL SECTIONS
+   ========================================= */
 
 .experience-section,
 .floor-plan-section,
 .video-section {
-    margin-bottom: 5rem;
+  width: 100%;
+
+  margin-bottom: var(--section-space);
 }
 
 .experience-section h2,
 .floor-plan-section h2,
 .video-section h2 {
-    margin: 0 0 1rem;
-    font-size: clamp(1.8rem, 4vw, 2.4rem);
-    line-height: 1.3;
-    text-align: center;
+  margin: 0 0 var(--space-4);
+
+  color: var(--avcon-text);
+
+  font-size: var(--avcon-font-h2);
+  font-weight: 700;
+  line-height: 1.25;
+
+  text-align: center;
 }
 
 .experience-section > p,
 .floor-plan-section > p {
-    max-width: 850px;
-    margin: 0 auto 2rem;
-    font-size: 1.05rem;
-    line-height: 1.75;
-    text-align: center;
+  max-width: 53rem;
+
+  margin: 0 auto var(--space-6);
+
+  color: var(--avcon-text-muted);
+
+  font-size: var(--avcon-font-body);
+  line-height: var(--avcon-line-body);
+
+  text-align: center;
 }
 
-
-/* ================================
-   Experience Cards
-================================ */
+/* =========================================
+   EXPERIENCE CARDS
+   ========================================= */
 
 .experience-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
-    margin-top: 2.5rem;
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: var(--space-5);
+
+  width: 100%;
+
+  margin-top: var(--space-5);
 }
 
 .experience-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 2rem;
-    box-sizing: border-box;
-    border: 1px solid color-mix(in srgb, var(--avcon-white) 20%, transparent);
-    border-radius: 16px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  padding: var(--space-6);
+
+  box-sizing: border-box;
+
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
+
+  background: var(--avcon-surface);
+  color: var(--avcon-text);
+
+  text-align: center;
+
+  box-shadow: var(--avcon-shadow);
+
+  transition:
+    border-color var(--avcon-transition),
+    transform var(--avcon-transition),
+    box-shadow var(--avcon-transition);
+}
+
+.experience-card:hover {
+  border-color: var(--avcon-accent);
+
+  transform: translateY(-2px);
 }
 
 .experience-card h3 {
-    margin: 0 0 1rem;
-    font-size: 1.35rem;
-    line-height: 1.35;
+  margin: 0 0 var(--space-3);
+
+  color: var(--avcon-text);
+
+  font-size: var(--avcon-font-h3);
+  font-weight: 700;
+  line-height: 1.3;
 }
 
 .experience-card p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.7;
+  margin: 0;
+
+  color: var(--avcon-text-muted);
+
+  font-size: var(--avcon-font-body);
+  line-height: var(--avcon-line-body);
 }
 
-
-/* ================================
-   Floor Plan
-================================ */
+/* =========================================
+   FLOOR PLAN
+   ========================================= */
 
 .floor-plan-section {
-    text-align: center;
+  text-align: center;
 }
 
 .floor-plan-container {
-    position: relative;
-    width: 100%;
-    height: 750px;
-    margin: 2.5rem auto 1rem;
-    overflow: hidden;
-    border-radius: 16px;
-    border: 1px solid color-mix(in srgb, var(--avcon-white) 20%, transparent);
+  position: relative;
+
+  width: 100%;
+  height: 46.875rem;
+
+  margin: var(--space-5) auto var(--space-3);
+
+  overflow: hidden;
+
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
+
+  background: var(--avcon-surface);
+
+  box-shadow: var(--avcon-shadow);
 }
 
 .floor-plan-viewer {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    background: transparent;
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+
+  background: var(--avcon-primary-dark);
 }
 
 .floor-plan-viewer:focus-visible {
-    outline: 3px solid currentColor;
-    outline-offset: 4px;
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: -4px;
 }
 
 .floor-plan-note {
-    max-width: 750px;
-    margin: 1rem auto 0 !important;
-    font-size: 0.95rem !important;
-    line-height: 1.6 !important;
+  max-width: 47rem;
+
+  margin: var(--space-3) auto 0 !important;
+
+  color: var(--avcon-text-muted);
+
+  font-size: var(--avcon-font-small) !important;
+  line-height: 1.6 !important;
 }
 
-
-/* ================================
-   Video Section
-================================ */
+/* =========================================
+   VIDEO SECTION
+   ========================================= */
 
 .video-section {
-    text-align: center;
+  text-align: center;
 }
 
 .video-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
-    margin-top: 2.5rem;
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: var(--space-6);
+
+  width: 100%;
+
+  margin-top: var(--space-5);
 }
 
 .video-grid > div {
-    min-width: 0;
+  min-width: 0;
 }
 
 .video-grid h3 {
-    margin: 0 0 1rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
+  margin: 0 0 var(--space-3);
+
+  color: var(--avcon-text);
+
+  font-size: var(--avcon-font-h4);
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .video-container {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    background: var(--avcon-primary-dark);
-    border-radius: 16px;
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  border-radius: var(--avcon-radius-medium);
+
+  background: var(--avcon-primary-dark);
 }
 
 .video-container iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+  position: absolute;
+  inset: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
 }
 
 .video-container iframe:focus-visible {
-    outline: 3px solid currentColor;
-    outline-offset: 4px;
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: -4px;
 }
 
-
-/* ================================
-   Keyboard Accessibility
-================================ */
-
-a:focus-visible,
-button:focus-visible,
-iframe:focus-visible {
-    outline: 3px solid currentColor;
-    outline-offset: 4px;
-}
-
-
-/* ================================
-   Responsive - Tablet
-================================ */
+/* =========================================
+   TABLET
+   ========================================= */
 
 @media (max-width: 900px) {
+  .schedule-page {
+    padding-block: var(--section-space-mobile);
+    padding-inline: var(--page-gutter);
+  }
 
-    .schedule-page {
-        padding: 2.5rem 1.5rem;
-    }
+  .experience-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-    .experience-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+  .experience-card:last-child {
+    grid-column: 1 / -1;
 
-    .experience-card:last-child {
-        grid-column: 1 / -1;
-        max-width: 50%;
-        width: 100%;
-        margin: 0 auto;
-    }
+    width: 100%;
+    max-width: 50%;
 
-    .video-grid {
-        grid-template-columns: 1fr;
-        max-width: 750px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    margin-inline: auto;
+  }
 
-    .floor-plan-container {
-        height: 600px;
-    }
+  .video-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 46.875rem;
+
+    margin-inline: auto;
+    margin-top: var(--space-5);
+  }
+
+  .floor-plan-container {
+    height: 37.5rem;
+  }
 }
 
-
-/* ================================
-   Responsive - Mobile
-================================ */
+/* =========================================
+   MOBILE
+   ========================================= */
 
 @media (max-width: 600px) {
+  .schedule-page {
+    padding-block: var(--section-space-mobile);
+    padding-inline: var(--page-gutter);
+  }
 
-    .schedule-page {
-        padding: 2rem 1rem;
-    }
+  .schedule-header {
+    margin-bottom: var(--space-7);
+  }
 
-    .schedule-header {
-        margin-bottom: 3.5rem;
-    }
+  .schedule-header h1 {
+    font-size: 2rem;
+  }
 
-    .schedule-header h1 {
-        font-size: 2rem;
-    }
+  .schedule-header p {
+    font-size: var(--avcon-font-body);
+    line-height: 1.7;
+  }
 
-    .schedule-header p {
-        font-size: 1rem;
-        line-height: 1.7;
-    }
+  .experience-section,
+  .floor-plan-section,
+  .video-section {
+    margin-bottom: var(--section-space-mobile);
+  }
 
-    .experience-section,
-    .floor-plan-section,
-    .video-section {
-        margin-bottom: 4rem;
-    }
+  .experience-section h2,
+  .floor-plan-section h2,
+  .video-section h2 {
+    font-size: 1.75rem;
+  }
 
-    .experience-section h2,
-    .floor-plan-section h2,
-    .video-section h2 {
-        font-size: 1.75rem;
-    }
+  .experience-grid {
+    grid-template-columns: 1fr;
 
-    .experience-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
+    gap: var(--space-4);
+  }
 
-    .experience-card {
-        padding: 1.5rem;
-    }
+  .experience-card {
+    padding: var(--space-5);
+  }
 
-    .experience-card:last-child {
-        grid-column: auto;
-        max-width: none;
-    }
+  .experience-card:last-child {
+    grid-column: auto;
 
-    .floor-plan-container {
-        height: 500px;
-        margin-top: 2rem;
-        border-radius: 12px;
-    }
+    max-width: none;
+  }
 
-    .video-grid {
-        gap: 2.5rem;
-    }
+  .floor-plan-container {
+    height: 31.25rem;
 
-    .video-container {
-        border-radius: 12px;
-    }
+    margin-top: var(--space-5);
+
+    border-radius: var(--avcon-radius-small);
+  }
+
+  .video-grid {
+    gap: var(--space-6);
+  }
+
+  .video-container {
+    border-radius: var(--avcon-radius-small);
+  }
 }
 
-
-/* ================================
-   Small Mobile
-================================ */
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
 
 @media (max-width: 400px) {
+  .schedule-page {
+    padding-inline: 1.25rem;
+  }
 
-    .schedule-page {
-        padding: 1.5rem 0.75rem;
-    }
+  .schedule-header h1 {
+    font-size: 1.8rem;
+  }
 
-    .schedule-header h1 {
-        font-size: 1.8rem;
-    }
-
-    .floor-plan-container {
-        height: 400px;
-    }
+  .floor-plan-container {
+    height: 25rem;
+  }
 }
 
-
-/* ================================
-   Reduced Motion
-================================ */
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
+  .experience-card {
+    transition: none;
+  }
 
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-    }
+  .experience-card:hover {
+    transform: none;
+  }
 }

@@ -3,32 +3,32 @@
    ========================================= */
 
 .convention-main {
-    --avcon-primary: #0b2d4d;
-    --avcon-primary-dark: #061b2d;
-    --avcon-accent: #4c9ac4;
-    --avcon-accent-light: #123d5c;
+  --avcon-primary: #0b2d4d;
+  --avcon-primary-dark: #061b2d;
+  --avcon-accent: #4c9ac4;
+  --avcon-accent-light: #123d5c;
 
-    --avcon-text: #f4f7f9;
-    --avcon-text-muted: #c5d0d8;
+  --avcon-text: #f4f7f9;
+  --avcon-text-muted: #c5d0d8;
 
-    --avcon-border: #28516d;
-    --avcon-surface: #0a243b;
-    --avcon-white: #ffffff;
+  --avcon-border: #28516d;
+  --avcon-surface: #0a243b;
+  --avcon-white: #ffffff;
 
-    --avcon-focus: #f4b400;
+  --avcon-focus: #f4b400;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    padding: clamp(3rem, 7vw, 6rem) 1.25rem;
-    color: var(--avcon-text);
-    font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: var(--section-space) var(--page-gutter);
+  color: var(--avcon-text);
+  font-family: "Inter", sans-serif;
 }
 
 .convention-container {
-    width: 100%;
-    max-width: 960px;
+  width: 100%;
+  max-width: 960px;
 }
 
 /* =========================================
@@ -36,48 +36,48 @@
    ========================================= */
 
 .convention-header {
-    position: relative;
-    margin-bottom: clamp(2.5rem, 5vw, 4rem);
-    padding-bottom: 2rem;
-    text-align: center;
+  position: relative;
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-5);
+  text-align: center;
 }
 
 .convention-header::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 72px;
-    height: 4px;
-    transform: translateX(-50%);
-    border-radius: 999px;
-    background: var(--avcon-accent);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 72px;
+  height: 4px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: var(--avcon-accent);
 }
 
 .convention-main h1 {
-    max-width: 850px;
-    margin: 0 auto 1.25rem;
+  max-width: 850px;
+  margin: 0 auto var(--space-4);
 
-    color: var(--avcon-white);
-    font-size: clamp(2rem, 5vw, 3.25rem);
-    font-weight: 750;
-    line-height: 1.12;
-    letter-spacing: -0.025em;
+  color: var(--avcon-white);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 750;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
 }
 
 .convention-tagline {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.35rem 0.6rem;
-    margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 0.6rem;
+  margin: 0;
 
-    color: var(--avcon-accent);
-    font-size: clamp(0.95rem, 2vw, 1.15rem);
-    font-weight: 700;
-    line-height: 1.6;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+  color: var(--avcon-accent);
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 /* =========================================
@@ -85,44 +85,44 @@
    ========================================= */
 
 .convention-content {
-    max-width: 850px;
-    margin: 0 auto;
+  max-width: 850px;
+  margin: 0 auto;
 }
 
 .convention-main p {
-    margin: 0 0 1.5rem;
+  margin: 0 0 var(--space-5);
 
-    color: var(--avcon-text-muted);
-    font-size: clamp(1rem, 1.5vw, 1.1rem);
-    line-height: 1.85;
+  color: var(--avcon-text-muted);
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  line-height: 1.85;
 }
 
 .convention-main p:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .convention-main .intro-text {
-    margin-bottom: 1.75rem;
+  margin-bottom: var(--space-5);
 
-    color: var(--avcon-white);
-    font-size: clamp(1.25rem, 2vw, 1.45rem);
-    font-weight: 700;
-    line-height: 1.5;
+  color: var(--avcon-white);
+  font-size: clamp(1.25rem, 2vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.5;
 }
 
 .convention-values {
-    margin: 2.25rem 0 !important;
-    padding: 1.5rem;
+  margin: var(--space-6) 0 !important;
+  padding: var(--space-5);
 
-    border-left: 4px solid var(--avcon-accent);
+  border-left: 4px solid var(--avcon-accent);
 
-    background: color-mix(in srgb, var(--avcon-accent) 12%, transparent);
+  background: color-mix(in srgb, var(--avcon-accent) 12%, transparent);
 
-    color: var(--avcon-white) !important;
-    font-size: clamp(1.05rem, 2vw, 1.25rem) !important;
-    font-weight: 750;
-    line-height: 1.6 !important;
-    letter-spacing: 0.02em;
+  color: var(--avcon-white) !important;
+  font-size: clamp(1.05rem, 2vw, 1.25rem) !important;
+  font-weight: 750;
+  line-height: 1.6 !important;
+  letter-spacing: 0.02em;
 }
 
 /* =========================================
@@ -130,51 +130,51 @@
    ========================================= */
 
 .registration-section {
-    margin-top: clamp(3.5rem, 7vw, 5.5rem);
-    padding: clamp(2rem, 5vw, 3.5rem);
+  margin-top: var(--section-space);
+  padding: var(--space-6);
 
-    border: 1px solid var(--avcon-border);
-    border-radius: 20px;
+  border: 1px solid var(--avcon-border);
+  border-radius: 20px;
 
-    background: color-mix(in srgb, var(--avcon-primary-dark) 75%, transparent);
+  background: color-mix(in srgb, var(--avcon-primary-dark) 75%, transparent);
 
-    box-shadow:
-        0 20px 45px color-mix(in srgb, var(--avcon-primary-dark) 25%, transparent),
-        inset 0 1px 0 color-mix(in srgb, var(--avcon-white) 3%, transparent);
+  box-shadow:
+    0 20px 45px color-mix(in srgb, var(--avcon-primary-dark) 25%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--avcon-white) 3%, transparent);
 }
 
 .registration-heading {
-    margin-bottom: 2rem;
-    text-align: center;
+  margin-bottom: var(--space-6);
+  text-align: center;
 }
 
 .registration-eyebrow {
-    display: inline-block;
-    margin-bottom: 0.75rem;
+  display: inline-block;
+  margin-bottom: var(--space-2);
 
-    color: var(--avcon-accent);
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+  color: var(--avcon-accent);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .registration-section h2 {
-    margin: 0 0 0.75rem;
+  margin: 0 0 0.75rem;
 
-    color: var(--avcon-white);
-    font-size: clamp(1.75rem, 4vw, 2.25rem);
-    font-weight: 750;
-    line-height: 1.2;
+  color: var(--avcon-white);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 750;
+  line-height: 1.2;
 }
 
 .registration-heading p {
-    max-width: 600px;
-    margin: 0 auto;
+  max-width: 600px;
+  margin: 0 auto;
 
-    color: var(--avcon-text-muted);
-    font-size: 1rem;
-    line-height: 1.6;
+  color: var(--avcon-text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* =========================================
@@ -182,71 +182,71 @@
    ========================================= */
 
 .registration-links {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
 
-    max-width: 700px;
-    margin: 0 auto;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .registration-button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
 
-    min-height: 60px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 1rem 1.25rem 1rem 1.5rem;
+  min-height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--space-3) var(--space-4) var(--space-3) var(--space-5);
 
-    border: 2px solid var(--avcon-accent);
-    border-radius: 10px;
+  border: 2px solid var(--avcon-accent);
+  border-radius: 10px;
 
-    background: var(--avcon-accent);
+  background: var(--avcon-accent);
 
-    color: var(--avcon-white);
-    text-decoration: none;
+  color: var(--avcon-white);
+  text-decoration: none;
 
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.4;
-    text-align: left;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: left;
 
-    transition:
-        background-color 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease,
-        transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 .button-arrow {
-    flex-shrink: 0;
+  flex-shrink: 0;
 
-    font-size: 1.4rem;
-    line-height: 1;
+  font-size: 1.4rem;
+  line-height: 1;
 
-    transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .registration-button:hover {
-    background: var(--avcon-accent-light);
-    border-color: var(--avcon-accent-light);
+  background: var(--avcon-accent-light);
+  border-color: var(--avcon-accent-light);
 
-    box-shadow:
-        0 8px 20px color-mix(in srgb, var(--avcon-primary-dark) 30%, transparent),
-        0 0 0 1px color-mix(in srgb, var(--avcon-accent) 15%, transparent);
+  box-shadow:
+    0 8px 20px color-mix(in srgb, var(--avcon-primary-dark) 30%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--avcon-accent) 15%, transparent);
 
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .registration-button:hover .button-arrow {
-    transform: translateX(4px);
+  transform: translateX(4px);
 }
 
 .registration-button:active {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 /* =========================================
@@ -254,8 +254,8 @@
    ========================================= */
 
 .registration-button:focus-visible {
-    outline: 3px solid var(--avcon-focus);
-    outline-offset: 4px;
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 4px;
 }
 
 /* =========================================
@@ -263,17 +263,17 @@
    ========================================= */
 
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* =========================================
@@ -281,20 +281,20 @@
    ========================================= */
 
 @media (min-width: 600px) {
-    .convention-main {
-        padding-right: 2rem;
-        padding-left: 2rem;
-    }
+  .convention-main {
+    padding-right: var(--page-gutter);
+    padding-left: var(--page-gutter);
+  }
 
-    .registration-links {
-        gap: 1.15rem;
-    }
+  .registration-links {
+    gap: var(--space-3);
+  }
 
-    .registration-button {
-        min-height: 64px;
-        padding: 1rem 1.5rem;
-        font-size: 1.05rem;
-    }
+  .registration-button {
+    min-height: 64px;
+    padding: 1rem 1.5rem;
+    font-size: 1.05rem;
+  }
 }
 
 /* =========================================
@@ -302,19 +302,19 @@
    ========================================= */
 
 @media (min-width: 768px) {
-    .convention-main {
-        padding-right: 3rem;
-        padding-left: 3rem;
-    }
+  .convention-main {
+    padding-right: var(--page-gutter);
+    padding-left: var(--page-gutter);
+  }
 
-    .registration-section {
-        padding: 3.5rem;
-    }
+  .registration-section {
+    padding: var(--space-7);
+  }
 
-    .registration-button {
-        min-height: 66px;
-        padding: 1rem 1.5rem 1rem 1.75rem;
-    }
+  .registration-button {
+    min-height: 66px;
+    padding: 1rem 1.5rem 1rem 1.75rem;
+  }
 }
 
 /* =========================================
@@ -322,40 +322,40 @@
    ========================================= */
 
 @media (max-width: 480px) {
-    .convention-main {
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
-    }
+  .convention-main {
+    padding-top: var(--section-space-mobile);
+    padding-bottom: var(--section-space-mobile);
+  }
 
-    .convention-header {
-        margin-bottom: 2.5rem;
-        padding-bottom: 1.5rem;
-    }
+  .convention-header {
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-5);
+  }
 
-    .convention-tagline {
-        gap: 0.2rem 0.45rem;
-        font-size: 0.8rem;
-    }
+  .convention-tagline {
+    gap: 0.2rem 0.45rem;
+    font-size: 0.8rem;
+  }
 
-    .convention-main p {
-        line-height: 1.75;
-    }
+  .convention-main p {
+    line-height: 1.75;
+  }
 
-    .convention-values {
-        padding: 1.25rem;
-    }
+  .convention-values {
+    padding: var(--space-4);
+  }
 
-    .registration-section {
-        margin-top: 3rem;
-        padding: 1.75rem 1.25rem;
-        border-radius: 16px;
-    }
+  .registration-section {
+    margin-top: var(--section-space-mobile);
+    padding: var(--space-5) var(--space-4);
+    border-radius: 16px;
+  }
 
-    .registration-button {
-        min-height: 60px;
-        padding: 0.9rem 1rem 0.9rem 1.15rem;
-        font-size: 0.95rem;
-    }
+  .registration-button {
+    min-height: 60px;
+    padding: 0.9rem 1rem 0.9rem 1.15rem;
+    font-size: 0.95rem;
+  }
 }
 
 /* =========================================
@@ -363,16 +363,16 @@
    ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
-    .registration-button,
-    .button-arrow {
-        transition: none;
-    }
+  .registration-button,
+  .button-arrow {
+    transition: none;
+  }
 
-    .registration-button:hover {
-        transform: none;
-    }
+  .registration-button:hover {
+    transform: none;
+  }
 
-    .registration-button:hover .button-arrow {
-        transform: none;
-    }
+  .registration-button:hover .button-arrow {
+    transform: none;
+  }
 }

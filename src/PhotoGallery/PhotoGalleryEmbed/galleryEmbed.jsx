@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import "./PhotoGalleryEmbed.css";
+import GalleryTabs from "./GalleryTabs";
 
 export default function PhotoGalleryEmbed() {
   const [activeGallery, setActiveGallery] = useState("Gallery");
 
-  const galleries = {
-    Gallery: "https://drive.google.com/embeddedfolderview?id=1XbLfdd6JdLJArOiL2SRpINHCL_Eg_oVt#grid",
-    BCFE: "https://drive.google.com/embeddedfolderview?id=1welPjMaCd3NCgvgOdlAbdf8asYXYQkXS#grid",
-    Avcon2024Gallery: "https://drive.google.com/embeddedfolderview?id=1cmSUxjwAACJafUwsUPOqpjyD9fvOhdXw#grid",
-    AirCorps2025: "https://www.flickr.com/photos/dfmagazine/albums/72177720329423083/player/",
-  };
+  const galleries = [
+    { id: "Gallery", label: "2025 Shannon Irvine Gallery", url: "https://drive.google.com/embeddedfolderview?id=1XbLfdd6JdLJArOiL2SRpINHCL_Eg_oVt#grid" },
+    { id: "BCFE", label: "2025 BCFE Gallery", url: "https://drive.google.com/embeddedfolderview?id=1welPjMaCd3NCgvgOdlAbdf8asYXYQkXS#grid" },
+    { id: "Avcon2024Gallery", label: "2024 Shannon Irvine Gallery", url: "https://drive.google.com/embeddedfolderview?id=1cmSUxjwAACJafUwsUPOqpjyD9fvOhdXw#grid" },
+    { id: "AirCorps2025", label: "2025 Air Corps Gallery", url: "https://www.flickr.com/photos/dfmagazine/albums/72177720329423083/player/" },
+  ];
 
   return (
     <section className="gallery-section">
@@ -20,37 +21,16 @@ export default function PhotoGalleryEmbed() {
         </div>
 
         {/* Tab Buttons */}
-        <div className="gallery-tabs">
-          <button
-            onClick={() => setActiveGallery("Gallery")}
-            className={`gallery-btn ${activeGallery === "Gallery" ? "active" : ""}`}
-          >
-            2025 Shannon Irvine Gallery
-          </button>
-          <button
-            onClick={() => setActiveGallery("BCFE")}
-            className={`gallery-btn ${activeGallery === "BCFE" ? "active" : ""}`}
-          >
-            2025 BCFE Gallery
-          </button>
-          <button
-            onClick={() => setActiveGallery("Avcon2024Gallery")}
-            className={`gallery-btn ${activeGallery === "Avcon2024Gallery" ? "active" : ""}`}
-          >
-            2024 Shannon Irvine Gallery
-          </button>
-          <button
-            onClick={() => setActiveGallery("AirCorps2025")}
-            className={`gallery-btn ${activeGallery === "AirCorps2025" ? "active" : ""}`}
-          >
-            2025 Air Corps Gallery
-          </button>
-        </div>
+        <GalleryTabs
+          galleries={galleries}
+          activeGallery={activeGallery}
+          onSelect={setActiveGallery}
+        />
 
         {/* Gallery iframe */}
         <div className="gallery-iframe-container">
           <iframe
-            src={galleries[activeGallery]}
+            src={galleries.find((gallery) => gallery.id === activeGallery).url}
             className="gallery-iframe"
             title="AvCon Photo Gallery"
             allowFullScreen

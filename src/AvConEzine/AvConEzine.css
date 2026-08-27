@@ -1,180 +1,198 @@
+/* =========================================
+   E-Zine Page
+========================================= */
+
 .main-container {
-
-    display:flex;
-    flex-direction:column;
-    min-height:100vh;
-
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
 }
 
-
+/* =========================================
+   Introduction
+========================================= */
 
 .ezine-intro {
-
-    text-align:center;
-    padding:4% 8%;
-    max-width:1000px;
-    margin:auto;
-
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--section-space) var(--page-gutter);
+  text-align: center;
 }
-
-
 
 .ezine-intro h2 {
-
-    font-size:2.5rem;
-    margin-bottom:1.5rem;
-
+  margin: 0 0 var(--space-5);
+  color: var(--avcon-text);
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  line-height: 1.25;
 }
-
-
 
 .ezine-intro p {
-
-    line-height:1.7;
-    font-size:1.1rem;
-
+  margin: 0;
+  color: var(--avcon-text-muted);
+  font-size: 1.1rem;
+  line-height: var(--avcon-line-body);
 }
 
-
-
+/* =========================================
+   E-Zine Grid
+========================================= */
 
 .ezine-grid {
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
-    gap:3rem;
-    padding:2% 5% 5%;
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr));
+  gap: var(--space-6);
+  width: 100%;
+  padding: var(--section-space) var(--page-gutter);
 }
 
-
-
+/* =========================================
+   E-Zine Card
+========================================= */
 
 .ezine-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: var(--space-6);
 
-    display:flex;
-    flex-direction:column;
-    background:color-mix(in srgb, var(--avcon-white) 5%, transparent);
-    border-radius:15px;
-    padding:2rem;
-    border:1px solid color-mix(in srgb, var(--avcon-white) 20%, transparent);
+  background: var(--avcon-primary);
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
 
+  color: var(--avcon-text);
+
+  transition:
+    transform var(--avcon-transition),
+    border-color var(--avcon-transition),
+    box-shadow var(--avcon-transition);
 }
-
-
-
-
-.ezine-card h3 {
-
-    font-size:1.6rem;
-    margin-top:.5rem;
-    text-align:center;
-
-}
-
-
-
-
-.ezine-card p {
-
-    line-height:1.6;
-    text-align:center;
-    margin-bottom:1.5rem;
-
-}
-
-
-
-
-.ezine-year {
-
-    display:block;
-    text-align:center;
-    font-size:.9rem;
-    font-weight:bold;
-    color:var(--avcon-accent);
-    text-transform:uppercase;
-
-}
-
-
-
-
-.iframe-container {
-
-    position:relative;
-    width:100%;
-    overflow:hidden;
-    border-radius:10px;
-
-}
-
-
-
-.ezine-iframe {
-
-    width:100%;
-    height:550px;
-    border:none;
-
-}
-
-
-
 
 .ezine-card:hover {
-
-    transform:translateY(-5px);
-    transition:.3s ease;
-
+  transform: translateY(-3px);
+  border-color: var(--avcon-accent);
+  box-shadow: var(--avcon-shadow);
 }
 
+/* =========================================
+   Card Content
+========================================= */
 
-
-
-@media(max-width:768px){
-
-
-    .ezine-grid {
-
-        grid-template-columns:1fr;
-        padding:5%;
-
-    }
-
-
-    .ezine-card {
-
-        padding:1.2rem;
-
-    }
-
-
-    .ezine-intro h2 {
-
-        font-size:2rem;
-
-    }
-
-
-    .ezine-iframe {
-
-        height:400px;
-
-    }
-
+.ezine-card h3 {
+  margin: var(--space-1) 0 var(--space-3);
+  color: var(--avcon-text);
+  font-size: clamp(1.35rem, 3vw, 1.6rem);
+  line-height: 1.3;
+  text-align: center;
 }
 
+.ezine-card p {
+  margin: 0 0 var(--space-5);
+  color: var(--avcon-text-muted);
+  font-size: var(--avcon-font-body);
+  line-height: var(--avcon-line-body);
+  text-align: center;
+}
 
+.ezine-year {
+  display: block;
+  margin-bottom: var(--space-2);
+  color: var(--avcon-accent);
+  font-size: var(--avcon-font-small);
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
 
-@media(max-width:480px){
+/* =========================================
+   E-Zine Viewer
+========================================= */
 
+.iframe-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-small);
+  background: var(--avcon-primary-dark);
+}
 
-    .ezine-iframe {
+.ezine-iframe {
+  display: block;
+  width: 100%;
+  height: 550px;
+  border: 0;
+  background: var(--avcon-primary-dark);
+}
 
-        height:350px;
+/* =========================================
+   Keyboard Accessibility
+========================================= */
 
-    }
+.ezine-card:focus-within {
+  border-color: var(--avcon-accent);
+}
 
+.ezine-iframe:focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 4px;
+}
 
+/* =========================================
+   Tablet / Mobile
+========================================= */
+
+@media (max-width: 768px) {
+  .ezine-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+    padding: var(--section-space-mobile) var(--page-gutter);
+  }
+
+  .ezine-card {
+    padding: var(--space-5);
+  }
+
+  .ezine-intro {
+    padding: var(--section-space-mobile) var(--page-gutter);
+  }
+
+  .ezine-intro h2 {
+    font-size: 2rem;
+  }
+
+  .ezine-iframe {
+    height: 400px;
+  }
+}
+
+/* =========================================
+   Small Mobile
+========================================= */
+
+@media (max-width: 480px) {
+  .ezine-card {
+    padding: var(--space-4);
+  }
+
+  .ezine-iframe {
+    height: 350px;
+  }
+}
+
+/* =========================================
+   Reduced Motion
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .ezine-card {
+    transition: none;
+  }
+
+  .ezine-card:hover {
+    transform: none;
+  }
 }

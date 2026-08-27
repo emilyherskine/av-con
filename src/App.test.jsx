@@ -39,7 +39,10 @@ jest.mock("web-vitals", () => ({
 }));
 
 const setViewport = (width) => {
-  Object.defineProperty(window, "innerWidth", { configurable: true, value: width });
+  Object.defineProperty(window, "innerWidth", {
+    configurable: true,
+    value: width,
+  });
 };
 
 beforeEach(() => {
@@ -50,12 +53,27 @@ beforeEach(() => {
 afterEach(cleanup);
 
 describe("application routes", () => {
-  const routes = ["/", "/event", "/about", "/contact", "/eventSchedule", "/speakersPresenters", "/photoGallery", "/avConNetwork", "/news", "/avconEzine", "/sponsorsPartners", "/aviationPathwayPortal", "/bookTickets", "/exhibitorRegistration"];
+  const routes = [
+    "/",
+    "/event",
+    "/about",
+    "/contact",
+    "/eventSchedule",
+    "/speakersPresenters",
+    "/photoGallery",
+    "/avConNetwork",
+    "/news",
+    "/avconEzine",
+    "/sponsorsPartners",
+    "/aviationPathwayPortal",
+    "/bookTickets",
+    "/exhibitorRegistration",
+  ];
 
   test.each(routes)("renders %s", (path) => {
     window.history.pushState({}, "", path);
     render(<App />);
-    expect(document.querySelector(".app-content")).toBeInTheDocument();
+    expect(screen.getByRole("main")).toBeInTheDocument();
   });
 
   it("redirects an unknown route to the home page", () => {
@@ -67,7 +85,11 @@ describe("application routes", () => {
 
 describe("interactive UI", () => {
   it("opens desktop dropdowns and the mobile menu", async () => {
-    render(<MemoryRouter><Header /></MemoryRouter>);
+    render(
+      <MemoryRouter>
+        <Header />
+      </MemoryRouter>,
+    );
     fireEvent.mouseEnter(screen.getByText("EVENT INFO"));
     expect(screen.getByText("EVENT SCHEDULE")).toBeInTheDocument();
     fireEvent.mouseLeave(screen.getByText("EVENT INFO"));
@@ -76,9 +98,15 @@ describe("interactive UI", () => {
 
     setViewport(500);
     cleanup();
-    render(<MemoryRouter><Header /></MemoryRouter>);
+    render(
+      <MemoryRouter>
+        <Header />
+      </MemoryRouter>,
+    );
     fireEvent.click(screen.getByText("☰"));
-    expect(screen.getByText("AVCON 2026 SCHOOL REGISTRATION")).toBeInTheDocument();
+    expect(
+      screen.getByText("AVCON 2026 SCHOOL REGISTRATION"),
+    ).toBeInTheDocument();
     fireEvent.click(screen.getAllByText("HOME").at(-1));
 
     setViewport(1024);
@@ -87,7 +115,16 @@ describe("interactive UI", () => {
   });
 
   it("updates responsive hero copy and supports optional copy", () => {
-    const { rerender } = render(<HeroSection defaultTitle="Desktop" defaultSubtitle="Wide" smallScreenTitle="Mobile" smallScreenSubtitle="Narrow" buttonText="Go" buttonLink="/go" />);
+    const { rerender } = render(
+      <HeroSection
+        defaultTitle="Desktop"
+        defaultSubtitle="Wide"
+        smallScreenTitle="Mobile"
+        smallScreenSubtitle="Narrow"
+        buttonText="Go"
+        buttonLink="/go"
+      />,
+    );
     expect(screen.getByText("Desktop")).toBeInTheDocument();
     setViewport(600);
     fireEvent(window, new Event("resize"));
@@ -97,7 +134,16 @@ describe("interactive UI", () => {
   });
 
   it("switches news, gallery, and carousel states", () => {
-    render(<NewsArticle title="Article" summary={["Summary"]} fullContent={["Full"]} galleryLink="https://example.test" email="hello@example.test" tags="Tag" />);
+    render(
+      <NewsArticle
+        title="Article"
+        summary={["Summary"]}
+        fullContent={["Full"]}
+        galleryLink="https://example.test"
+        email="hello@example.test"
+        tags="Tag"
+      />,
+    );
     fireEvent.click(screen.getByText("Read More ▼"));
     expect(screen.getByText("Full")).toBeInTheDocument();
     expect(screen.getByText("Show Less ▲")).toBeInTheDocument();
@@ -106,7 +152,10 @@ describe("interactive UI", () => {
     render(<PhotoGalleryEmbed />);
     fireEvent.click(screen.getByText("2025 Shannon Irvine Gallery"));
     fireEvent.click(screen.getByText("2025 BCFE Gallery"));
-    expect(screen.getByTitle("AvCon Photo Gallery")).toHaveAttribute("src", expect.stringContaining("1welPj"));
+    expect(screen.getByTitle("AvCon Photo Gallery")).toHaveAttribute(
+      "src",
+      expect.stringContaining("1welPj"),
+    );
     fireEvent.click(screen.getByText("2024 Shannon Irvine Gallery"));
     fireEvent.click(screen.getByText("2025 Air Corps Gallery"));
     cleanup();
@@ -120,7 +169,7 @@ describe("interactive UI", () => {
     expect(screen.getByAltText("Slide 1")).toBeInTheDocument();
     fireEvent.click(screen.getByText("❮"));
     expect(screen.getByAltText("Slide 0")).toBeInTheDocument();
-    fireEvent.click(document.querySelectorAll(".dot")[1]);
+    fireEvent.click(screen.getAllByRole("button")[2]);
     expect(screen.getByAltText("Slide 1")).toBeInTheDocument();
     cleanup();
     render(<NewsArticle title="Defaults" />);
@@ -136,29 +185,53 @@ describe("standalone and legacy components", () => {
     expect(legacyUtils.debounce).toBe(debounce);
     expect(legacyLayouts.RootLayout).toBeDefined();
 
-    render(<MemoryRouter><LegacyRootLayout><span>Child</span></LegacyRootLayout></MemoryRouter>);
+    render(
+      <MemoryRouter>
+        <LegacyRootLayout>
+          <span>Child</span>
+        </LegacyRootLayout>
+      </MemoryRouter>,
+    );
     expect(screen.getByText("Child")).toBeInTheDocument();
     cleanup();
-    render(<Card imageSrc="image" heading="Heading" description="Description" />);
+    render(
+      <Card imageSrc="image" heading="Heading" description="Description" />,
+    );
     expect(screen.getByText("Heading")).toBeInTheDocument();
     cleanup();
     render(<Highlights />);
     expect(screen.getByText("Design Challenges")).toBeInTheDocument();
     cleanup();
     const { unmount } = render(<MailchimpScript />);
-    expect(document.getElementById("mcjs")).toBeInTheDocument();
+    expect(screen.getByTestId("mcjs")).toBeInTheDocument();
     unmount();
-    expect(document.getElementById("mcjs")).not.toBeInTheDocument();
-    render(<Speaker SpeakerImage="image" SpeakerName="Short" SpeakerBio="short" />);
+    expect(screen.queryByTestId("mcjs")).not.toBeInTheDocument();
+    render(
+      <Speaker SpeakerImage="image" SpeakerName="Short" SpeakerBio="short" />,
+    );
     expect(screen.queryByText("Expand for More")).not.toBeInTheDocument();
     cleanup();
-    render(<Speaker SpeakerImage="image" SpeakerName="Long" SpeakerBio={"a".repeat(101)} />);
+    render(
+      <Speaker
+        SpeakerImage="image"
+        SpeakerName="Long"
+        SpeakerBio={"a".repeat(101)}
+      />,
+    );
     fireEvent.click(screen.getByText("Expand for More"));
     expect(screen.getByText("Show Less")).toBeInTheDocument();
     cleanup();
-    render(<GOCHighlight SpeakerImage="image" SpeakerName="Keynote" SpeakerBio={"a".repeat(151)} />);
+    render(
+      <GOCHighlight
+        SpeakerImage="image"
+        SpeakerName="Keynote"
+        SpeakerBio={"a".repeat(151)}
+      />,
+    );
     fireEvent.click(screen.getByRole("button", { name: "Expand full bio" }));
-    expect(screen.getByRole("button", { name: "Collapse bio" })).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: "Collapse bio" }),
+    ).toBeInTheDocument();
     cleanup();
     render(<Speakers2024 />);
     expect(screen.getByText("AvCon Presenters")).toBeInTheDocument();
@@ -178,7 +251,10 @@ describe("utilities and performance reporting", () => {
     window.history.pushState({}, "", "/?source=test");
     expect(getQueryParam("source")).toBe("test");
     scrollToTop();
-    expect(window.scrollTo).toHaveBeenCalledWith({ top: 0, behavior: "smooth" });
+    expect(window.scrollTo).toHaveBeenCalledWith({
+      top: 0,
+      behavior: "smooth",
+    });
 
     jest.useFakeTimers();
     const callback = jest.fn();

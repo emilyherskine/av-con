@@ -1,113 +1,286 @@
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
+
 .main-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
 }
 
+/* =========================================
+   EVENT CONTAINER
+   ========================================= */
 
 .event-container {
-    text-align: center;
-    padding-bottom: 3rem;
+  width: 100%;
+
+  padding-bottom: var(--section-space);
+
+  text-align: center;
 }
 
+/* =========================================
+   GRID CONTAINER
+   ========================================= */
 
 .grid-container {
-    padding: 0 5%;
+  width: 100%;
+  padding-inline: var(--page-gutter);
+
+  box-sizing: border-box;
 }
 
+/* =========================================
+   TEXT CONTAINER
+   ========================================= */
 
 .text-container {
-    text-align: left;
+  width: 100%;
+
+  text-align: left;
 }
 
+/* =========================================
+   EVENT IMAGE
+   ========================================= */
 
 .event-image {
-    width: 100%;
-    border-radius: 12px;
-    display: block;
-    box-shadow: 0 8px 20px color-mix(in srgb, var(--avcon-primary-dark) 15%, transparent);
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: var(--avcon-radius-medium);
+
+  box-shadow: var(--avcon-shadow);
 }
 
+/* =========================================
+   CONTENT SECTIONS
+   ========================================= */
 
-.content-section {
-    margin: 4rem 0;
-    text-align: left;
+.content-section,
+.corporate-section {
+  margin-block: var(--section-space);
+
+  text-align: left;
 }
-
 
 .content-section h2,
 .corporate-section h2 {
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
+  margin: 0 0 var(--space-3);
 
+  color: var(--avcon-text);
+
+  font-size: var(--avcon-font-h2);
+  font-weight: 700;
+  line-height: 1.25;
+}
 
 .content-section p,
 .corporate-section p {
-    line-height: 1.7;
+  margin: 0 0 var(--space-3);
+
+  color: var(--avcon-text-muted);
+
+  font-size: var(--avcon-font-body);
+  line-height: var(--avcon-line-body);
 }
 
+/* =========================================
+   LISTS
+   ========================================= */
 
-ul {
-    padding-left: 1.5rem;
-    line-height: 1.8;
+.content-section ul,
+.corporate-section ul {
+  margin: 0 0 var(--space-4);
+  padding-left: var(--space-5);
+
+  color: var(--avcon-text-muted);
+
+  line-height: var(--avcon-line-body);
 }
 
+.content-section li,
+.corporate-section li {
+  padding-left: var(--space-1);
+  margin-bottom: var(--space-2);
+}
+
+/* =========================================
+   SUBTITLE
+   ========================================= */
 
 .info-subtitle {
-    margin-bottom: 1rem;
+  margin: 0 0 var(--space-3);
+
+  color: var(--avcon-text);
+
+  font-size: var(--avcon-font-h3);
+  font-weight: 600;
+  line-height: 1.3;
 }
 
+/* =========================================
+   BUTTON / LINK
+   ========================================= */
 
 .btn-link {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.9rem 1.8rem;
-    background: var(--avcon-accent);
-    color: var(--avcon-white);
-    border-radius: 8px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: 0.3s ease;
-}
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
+  min-height: 44px;
+
+  margin-top: var(--space-5);
+  padding: var(--space-2) var(--space-5);
+
+  box-sizing: border-box;
+
+  border: 1px solid var(--avcon-accent);
+  border-radius: var(--avcon-radius-small);
+
+  background: var(--avcon-accent);
+  color: var(--avcon-white) !important;
+
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.3;
+
+  text-align: center;
+  text-decoration: none;
+
+  transition:
+    background-color var(--avcon-transition),
+    border-color var(--avcon-transition),
+    color var(--avcon-transition),
+    transform var(--avcon-transition);
+}
 
 .btn-link:hover {
-    background: var(--avcon-accent-light);
-    color:var(--avcon-white);
+  background: var(--avcon-accent-light);
+  border-color: var(--avcon-accent-light);
+
+  color: var(--avcon-white) !important;
+
+  transform: translateY(-2px);
 }
 
-
-.corporate-section {
-    margin: 4rem 0;
-    text-align: left;
+.btn-link:focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 3px;
 }
 
+.btn-link:active {
+  transform: translateY(0);
+}
+
+/* =========================================
+   CORPORATE SECTION LINKS
+   ========================================= */
 
 .corporate-section a {
-    display:block;
-    margin-top:0.5rem;
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 44px;
+
+  margin-top: var(--space-1);
+
+  color: var(--avcon-accent) !important;
+
+  line-height: 1.4;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+
+  transition: color var(--avcon-transition);
 }
 
+.corporate-section a:hover {
+  color: var(--avcon-text) !important;
+}
+
+/* =========================================
+   BLOCKQUOTE
+   ========================================= */
 
 blockquote {
-    margin: 4rem auto 2rem;
-    text-align:center;
-    font-style:italic;
-    font-size:1.3rem;
-    max-width:700px;
-    line-height:1.6;
+  max-width: 700px;
+
+  margin: var(--section-space) auto var(--space-6);
+  padding-inline: var(--space-4);
+
+  box-sizing: border-box;
+
+  color: var(--avcon-text);
+
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.6;
+
+  text-align: center;
 }
 
+/* =========================================
+   MOBILE
+   ========================================= */
 
-@media(max-width:768px){
+@media (max-width: 768px) {
+  .grid-container {
+    padding-inline: var(--page-gutter);
+  }
 
-    .grid-container {
-        padding:0 1.5rem;
-    }
+  .content-section,
+  .corporate-section {
+    margin-block: var(--section-space-mobile);
+  }
 
-    .content-section,
-    .corporate-section {
-        margin:2.5rem 0;
-    }
+  .content-section h2,
+  .corporate-section h2 {
+    font-size: var(--avcon-font-h2);
+  }
 
+  .info-subtitle {
+    font-size: var(--avcon-font-h3);
+  }
+
+  blockquote {
+    margin-block: var(--section-space-mobile) var(--space-5);
+    padding-inline: var(--space-3);
+
+    font-size: 1.15rem;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+  .event-container {
+    padding-bottom: var(--section-space-mobile);
+  }
+
+  .btn-link {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-link,
+  .corporate-section a {
+    transition: none;
+  }
+
+  .btn-link:hover {
+    transform: none;
+  }
 }

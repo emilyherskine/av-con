@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import "./GOCHighlight.css";
 
-export default function GOCHighlight({ SpeakerImage, SpeakerName, SpeakerBio }) {
+export default function GOCHighlight({
+  SpeakerImage,
+  SpeakerName,
+  SpeakerBio,
+}) {
   const [isExpanded, setIsExpanded] = useState(false);
   const maxBioLength = 150;
 
