@@ -2,10 +2,13 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+
 import HeroSection from "../CommonComponents/HeroSection/HeroSection";
 import ExternalLink from "../CommonComponents/ExternalLink/ExternalLink";
+
 import BackgroundImage from "./BookTicketsImages/SHAN5640.jfif";
 import Flight from "./BookTicketsImages/SHAN6371.jfif";
+
 import "./register.css";
 
 const introParagraphs = [
@@ -41,41 +44,59 @@ const corporateParagraphs = [
   "These passes provide event access, networking opportunities and support the SkyBound Fund, helping keep AvCon free for schools and students.",
 ];
 
+const schoolRegistrationUrl =
+  "https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUNUUyVEVDSUtXWkJHV0RBOVlNSko4MFlTVC4u&route=shorturl";
+
+const collegeRegistrationUrl = "https://forms.cloud.microsoft/r/bKq0qMmnFY";
+
+const liveStreamUrl = "https://streamyard.com/watch/fXQZNAES3G5A";
+
 export default function Register() {
   return (
     <main className="main-container">
+      {/* =========================================
+          HERO
+          ========================================= */}
+
       <HeroSection
         defaultTitle="AvCon 2026 School Registration Now Open"
         defaultSubtitle="Ireland's flagship free Student & Industry Convention returns Thursday, 8 October 2026."
         smallScreenTitle="Schools Registration 2026"
         smallScreenSubtitle="Bring your students into the future of aviation, aerospace and emerging industries."
         buttonText="Register Your School"
-        buttonLink="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUNUUyVEVDSUtXWkJHV0RBOVlNSko4MFlTVC4u&route=shorturl"
+        buttonLink={schoolRegistrationUrl}
       />
 
-      <section className="event-container">
+      <section className="event-container" aria-labelledby="welcome-heading">
         <Box className="grid-container">
-          {/* Introduction */}
+          {/* =========================================
+              INTRODUCTION
+              ========================================= */}
+
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6}>
               <div className="text-container">
-                <h2>Welcome Schools & Colleges</h2>
+                <h2 id="welcome-heading">Welcome Schools &amp; Colleges</h2>
+
                 {introParagraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
 
-                <ExternalLink
-                  href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUNUUyVEVDSUtXWkJHV0RBOVlNSko4MFlTVC4u&route=shorturl"
-                  className="btn-link"
-                >
-                  Schools Registration for AvCon 2026
-                </ExternalLink>
-                <ExternalLink
-                  href="https://forms.cloud.microsoft/r/bKq0qMmnFY"
-                  className="btn-link"
-                >
-                  College Registration for AvCon 2026
-                </ExternalLink>
+                <div className="registration-buttons">
+                  <ExternalLink
+                    href={schoolRegistrationUrl}
+                    className="btn-link"
+                  >
+                    Register Your School
+                  </ExternalLink>
+
+                  <ExternalLink
+                    href={collegeRegistrationUrl}
+                    className="btn-link"
+                  >
+                    Register Your College
+                  </ExternalLink>
+                </div>
               </div>
             </Grid>
 
@@ -88,9 +109,20 @@ export default function Register() {
             </Grid>
           </Grid>
 
-          {/* Why Attend */}
-          <section className="content-section">
-            <Typography variant="h4" className="info-subtitle uppercase">
+          {/* =========================================
+              WHY ATTEND
+              ========================================= */}
+
+          <section
+            className="content-section"
+            aria-labelledby="why-attend-heading"
+          >
+            <Typography
+              component="h2"
+              variant="h4"
+              id="why-attend-heading"
+              className="info-subtitle uppercase"
+            >
               Why Attend AvCon?
             </Typography>
 
@@ -106,32 +138,44 @@ export default function Register() {
             </ul>
           </section>
 
-          {/* What Makes AvCon Different */}
-          <Grid
-            container
-            spacing={4}
-            alignItems="center"
+          {/* =========================================
+              WHAT MAKES AVCON DIFFERENT
+              ========================================= */}
+
+          <section
             className="content-section"
+            aria-labelledby="what-makes-avcon-heading"
           >
-            <Grid item xs={12} md={6}>
-              <img
-                src={Flight}
-                alt="AvCon aviation experience"
-                className="event-image"
-              />
-            </Grid>
+            <Grid container spacing={4} alignItems="center">
+              <Grid item xs={12} md={6}>
+                <img
+                  src={Flight}
+                  alt="Aircraft at AvCon demonstrating the aviation experience available to students"
+                  className="event-image"
+                />
+              </Grid>
 
-            <Grid item xs={12} md={6}>
-              <h2>What Makes AvCon Different?</h2>
-              {whatMakesAvConParagraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </Grid>
-          </Grid>
+              <Grid item xs={12} md={6}>
+                <h2 id="what-makes-avcon-heading">
+                  What Makes AvCon Different?
+                </h2>
 
-          {/* Registration */}
-          <section className="content-section">
-            <h2>Register Early</h2>
+                {whatMakesAvConParagraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </Grid>
+            </Grid>
+          </section>
+
+          {/* =========================================
+              EARLY REGISTRATION
+              ========================================= */}
+
+          <section
+            className="content-section"
+            aria-labelledby="register-early-heading"
+          >
+            <h2 id="register-early-heading">Register Early</h2>
 
             <p>
               Demand continues to grow every year, with schools travelling from
@@ -145,35 +189,29 @@ export default function Register() {
               ))}
             </ul>
 
-            <Grid
-              container
-              spacing={0.5}
-              alignItems="center"
-              className="content-section"
+            <div
+              className="registration-buttons"
+              aria-label="AvCon registration options"
             >
-              <Grid item xs={6} md={3}>
-                <ExternalLink
-                  href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUNUUyVEVDSUtXWkJHV0RBOVlNSko4MFlTVC4u&route=shorturl"
-                  className="btn-link"
-                >
-                  Register Your School
-                </ExternalLink>
-              </Grid>
+              <ExternalLink href={schoolRegistrationUrl} className="btn-link">
+                Register Your School
+              </ExternalLink>
 
-              <Grid item xs={6} md={3}>
-                <ExternalLink
-                  href="https://forms.cloud.microsoft/r/bKq0qMmnFY"
-                  className="btn-link"
-                >
-                  Register Your College
-                </ExternalLink>
-              </Grid>
-            </Grid>
+              <ExternalLink href={collegeRegistrationUrl} className="btn-link">
+                Register Your College
+              </ExternalLink>
+            </div>
           </section>
 
-          {/* Live Stream */}
-          <section className="content-section">
-            <h2>Can't Attend In Person?</h2>
+          {/* =========================================
+              LIVE STREAM
+              ========================================= */}
+
+          <section
+            className="content-section"
+            aria-labelledby="live-stream-heading"
+          >
+            <h2 id="live-stream-heading">Can&apos;t Attend In Person?</h2>
 
             <p>
               AvCon Live brings the experience directly into classrooms across
@@ -182,33 +220,49 @@ export default function Register() {
               wherever they are.
             </p>
 
-            <a
-              href="https://streamyard.com/watch/fXQZNAES3G5A"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-link"
-            >
+            <ExternalLink href={liveStreamUrl} className="btn-link">
               AvCon Live Stream Education Registration
-            </a>
+            </ExternalLink>
           </section>
 
-          {/* Corporate */}
-          <section className="corporate-section">
-            <h2>Corporate & Industry Visitors</h2>
+          {/* =========================================
+              CORPORATE & INDUSTRY
+              ========================================= */}
+
+          <section
+            className="corporate-section"
+            aria-labelledby="corporate-heading"
+          >
+            <h2 id="corporate-heading">Corporate &amp; Industry Visitors</h2>
 
             {corporateParagraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
 
-            <strong>For enquiries:</strong>
-
-            <a href="mailto:hello@avcon.ie">hello@avcon.ie</a>
+            <p>
+              <strong>For enquiries:</strong>{" "}
+              <a
+                href="mailto:hello@avcon.ie"
+                aria-label="Email AvCon at hello@avcon.ie"
+              >
+                hello@avcon.ie
+              </a>
+            </p>
           </section>
 
+          {/* =========================================
+              CLOSING STATEMENT
+              ========================================= */}
+
           <blockquote>
-            Connecting Industry. Inspiring Talent. Shaping Tomorrow's Workforce.
-            <br />
-            <strong>The Sky is NOT the Limit. It's ONLY the Beginning.</strong>
+            <p>
+              Connecting Industry. Inspiring Talent. Shaping Tomorrow&apos;s
+              Workforce.
+            </p>
+
+            <strong>
+              The Sky is NOT the Limit. It&apos;s ONLY the Beginning.
+            </strong>
           </blockquote>
         </Box>
       </section>

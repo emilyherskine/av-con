@@ -5,7 +5,6 @@
 .main-container {
   display: flex;
   flex-direction: column;
-
   width: 100%;
 }
 
@@ -15,9 +14,7 @@
 
 .event-container {
   width: 100%;
-
   padding-bottom: var(--section-space);
-
   text-align: center;
 }
 
@@ -28,7 +25,6 @@
 .grid-container {
   width: 100%;
   padding-inline: var(--page-gutter);
-
   box-sizing: border-box;
 }
 
@@ -38,7 +34,6 @@
 
 .text-container {
   width: 100%;
-
   text-align: left;
 }
 
@@ -64,7 +59,6 @@
 .content-section,
 .corporate-section {
   margin-block: var(--section-space);
-
   text-align: left;
 }
 
@@ -105,8 +99,8 @@
 
 .content-section li,
 .corporate-section li {
-  padding-left: var(--space-1);
   margin-bottom: var(--space-2);
+  padding-left: var(--space-1);
 }
 
 /* =========================================
@@ -124,7 +118,7 @@
 }
 
 /* =========================================
-   BUTTON / LINK
+   SHARED BUTTON / LINK
    ========================================= */
 
 .btn-link {
@@ -132,7 +126,7 @@
   align-items: center;
   justify-content: center;
 
-  min-height: 44px;
+  min-height: 48px;
 
   margin-top: var(--space-5);
   padding: var(--space-2) var(--space-5);
@@ -152,11 +146,14 @@
   text-align: center;
   text-decoration: none;
 
+  cursor: pointer;
+
   transition:
     background-color var(--avcon-transition),
     border-color var(--avcon-transition),
     color var(--avcon-transition),
-    transform var(--avcon-transition);
+    transform var(--avcon-transition),
+    box-shadow var(--avcon-transition);
 }
 
 .btn-link:hover {
@@ -166,6 +163,9 @@
   color: var(--avcon-white) !important;
 
   transform: translateY(-2px);
+
+  box-shadow: 0 6px 16px
+    color-mix(in srgb, var(--avcon-primary-dark) 25%, transparent);
 }
 
 .btn-link:focus-visible {
@@ -178,10 +178,10 @@
 }
 
 /* =========================================
-   CORPORATE SECTION LINKS
+   CORPORATE EMAIL LINK
    ========================================= */
 
-.corporate-section a {
+.corporate-section a:not(.btn-link) {
   display: inline-flex;
   align-items: center;
 
@@ -199,8 +199,39 @@
   transition: color var(--avcon-transition);
 }
 
-.corporate-section a:hover {
+.corporate-section a:not(.btn-link):hover {
   color: var(--avcon-text) !important;
+}
+
+.corporate-section a:not(.btn-link):focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   REGISTRATION BUTTONS
+   ========================================= */
+
+.registration-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  gap: var(--space-3);
+
+  width: 100%;
+  max-width: 700px;
+
+  margin: var(--space-5) auto 0;
+}
+
+.registration-buttons .btn-link {
+  width: 100%;
+  min-height: 48px;
+
+  margin-top: 0;
+
+  box-sizing: border-box;
 }
 
 /* =========================================
@@ -222,6 +253,25 @@ blockquote {
   line-height: 1.6;
 
   text-align: center;
+}
+
+blockquote strong {
+  font-weight: 700;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (min-width: 600px) {
+  .registration-buttons {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .registration-buttons .btn-link {
+    flex: 1 1 0;
+  }
 }
 
 /* =========================================
@@ -267,6 +317,23 @@ blockquote {
   .btn-link {
     width: 100%;
     max-width: 100%;
+    min-height: 48px;
+
+    padding: var(--space-2) var(--space-4);
+  }
+
+  .registration-buttons {
+    gap: var(--space-3);
+    margin-top: var(--space-5);
+  }
+
+  .registration-buttons .btn-link {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  blockquote {
+    font-size: 1.1rem;
   }
 }
 
@@ -276,7 +343,7 @@ blockquote {
 
 @media (prefers-reduced-motion: reduce) {
   .btn-link,
-  .corporate-section a {
+  .corporate-section a:not(.btn-link) {
     transition: none;
   }
 
