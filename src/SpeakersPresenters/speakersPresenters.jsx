@@ -17,6 +17,7 @@ import PatriciaMoore from "./PresenterSpeakerImages2026/PatriciaMoore.jpg";
 import MuireannBagley from "./PresenterSpeakerImages2026/MuireannBagley.jpg";
 import DiarmuidORiordan from "./PresenterSpeakerImages2026/DiarmuidORiordan.jpg";
 import TimothyKelly from "./PresenterSpeakerImages2026/TimothyKelly.png";
+import JohnDrysdale from "./PresenterSpeakerImages2026/JohnDrysdale.jpeg";
 
 const defaultPresenters = [
   {
@@ -71,6 +72,11 @@ const defaultSpeakers = [
     image: TimothyKelly,
     name: "Timothy Kelly",
     bio: "Timothy Kelly is the founder and Managing Director of Corballis Technologies, an Irish software company specialising in safety, risk and compliance management systems for aviation, defence and other safety-critical sectors. A software engineering graduate of Dublin City University (DCU), Timothy began his career in aviation with FLS Aerospace and SR Technics in Ireland. He later joined the Aerospace Psychology Research Group at Trinity College Dublin, where his work developed his expertise in human factors, organisational culture, risk management and change management. In 2010, Timothy founded Corballis Technologies and has since led the delivery of enterprise software projects across aviation, defence, border security, law enforcement and the Architecture, Engineering and Construction sectors. He has also contributed to research and development projects funded by the European Union and the European Defence Agency. Since 2019, Corballis has supplied the Irish Air Corps with an integrated safety and compliance management system supporting requirements and frameworks including ICAO, EASA, ARMS, health and safety and ISO standards across multiple departments. Timothy's work sits at the intersection of aviation, technology and human factors, shaped by over a decade building safety-critical systems for defence and aviation organisations.",
+  },
+  {
+    image: JohnDrysdale,
+    name: "John Drysdale",
+    bio: "John Drysdale is a leading aviation consultant, aircraft maintenance engineer, and pilot advocate who has built a diverse career spanning airlines, maintenance hangars, airports, and aircraft leasing. As Director of Annadale Aviation and Senior Advisor to the Emerald Aero Group, John works with businesses across Ireland and internationally to drive growth and technical excellence across the aerospace sector. John’s journey highlights how practical skills and continuous learning open doors across the entire aviation ecosystem. He holds an EASA Category B1 Aircraft Maintenance Licence, graduated from the Technological University of the Shannon (TUS) Aviation Technical Certificates series, and earned a First-Class Honours BSc in Aviation Leadership from Dublin City University (DCU) in 2021. A Fellow of the Royal Aeronautical Society and Vice Chairman of Limerick Flying Club, John is also actively pursuing his Private Pilot Licence (PPL), proving that no matter how far your career takes you, there is always a new sky to explore.",
   },
 ];
 
