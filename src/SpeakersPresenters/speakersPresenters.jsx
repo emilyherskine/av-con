@@ -18,6 +18,7 @@ import MuireannBagley from "./PresenterSpeakerImages2026/MuireannBagley.jpg";
 import DiarmuidORiordan from "./PresenterSpeakerImages2026/DiarmuidORiordan.jpg";
 import TimothyKelly from "./PresenterSpeakerImages2026/TimothyKelly.png";
 import JohnDrysdale from "./PresenterSpeakerImages2026/JohnDrysdale.jpeg";
+import MarkFitzgerald from "./PresenterSpeakerImages2026/MarkFitzgerald.png";
 
 const defaultPresenters = [
   {
@@ -77,6 +78,11 @@ const defaultSpeakers = [
     image: JohnDrysdale,
     name: "John Drysdale",
     bio: "John Drysdale is a leading aviation consultant, aircraft maintenance engineer, and pilot advocate who has built a diverse career spanning airlines, maintenance hangars, airports, and aircraft leasing. As Director of Annadale Aviation and Senior Advisor to the Emerald Aero Group, John works with businesses across Ireland and internationally to drive growth and technical excellence across the aerospace sector. John’s journey highlights how practical skills and continuous learning open doors across the entire aviation ecosystem. He holds an EASA Category B1 Aircraft Maintenance Licence, graduated from the Technological University of the Shannon (TUS) Aviation Technical Certificates series, and earned a First-Class Honours BSc in Aviation Leadership from Dublin City University (DCU) in 2021. A Fellow of the Royal Aeronautical Society and Vice Chairman of Limerick Flying Club, John is also actively pursuing his Private Pilot Licence (PPL), proving that no matter how far your career takes you, there is always a new sky to explore.",
+  },
+  {
+    image: MarkFitzgerald,
+    name: "Mark Fitzgerald",
+    bio: "Mark Fitzgerald is a seasoned aviation executive and licensed engineer with nearly 30 years of industry experience, including over a decade in senior leadership roles. He currently serves as Head of Safety, Quality, and Business Excellence at Airbus International Services, leading safety management systems (SMS), quality assurance, and compliance monitoring across complex operational environments. Mark started his career in the Irish Air Corps and went on to hold key regulatory leadership roles—including Deputy Accountable Manager, Group Safety and Quality Coordinator, and Head of Consulting—for major organizations such as CHC Ireland, Starlite Aviation, and Irish Helicopters. He was also a Director at CHC Leasing and served on Irish Government Search and Rescue (SAR) aviation working groups.  Mark holds an Executive MBA from Dublin City University (DCU), an Honours Degree in Business Studies (Aviation & Emergency Services), and an EASA/IAA Part 66 B1.3/C aircraft maintenance licence. He is currently completing a Master’s in Managing Risk and System Change at Trinity College Dublin.",
   },
 ];
 
