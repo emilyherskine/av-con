@@ -19,6 +19,8 @@ import DiarmuidORiordan from "./PresenterSpeakerImages2026/DiarmuidORiordan.jpg"
 import TimothyKelly from "./PresenterSpeakerImages2026/TimothyKelly.png";
 import JohnDrysdale from "./PresenterSpeakerImages2026/JohnDrysdale.jpeg";
 import MarkFitzgerald from "./PresenterSpeakerImages2026/MarkFitzgerald.png";
+import NicholasBrereton from "./PresenterSpeakerImages2026/NicholasBrereton.jpeg";
+import MichelOrsi from "./PresenterSpeakerImages2026/MichelOrsi.png";
 
 const defaultPresenters = [
   {
@@ -80,9 +82,19 @@ const defaultSpeakers = [
     bio: "John Drysdale is a leading aviation consultant, aircraft maintenance engineer, and pilot advocate who has built a diverse career spanning airlines, maintenance hangars, airports, and aircraft leasing. As Director of Annadale Aviation and Senior Advisor to the Emerald Aero Group, John works with businesses across Ireland and internationally to drive growth and technical excellence across the aerospace sector. John’s journey highlights how practical skills and continuous learning open doors across the entire aviation ecosystem. He holds an EASA Category B1 Aircraft Maintenance Licence, graduated from the Technological University of the Shannon (TUS) Aviation Technical Certificates series, and earned a First-Class Honours BSc in Aviation Leadership from Dublin City University (DCU) in 2021. A Fellow of the Royal Aeronautical Society and Vice Chairman of Limerick Flying Club, John is also actively pursuing his Private Pilot Licence (PPL), proving that no matter how far your career takes you, there is always a new sky to explore.",
   },
   {
+    image: MichelOrsi,
+    name: "Michel Orsi",
+    bio: "Michel Orsi is an accomplished aerospace operations leader with 35+ years of experience in helicopter engineering, global maintenance, and field support. As Head of Operations at Airbus International Services, he leads 60+ technicians across the world , driving field technical assistance, regulatory compliance, and a €12M operational budget. Michel built his career from the ground up at Aerospatiale and Eurocopter. Starting as a mechanical fitter and prototype designer, he advanced to Field Service Engineer, providing critical technical assistance across the world . He later served as a Field Service Representative, interfacing directly with military fleets on major upgrade programs. A certified auditor with background in mechanical engineering design and production, Michel combines deep technical precision with strategic management. He is recognized for his leadership in high-stakes, multicultural environments and his dedication to global aviation safety",
+  },
+  {
     image: MarkFitzgerald,
     name: "Mark Fitzgerald",
     bio: "Mark Fitzgerald is a seasoned aviation executive and licensed engineer with nearly 30 years of industry experience, including over a decade in senior leadership roles. He currently serves as Head of Safety, Quality, and Business Excellence at Airbus International Services, leading safety management systems (SMS), quality assurance, and compliance monitoring across complex operational environments. Mark started his career in the Irish Air Corps and went on to hold key regulatory leadership roles—including Deputy Accountable Manager, Group Safety and Quality Coordinator, and Head of Consulting—for major organizations such as CHC Ireland, Starlite Aviation, and Irish Helicopters. He was also a Director at CHC Leasing and served on Irish Government Search and Rescue (SAR) aviation working groups.  Mark holds an Executive MBA from Dublin City University (DCU), an Honours Degree in Business Studies (Aviation & Emergency Services), and an EASA/IAA Part 66 B1.3/C aircraft maintenance licence. He is currently completing a Master’s in Managing Risk and System Change at Trinity College Dublin.",
+  },
+    {
+    image: NicholasBrereton,
+    name: "Nicholas Brereton",
+    bio: "Dr Nicholas J.B. Brereton is an Ad Astra Fellow and Assistant Professor within the School of Biology and Environmental Science at University College Dublin. He is Space life sciences lead at the UCD Centre for Space Research. His research tries to understand genetics at the interface of human, animal, plant, and environmental microbiomes, with a focus on clinical, agricultural and environmental challenges. In the space sciences, he has contributed to genetic studies associated with the ISS, Mars500, Inspiration4 and Axiom Mission 1 (Ax-1). Inspiration4 was the first all-civilian orbital spaceflight, while Ax-1 was the first all-private astronaut mission to the ISS. He is also an active member of the Open Science community, with membership of NASA OSDR Analysis Working Groups for Regolith, Microbes, Multiomics and Planetary Protection. This ongoing research helps advance our understanding of astronaut health, microbial resilience and environmental microbiology under extreme conditions. More recently his team led analysis of the Rodent Research-6 mission, looking into spaceflight effects on mouse genetics and gut microbiome interactions. He currently leads two ESA-funded projects, MARSCROP and RadioBiome, both focusing on understanding how life responds to the stresses of space, but which also help translate space discoveries to inform radiotherapy treatment and smart agriculture on Earth.",
   },
 ];
 
