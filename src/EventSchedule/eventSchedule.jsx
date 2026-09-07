@@ -3,6 +3,7 @@ import "./eventSchedule.css";
 import FloorPlan2026 from "./EventScheduleImages/AvCon 2026 Floorplan Draft.pdf";
 import ContentCard from "../CommonComponents/ContentCard/ContentCard";
 import VideoEmbed from "../CommonComponents/VideoEmbed/VideoEmbed";
+import AvConLivePanel from "./EventScheduleImages/AvCon Live 2026 - Panels.pdf";
 
 const experienceCards = [
   {
@@ -45,6 +46,12 @@ export default function EventSchedule() {
       {/* 2026 Experience */}
       <section className="experience-section">
         <h2>AvCon 2026 Experience</h2>
+
+        <iframe
+          src={AvConLivePanel}
+          title="AvCon 2026 Live Panel Plan"
+          className="floor-plan-viewer"
+        />
 
         <div className="experience-grid">
           {experienceCards.map((card) => (

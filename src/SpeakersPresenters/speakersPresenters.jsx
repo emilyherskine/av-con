@@ -21,6 +21,13 @@ import JohnDrysdale from "./PresenterSpeakerImages2026/JohnDrysdale.jpeg";
 import MarkFitzgerald from "./PresenterSpeakerImages2026/MarkFitzgerald.png";
 import NicholasBrereton from "./PresenterSpeakerImages2026/NicholasBrereton.jpeg";
 import MichelOrsi from "./PresenterSpeakerImages2026/MichelOrsi.png";
+import HannahDennison from "./PresenterSpeakerImages2026/HannahDennison.jpg";
+import OlivierNiel from "./PresenterSpeakerImages2026/OlivierNiel.png";
+import LauraSavage from "./PresenterSpeakerImages2026/LauraSavage.jpg";
+import ViktoriiaIvannikova from "./PresenterSpeakerImages2026/ViktoriiaIvannikova.jpg";
+import CiaránOCallaghan from "./PresenterSpeakerImages2026/CiaránO’Callaghan.png";
+import SamanthaHarding from "./PresenterSpeakerImages2026/SamanthaHarding.jpg";
+import FayçalSassi from "./PresenterSpeakerImages2026/FayçalSassi.png";
 
 const defaultPresenters = [
   {
@@ -91,10 +98,45 @@ const defaultSpeakers = [
     name: "Mark Fitzgerald",
     bio: "Mark Fitzgerald is a seasoned aviation executive and licensed engineer with nearly 30 years of industry experience, including over a decade in senior leadership roles. He currently serves as Head of Safety, Quality, and Business Excellence at Airbus International Services, leading safety management systems (SMS), quality assurance, and compliance monitoring across complex operational environments. Mark started his career in the Irish Air Corps and went on to hold key regulatory leadership roles—including Deputy Accountable Manager, Group Safety and Quality Coordinator, and Head of Consulting—for major organizations such as CHC Ireland, Starlite Aviation, and Irish Helicopters. He was also a Director at CHC Leasing and served on Irish Government Search and Rescue (SAR) aviation working groups.  Mark holds an Executive MBA from Dublin City University (DCU), an Honours Degree in Business Studies (Aviation & Emergency Services), and an EASA/IAA Part 66 B1.3/C aircraft maintenance licence. He is currently completing a Master’s in Managing Risk and System Change at Trinity College Dublin.",
   },
-    {
+  {
     image: NicholasBrereton,
     name: "Nicholas Brereton",
     bio: "Dr Nicholas J.B. Brereton is an Ad Astra Fellow and Assistant Professor within the School of Biology and Environmental Science at University College Dublin. He is Space life sciences lead at the UCD Centre for Space Research. His research tries to understand genetics at the interface of human, animal, plant, and environmental microbiomes, with a focus on clinical, agricultural and environmental challenges. In the space sciences, he has contributed to genetic studies associated with the ISS, Mars500, Inspiration4 and Axiom Mission 1 (Ax-1). Inspiration4 was the first all-civilian orbital spaceflight, while Ax-1 was the first all-private astronaut mission to the ISS. He is also an active member of the Open Science community, with membership of NASA OSDR Analysis Working Groups for Regolith, Microbes, Multiomics and Planetary Protection. This ongoing research helps advance our understanding of astronaut health, microbial resilience and environmental microbiology under extreme conditions. More recently his team led analysis of the Rodent Research-6 mission, looking into spaceflight effects on mouse genetics and gut microbiome interactions. He currently leads two ESA-funded projects, MARSCROP and RadioBiome, both focusing on understanding how life responds to the stresses of space, but which also help translate space discoveries to inform radiotherapy treatment and smart agriculture on Earth.",
+  },
+  {
+    image: HannahDennison,
+    name: "Hannah Dennison",
+    bio: "Currently Programme Chair for the B.Eng. Tech in Aviation Technology at TU Dublin, with a decade of industry experience within CAMO engineering, safety management and more recently, academia. Her operational expertise from ASL Airlines Ireland, where she held senior engineering and safety leadership roles, including Fleet Principal Engineer for the B757 and Airbus fleets (A330/A300), Deputy Safety Manager for the AOC, and nominated Post-Holder for CAMO Safety Manager. Before joining ASL, she worked in helicopter operations with Starlite Aviation, where she gained exposure to continuing airworthiness management and P-145 maintenance organisation operations, providing her with invaluable hands-on experience. She holds an MSc in Human Factors in Aviation Engineering from Coventry University and a Postgraduate Diploma in Aviation Maintenance Management from the University of Limerick. Her experience brings a blend of frontline engineering, safety leadership, and academic insight, which she would love to share with students.",
+  },
+  {
+    image: OlivierNiel,
+    name: "Olivier Niel",
+    bio: "Olivier Niel is the Managing Director of Airbus International Services, based in Dublin, Ireland. In this role, he leads global operations and maintenance support networks for the division. Olivier has built a 20+ year career at Airbus Helicopters and Eurocopter. Most recently, he served as Head of Industrial Operations for the Military Support Center France, where he directed a 200-person team managing helicopter maintenance, overhauls, and safety programs—notably driving a 20% turn-around time improvement for NH90 inspections. His expansive background also includes leadership roles as Head of Mechanical Flight Control & Hydraulics, Product Engineering Manager, and Head of Blade Design, where he successfully guided civil aircraft through EASA certification. He holds a Master’s in Aeronautical Maintenance and a Post-graduate Degree in Composite Materials from Bordeaux University. Outside the office, Olivier is an active private pilot with a passion for aerobatics, running, fencing, and surfing.",
+  },
+  {
+    image: LauraSavage,
+    name: "Laura Savage",
+    bio: "Laura is an aviation trading and investment executive with more than a decade of experience originating, negotiating and executing complex aircraft transactions across global secondary markets. She is currently Senior Vice President of Trading at TrueAero, where she leads acquisitions, disposals and portfolio optimisation initiatives that support platform growth and drive asset value creation. Prior to joining TrueAero, Laura held a number of operational and commercial roles at Bocomm Leasing, including Vice President of Trading, following the start of her career in Financial Services Tax at KPMG. Laura brings a multidisciplinary perspective spanning aviation finance, aircraft lease management, law, tax and accounting. She is a Chartered Accountant (ACA) and Chartered Tax Advisor (CTA), and holds a First Class Executive MBA from Trinity College Dublin and a Master of Accounting from UCD Michael Smurfit Graduate Business School. She also holds a First Class BA in Law and Accounting from the University of Limerick, together with specialised qualifications in Aviation Lease and Finance, Aircraft Lease Transition Management, Aircraft Engine Management and executive leadership. In 2025, Laura was recognised as one of Airline Economics’ 40 Under 40.",
+  },
+  {
+    image: ViktoriiaIvannikova,
+    name: "Viktoriia Ivannikova",
+    bio: "Dr Viktoriia Ivannikova is an aviation academic, researcher and educator with almost 20 years of international experience spanning aviation management, airport planning, research and higher education leadership in Ireland and Ukraine. She is an Assistant Professor in Aviation Management and Programme Chair for the BSc in Aviation Management with Pilot and Air Traffic Controller Studies at DCU Business School, where she works closely with industry to connect aviation education, research and practice. Prior to joining DCU, Viktoriia held senior academic and leadership positions at the National Aviation University of Ukraine, including Associate Professor, Deputy Head of School, Programme Chair for BSc and MSc programmes in Air Transportation Management, and Director of Education in English. She holds a PhD in Air Transportation Systems and Bachelor's and Master's degrees in Civil Engineering, specialising in Airport Design and Planning. Her research focuses on airport planning and management, airport-cities, digital transformation, innovation and the future of aviation. A Senior Fellow of Advance HE (SFHEA) and Fellow of the Royal Aeronautical Society (FRAeS), Viktoriia is also an External Examiner at Cranfield University and serves on the Executive Committees of the University Transport Study Group (UTSG) and the European Aviation Conference Institute (EACI).",
+  },
+  {
+    image: CiaránOCallaghan,
+    name: "Ciarán O’Callaghan ",
+    bio: "Ciarán O’Callaghan is an Aeronautical Engineer and lecturer with over 30 years’ experience in aviation from MRO’s, aircraft leasing, drones and more recently as an academic in TU Dublin. At present, Ciarán is a faculty member of the Faculty of Engineering, Built Environment and Apprenticeships lecturing on the Aviation Technology program. A licenced engineer (B1.3), he also holds an B’Eng in Aeronautical Engineering (Hons), a PG Cert in Technology Management and an MSc in Space Science and Technology. Ciarán started his career in the Air Corps but has also branched out into other sectors of aviation. Prior to joining TU Dublin, he held senior roles in the drone industry as a Flight-Testing Program Manager (Manna) and Head of Aviation and Accountable Manager (A-techsyn). A highlight for Ciarán took place recently during the August 12th Eclipse where he took to the air on an international expedition alongside researchers from DIAS, TCD, INAF, ESA and the Irish Air Corps to image and capture data on the sun’s corona while in totality. A keen astronomer, he got to blend his aviation and astronomy skills to help build what was a very successful expedition!",
+  },
+  {
+    image: SamanthaHarding,
+    name: "Samantha Harding",
+    bio: "Samantha Harding is the founder of the SILC Conference and has spent the past twelve years working to advance Ireland’s aviation industry. She has played an important role in strengthening collaboration across the aviation community, bringing key stakeholders together and championing Ireland’s position as a global centre for aviation and aircraft leasing. Samantha holds a Master’s degree in Financial Economics and a Specialist Diploma in Aviation Leasing and Finance.",
+  },
+  {
+    image: FayçalSassi,
+    name: "Fayçal Sassi",
+    bio: "Fayçal Sassi is an aviation technology and cybersecurity leader with over 18 years of experience in the industry. His career has progressed from Systems Administration to IT Management and ultimately to Head of IT & Cybersecurity at Airbus Ireland, where he leads the organisation’s IT strategy, governance, digital transformation, cybersecurity and IT operations across a multinational environment. Throughout his career, Fayçal has led major technology and transformation initiatives, from modernising IT infrastructure and implementing enterprise platforms to integrating Artificial Intelligence and strengthening cybersecurity resilience in response to an evolving regulatory and threat landscape. He holds an Executive MBA (Hons) from Dublin City University and serves as a Board Director of the MBA Association of Ireland. In 2025, he was recognised among the Global CISO 100 by Trellix for his contribution to cybersecurity leadership. Passionate about leadership, innovation and the future of aviation, Fayçal shares practical insights at the intersection of technology, cybersecurity, business and people.",
   },
 ];
 
