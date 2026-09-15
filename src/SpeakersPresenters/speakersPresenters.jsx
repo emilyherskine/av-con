@@ -25,9 +25,15 @@ import HannahDennison from "./PresenterSpeakerImages2026/HannahDennison.jpg";
 import OlivierNiel from "./PresenterSpeakerImages2026/OlivierNiel.png";
 import LauraSavage from "./PresenterSpeakerImages2026/LauraSavage.jpg";
 import ViktoriiaIvannikova from "./PresenterSpeakerImages2026/ViktoriiaIvannikova.jpg";
-import CiaránOCallaghan from "./PresenterSpeakerImages2026/CiaránO’Callaghan.png";
+import CiaranOCallaghan from "./PresenterSpeakerImages2026/CiaránO’Callaghan.png";
 import SamanthaHarding from "./PresenterSpeakerImages2026/SamanthaHarding.jpg";
-import FayçalSassi from "./PresenterSpeakerImages2026/FayçalSassi.png";
+import FaycalSassi from "./PresenterSpeakerImages2026/FayçalSassi.png";
+import GerryHumphreys from "./PastSpeakersArchive/PresenterSpeakerImages2024/GerryHumphreys.jpg";
+import PhilipSmythe from "./PastSpeakersArchive/PresenterSpeakerImages2025/PhilipSmythe.jpg";
+import DeirdreOReilly from "./PresenterSpeakerImages2026/DeirdreO'Reilly.jpg";
+import GraceDelaney from "./PresenterSpeakerImages2026/GraceDelaney.jpeg";
+import SolGianoutsos from "./PresenterSpeakerImages2026/SolGianoutsos.jpeg";
+import MaireKerrigan from "./PresenterSpeakerImages2026/MáireKerrigan.jpeg";
 
 const defaultPresenters = [
   {
@@ -124,7 +130,7 @@ const defaultSpeakers = [
     bio: "Dr Viktoriia Ivannikova is an aviation academic, researcher and educator with almost 20 years of international experience spanning aviation management, airport planning, research and higher education leadership in Ireland and Ukraine. She is an Assistant Professor in Aviation Management and Programme Chair for the BSc in Aviation Management with Pilot and Air Traffic Controller Studies at DCU Business School, where she works closely with industry to connect aviation education, research and practice. Prior to joining DCU, Viktoriia held senior academic and leadership positions at the National Aviation University of Ukraine, including Associate Professor, Deputy Head of School, Programme Chair for BSc and MSc programmes in Air Transportation Management, and Director of Education in English. She holds a PhD in Air Transportation Systems and Bachelor's and Master's degrees in Civil Engineering, specialising in Airport Design and Planning. Her research focuses on airport planning and management, airport-cities, digital transformation, innovation and the future of aviation. A Senior Fellow of Advance HE (SFHEA) and Fellow of the Royal Aeronautical Society (FRAeS), Viktoriia is also an External Examiner at Cranfield University and serves on the Executive Committees of the University Transport Study Group (UTSG) and the European Aviation Conference Institute (EACI).",
   },
   {
-    image: CiaránOCallaghan,
+    image: CiaranOCallaghan,
     name: "Ciarán O’Callaghan ",
     bio: "Ciarán O’Callaghan is an Aeronautical Engineer and lecturer with over 30 years’ experience in aviation from MRO’s, aircraft leasing, drones and more recently as an academic in TU Dublin. At present, Ciarán is a faculty member of the Faculty of Engineering, Built Environment and Apprenticeships lecturing on the Aviation Technology program. A licenced engineer (B1.3), he also holds an B’Eng in Aeronautical Engineering (Hons), a PG Cert in Technology Management and an MSc in Space Science and Technology. Ciarán started his career in the Air Corps but has also branched out into other sectors of aviation. Prior to joining TU Dublin, he held senior roles in the drone industry as a Flight-Testing Program Manager (Manna) and Head of Aviation and Accountable Manager (A-techsyn). A highlight for Ciarán took place recently during the August 12th Eclipse where he took to the air on an international expedition alongside researchers from DIAS, TCD, INAF, ESA and the Irish Air Corps to image and capture data on the sun’s corona while in totality. A keen astronomer, he got to blend his aviation and astronomy skills to help build what was a very successful expedition!",
   },
@@ -134,9 +140,39 @@ const defaultSpeakers = [
     bio: "Samantha Harding is the founder of the SILC Conference and has spent the past twelve years working to advance Ireland’s aviation industry. She has played an important role in strengthening collaboration across the aviation community, bringing key stakeholders together and championing Ireland’s position as a global centre for aviation and aircraft leasing. Samantha holds a Master’s degree in Financial Economics and a Specialist Diploma in Aviation Leasing and Finance.",
   },
   {
-    image: FayçalSassi,
+    image: FaycalSassi,
     name: "Fayçal Sassi",
-    bio: "Fayçal Sassi is an aviation technology and cybersecurity leader with over 18 years of experience in the industry. His career has progressed from Systems Administration to IT Management and ultimately to Head of IT & Cybersecurity at Airbus Ireland, where he leads the organisation’s IT strategy, governance, digital transformation, cybersecurity and IT operations across a multinational environment. Throughout his career, Fayçal has led major technology and transformation initiatives, from modernising IT infrastructure and implementing enterprise platforms to integrating Artificial Intelligence and strengthening cybersecurity resilience in response to an evolving regulatory and threat landscape. He holds an Executive MBA (Hons) from Dublin City University and serves as a Board Director of the MBA Association of Ireland. In 2025, he was recognised among the Global CISO 100 by Trellix for his contribution to cybersecurity leadership. Passionate about leadership, innovation and the future of aviation, Fayçal shares practical insights at the intersection of technology, cybersecurity, business and people.",
+    bio: "Fayçal Sassi is an aviation technology and cybersecurity leader with over 18 years of experience in the industry. His career has progressed from Systems Administration to IT Management and ultimately to Head of IT & Cybersecurity at Airbus Ireland, where he now leads the organisation’s IT strategy, governance, digital transformation, cybersecurity and IT operations across a multinational environment. Throughout his career, Fayçal has led major technology and transformation initiatives, from modernising IT infrastructure and implementing enterprise platforms to integrating Artificial Intelligence and strengthening cybersecurity resilience in response to an evolving regulatory and threat landscape. He holds an Executive MBA (Hons) from Dublin City University, serves as a Board Director of the MBA Association of Ireland, and is commencing doctoral research at Dublin City University exploring how organisations can move beyond the AI hype to create sustainable business value through AI-driven digital transformation and strategic leadership. In 2025, he was recognised among the Global CISO 100 by Trellix for his contribution to cybersecurity leadership. Passionate about leadership, innovation and the future of aviation, Fayçal shares practical insights at the intersection of technology, cybersecurity, business and people.",
+  },
+  {
+    image: GerryHumphreys,
+    name: "Gerry Humphreys",
+    bio: "Gerry is an accomplished aviator with over 40 years of experience, 14,000 flying hours logged on more than 120 different aircraft types. After completing a degree in Aeronautical Engineering at Queen's University Gerry spent 20 years in the RAF, where he primarily flew single-seat fast jets such as the Hunter, Hawk, and Harrier. After leaving the RAF, Gerry transitioned to corporate aviation for 10 years, during which time he also constructed a runway at his home, built an aircraft, performed in air displays, and became a certified flying instructor. Currently, Gerry serves as the Deputy Head of Training, where he is responsible for upholding the highest standards in all aspects of pilot training. He also leads instruction in aerobatics, tailwheel conversions, and Upset Recovery and is an EASA flight examiner. Additionally, Gerry is a board member of the Foynes Flying Boat and Maritime Museum and serves as the Chairman of the General Aviation Safety Council of Ireland."
+  },
+  {
+    image: PhilipSmythe,
+    name: "Philip Smythe",
+    bio: "Philip has a life long interest in aviation a former commercial and corporate pilot, Philip has been a flight instructor for over 40 years. Captain Smythe has been with AFTA since its inception in 1995, training pilots at all levels from Private Pilots Licence (PPL) to Commercial Pilots Licence (CPL) and Multi-Engine Instrument Rating qualifications. As Safety Manager, Philip conducts internal safety audits and promotes, maintains and oversees flight safety and best practices on a daily basis. Philip is an Irish Aviation Authority (IAA) certified Flight Examiner. He has witnessed a growing focus on environmental sustainability in the aviation industry over his time with the business.",
+  },
+  {
+    image: DeirdreOReilly,
+    name: "Deirdre O'Reilly",
+    bio: "Deirdre O'Reilly is currently the Training Coordinator for Skypeople Training EU and has many years of experience in the aviation industry. She worked as a Cabin Crewmember with Aer Lingus for 20 years, flying all routes and aircraft as a Senior Cabin Crewmember. She spent 10 of these years working in the Flight Services Training Department, where she instructed in SEP, CRM, Dangerous Goods, Security, First Aid, Senior Training, Flight Crew Training, Initial Cabin Crew Training and Customer Service Training. Towards the end of her career, Deirdre became the Chief Instructor/Training Supervisor. In this role, she helped ensure that the Training Academy ran smoothly, overseeing administration, instructor rosters, instructor qualifications, trainee standards and regulatory standards. She also designed and delivered a Cabin Crew introductory course for Portobello Institute in Dublin. In her current role with Skypeople Training EU, Deirdre helps coordinate EASA Attestation courses, which are delivered internationally. She has also designed two TY courses, which are delivered to schools nationally by her team of experienced instructors.",
+  },
+  {
+    image: GraceDelaney,
+    name: "Grace Delaney",
+    bio: "Grace Delaney is 23 years old and first became interested in aviation as a teenager. After completing her first discovery flight, it sparked her passion for flying. She went on to study Aviation Management at Dublin City University before deciding to take the next step and pursue a career as a pilot. Grace began her pilot training with AFTA in August last year. She completed her ATPL exams this summer and is currently working towards completing the final stages of her PPL.",
+  },
+  {
+    image: SolGianoutsos,
+    name: "Sol Gianoutsos",
+    bio: "Sol Gianoutsos was born in Wellington, New Zealand, and grew up around the world, giving him a slightly distinctive accent. He has been interested in aviation for as long as he can remember. Growing up around one of the windiest airports in the world probably didn’t hurt either. He really caught the aviation bug when his parents gave him a discovery flight for his 15th birthday, and he has been flying ever since. In fact, he managed to obtain his PPL before he even got his driver’s licence. Sol is currently working at AFTA as a Flight Instructor through the VistaJet Mentored Programme, where he has had the opportunity to teach students like Grace, as well as hopefully some future students, how to fly. Excitingly, Sol will be starting with VistaJet shortly after the event, and he looks forward to sharing more about his journey, the industry, and what comes next."
+  },
+  {
+    image: MaireKerrigan,
+    name: "Máire Kerrigan",
+    bio: "Máire Kerrigan brings over a decade of financial expertise to her role as Head of Finance at Airbus International Services. Having advanced through key accounting positions across both the non-profit and corporate sectors, she now oversees end-to-end financial operations, risk, governance, and system innovations. In doing so, she demonstrates that finance is far more than a behind-the-scenes function, it is a strategic engine driving the aerospace industry forward. Her strong educational background includes a First-Class Honours degree in Corporate Law and a Postgraduate Law degree from NUI Galway, alongside her ACCA professional accreditation. Passionate about inspiring the next generation, Máire encourages students pursuing careers across finance and aviation by showing firsthand how diverse analytical backgrounds can lead to high-impact leadership roles in aerospace."
   },
 ];
 
