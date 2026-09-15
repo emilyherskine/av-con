@@ -25,15 +25,15 @@ import HannahDennison from "./PresenterSpeakerImages2026/HannahDennison.jpg";
 import OlivierNiel from "./PresenterSpeakerImages2026/OlivierNiel.png";
 import LauraSavage from "./PresenterSpeakerImages2026/LauraSavage.jpg";
 import ViktoriiaIvannikova from "./PresenterSpeakerImages2026/ViktoriiaIvannikova.jpg";
-import CiaranOCallaghan from "./PresenterSpeakerImages2026/CiaránO’Callaghan.png";
+import CiaranOCallaghan from "./PresenterSpeakerImages2026/CiaranOCallaghan.png";
 import SamanthaHarding from "./PresenterSpeakerImages2026/SamanthaHarding.jpg";
-import FaycalSassi from "./PresenterSpeakerImages2026/FayçalSassi.png";
+import FaycalSassi from "./PresenterSpeakerImages2026/FaycalSassi.png";
 import GerryHumphreys from "./PastSpeakersArchive/PresenterSpeakerImages2024/GerryHumphreys.jpg";
 import PhilipSmythe from "./PastSpeakersArchive/PresenterSpeakerImages2025/PhilipSmythe.jpg";
 import DeirdreOReilly from "./PresenterSpeakerImages2026/DeirdreO'Reilly.jpg";
 import GraceDelaney from "./PresenterSpeakerImages2026/GraceDelaney.jpeg";
 import SolGianoutsos from "./PresenterSpeakerImages2026/SolGianoutsos.jpeg";
-import MaireKerrigan from "./PresenterSpeakerImages2026/MáireKerrigan.jpeg";
+import MaireKerrigan from "./PresenterSpeakerImages2026/MaireKerrigan.jpeg";
 
 const defaultPresenters = [
   {
