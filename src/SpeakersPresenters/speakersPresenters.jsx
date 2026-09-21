@@ -34,6 +34,9 @@ import DeirdreOReilly from "./PresenterSpeakerImages2026/DeirdreO'Reilly.jpg";
 import GraceDelaney from "./PresenterSpeakerImages2026/GraceDelaney.jpeg";
 import SolGianoutsos from "./PresenterSpeakerImages2026/SolGianoutsos.jpeg";
 import MaireKerrigan from "./PresenterSpeakerImages2026/MaireKerrigan.jpeg";
+import PaulKennedy from "./PastSpeakersArchive/PresenterSpeakerImages2024/PaulKennedy.jpg";
+import MarinaEfthymiou from "./PresenterSpeakerImages2026/MarinaEfthymiou.jpg";
+import JarlathMolloy from "./PresenterSpeakerImages2026/JarlathMolloy.jpg";
 
 const defaultPresenters = [
   {
@@ -155,6 +158,11 @@ const defaultSpeakers = [
     bio: "Philip has a life long interest in aviation a former commercial and corporate pilot, Philip has been a flight instructor for over 40 years. Captain Smythe has been with AFTA since its inception in 1995, training pilots at all levels from Private Pilots Licence (PPL) to Commercial Pilots Licence (CPL) and Multi-Engine Instrument Rating qualifications. As Safety Manager, Philip conducts internal safety audits and promotes, maintains and oversees flight safety and best practices on a daily basis. Philip is an Irish Aviation Authority (IAA) certified Flight Examiner. He has witnessed a growing focus on environmental sustainability in the aviation industry over his time with the business.",
   },
   {
+    image: PaulKennedy,
+    name: "Paul Kennedy",
+    bio: "Paul Kennedy is the Head of Aviation Infrastructure for the Irish Aviation Authority, with 30 years of aviation experience. He holds an air traffic controller's license, commercial pilot's license, and an MSc in Human Factors and Safety Assessment in Aeronautics from Cranfield University. Starting with the Irish Aviation Authority in 1994, Paul gained extensive expertise in Air Traffic Control (ATC), serving as an officer, instructor, and investigator. In 2009, he transitioned to regulation, becoming an air traffic services inspector and later managing the Air Navigation Services Division. In 2023, he was appointed Head of Aviation Infrastructure, overseeing the regulation of Air Traffic Management, Air Navigation Services, and Aerodromes. Paul chairs the ICAO European Region Aerodrome Operations Working Group and the EU National Supervisor Committee Coordination Platform. He is also Vice Chair of the ICAO North Atlantic Safety Oversight Group and has participated in EASA ATM/ANS Standardisation Inspections since 2012.",
+  },
+  {
     image: DeirdreOReilly,
     name: "Deirdre O'Reilly",
     bio: "Deirdre O'Reilly is currently the Training Coordinator for Skypeople Training EU and has many years of experience in the aviation industry. She worked as a Cabin Crewmember with Aer Lingus for 20 years, flying all routes and aircraft as a Senior Cabin Crewmember. She spent 10 of these years working in the Flight Services Training Department, where she instructed in SEP, CRM, Dangerous Goods, Security, First Aid, Senior Training, Flight Crew Training, Initial Cabin Crew Training and Customer Service Training. Towards the end of her career, Deirdre became the Chief Instructor/Training Supervisor. In this role, she helped ensure that the Training Academy ran smoothly, overseeing administration, instructor rosters, instructor qualifications, trainee standards and regulatory standards. She also designed and delivered a Cabin Crew introductory course for Portobello Institute in Dublin. In her current role with Skypeople Training EU, Deirdre helps coordinate EASA Attestation courses, which are delivered internationally. She has also designed two TY courses, which are delivered to schools nationally by her team of experienced instructors.",
@@ -173,6 +181,16 @@ const defaultSpeakers = [
     image: MaireKerrigan,
     name: "Máire Kerrigan",
     bio: "Máire Kerrigan brings over a decade of financial expertise to her role as Head of Finance at Airbus International Services. Having advanced through key accounting positions across both the non-profit and corporate sectors, she now oversees end-to-end financial operations, risk, governance, and system innovations. In doing so, she demonstrates that finance is far more than a behind-the-scenes function, it is a strategic engine driving the aerospace industry forward. Her strong educational background includes a First-Class Honours degree in Corporate Law and a Postgraduate Law degree from NUI Galway, alongside her ACCA professional accreditation. Passionate about inspiring the next generation, Máire encourages students pursuing careers across finance and aviation by showing firsthand how diverse analytical backgrounds can lead to high-impact leadership roles in aerospace."
+  },
+  {
+    image: MarinaEfthymiou,
+    name: "Marina Efthymiou",
+    bio: "Prof. Marina Efthymiou is Professor of Aviation Management at Dublin City University Business School, where she leads the Sustainable Aviation Hub of the Institute of Business and Society. She has published over 60 academic papers and advised bodies including the Department of Transport (Ireland), OECD ITF, European Commission, and European Parliament, and she comments regularly for Bloomberg, BBC, CNN, RTE and Politico. An IATA instructor and Principal Investigator on the EC-funded MSCA project AZER02050, she has held visiting professorships in Beijing, Singapore, and Riyadh. Her accolades include the aviation industry's Women in Aviation award (2025), the DCU Business School Young Research Award (2023), and the DCU President's Award for Distinctive Approach to Innovation in Teaching (2022).",
+  },
+  {
+    image: JarlathMolloy,
+    name: "Jarlath Molloy",
+    bio: "Dr Jarlath Molloy has over 20 years’ experience working on ESG and sustainability issues across the public, private and non‑profit sectors, with professional experience in multiple countries. His work and interests focus on climate risk, sustainable finance, decarbonisation, corporate governance and non‑financial reporting and—critically—how these domains intersect in real decision‑making contexts. His career both inside and beyond the aviation sector has given him a broad, systems‑level perspective on the shared sustainability challenges facing industry, capital markets and governments alike and on the practical constraints that often limit effective action. In 2025, he took up the role of Head of Aviation Sustainability at the Irish Aviation Authority (IAA). In this role, he is responsible for the environmental elements of ReFuelEU, Single European Sky and Critical Entities Resilience regulations – and works closely with other competent authorities, regulated entities and stakeholders.",
   },
 ];
 
