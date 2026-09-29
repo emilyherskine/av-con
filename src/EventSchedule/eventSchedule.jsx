@@ -4,6 +4,7 @@ import FloorPlan2026 from "./EventScheduleImages/AvCon 2026 Floorplan Draft.pdf"
 import ContentCard from "../CommonComponents/ContentCard/ContentCard";
 import VideoEmbed from "../CommonComponents/VideoEmbed/VideoEmbed";
 import AvConLivePanel from "./EventScheduleImages/AvCon Live 2026 - Panels.pdf";
+import AVConSchedule from "./EventScheduleImages/AVConSchedule2026.jpeg";
 
 const experienceCards = [
   {
@@ -30,28 +31,52 @@ export default function EventSchedule() {
       <section className="schedule-header">
         <h1>AvCon 2026 Event Experience</h1>
 
-        <p>
-          Discover the experiences, speakers, demonstrations and opportunities
-          waiting for you at AvCon 2026.
-        </p>
+        <div className="schedule-introduction">
+          <p>
+            Discover the experiences, speakers, demonstrations and opportunities
+            waiting for you at AvCon 2026.
+          </p>
+          <p>
+            Ireland's flagship aviation and aerospace careers event brings
+            together students, educators and industry leaders for a day of
+            inspiration, discovery and connection.
+          </p>
+        </div>
+      </section>
 
-        <p>
-          Ireland's flagship aviation and aerospace careers event brings
-          together students, educators and industry leaders for a day of
-          inspiration, discovery and connection.
-        </p>
-        <VideoEmbed src="https://www.youtube.com/embed/rjl6q8Y0h5w?si=o6VOZ_5PlR2E_aLz" />
+      <section className="schedule-feature" aria-labelledby="schedule-overview-heading">
+        <div className="schedule-feature__content">
+          <p className="section-eyebrow">Plan your day</p>
+          <h2 id="schedule-overview-heading">AvCon 2026 event schedule</h2>
+          <p>
+            Browse the day at a glance, then use the floor plan below to find
+            each stage, zone and activity.
+          </p>
+        </div>
+        <div className="schedule-image-frame">
+          <img
+            src={AVConSchedule}
+            alt="AvCon 2026 event schedule"
+            className="schedule-image"
+          />
+        </div>
       </section>
 
       {/* 2026 Experience */}
       <section className="experience-section">
-        <h2>AvCon 2026 Experience</h2>
+        <div className="section-heading">
+          <p className="section-eyebrow">What to expect</p>
+          <h2>AvCon 2026 Experience</h2>
+        </div>
 
-        <iframe
-          src={AvConLivePanel}
-          title="AvCon 2026 Live Panel Plan"
-          className="floor-plan-viewer"
-        />
+        <div className="document-frame document-frame--panels">
+          <iframe
+            src={AvConLivePanel}
+            title="AvCon 2026 live panel plan"
+            className="document-viewer"
+            loading="lazy"
+          />
+        </div>
 
         <div className="experience-grid">
           {experienceCards.map((card) => (
@@ -66,7 +91,10 @@ export default function EventSchedule() {
 
       {/* 2026 Floor Plan */}
       <section className="floor-plan-section">
-        <h2>AvCon 2026 Floor Plan</h2>
+        <div className="section-heading">
+          <p className="section-eyebrow">Find your way</p>
+          <h2>AvCon 2026 Floor Plan</h2>
+        </div>
 
         <p>
           Explore the AvCon 2026 floor plan to see where the different zones,
@@ -74,11 +102,12 @@ export default function EventSchedule() {
           the event.
         </p>
 
-        <div className="floor-plan-container">
+        <div className="document-frame">
           <iframe
             src={FloorPlan2026}
             title="AvCon 2026 Floor Plan"
-            className="floor-plan-viewer"
+            className="document-viewer"
+            loading="lazy"
           />
         </div>
 
@@ -90,20 +119,23 @@ export default function EventSchedule() {
 
       {/* Live Stream */}
       <section className="video-section">
-        <h2>Watch Previous AvCon Live Streams</h2>
+        <div className="section-heading">
+          <p className="section-eyebrow">Look back</p>
+          <h2>Watch Previous AvCon Live Streams</h2>
+        </div>
 
         <div className="video-grid">
-          <div>
+          <article className="stream-card">
             <h3>AvCon 2025 LIVE STREAM</h3>
 
             <VideoEmbed src="https://www.youtube.com/embed/videoseries?si=X0ZMQCI5w-k9s84C&amp;list=PLKqYIkM4gVMV9yfE4WkiBRn141HuYwuGa" />
-          </div>
+          </article>
 
-          <div>
+          <article className="stream-card">
             <h3>AvCon 2024 LIVE STREAM</h3>
 
             <VideoEmbed src="https://www.youtube.com/embed/videoseries?si=IOMb30T0FMtjvWkD&amp;list=PLKqYIkM4gVMUO04DAeqTrWWMyYJhc9ccg" />
-          </div>
+          </article>
         </div>
       </section>
     </main>
