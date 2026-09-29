@@ -37,6 +37,9 @@ import MaireKerrigan from "./PresenterSpeakerImages2026/MaireKerrigan.jpeg";
 import PaulKennedy from "./PastSpeakersArchive/PresenterSpeakerImages2024/PaulKennedy.jpg";
 import MarinaEfthymiou from "./PresenterSpeakerImages2026/MarinaEfthymiou.jpg";
 import JarlathMolloy from "./PresenterSpeakerImages2026/JarlathMolloy.jpg";
+import AineFlood from "./PresenterSpeakerImages2026/AineFlood.jpg";
+import AoifeConneely from "./PresenterSpeakerImages2026/AoifeConneely.jpg";
+import CharlotteOKelly from "./PresenterSpeakerImages2026/CharlotteOKelly.jpg";
 
 const defaultPresenters = [
   {
@@ -192,6 +195,22 @@ const defaultSpeakers = [
     name: "Jarlath Molloy",
     bio: "Dr Jarlath Molloy has over 20 years’ experience working on ESG and sustainability issues across the public, private and non‑profit sectors, with professional experience in multiple countries. His work and interests focus on climate risk, sustainable finance, decarbonisation, corporate governance and non‑financial reporting and—critically—how these domains intersect in real decision‑making contexts. His career both inside and beyond the aviation sector has given him a broad, systems‑level perspective on the shared sustainability challenges facing industry, capital markets and governments alike and on the practical constraints that often limit effective action. In 2025, he took up the role of Head of Aviation Sustainability at the Irish Aviation Authority (IAA). In this role, he is responsible for the environmental elements of ReFuelEU, Single European Sky and Critical Entities Resilience regulations – and works closely with other competent authorities, regulated entities and stakeholders.",
   },
+  {
+    image: AineFlood,
+    name: "Áine Flood",
+    bio: "Áine Flood is the ESERO Ireland Manager at Research Ireland, leading on the ESA Education programme in Ireland to spark young people’s passion for STEM. With a background in physics and science communication and education, she has worked on a variety of science and STEAM education and public engagement projects including with Science Gallery Dublin, the National Youth Council of Ireland, Pint of Science, the SCI:COM Conference, Bright Club Dublin, Science Apprentice book series, and I-LOFAR. As ESERO Ireland Manager, Áine engages young people, schools, and communities with astronomy and space research taking place in Ireland and in ESA (European Space Agency) and promotes space as a tool for STEM education."
+  },
+  {
+    image: AoifeConneely,
+    name: "Aoife Conneely",
+    bio: "Aoife Conneely is Head of Aviation at Vistra and an experienced aviation finance professional, with a career spanning aircraft leasing, aviation investment platforms and structured finance. Prior to Vistra, Aoife held a number of roles within Investec Bank’s Global Aviation team and Airborne Capital, with experience spanning financial control of aircraft leasing platforms and funds, aviation operations, board directorships and corporate governance across aviation structures. Her experience has given her the opportunity to work closely with investors, asset managers, banks, legal & tax advisers and aviation clients across the industry. Aoife is a Fellow of Chartered Accountants Ireland (ACA) and holds an Honours Bachelor of Business Studies in Accounting from the University of Limerick. She recently achieved a Distinction in the Diploma in Company Direction with the Institute of Directors Ireland, complementing her aviation and finance experience with a strong focus on governance, strategy and leadership. She is passionate about developing people within aviation and supporting more women and emerging talent to build rewarding careers and progress into leadership roles across the industry."
+  },
+  {
+    image: CharlotteOKelly,
+    name: "Charlotte O’Kelly",
+    bio: "Charlotte O’Kelly is the co-founder and Managing Director of TechWorks Marine, with more than two decades of experience in operational oceanography and marine data services. She has led the company’s work with the European Space Agency (ESA), combining satellite Earth observation with in-situ measurements for coastal monitoring and offshore renewables. This includes a project exploring the use of Earth observation to estimate wind-farm yield losses caused by wake effects. Charlotte has served on the board of the Marine Institute for over five years."
+  },
+
 ];
 
 export default function SpeakersPresentors({
