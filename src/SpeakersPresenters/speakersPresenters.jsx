@@ -40,6 +40,7 @@ import JarlathMolloy from "./PresenterSpeakerImages2026/JarlathMolloy.jpg";
 import AineFlood from "./PresenterSpeakerImages2026/AineFlood.jpg";
 import AoifeConneely from "./PresenterSpeakerImages2026/AoifeConneely.jpg";
 import CharlotteOKelly from "./PresenterSpeakerImages2026/CharlotteOKelly.jpg";
+import MelvinKelly from "./PastSpeakersArchive/PresenterSpeakerImages2025/MelvinKelly.png";
 
 const defaultPresenters = [
   {
@@ -209,6 +210,11 @@ const defaultSpeakers = [
     image: CharlotteOKelly,
     name: "Charlotte O’Kelly",
     bio: "Charlotte O’Kelly is the co-founder and Managing Director of TechWorks Marine, with more than two decades of experience in operational oceanography and marine data services. She has led the company’s work with the European Space Agency (ESA), combining satellite Earth observation with in-situ measurements for coastal monitoring and offshore renewables. This includes a project exploring the use of Earth observation to estimate wind-farm yield losses caused by wake effects. Charlotte has served on the board of the Marine Institute for over five years."
+  },
+  {
+    image: MelvinKelly,
+    name: "Melvin Kelly",
+    bio: "Melvin Kelly serves as the Senior Vice President Technical at Jackson Square Aviation (JSA). In this role, he is responsible for the regional technical teams and provides crucial technical input for aircraft leases at the transaction level. Melvin's career in aviation began as an apprentice with the Irish Air Corps. He has since accumulated 30 years of experience across various facets of the industry, working with airlines, Maintenance, Repair, and Overhaul (MRO) organizations, and lessors. Before joining JSA, Melvin spent eight years with Avolon and five years with Nordic Aviation Capital. His roles involved leading negotiations for aircraft leases, supporting the delivery of new aircraft, and managing aircraft transitions between operators. His professional background also includes tenure at Vueling Airlines, Lufthansa Technik, and Team Aer Lingus. Throughout his career, Melvin has gained extensive hands-on experience with a diverse range of Airbus and Boeing aircraft. He holds an EASA Part 66 B1 and C Aircraft Engineers Licence, underscoring his technical expertise. Melvin possesses a comprehensive understanding of aircraft maintenance, airline operations, and aircraft leasing, developed from both the lessor's and the airline's perspectives."
   },
 
 ];
