@@ -41,6 +41,8 @@ import AineFlood from "./PresenterSpeakerImages2026/AineFlood.jpg";
 import AoifeConneely from "./PresenterSpeakerImages2026/AoifeConneely.jpg";
 import CharlotteOKelly from "./PresenterSpeakerImages2026/CharlotteOKelly.jpg";
 import MelvinKelly from "./PastSpeakersArchive/PresenterSpeakerImages2025/MelvinKelly.png";
+import SineadCrampton from "./PresenterSpeakerImages2026/SineadCrampton.png";
+import NickHazeldine from "./PresenterSpeakerImages2026/NickHazeldine.png";
 
 const defaultPresenters = [
   {
@@ -215,6 +217,16 @@ const defaultSpeakers = [
     image: MelvinKelly,
     name: "Melvin Kelly",
     bio: "Melvin Kelly serves as the Senior Vice President Technical at Jackson Square Aviation (JSA). In this role, he is responsible for the regional technical teams and provides crucial technical input for aircraft leases at the transaction level. Melvin's career in aviation began as an apprentice with the Irish Air Corps. He has since accumulated 30 years of experience across various facets of the industry, working with airlines, Maintenance, Repair, and Overhaul (MRO) organizations, and lessors. Before joining JSA, Melvin spent eight years with Avolon and five years with Nordic Aviation Capital. His roles involved leading negotiations for aircraft leases, supporting the delivery of new aircraft, and managing aircraft transitions between operators. His professional background also includes tenure at Vueling Airlines, Lufthansa Technik, and Team Aer Lingus. Throughout his career, Melvin has gained extensive hands-on experience with a diverse range of Airbus and Boeing aircraft. He holds an EASA Part 66 B1 and C Aircraft Engineers Licence, underscoring his technical expertise. Melvin possesses a comprehensive understanding of aircraft maintenance, airline operations, and aircraft leasing, developed from both the lessor's and the airline's perspectives."
+  },
+  {
+    image: SineadCrampton,
+    name: "Sinéad Crampton",
+    bio: "Sinéad Crampton graduated with a Bachelor’s degree in Aeronautical Engineering from Queen’s University Belfast in 2006 and went on to obtain a Master’s degree in Air Transport Management from Cranfield University. She joined Altavair in 2022 as a Technical Director after beginning in the aircraft leasing industry in 2006. Sinéad is currently responsible for the negotiation, drafting, and due diligence in respect of the technical aspects of aircraft purchases, leases, and sales."
+  },
+  {
+    image: NickHazeldine,
+    name: "Nick Hazeldine",
+    bio: "Nick Hazeldine joined Altavair in 2024 and is responsible for overseeing day-to-day operations and ensuring the company’s strategic objectives are met. With extensive experience in asset finance including over 20 years in aircraft leasing, Nick plays a key role in optimising Altavair’s deal execution, asset management, business processes, and operational efficiency. Prior to joining Altavair, he was COO at CDB Aviation, where he led the transformation of the operations teams to be best in class to facilitate the rapid scaling of the business. Before that he held various senior roles at SMBC Aviation Capital including Head of Credit Risk, Head of Innovation, Head of Transaction Management and SVP Transaction Negotiation. Nick holds a Masters of Mechanical Engineering from the University of Leeds."
   },
 
 ];
