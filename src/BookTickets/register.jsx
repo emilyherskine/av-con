@@ -51,6 +51,8 @@ const collegeRegistrationUrl = "https://forms.cloud.microsoft/r/bKq0qMmnFY";
 
 const liveStreamUrl = "https://streamyard.com/watch/fXQZNAES3G5A";
 
+const preRegistration2027Url = "https://forms.cloud.microsoft/r/dSPvJzKjaS";
+
 export default function Register() {
   return (
     <main className="main-container">
@@ -188,17 +190,12 @@ export default function Register() {
                 <li key={point}>{point}</li>
               ))}
             </ul>
-
             <div
               className="registration-buttons"
               aria-label="AvCon registration options"
             >
-              <ExternalLink href={schoolRegistrationUrl} className="btn-link">
-                Register Your School
-              </ExternalLink>
-
-              <ExternalLink href={collegeRegistrationUrl} className="btn-link">
-                Register Your College
+              <ExternalLink href={preRegistration2027Url} className="btn-link">
+                Pre-register for AvCon 2027
               </ExternalLink>
             </div>
           </section>
@@ -221,7 +218,7 @@ export default function Register() {
             </p>
 
             <ExternalLink href={liveStreamUrl} className="btn-link">
-              AvCon Live Stream Education Registration
+              AvCon Live Stream Education LIVE!!
             </ExternalLink>
           </section>
 

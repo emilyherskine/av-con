@@ -38,5 +38,5 @@ export const HOME_CONFIG = {
   heroMobileTitle: "AvCon 2026",
   heroMobileSubtitle:
     "Connecting students, industry and the future of aviation.",
-  buttonText: "Schools Register 2026",
+  buttonText: "Schools Pre-Register 2027",
 };

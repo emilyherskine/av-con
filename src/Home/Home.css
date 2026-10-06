@@ -17,11 +17,13 @@
 .intro-section,
 .section,
 .convention-section,
-.final-section {
+.final-section,
+.live-stream-section {
   width: 100%;
 
   padding-block: var(--section-space);
   padding-inline: var(--page-gutter);
+  box-sizing: border-box;
 }
 
 /* =========================================
@@ -56,6 +58,165 @@
   padding: var(--space-6);
 
   text-align: center;
+}
+
+/* =========================================
+   FEATURED LIVE STREAM
+   ========================================= */
+
+.live-stream-section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  background: var(--avcon-primary-dark);
+}
+
+.live-stream-heading {
+  width: 100%;
+  max-width: 48rem;
+
+  margin-inline: auto;
+  margin-bottom: var(--space-6);
+
+  text-align: center;
+}
+
+.live-stream-heading h2 {
+  margin: 0;
+
+  color: var(--avcon-text);
+  font-weight: 700;
+  line-height: var(--avcon-line-heading);
+}
+
+.section-eyebrow {
+  margin: 0 0 var(--space-2);
+
+  color: var(--avcon-accent);
+
+  font-size: var(--avcon-font-small);
+  font-weight: 700;
+
+  letter-spacing: 0.09em;
+  line-height: 1.3;
+
+  text-transform: uppercase;
+}
+
+/* =========================================
+   VIDEO FEATURE
+   ========================================= */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+
+  width: 100%;
+  max-width: 90rem;
+
+  margin-inline: auto;
+}
+
+.stream-card {
+  min-width: 0;
+
+  padding: var(--space-4);
+
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
+
+  background: var(--avcon-surface);
+  box-shadow: var(--avcon-shadow);
+}
+
+/*
+ * Featured 2026 stream.
+ * Uses the existing AvCon colour variables so the
+ * section remains consistent with the rest of the site.
+ */
+.stream-card--featured {
+  width: 100%;
+
+  padding: clamp(2rem, 5vw, 4rem);
+
+  box-sizing: border-box;
+
+  border: 2px solid var(--avcon-accent);
+  border-radius: var(--avcon-radius-medium);
+
+  background: linear-gradient(
+    135deg,
+    var(--avcon-surface),
+    var(--avcon-primary-dark)
+  );
+
+  box-shadow: var(--avcon-shadow);
+}
+
+.stream-card__content {
+  max-width: 52rem;
+
+  margin-inline: auto;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+
+  text-align: center;
+}
+
+.stream-card__title {
+  margin: 0 0 var(--space-3);
+
+  color: var(--avcon-text) !important;
+
+  font-size: clamp(1.75rem, 3vw, 2.5rem) !important;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.stream-card__description {
+  max-width: 48rem;
+
+  margin: 0 auto;
+
+  color: var(--avcon-text-muted);
+
+  font-size: var(--avcon-font-body);
+  line-height: var(--avcon-line-body);
+}
+
+.stream-card--featured .video-container {
+  width: 100%;
+  max-width: 75rem;
+
+  margin-inline: auto;
+}
+
+.stream-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: var(--space-3);
+
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.stream-link {
+  color: var(--avcon-text);
+
+  font-weight: 700;
+
+  text-align: center;
+  text-underline-offset: 0.2em;
+}
+
+.stream-link:hover {
+  color: var(--avcon-focus);
+}
+
+.stream-link:focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 3px;
 }
 
 /* =========================================
@@ -222,7 +383,8 @@
   .intro-section,
   .section,
   .convention-section,
-  .final-section {
+  .final-section,
+  .live-stream-section {
     padding-block: var(--section-space-mobile);
     padding-inline: var(--page-gutter);
   }
@@ -250,12 +412,28 @@
   .intro-section,
   .section,
   .convention-section,
-  .final-section {
+  .final-section,
+  .live-stream-section {
     padding-inline: 1.25rem;
   }
 
   .banner-content {
     padding-inline: 1.25rem;
+  }
+
+  .stream-card--featured {
+    padding: clamp(1.5rem, 6vw, 2.5rem);
+
+    border-radius: var(--avcon-radius-medium);
+  }
+
+  .stream-links {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .stream-link {
+    width: 100%;
   }
 
   .button-row {

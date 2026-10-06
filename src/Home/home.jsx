@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import HeroSection from "../CommonComponents/HeroSection/HeroSection";
+import VideoEmbed from "../CommonComponents/VideoEmbed/VideoEmbed";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
@@ -53,7 +54,11 @@ export default function Home() {
       <section className="intro-section">
         <Grid container spacing={4} alignItems="center">
           <Grid item xs={12} md={6}>
-            <img src={PiletPhoto} alt="AvCon Aviation" className="home-image" />
+            <img
+              src={PiletPhoto}
+              alt="AvCon Aviation"
+              className="home-image"
+            />
           </Grid>
 
           <Grid item xs={12} md={6}>
@@ -78,6 +83,53 @@ export default function Home() {
           </Grid>
         </Grid>
       </section>
+
+      {/* Featured Live Stream */}
+
+        <div className="video-grid">
+          <article className="stream-card stream-card--featured">
+            <div className="stream-card__content">
+              <Typography
+                variant="h4"
+                component="h3"
+                className="stream-card__title"
+              >
+                Watch AvCon 2026 Live
+              </Typography>
+
+              <p className="stream-card__description">
+                Join the AvCon 2026 live stream on YouTube. Schools can use the
+                education registration link below to submit questions during
+                the broadcast.
+              </p>
+            </div>
+
+            <VideoEmbed
+              src="https://www.youtube.com/embed/R9WwaqI-8Lw"
+              title="AvCon 2026 live stream"
+            />
+
+            <div className="stream-links">
+              <a
+                href="https://streamyard.com/watch/fXQZNAES3G5A"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="stream-link"
+              >
+                Schools: register to ask live questions
+              </a>
+
+              <a
+                href="https://tyhub.ie/ty-podcast/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="stream-link"
+              >
+                Also available on TY Hub
+              </a>
+            </div>
+          </article>
+        </div>
 
       {/* Ecosystem Section */}
       <section className="section">
@@ -130,7 +182,7 @@ export default function Home() {
 
         <div className="button-row">
           <a href={EXTERNAL_LINKS.studentConventionForm} className="btn-link">
-            Schools Register - AvCon 2026
+            Schools Pre-Register - AvCon 2027
           </a>
 
           <a
@@ -138,6 +190,13 @@ export default function Home() {
             className="btn-link"
           >
             Become a Partner
+          </a>
+
+          <a
+            href={EXTERNAL_LINKS.avcon2027PreRegistrationForm}
+            className="btn-link"
+          >
+            Pre-register for AvCon 2027
           </a>
         </div>
       </section>
@@ -178,7 +237,7 @@ export default function Home() {
 
         <div className="button-row">
           <Link to="/bookTickets" className="btn-link">
-            Schools Register
+            Schools 2027 Pre-Register
           </Link>
 
           <Link to="/exhibitorRegistration" className="btn-link">

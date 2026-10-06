@@ -4,6 +4,20 @@ import "./AvConEzine.css";
 
 const ezines = [
   {
+    year: "2026",
+    title: "Main Event AvCon 2026 Altitude Ezine",
+    description:
+      "Altitude Ezine is the official publication of AvCon 2026, bringing together the latest aviation, aerospace, technology and future-of-flight stories. Featuring industry insights, expert voices, career pathways, innovation and AvCon highlights, Altitude connects the industry with the next generation of aviation and aerospace talent.",
+    embed:
+      "https://e.issuu.com/embed.html?d=main_event_avcon_2026_altitude_ezine_-2&u=tyhub",
+    publicationUrl:
+      "https://issuu.com/tyhub/docs/main_event_avcon_2026_altitude_ezine_-2?fr=xKAE9_zU1NQ",
+    allow:
+      "clipboard-write; autoplay; encrypted-media; fullscreen; picture-in-picture",
+    sandbox:
+      "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation allow-top-navigation-by-user-activation",
+  },
+  {
     year: "2025",
     title: "AvCon Christmas Ezine 2025 – Celebrating Two Years of Inspiration",
     description:

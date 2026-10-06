@@ -51,7 +51,7 @@ const DesktopMenu = ({
       className="link-text button-highlight"
       to="/bookTickets"
     >
-      AVCON 2026 SCHOOL REGISTRATION
+      AVCON 2027 SCHOOL PRE-REGISTRATION
     </Link>
   </div>
 );

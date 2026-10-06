@@ -37,13 +37,13 @@ export default function EventClosing() {
       </p>
 
       <Box className="registration-box">
-        <h2>Register Your School</h2>
+        <h2>Pre-Register Your School</h2>
         <p>
-          School registration for AvCon 2026 is now open. Participation is free
+          School pre-registration for AvCon 2027 is now open. Participation is free
           for schools and students thanks to the support of our partners.
         </p>
         <a href="https://avcon.ie/BookTickets" className="btn-link">
-          Register Your School
+          Pre-Register Your School
         </a>
       </Box>
     </Box>

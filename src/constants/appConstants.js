@@ -21,6 +21,7 @@ export const EXTERNAL_LINKS = {
   studentConventionForm: "https://forms.cloud.microsoft/r/EinwjqpRz7",
   collegeRegistrationForm: "https://forms.cloud.microsoft/r/bKq0qMmnFY",
   liveStreamForm: "https://streamyard.com/watch/fXQZNAES3G5A",
+  avcon2027PreRegistrationForm: "https://forms.cloud.microsoft/r/dSPvJzKjaS",
   exhibitorRegistrationForm: "https://forms.cloud.microsoft/r/UJFTLHDDve",
 };
 

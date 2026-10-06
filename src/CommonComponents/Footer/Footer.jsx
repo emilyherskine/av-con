@@ -47,8 +47,8 @@ export default function Footer() {
         </div>
 
         <div className="footer-register-buttons">
-          <a href={EXTERNAL_LINKS.studentConventionForm} className="footer-btn">
-            AvCon Schools Registration
+          <a href={EXTERNAL_LINKS.avcon2027PreRegistrationForm} className="footer-btn">
+            AvCon Schools 2027 Pre-Registration
           </a>
           <a
             href={EXTERNAL_LINKS.collegeRegistrationForm}

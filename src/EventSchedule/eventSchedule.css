@@ -1,4 +1,5 @@
 /* Event schedule */
+
 .schedule-page {
   width: min(100%, 90rem);
   margin-inline: auto;
@@ -29,7 +30,9 @@
   line-height: var(--avcon-line-heading);
 }
 
-.schedule-header h1 { font-size: var(--avcon-font-h1); }
+.schedule-header h1 {
+  font-size: var(--avcon-font-h1);
+}
 
 .schedule-introduction {
   display: grid;
@@ -46,14 +49,19 @@
   line-height: var(--avcon-line-body);
 }
 
+/* Event Schedule */
+
 .schedule-feature {
   display: grid;
-  grid-template-columns: minmax(15rem, .72fr) minmax(0, 1.28fr);
+  grid-template-columns: minmax(15rem, 0.72fr) minmax(0, 1.28fr);
   gap: clamp(1.5rem, 4vw, 4rem);
   align-items: center;
+
   padding: clamp(1.25rem, 3vw, 2.5rem);
+
   border: 1px solid var(--avcon-border);
   border-radius: var(--avcon-radius-medium);
+
   background: var(--avcon-surface);
   box-shadow: var(--avcon-shadow);
 }
@@ -65,7 +73,9 @@
 }
 
 .schedule-feature h2,
-.section-heading h2 { font-size: var(--avcon-font-h2); }
+.section-heading h2 {
+  font-size: var(--avcon-font-h2);
+}
 
 .section-heading {
   max-width: 48rem;
@@ -78,16 +88,21 @@
   color: var(--avcon-accent);
   font-size: var(--avcon-font-small);
   font-weight: 700;
-  letter-spacing: .09em;
+  letter-spacing: 0.09em;
   line-height: 1.3;
   text-transform: uppercase;
 }
 
+/* Images & Documents */
+
 .schedule-image-frame,
-.document-frame {
+.document-frame,
+.floor-plan-frame {
   overflow: hidden;
+
   border: 1px solid var(--avcon-border);
   border-radius: var(--avcon-radius-medium);
+
   background: var(--avcon-primary-dark);
   box-shadow: var(--avcon-shadow);
 }
@@ -98,9 +113,42 @@
   background: var(--avcon-surface);
 }
 
-.schedule-image { display: block; width: 100%; height: auto; }
+.schedule-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
-.document-frame { height: clamp(31.25rem, 62vw, 46.875rem); }
+.document-frame {
+  height: clamp(31.25rem, 62vw, 46.875rem);
+}
+
+.floor-plan-frame {
+  margin: 0;
+}
+
+.floor-plan-frame a {
+  display: block;
+}
+
+.floor-plan-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--avcon-white);
+}
+
+.floor-plan-frame figcaption {
+  padding: var(--space-3) var(--space-4);
+
+  color: var(--avcon-text-muted);
+  font-size: var(--avcon-font-small);
+  text-align: center;
+}
+
+.floor-plan-frame a:focus-visible {
+  outline-offset: -4px;
+}
 
 .document-frame--panels {
   height: clamp(25rem, 55vw, 40rem);
@@ -121,6 +169,8 @@
   outline-offset: -4px;
 }
 
+/* Experience */
+
 .experience-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -130,23 +180,37 @@
 .experience-card {
   display: flex;
   flex-direction: column;
+
   width: 100%;
   height: 100%;
   padding: var(--space-6);
+
   box-sizing: border-box;
+
   border: 1px solid var(--avcon-border);
   border-radius: var(--avcon-radius-medium);
+
   background: var(--avcon-surface);
   color: var(--avcon-text);
+
   text-align: center;
+
   box-shadow: var(--avcon-shadow);
-  transition: border-color var(--avcon-transition), transform var(--avcon-transition), box-shadow var(--avcon-transition);
+
+  transition:
+    border-color var(--avcon-transition),
+    transform var(--avcon-transition),
+    box-shadow var(--avcon-transition);
 }
 
-.experience-card:hover { border-color: var(--avcon-accent); transform: translateY(-2px); }
+.experience-card:hover {
+  border-color: var(--avcon-accent);
+  transform: translateY(-2px);
+}
 
 .experience-card h3 {
   margin: 0 0 var(--space-3);
+
   color: var(--avcon-text);
   font-size: var(--avcon-font-h3);
   line-height: 1.3;
@@ -155,10 +219,13 @@
 .experience-card p,
 .floor-plan-note {
   margin: 0;
+
   color: var(--avcon-text-muted);
   font-size: var(--avcon-font-body);
   line-height: var(--avcon-line-body);
 }
+
+/* Floor Plan */
 
 .floor-plan-section > p {
   max-width: 53rem;
@@ -169,66 +236,289 @@
 .floor-plan-note {
   max-width: 47rem;
   margin: var(--space-3) auto 0;
+
   font-size: var(--avcon-font-small);
   text-align: center;
 }
 
-.video-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); }
+/* Live Stream */
+
+.video-section {
+  width: 100%;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+/*
+ * The current AvCon live stream is intentionally displayed
+ * as a full-width feature rather than a two-column card.
+ */
+.video-grid--featured {
+  grid-template-columns: 1fr;
+}
 
 .stream-card {
   min-width: 0;
+
   padding: var(--space-4);
+
   border: 1px solid var(--avcon-border);
   border-radius: var(--avcon-radius-medium);
+
   background: var(--avcon-surface);
   box-shadow: var(--avcon-shadow);
 }
 
 .stream-card h3 {
   margin: 0 0 var(--space-3);
+
   color: var(--avcon-text);
   font-size: var(--avcon-font-h4);
   line-height: 1.4;
 }
 
+.stream-card > p {
+  margin: 0 0 var(--space-4);
+  color: var(--avcon-text-muted);
+}
+
+/*
+ * Featured AvCon 2026 live stream
+ */
+.stream-card--featured {
+  width: 100%;
+  margin-inline: 0;
+
+  padding: clamp(2rem, 5vw, 4rem);
+
+  box-sizing: border-box;
+
+  border: 2px solid var(--avcon-accent);
+  border-radius: var(--avcon-radius-medium);
+
+  background: linear-gradient(
+    135deg,
+    var(--avcon-surface),
+    var(--avcon-primary-dark)
+  );
+
+  box-shadow: var(--avcon-shadow);
+}
+
+.stream-card--featured h3 {
+  max-width: 50rem;
+  margin-inline: auto;
+  margin-bottom: var(--space-3);
+
+  color: var(--avcon-text);
+
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.2;
+
+  text-align: center;
+}
+
+.stream-card--featured > p {
+  max-width: 48rem;
+  margin-inline: auto;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+
+  color: var(--avcon-text-muted);
+
+  font-size: var(--avcon-font-body);
+  line-height: var(--avcon-line-body);
+
+  text-align: center;
+}
+
+.stream-card--featured .video-container {
+  width: 100%;
+  max-width: 75rem;
+  margin-inline: auto;
+}
+
+.stream-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: var(--space-3);
+
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.stream-link {
+  color: var(--avcon-text);
+  font-weight: 700;
+  text-underline-offset: 0.2em;
+}
+
+.stream-link:hover {
+  color: var(--avcon-focus);
+}
+
+/* Previous Streams */
+
+.section-heading--archive {
+  margin-top: clamp(3.5rem, 8vw, 7rem);
+}
+
+/* Video */
+
 .video-container {
   position: relative;
+
   width: 100%;
   aspect-ratio: 16 / 9;
+
   overflow: hidden;
+
   border-radius: var(--avcon-radius-small);
+
   background: var(--avcon-primary-dark);
 }
 
-.video-container iframe { position: absolute; inset: 0; display: block; width: 100%; height: 100%; border: 0; }
+.video-container iframe {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+.video-container iframe:focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: -4px;
+}
+
+/* Tablet */
 
 @media (max-width: 900px) {
-  .schedule-feature { grid-template-columns: 1fr; }
-  .schedule-feature__content { text-align: center; }
-  .experience-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .experience-card:last-child { grid-column: 1 / -1; width: min(100%, 50%); margin-inline: auto; }
-  .video-grid { grid-template-columns: 1fr; max-width: 46.875rem; margin-inline: auto; }
+  .schedule-feature {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-feature__content {
+    text-align: center;
+  }
+
+  .experience-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .experience-card:last-child {
+    grid-column: 1 / -1;
+    width: min(100%, 50%);
+    margin-inline: auto;
+  }
+
+  .video-grid:not(.video-grid--featured) {
+    grid-template-columns: 1fr;
+    max-width: 46.875rem;
+    margin-inline: auto;
+  }
 }
+
+/* Mobile */
 
 @media (max-width: 600px) {
-  .schedule-page { padding-block: var(--section-space-mobile); }
-  .schedule-header, .schedule-feature, .experience-section, .floor-plan-section, .video-section { margin-bottom: var(--section-space-mobile); }
-  .schedule-header h1 { font-size: 2rem; }
-  .schedule-feature h2, .section-heading h2 { font-size: 1.75rem; }
-  .schedule-feature, .stream-card { padding: var(--space-3); }
-  .schedule-image-frame, .document-frame, .stream-card { border-radius: var(--avcon-radius-small); }
-  .document-frame { height: 31.25rem; }
-  .document-frame--panels { height: 25rem; }
-  .experience-grid { grid-template-columns: 1fr; gap: var(--space-4); }
-  .experience-card:last-child { grid-column: auto; width: 100%; }
+  .schedule-page {
+    padding-block: var(--section-space-mobile);
+  }
+
+  .schedule-header,
+  .schedule-feature,
+  .experience-section,
+  .floor-plan-section,
+  .video-section {
+    margin-bottom: var(--section-space-mobile);
+  }
+
+  .schedule-header h1 {
+    font-size: 2rem;
+  }
+
+  .schedule-feature h2,
+  .section-heading h2 {
+    font-size: 1.75rem;
+  }
+
+  .schedule-feature,
+  .stream-card {
+    padding: var(--space-3);
+  }
+
+  /*
+   * Keep the featured live stream more spacious than
+   * the archive cards on smaller screens.
+   */
+  .stream-card--featured {
+    padding: clamp(1.5rem, 6vw, 2.5rem);
+    border-radius: var(--avcon-radius-medium);
+  }
+
+  .schedule-image-frame,
+  .document-frame,
+  .stream-card {
+    border-radius: var(--avcon-radius-small);
+  }
+
+  .document-frame {
+    height: 31.25rem;
+  }
+
+  .document-frame--panels {
+    height: 25rem;
+  }
+
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .experience-card:last-child {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .stream-links {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .stream-link {
+    text-align: center;
+  }
 }
+
+/* Very small screens */
 
 @media (max-width: 400px) {
-  .schedule-page { padding-inline: 1.25rem; }
-  .document-frame { height: 25rem; }
+  .schedule-page {
+    padding-inline: 1.25rem;
+  }
+
+  .document-frame {
+    height: 25rem;
+  }
 }
 
+/* Reduced Motion */
+
 @media (prefers-reduced-motion: reduce) {
-  .experience-card { transition: none; }
-  .experience-card:hover { transform: none; }
+  .experience-card {
+    transition: none;
+  }
+
+  .experience-card:hover {
+    transform: none;
+  }
 }
