@@ -85,18 +85,22 @@ export default function Home() {
       </section>
 
       {/* Featured Live Stream */}
+      <section className="live-stream-section" aria-labelledby="live-stream-title">
+        <div className="live-stream-heading">
+          <p className="section-eyebrow">Live from AvCon 2026</p>
 
-        <div className="video-grid">
+          <Typography
+            variant="h2"
+            component="h2"
+            id="live-stream-title"
+          >
+            Watch AvCon 2026 Live
+          </Typography>
+        </div>
+
+        <div>
           <article className="stream-card stream-card--featured">
             <div className="stream-card__content">
-              <Typography
-                variant="h4"
-                component="h3"
-                className="stream-card__title"
-              >
-                Watch AvCon 2026 Live
-              </Typography>
-
               <p className="stream-card__description">
                 Join the AvCon 2026 live stream on YouTube. Schools can use the
                 education registration link below to submit questions during
@@ -130,6 +134,7 @@ export default function Home() {
             </div>
           </article>
         </div>
+      </section>
 
       {/* Ecosystem Section */}
       <section className="section">

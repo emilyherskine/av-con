@@ -61,23 +61,43 @@
 }
 
 /* =========================================
-   FEATURED LIVE STREAM
+   FULL-WIDTH LIVE STREAM HIGHLIGHT
    ========================================= */
 
 .live-stream-section {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
+
+  width: 100vw;
+  max-width: 100vw;
+
+  /*
+   * Break the section out of any centred/constrained
+   * parent container so it reaches both viewport edges.
+   */
+  margin-left: calc(50% - 50vw);
+
+  padding-block: clamp(4rem, 8vw, 7rem);
+  padding-inline: clamp(1.5rem, 5vw, 5rem);
+
+  box-sizing: border-box;
 
   background: var(--avcon-primary-dark);
+
+  border-block: 1px solid var(--avcon-border);
 }
+
+/* =========================================
+   LIVE STREAM HEADING
+   ========================================= */
 
 .live-stream-heading {
   width: 100%;
-  max-width: 48rem;
+  max-width: 52rem;
 
   margin-inline: auto;
-  margin-bottom: var(--space-6);
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
 
   text-align: center;
 }
@@ -86,8 +106,10 @@
   margin: 0;
 
   color: var(--avcon-text);
+
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
-  line-height: var(--avcon-line-heading);
+  line-height: 1.15;
 }
 
 .section-eyebrow {
@@ -102,6 +124,151 @@
   line-height: 1.3;
 
   text-transform: uppercase;
+}
+
+/* =========================================
+   FEATURED STREAM CARD
+   ========================================= */
+
+.stream-card--featured {
+  width: 100%;
+
+  padding: clamp(2rem, 5vw, 4rem);
+
+  box-sizing: border-box;
+
+  border: 2px solid var(--avcon-accent);
+  border-radius: var(--avcon-radius-medium);
+
+  background: linear-gradient(
+    135deg,
+    var(--avcon-surface),
+    var(--avcon-primary-dark)
+  );
+
+  box-shadow: var(--avcon-shadow);
+}
+
+/* =========================================
+   STREAM CONTENT
+   ========================================= */
+
+.stream-card__content {
+  width: 100%;
+  max-width: 52rem;
+
+  margin-inline: auto;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+
+  text-align: center;
+}
+
+.stream-card__title {
+  margin: 0 0 var(--space-3);
+
+  color: var(--avcon-text) !important;
+
+  font-size: clamp(1.75rem, 3vw, 2.5rem) !important;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.stream-card__description {
+  max-width: 48rem;
+
+  margin: 0 auto;
+
+  color: var(--avcon-text-muted);
+
+  font-size: var(--avcon-font-body);
+  line-height: var(--avcon-line-body);
+
+  text-align: center;
+}
+
+/* =========================================
+   VIDEO
+   ========================================= */
+
+.stream-card--featured .video-container {
+  width: 100%;
+  max-width: 75rem;
+
+  margin-inline: auto;
+}
+
+/* =========================================
+   STREAM LINKS
+   ========================================= */
+
+.stream-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: var(--space-3);
+
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.stream-link {
+  color: var(--avcon-text);
+
+  font-weight: 700;
+
+  text-align: center;
+  text-underline-offset: 0.2em;
+}
+
+.stream-link:hover {
+  color: var(--avcon-focus);
+}
+
+.stream-link:focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 768px) {
+  .live-stream-section {
+    margin-left: calc(50% - 50vw);
+
+    padding-block: var(--section-space-mobile);
+    padding-inline: var(--page-gutter);
+  }
+
+  .stream-card--featured {
+    padding: clamp(2rem, 6vw, 3rem);
+  }
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+  .live-stream-section {
+    padding-inline: 1.25rem;
+  }
+
+  .stream-card--featured {
+    padding: 1.5rem;
+
+    border-radius: var(--avcon-radius-medium);
+  }
+
+  .stream-links {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .stream-link {
+    width: 100%;
+  }
 }
 
 /* =========================================
