@@ -5,6 +5,7 @@ import ContentCard from "../CommonComponents/ContentCard/ContentCard";
 import VideoEmbed from "../CommonComponents/VideoEmbed/VideoEmbed";
 import AvConLivePanel from "./EventScheduleImages/AvCon Live 2026 - Panels.pdf";
 import AVConSchedule from "./EventScheduleImages/AVConSchedule2026.jpeg";
+import AvConSpeakerSchedule from "./EventScheduleImages/Speakers Hub Schedule.png";
 
 const experienceCards = [
   {
@@ -52,20 +53,22 @@ export default function EventSchedule() {
         <div className="schedule-feature__content">
           <p className="section-eyebrow">Plan your day</p>
 
-          <h2 id="schedule-overview-heading">
-            AvCon 2026 event schedule
-          </h2>
+          <h2 id="schedule-overview-heading">AvCon 2026 event schedule</h2>
 
           <p>
             Browse the day at a glance, then use the floor plan below to find
             each stage, zone and activity.
           </p>
         </div>
-
         <div className="schedule-image-frame">
           <img
             src={AVConSchedule}
             alt="AvCon 2026 event schedule"
+            className="schedule-image"
+          />
+          <img
+            src={AvConSpeakerSchedule}
+            alt="AvCon 2026 speakers hub schedule"
             className="schedule-image"
           />
         </div>
@@ -132,17 +135,13 @@ export default function EventSchedule() {
         </figure>
 
         <p className="floor-plan-note">
-          Use your browser's zoom controls to explore the different areas of
-          the AvCon 2026 event space.
+          Use your browser's zoom controls to explore the different areas of the
+          AvCon 2026 event space.
         </p>
       </section>
 
       {/* Live Stream */}
-      <section
-        className="video-section"
-        aria-labelledby="live-stream-heading"
-      >
-
+      <section className="video-section" aria-labelledby="live-stream-heading">
         {/* Featured 2026 Live Stream */}
         <div className="video-grid video-grid--featured">
           <article className="stream-card stream-card--featured">

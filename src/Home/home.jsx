@@ -15,6 +15,8 @@ import {
   HOME_CONFIG,
   EXTERNAL_LINKS,
 } from "../constants";
+import AVConSchedule from "../EventSchedule/EventScheduleImages/AVConSchedule2026.jpeg";
+import AvConSpeakerSchedule from "../EventSchedule/EventScheduleImages/Speakers Hub Schedule.png";
 
 /**
  * EcosystemCard Component
@@ -54,11 +56,7 @@ export default function Home() {
       <section className="intro-section">
         <Grid container spacing={4} alignItems="center">
           <Grid item xs={12} md={6}>
-            <img
-              src={PiletPhoto}
-              alt="AvCon Aviation"
-              className="home-image"
-            />
+            <img src={PiletPhoto} alt="AvCon Aviation" className="home-image" />
           </Grid>
 
           <Grid item xs={12} md={6}>
@@ -85,15 +83,14 @@ export default function Home() {
       </section>
 
       {/* Featured Live Stream */}
-      <section className="live-stream-section" aria-labelledby="live-stream-title">
+      <section
+        className="live-stream-section"
+        aria-labelledby="live-stream-title"
+      >
         <div className="live-stream-heading">
           <p className="section-eyebrow">Live from AvCon 2026</p>
 
-          <Typography
-            variant="h2"
-            component="h2"
-            id="live-stream-title"
-          >
+          <Typography variant="h2" component="h2" id="live-stream-title">
             Watch AvCon 2026 Live
           </Typography>
         </div>
@@ -103,8 +100,8 @@ export default function Home() {
             <div className="stream-card__content">
               <p className="stream-card__description">
                 Join the AvCon 2026 live stream on YouTube. Schools can use the
-                education registration link below to submit questions during
-                the broadcast.
+                education registration link below to submit questions during the
+                broadcast.
               </p>
             </div>
 
@@ -131,6 +128,19 @@ export default function Home() {
               >
                 Also available on TY Hub
               </a>
+            </div>
+            <br/>
+            <div className="video-grid">
+              <img
+                src={AVConSchedule}
+                alt="AvCon 2026 event schedule"
+                className="schedule-image"
+              />
+              <img
+                src={AvConSpeakerSchedule}
+                alt="AvCon 2026 speakers hub schedule"
+                className="schedule-image"
+              />
             </div>
           </article>
         </div>
