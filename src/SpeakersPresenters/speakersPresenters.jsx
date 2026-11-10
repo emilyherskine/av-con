@@ -305,7 +305,7 @@ export default function SpeakersPresentors({
             ========================== */}
 
       <section className="speakers-section">
-        <h2>Welcome from AvCon 2024</h2>
+        <h2>Welcome from AvCon 2026</h2>
         <GOCHighlight
           SpeakerImage={GOC}
           SpeakerName="GOC, Brigadier General Rory O'Connor"
