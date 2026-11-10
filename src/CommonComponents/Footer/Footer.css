@@ -286,8 +286,27 @@
   .footer-link {
     transition: none;
   }
-
   .footer-btn:hover {
     transform: none;
   }
 }
+
+  .footer {
+    padding-block: clamp(3rem, 6vw, 5rem);
+    background: #081f33;
+  }
+
+  .footer-heading {
+    color: #b7dff2;
+    letter-spacing: 0.1em;
+  }
+
+  .footer-btn {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .footer-register-buttons .footer-btn:first-child {
+    border-color: var(--avcon-action);
+    background: var(--avcon-action);
+  }

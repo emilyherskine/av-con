@@ -7,15 +7,9 @@ export default function FirstImageAndText() {
       <h2>Welcome to A.P.P.</h2>
 
       <p>
-        The Aviation Pathways Portal (A.P.P.) is AvCon’s platform connecting
-        aspiring professionals with exciting opportunities across aviation,
-        aerospace and space industries.
-      </p>
-
-      <p>
-        Whether you are a student exploring career options, a graduate beginning
-        your journey, or a professional looking to advance your skills, A.P.P.
-        provides access to:
+        The Aviation Pathway Portal (A.P.P.) connects students, graduates and
+        professionals with opportunities in aviation, aerospace and space,
+        including:
       </p>
 
       <div className="intro-highlights">

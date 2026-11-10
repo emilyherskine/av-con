@@ -18,12 +18,7 @@ export default function News() {
         <h1>AvCon News & Updates</h1>
 
         <p>
-          Stay connected with the latest announcements, stories, industry
-          updates and highlights from AvCon.
-        </p>
-
-        <p>
-          Connecting Industry. Inspiring Talent. Shaping Tomorrow's Workforce.
+          The latest announcements, stories and highlights from AvCon.
         </p>
       </section>
 
@@ -31,12 +26,12 @@ export default function News() {
 
       <section className="featured-news">
         <Box>
-          <span>FEATURED UPDATE</span>
+          <span>2026 HIGHLIGHT</span>
 
           <h2>AvCon 2026 - The Future of Aviation & Aerospace</h2>
 
           <p>
-            Follow the journey as AvCon brings together students, educators,
+            Look back at AvCon 2026, which brought together students, educators,
             industry and government to inspire the next generation of aviation
             and aerospace professionals.
           </p>

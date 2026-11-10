@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 
 import HeroSection from "../CommonComponents/HeroSection/HeroSection";
 import ExternalLink from "../CommonComponents/ExternalLink/ExternalLink";
+import { EXTERNAL_LINKS } from "../constants";
 
 import BackgroundImage from "./BookTicketsImages/SHAN5640.jfif";
 import Flight from "./BookTicketsImages/SHAN6371.jfif";
@@ -12,9 +13,9 @@ import Flight from "./BookTicketsImages/SHAN6371.jfif";
 import "./register.css";
 
 const introParagraphs = [
-  "AvCon 2026 will once again bring together thousands of students, educators, industry leaders and government representatives at Casement Aerodrome, Baldonnel, Co. Dublin.",
-  "Students will explore the future of aviation, aerospace, engineering, defence, drones, space, sustainability and future mobility through interactive experiences, live demonstrations and conversations with professionals.",
-  "Register your school today to receive priority updates, teacher information packs and event announcements.",
+  "AvCon brings students, educators, industry and government together. Previous events were held at Casement Aerodrome, Baldonnel, Co. Dublin.",
+  "Students explore aviation, aerospace, engineering, defence, drones, space, sustainability and future mobility through interactive experiences, demonstrations and conversations with professionals.",
+  "Pre-register your school for 2027 to receive updates, teacher information packs and event announcements.",
 ];
 
 const whyAttendItems = [
@@ -26,8 +27,7 @@ const whyAttendItems = [
 ];
 
 const whatMakesAvConParagraphs = [
-  "AvCon isn't just another careers event. Hosted in partnership with the Irish Air Corps at Casement Aerodrome, students experience an immersive environment where education meets industry.",
-  "From aircraft and engineering to drones, sustainability, aerospace, defence and space technology, students gain real insight into industries creating tomorrow's opportunities.",
+  "Previous events, hosted with the Irish Air Corps at Casement Aerodrome, offered an immersive introduction to aircraft, engineering, drones, sustainability, aerospace, defence and space technology.",
   "Thanks to the continued support of our partners and the SkyBound Fund, attendance remains free for schools and students.",
 ];
 
@@ -44,29 +44,28 @@ const corporateParagraphs = [
   "These passes provide event access, networking opportunities and support the SkyBound Fund, helping keep AvCon free for schools and students.",
 ];
 
-const schoolRegistrationUrl =
-  "https://forms.cloud.microsoft/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WNhaCZUNUUyVEVDSUtXWkJHV0RBOVlNSko4MFlTVC4u&route=shorturl";
-
 const collegeRegistrationUrl = "https://forms.cloud.microsoft/r/bKq0qMmnFY";
 
 const liveStreamUrl = "https://streamyard.com/watch/fXQZNAES3G5A";
 
-const preRegistration2027Url = "https://forms.cloud.microsoft/r/dSPvJzKjaS";
+const schoolRegistrationUrl = EXTERNAL_LINKS.avcon2027PreRegistrationForm;
 
 export default function Register() {
   return (
-    <main className="main-container">
+    <main className="main-container register-page">
       {/* =========================================
           HERO
           ========================================= */}
 
       <HeroSection
-        defaultTitle="AvCon 2026 School Registration Now Open"
-        defaultSubtitle="Ireland's flagship free Student & Industry Convention returns Thursday, 8 October 2026."
-        smallScreenTitle="Schools Registration 2026"
+        defaultTitle="AvCon 2027 School Pre-Registration"
+        defaultSubtitle="Pre-register your school for Ireland's free Student & Industry Convention."
+        smallScreenTitle="Schools Pre-Registration 2027"
         smallScreenSubtitle="Bring your students into the future of aviation, aerospace and emerging industries."
         buttonText="Register Your School"
         buttonLink={schoolRegistrationUrl}
+        eyebrow="Schools & colleges"
+        backgroundImage={BackgroundImage}
       />
 
       <section className="event-container" aria-labelledby="welcome-heading">
@@ -75,7 +74,7 @@ export default function Register() {
               INTRODUCTION
               ========================================= */}
 
-          <Grid container spacing={4} alignItems="center">
+          <Grid container spacing={{ xs: 2, md: 4 }} alignItems="center">
             <Grid item xs={12} md={6}>
               <div className="text-container">
                 <h2 id="welcome-heading">Welcome Schools &amp; Colleges</h2>
@@ -148,7 +147,7 @@ export default function Register() {
             className="content-section"
             aria-labelledby="what-makes-avcon-heading"
           >
-            <Grid container spacing={4} alignItems="center">
+            <Grid container spacing={{ xs: 2, md: 4 }} alignItems="center">
               <Grid item xs={12} md={6}>
                 <img
                   src={Flight}
@@ -180,9 +179,8 @@ export default function Register() {
             <h2 id="register-early-heading">Register Early</h2>
 
             <p>
-              Demand continues to grow every year, with schools travelling from
-              across Ireland to attend AvCon. Registering early ensures your
-              school receives:
+              Schools travel from across Ireland to attend AvCon.
+              Pre-register for:
             </p>
 
             <ul>
@@ -194,7 +192,7 @@ export default function Register() {
               className="registration-buttons"
               aria-label="AvCon registration options"
             >
-              <ExternalLink href={preRegistration2027Url} className="btn-link">
+              <ExternalLink href={schoolRegistrationUrl} className="btn-link">
                 Pre-register for AvCon 2027
               </ExternalLink>
             </div>
@@ -211,14 +209,13 @@ export default function Register() {
             <h2 id="live-stream-heading">Can&apos;t Attend In Person?</h2>
 
             <p>
-              AvCon Live brings the experience directly into classrooms across
-              Ireland and around the world. Students can take part in keynote
-              talks, industry discussions, demonstrations and career inspiration
-              wherever they are.
+              AvCon Live has brought keynote talks, industry discussions,
+              demonstrations and career inspiration to classrooms in Ireland
+              and around the world.
             </p>
 
             <ExternalLink href={liveStreamUrl} className="btn-link">
-              AvCon Live Stream Education LIVE!!
+              AvCon 2026 education live stream link
             </ExternalLink>
           </section>
 

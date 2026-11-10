@@ -279,13 +279,38 @@ blockquote strong {
    ========================================= */
 
 @media (max-width: 768px) {
+  .register-page .hero-wrapper {
+    height: auto;
+    min-height: clamp(23rem, 60svh, 30rem);
+  }
+
+  .register-page .hero-image-container {
+    height: 100%;
+  }
+
   .grid-container {
     padding-inline: var(--page-gutter);
   }
 
+  .register-page .event-image {
+    max-width: 20rem;
+    margin-inline: auto;
+  }
+
   .content-section,
   .corporate-section {
-    margin-block: var(--section-space-mobile);
+    margin-block: var(--space-5);
+  }
+
+  .register-page .text-container p,
+  .register-page .content-section p,
+  .register-page .corporate-section p,
+  .register-page .content-section ul {
+    line-height: 1.5;
+  }
+
+  .register-page .content-section li {
+    margin-bottom: var(--space-1);
   }
 
   .content-section h2,
@@ -298,10 +323,11 @@ blockquote strong {
   }
 
   blockquote {
-    margin-block: var(--section-space-mobile) var(--space-5);
+    margin-block: var(--space-5);
     padding-inline: var(--space-3);
 
     font-size: 1.15rem;
+    line-height: 1.5;
   }
 }
 

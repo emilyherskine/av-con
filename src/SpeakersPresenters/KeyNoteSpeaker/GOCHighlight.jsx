@@ -30,7 +30,6 @@ export default function GOCHighlight({
         <h2 className="goc-name">{SpeakerName}</h2>
         <p
           className={`goc-bio ${isExpanded ? "expanded" : "collapsed"}`}
-          aria-expanded={isExpanded}
         >
           {isExpanded ? SpeakerBio : `${SpeakerBio.slice(0, maxBioLength)}...`}
         </p>
@@ -38,6 +37,8 @@ export default function GOCHighlight({
         {SpeakerBio.length > maxBioLength && (
           <button
             onClick={handleToggle}
+            type="button"
+            aria-expanded={isExpanded}
             aria-label={isExpanded ? "Collapse bio" : "Expand full bio"}
             className="speaker-bio-toggle"
           >

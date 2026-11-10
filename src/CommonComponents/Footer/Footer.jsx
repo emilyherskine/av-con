@@ -20,9 +20,8 @@ export default function Footer() {
         </a>
 
         <p className="footer-text">
-          {APP_CONFIG.appName} - The Future of Aviation & Aerospace: Connecting
-          education, industry and government to inspire the next generation of
-          aviation and aerospace talent.
+          Connecting education, industry and government to inspire the next
+          generation of aviation and aerospace talent.
         </p>
 
         <a href={EXTERNAL_LINKS.portfolioUrl} className="copyright">
@@ -32,17 +31,11 @@ export default function Footer() {
 
       <div className="footer-col footer-cta">
         <h3 className="footer-heading uppercase">
-          Join Us at {APP_CONFIG.appName} {APP_CONFIG.year}
+          Join Us at {APP_CONFIG.appName}
         </h3>
 
-        <p className="footer-text">
-          Every young person deserves the opportunity to discover what's
-          possible. Together we're connecting industry, inspiring talent and
-          shaping tomorrow's workforce.
-        </p>
-
         <div className="footer-event-details">
-          <strong>{APP_CONFIG.eventDate}</strong>
+          <strong>2026 event: {APP_CONFIG.eventDate}</strong>
           <span>{APP_CONFIG.eventLocation}</span>
         </div>
 
@@ -61,7 +54,7 @@ export default function Footer() {
             href={EXTERNAL_LINKS.liveStreamForm}
             className="footer-btn footer-btn-outline"
           >
-            Join the Free Live Stream
+            2026 education live stream link
           </a>
         </div>
 

@@ -25,6 +25,30 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+.app-shell :is(.btn-link, .industry-button, .submit-button) {
+  border-color: var(--avcon-action);
+  background-color: var(--avcon-action);
+  color: var(--avcon-white) !important;
+}
+
+.app-shell :is(.btn-link, .industry-button, .submit-button):hover {
+  border-color: var(--avcon-accent-light);
+  background-color: var(--avcon-accent-light);
+}
+
+.app-shell :is(
+  .initiative-card,
+  .experience-card,
+  .opportunity-card,
+  .involvement-card,
+  .pathway-card,
+  .collaboration-card,
+  .registration-box
+) {
+  border-color: var(--avcon-border);
+  background: linear-gradient(145deg, #103650, var(--avcon-surface));
+}
+
 :root {
   overflow-x: hidden;
 
@@ -37,6 +61,7 @@ body {
 
   --avcon-accent: #4c9ac4;
   --avcon-accent-light: #123d5c;
+  --avcon-action: #236487;
 
   --avcon-text: #f4f7f9;
   --avcon-text-muted: #c5d0d8;
@@ -103,9 +128,9 @@ body {
      BORDERS / RADIUS
      ========================================= */
 
-  --avcon-radius-small: 0.5rem;
-  --avcon-radius-medium: 0.75rem;
-  --avcon-radius-large: 1rem;
+  --avcon-radius-small: 0.4rem;
+  --avcon-radius-medium: 1rem;
+  --avcon-radius-large: 1.5rem;
 
   /* =========================================
      SHADOWS / TRANSITIONS

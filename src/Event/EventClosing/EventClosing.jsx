@@ -4,7 +4,7 @@ import "../event.css";
 
 export default function EventClosing() {
   return (
-    <Box className="event-section">
+    <Box className="event-section event-closing">
       <h2>Who Should Attend?</h2>
       <p>AvCon welcomes:</p>
       <ul>
@@ -16,19 +16,11 @@ export default function EventClosing() {
         <li>Government agencies and education partners</li>
       </ul>
 
-      <br />
-      <br />
-      <br />
-
       <h2>More Than an Event</h2>
       <p>
-        The AvCon Student Convention is the flagship event within the wider
-        AvCon ecosystem.
-      </p>
-      <p>
-        Throughout the year, AvCon connects industry, education and government
-        through the AvCon Industry Network, Afterburner networking events,
-        workshops and collaborative initiatives.
+        Beyond the flagship Student Convention, AvCon connects industry,
+        education and government through the AvCon Industry Network,
+        Afterburner networking events, workshops and collaborative initiatives.
       </p>
       <p>
         Together, we're helping build a stronger, more connected future for

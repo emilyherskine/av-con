@@ -1,7 +1,25 @@
-import React, { useState } from "react";
+import React, { useId, useState } from "react";
+
+function SpeakerPhoto({ src, name }) {
+  const [failed, setFailed] = useState(false);
+
+  if (!src || failed) {
+    return <p className="speaker-photo-unavailable">Photo unavailable</p>;
+  }
+
+  return (
+    <img
+      src={src}
+      alt={`Portrait of ${name}`}
+      className="speaker-image"
+      onError={() => setFailed(true)}
+    />
+  );
+}
 
 export default function Speaker({ SpeakerImage, SpeakerName, SpeakerBio }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const bioId = useId();
   const maxBioLength = 100;
 
   const handleToggle = () => {
@@ -9,50 +27,24 @@ export default function Speaker({ SpeakerImage, SpeakerName, SpeakerBio }) {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        textAlign: "center",
-      }}
-    >
-      <div
-        style={{
-          width: "350px",
-          height: "350px",
-          overflow: "hidden",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          marginBottom: "1rem",
-        }}
-      >
-        <img
-          src={SpeakerImage}
-          alt=""
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            objectPosition: "center",
-          }}
-        />
+    <div className="speaker-card">
+      <div className="speaker-image-wrapper">
+        <SpeakerPhoto key={SpeakerImage} src={SpeakerImage} name={SpeakerName} />
       </div>
-      <h6>{SpeakerName}</h6>
-      <p
-        style={{
-          maxHeight: isExpanded ? "none" : "60px",
-          overflow: "hidden",
-          transition: "max-height 0.3s ease",
-        }}
-      >
-        {isExpanded
+      <h3>{SpeakerName}</h3>
+      <p id={bioId}>
+        {isExpanded || SpeakerBio.length <= maxBioLength
           ? SpeakerBio
           : `${SpeakerBio.substring(0, maxBioLength)}...`}
       </p>
       {SpeakerBio.length > maxBioLength && (
-        <button className="speaker-bio-toggle" onClick={handleToggle}>
+        <button
+          type="button"
+          className="speaker-bio-toggle"
+          onClick={handleToggle}
+          aria-expanded={isExpanded}
+          aria-controls={bioId}
+        >
           {isExpanded ? "Show Less" : "Expand for More"}
         </button>
       )}

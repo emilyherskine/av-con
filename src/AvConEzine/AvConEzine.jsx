@@ -7,7 +7,7 @@ const ezines = [
     year: "2026",
     title: "Main Event AvCon 2026 Altitude Ezine",
     description:
-      "Altitude Ezine is the official publication of AvCon 2026, bringing together the latest aviation, aerospace, technology and future-of-flight stories. Featuring industry insights, expert voices, career pathways, innovation and AvCon highlights, Altitude connects the industry with the next generation of aviation and aerospace talent.",
+      "The official 2026 publication: aviation and aerospace stories, industry voices, career pathways, innovation and event highlights.",
     embed:
       "https://e.issuu.com/embed.html?d=main_event_avcon_2026_altitude_ezine_-2&u=tyhub",
     publicationUrl:
@@ -21,7 +21,7 @@ const ezines = [
     year: "2025",
     title: "AvCon Christmas Ezine 2025 – Celebrating Two Years of Inspiration",
     description:
-      "Our special Christmas Edition of the AvCon Altitude Ezine brings together another incredible year of aviation, aerospace, innovation, and inspiration. This limited-edition publication celebrates the growing AvCon community and our shared commitment to building pathways for the next generation.",
+      "This special Christmas edition celebrates the AvCon community, aviation, aerospace, innovation and pathways for the next generation.",
     embed:
       "https://e.issuu.com/embed.html?d=christmas_avcon_2025_altitude_ezine_&u=tyhub",
   },
@@ -51,20 +51,15 @@ export default function AvConEzine() {
         defaultSubtitle="Explore stories, insights and highlights from AvCon's aviation and aerospace community."
         smallScreenTitle="AvCon Ezine"
         smallScreenSubtitle="Discover the stories behind AvCon"
+        eyebrow="Stories & insights"
       />
 
       <section className="ezine-intro">
         <h2>The AvCon Altitude Ezine</h2>
 
         <p>
-          Welcome to the AvCon Ezine collection — a showcase of stories,
-          achievements and inspiration from across the aviation and aerospace
-          community.
-          <br />
-          <br />
-          From student experiences and industry insights to career pathways and
-          future technologies, each edition captures the people and ideas
-          helping shape tomorrow's workforce.
+          Aviation and aerospace stories, student experiences, career pathways
+          and new technology, all in one collection.
         </p>
       </section>
 
@@ -88,6 +83,9 @@ export default function AvConEzine() {
                 className="ezine-iframe"
               />
             </div>
+            <a href={ezine.publicationUrl || ezine.embed} target="_blank" rel="noopener noreferrer">
+              Open {ezine.title}
+            </a>
           </article>
         ))}
       </section>

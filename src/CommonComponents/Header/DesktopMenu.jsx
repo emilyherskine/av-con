@@ -5,11 +5,11 @@ import { eventLinks, aboutLinks, primaryLinks } from "../../constants";
 
 const DesktopMenu = ({
   showEventDropdown,
-  onEventDropdownToggle,
+  onEventDropdownChange,
   showAboutDropdown,
-  onAboutDropdownToggle,
+  onAboutDropdownChange,
 }) => (
-  <div className="desktop-menu">
+  <nav className="desktop-menu" aria-label="Main navigation">
     {primaryLinks.map((link) => {
       if (link.label === "EVENT INFO") {
         return (
@@ -19,8 +19,7 @@ const DesktopMenu = ({
             to={link.to}
             links={eventLinks}
             isOpen={showEventDropdown}
-            onEnter={onEventDropdownToggle}
-            onLeave={onEventDropdownToggle}
+            onOpenChange={onEventDropdownChange}
           />
         );
       }
@@ -33,8 +32,7 @@ const DesktopMenu = ({
             to={link.to}
             links={aboutLinks}
             isOpen={showAboutDropdown}
-            onEnter={onAboutDropdownToggle}
-            onLeave={onAboutDropdownToggle}
+            onOpenChange={onAboutDropdownChange}
           />
         );
       }
@@ -47,13 +45,12 @@ const DesktopMenu = ({
     })}
 
     <Link
-      role="button"
       className="link-text button-highlight"
       to="/bookTickets"
     >
-      AVCON 2027 SCHOOL PRE-REGISTRATION
+      SCHOOL PRE-REGISTRATION 2027
     </Link>
-  </div>
+  </nav>
 );
 
 export default DesktopMenu;

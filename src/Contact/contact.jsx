@@ -12,15 +12,16 @@ export default function Contact() {
   return (
     <div>
       <HeroSection
-        defaultTitle="CONTACT US"
-        defaultSubtitle="AvCon is thrilled to present its signature event dedicated to all things aviation"
+        defaultTitle="Contact AvCon"
+        defaultSubtitle="Questions about attending, partnerships or getting involved? We'd love to hear from you."
         smallScreenTitle="Contact Us"
-        smallScreenSubtitle="AvCon presenting an event for all things aviation"
+        smallScreenSubtitle="Get in touch with the AvCon team."
+        eyebrow="Let's connect"
       />
 
       <div className="contact-container">
         <div className="contact-card">
-          <h3>📩 AvCon General Enquiries</h3>
+          <h2>General Enquiries</h2>
           <p>
             Have a question about AvCon, partnerships, attending, or getting
             involved? Complete our contact form and we'll get back to you.
@@ -36,7 +37,7 @@ export default function Contact() {
         </div>
 
         <div className="contact-info">
-          <h3>More Questions? Contact:</h3>
+          <h2>Email the team</h2>
           <div className="contact-grid">
             {contactEmails.map((email) => (
               <a key={email.label} href={email.href}>

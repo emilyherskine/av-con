@@ -3,15 +3,13 @@ import AVConPromoVideo from "./The Future of aviation.mp4";
 import "./about.css";
 
 const introParagraphs = [
-  "AvCon is Ireland's flagship free Student & Industry Convention, created to inspire the next generation by connecting young people with the exciting worlds of aviation, aerospace, engineering, defence, drones, space, sustainability and future mobility.",
-  "Every year, thousands of students aged 15+ including Senior Cycle students, apprentices, further education learners, college students and young enthusiasts come together with industry leaders, educators and government representatives.",
-  "Together, they explore career pathways, discover emerging technologies and meet the people shaping the future of these industries.",
+  "AvCon is Ireland's free Student & Industry Convention, connecting young people with aviation, aerospace, engineering, defence, drones, space, sustainability and future mobility.",
+  "Thousands of students aged 15+, including Senior Cycle students, apprentices, further education learners, college students and young enthusiasts, meet industry leaders, educators and government representatives to explore careers and emerging technology.",
 ];
 
 const missionParagraphs = [
-  "We believe young people make better career decisions when they can experience industries first-hand, meet the people behind the careers and understand the many pathways available to them.",
-  "Organisations also have an opportunity to help shape the future workforce by sharing knowledge, inspiring the next generation, identifying future skills needs and building stronger relationships with education.",
-  "AvCon creates those connections — bringing together industry, education and government to inspire, collaborate and prepare for the future.",
+  "Young people can make informed career decisions by experiencing industries first-hand, meeting professionals and exploring pathways.",
+  "Organisations can share knowledge, identify future skills needs and build relationships with education, helping shape the future workforce.",
 ];
 
 const initiatives = [
@@ -30,9 +28,7 @@ const initiatives = [
 ];
 
 const lookingAheadParagraphs = [
-  "As AvCon continues to grow, so does our ambition.",
-  "Our vision is to become Ireland's leading platform connecting aviation, aerospace, engineering, defence, drones, space, sustainability and future mobility with the people who will shape these industries in the years ahead.",
-  "By creating stronger connections between industry, education and government today, we can help ensure Ireland has the skilled, diverse and innovative workforce needed for tomorrow.",
+  "We aim to connect aviation, aerospace, engineering, defence, drones, space, sustainability and future mobility with the people who will shape them, building a skilled, diverse and innovative workforce through stronger links between industry, education and government.",
 ];
 
 const visionParagraphs = [
@@ -80,11 +76,9 @@ export default function About() {
       <section className="about-section">
         <h2>More Than an Event</h2>
         <p>
-          The AvCon Student & Industry Convention is at the heart of everything
-          we do. Around this flagship event, AvCon has evolved into a year-round
-          ecosystem that strengthens partnerships, supports workforce
-          development and creates meaningful engagement between employers and
-          future talent.
+          Beyond the Student & Industry Convention, AvCon connects employers
+          and future talent year-round, building partnerships and supporting
+          workforce development.
         </p>
 
         <div className="initiative-grid">

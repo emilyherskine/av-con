@@ -29,5 +29,5 @@ export const mobileMenuSections = [
   { label: "ABOUT AVCON", to: "/about", links: aboutLinks },
   { label: "CONTACT US", to: "/contact" },
   { label: "EXHIBITOR REGISTRATION", to: "/exhibitorRegistration" },
-  { label: "AVCON 2026 SCHOOL REGISTRATION", to: "/bookTickets" },
+  { label: "SCHOOL PRE-REGISTRATION 2027", to: "/bookTickets" },
 ];

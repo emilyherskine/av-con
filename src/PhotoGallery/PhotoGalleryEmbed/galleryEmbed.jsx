@@ -12,6 +12,8 @@ export default function PhotoGalleryEmbed() {
     { id: "AirCorps2025", label: "2025 Air Corps Gallery", url: "https://www.flickr.com/photos/dfmagazine/albums/72177720329423083/player/" },
   ];
 
+  const selectedGallery = galleries.find((gallery) => gallery.id === activeGallery);
+
   return (
     <section className="gallery-section">
       <div className="gallery-card">
@@ -30,9 +32,9 @@ export default function PhotoGalleryEmbed() {
         {/* Gallery iframe */}
         <div className="gallery-iframe-container">
           <iframe
-            src={galleries.find((gallery) => gallery.id === activeGallery).url}
+            src={selectedGallery.url}
             className="gallery-iframe"
-            title="AvCon Photo Gallery"
+            title={selectedGallery.label}
             allowFullScreen
           ></iframe>
         </div>
@@ -40,6 +42,11 @@ export default function PhotoGalleryEmbed() {
         {/* Footer note */}
         <div className="gallery-footer">
           ✨ Curated by Shannon Irvine Photography & BCFE Students
+          <p>
+            <a href={selectedGallery.url} target="_blank" rel="noopener noreferrer">
+              Open {selectedGallery.label} in a new tab
+            </a>
+          </p>
         </div>
       </div>
     </section>

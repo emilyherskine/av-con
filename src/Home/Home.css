@@ -102,6 +102,36 @@
   text-align: center;
 }
 
+.home-archive {
+  width: 100%;
+}
+
+.home-archive summary {
+  width: fit-content;
+  min-height: 44px;
+  margin: 0 auto var(--space-4);
+  padding: var(--space-2);
+  color: var(--avcon-text);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.home-archive summary:focus-visible {
+  outline: 3px solid var(--avcon-focus);
+  outline-offset: 3px;
+}
+
+.home-archive .video-grid {
+  margin-top: var(--space-5);
+}
+
+.home-page .section > h2,
+.home-page .intro-section h2,
+.home-page .intro-section h3,
+.home-page .final-section hr {
+  margin-bottom: var(--space-5);
+}
+
 .live-stream-heading h2 {
   margin: 0;
 
@@ -631,10 +661,173 @@
   .btn-link {
     transition: none;
   }
-
   .info-card:hover,
   .highlight:hover,
   .btn-link:hover {
     transform: none;
   }
 }
+
+/* Home page refresh */
+  .home-pathways {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--avcon-border);
+    border-block: 1px solid var(--avcon-border);
+  }
+
+  .home-pathway {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    min-width: 0;
+    padding: clamp(1.5rem, 3vw, 2.5rem) var(--page-gutter);
+    background: #0a2941;
+    text-decoration: none;
+    transition: background-color var(--avcon-transition);
+  }
+
+  .home-pathway:hover {
+    background: #103955;
+  }
+
+  .home-pathway__label {
+    color: #b7dff2;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .home-pathway strong {
+    color: var(--avcon-text);
+    font-size: clamp(1.3rem, 2vw, 1.75rem);
+    line-height: 1.25;
+  }
+
+  .home-pathway strong span {
+    color: #b7dff2;
+  }
+
+  .home-pathway > span:last-child {
+    color: var(--avcon-text-muted);
+  }
+
+  .home-page .intro-section,
+  .home-page .section,
+  .home-page .convention-section,
+  .home-page .final-section {
+    padding-block: clamp(3.5rem, 7vw, 7rem);
+  }
+
+  .home-page .intro-section {
+    background: linear-gradient(135deg, #0b2a43, var(--avcon-primary-dark));
+  }
+
+  .home-page .home-image {
+    max-height: 34rem;
+    object-fit: cover;
+    mix-blend-mode: normal;
+  }
+
+  .home-page .intro-section h2,
+  .home-page .section > h2,
+  .home-page .final-section h2 {
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+  }
+
+  .home-page .intro-section h3 {
+    color: #b7dff2;
+    font-size: 1.15rem;
+    line-height: 1.4;
+  }
+
+  .home-section-eyebrow {
+    text-align: center;
+  }
+
+  .home-page .section-eyebrow {
+    color: #b7dff2;
+  }
+
+  .home-page .info-card {
+    align-items: flex-start;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    background: linear-gradient(145deg, #103650, #0a243b);
+    text-align: left;
+  }
+
+  .home-page .info-card h3 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .home-page .info-card p {
+    margin: var(--space-3) 0 0;
+  }
+
+  .home-page .convention-section {
+    background: #0b2b44;
+  }
+
+  .home-page .banner-image {
+    max-height: 32rem;
+    object-fit: cover;
+    mix-blend-mode: normal;
+  }
+
+  .home-page .highlight {
+    border-radius: 0;
+    border-width: 0 0 1px;
+    background: transparent;
+  }
+
+  .home-page .final-section > p {
+    max-width: 48rem;
+    margin-inline: auto;
+  }
+
+  .home-page .final-section hr {
+    border: 0;
+    border-top: 1px solid var(--avcon-border);
+    margin-block: var(--space-7);
+  }
+
+  .home-page .live-stream-section {
+    padding-block: clamp(3.5rem, 6vw, 6rem);
+    background: #0a243b;
+  }
+
+  .home-page .home-archive {
+    max-width: 75rem;
+  }
+
+  .home-page .home-archive summary {
+    border: 1px solid var(--avcon-border);
+    border-radius: var(--avcon-radius-small);
+    padding-inline: var(--space-5);
+  }
+
+  .home-page .video-grid {
+    gap: var(--space-4);
+  }
+
+  @media (max-width: 600px) {
+    .home-pathways {
+      grid-template-columns: 1fr;
+    }
+
+    .home-pathway {
+      padding-block: var(--space-5);
+    }
+
+    .home-page .intro-section,
+    .home-page .section,
+    .home-page .convention-section,
+    .home-page .final-section {
+      padding-block: 3rem;
+    }
+  }

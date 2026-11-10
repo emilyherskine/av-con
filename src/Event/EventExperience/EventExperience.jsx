@@ -18,8 +18,6 @@ export default function EventExperience() {
       <h2>What You'll Experience</h2>
       <p>AvCon is designed to inspire, educate and connect.</p>
 
-      <br />
-
       <Grid container spacing={3}>
         {experiences.map((item, index) => (
           <Grid item xs={12} md={4} key={index}>

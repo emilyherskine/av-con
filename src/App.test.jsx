@@ -105,7 +105,7 @@ describe("interactive UI", () => {
     );
     fireEvent.click(screen.getByText("☰"));
     expect(
-      screen.getByText("AVCON 2026 SCHOOL REGISTRATION"),
+      screen.getByText("SCHOOL PRE-REGISTRATION 2027"),
     ).toBeInTheDocument();
     fireEvent.click(screen.getAllByText("HOME").at(-1));
 

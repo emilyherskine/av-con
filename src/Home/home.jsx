@@ -24,7 +24,7 @@ import AvConSpeakerSchedule from "../EventSchedule/EventScheduleImages/Speakers 
  */
 const EcosystemCard = ({ title, text }) => (
   <Box className="info-card">
-    <Typography variant="h5">{title}</Typography>
+    <Typography variant="h5" component="h3">{title}</Typography>
     <p>{text}</p>
   </Box>
 );
@@ -50,109 +50,48 @@ export default function Home() {
         smallScreenSubtitle={HOME_CONFIG.heroMobileSubtitle}
         buttonText={HOME_CONFIG.buttonText}
         buttonLink="/bookTickets"
+        eyebrow="Aviation · Aerospace · Future talent"
       />
+
+      <nav className="home-pathways" aria-label="Explore AvCon">
+        <Link to="/bookTickets" className="home-pathway">
+          <span className="home-pathway__label">For schools &amp; students</span>
+          <strong>Discover your future <span aria-hidden="true">↗</span></strong>
+          <span>Explore careers and pre-register for 2027.</span>
+        </Link>
+        <Link to="/exhibitorRegistration" className="home-pathway">
+          <span className="home-pathway__label">For industry &amp; partners</span>
+          <strong>Shape what comes next <span aria-hidden="true">↗</span></strong>
+          <span>Connect with the next generation of talent.</span>
+        </Link>
+      </nav>
 
       {/* Introduction Section */}
       <section className="intro-section">
         <Grid container spacing={4} alignItems="center">
           <Grid item xs={12} md={6}>
-            <img src={PiletPhoto} alt="AvCon Aviation" className="home-image" />
+            <img src={PiletPhoto} alt="Air Corps personnel at an AvCon event" className="home-image" />
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <Typography variant="h3">More Than an Event</Typography>
-            <br />
-
-            <Typography variant="h5">
-              Building the Future of Aviation & Aerospace Together
-            </Typography>
-            <br />
+            <p className="section-eyebrow">The AvCon mission</p>
+            <Typography variant="h3" component="h2">More Than an Event</Typography>
 
             <p>
-              AvCon is more than an annual event — it is a growing ecosystem
-              connecting industry, education and government throughout the year.
-            </p>
-
-            <p>
-              By creating opportunities for collaboration, career exploration
-              and workforce development, AvCon helps inspire future talent while
-              supporting the needs of the industry today.
+              Beyond the annual convention, AvCon brings industry, education
+              and government together year-round to open up careers, build
+              partnerships and support Ireland's future workforce.
             </p>
           </Grid>
         </Grid>
       </section>
 
-      {/* Featured Live Stream */}
-      <section
-        className="live-stream-section"
-        aria-labelledby="live-stream-title"
-      >
-        <div className="live-stream-heading">
-          <p className="section-eyebrow">Live from AvCon 2026</p>
-
-          <Typography variant="h2" component="h2" id="live-stream-title">
-            Watch AvCon 2026 Live
-          </Typography>
-        </div>
-
-        <div>
-          <article className="stream-card stream-card--featured">
-            <div className="stream-card__content">
-              <p className="stream-card__description">
-                Join the AvCon 2026 live stream on YouTube. Schools can use the
-                education registration link below to submit questions during the
-                broadcast.
-              </p>
-            </div>
-
-            <VideoEmbed
-              src="https://www.youtube.com/embed/R9WwaqI-8Lw"
-              title="AvCon 2026 live stream"
-            />
-
-            <div className="stream-links">
-              <a
-                href="https://streamyard.com/watch/fXQZNAES3G5A"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="stream-link"
-              >
-                Schools: register to ask live questions
-              </a>
-
-              <a
-                href="https://tyhub.ie/ty-podcast/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="stream-link"
-              >
-                Also available on TY Hub
-              </a>
-            </div>
-            <br/>
-            <div className="video-grid">
-              <img
-                src={AVConSchedule}
-                alt="AvCon 2026 event schedule"
-                className="schedule-image"
-              />
-              <img
-                src={AvConSpeakerSchedule}
-                alt="AvCon 2026 speakers hub schedule"
-                className="schedule-image"
-              />
-            </div>
-          </article>
-        </div>
-      </section>
-
       {/* Ecosystem Section */}
       <section className="section">
-        <Typography variant="h3" align="center">
+        <p className="section-eyebrow home-section-eyebrow">Connecting people &amp; possibilities</p>
+        <Typography variant="h3" component="h2" align="center">
           The AvCon Ecosystem
         </Typography>
-        <br />
-        <br />
 
         <Grid container spacing={3}>
           {ECOSYSTEM_DATA.map((item, index) => (
@@ -179,8 +118,8 @@ export default function Home() {
           />
 
           <div className="banner-content">
-            <Typography variant="h3">
-              AvCon 2026 Student & Industry Convention
+            <Typography variant="h3" component="h2">
+              AvCon Student & Industry Convention
             </Typography>
 
             <Typography>Inspiring the Next Generation</Typography>
@@ -196,7 +135,7 @@ export default function Home() {
         </Grid>
 
         <div className="button-row">
-          <a href={EXTERNAL_LINKS.studentConventionForm} className="btn-link">
+          <a href={EXTERNAL_LINKS.avcon2027PreRegistrationForm} className="btn-link">
             Schools Pre-Register - AvCon 2027
           </a>
 
@@ -207,28 +146,18 @@ export default function Home() {
             Become a Partner
           </a>
 
-          <a
-            href={EXTERNAL_LINKS.avcon2027PreRegistrationForm}
-            className="btn-link"
-          >
-            Pre-register for AvCon 2027
-          </a>
         </div>
       </section>
 
       {/* Industry & CTA Section */}
       <section className="final-section">
         <hr />
-        <br />
-        <br />
 
-        <Typography variant="h3">Why Organisations Get Involved</Typography>
+        <Typography variant="h3" component="h2">Why Organisations Get Involved</Typography>
 
         <p>
-          The future of aviation depends on the people entering the industry
-          today. AvCon gives organisations the opportunity to connect with
-          future talent, build relationships with education and contribute to
-          tomorrow's workforce.
+          Connect with future talent, build relationships with education and
+          contribute to tomorrow's aviation workforce.
         </p>
 
         <div className="button-row">
@@ -239,30 +168,49 @@ export default function Home() {
           ))}
         </div>
 
-        <br />
-        <hr />
-        <br />
-        <br />
+        <Link to="/contact" className="home-contact-link">Questions? Contact the team <span aria-hidden="true">↗</span></Link>
+      </section>
 
-        <Typography variant="h3">Be Part of the Future</Typography>
-
-        <Typography>
-          Connecting Industry. Inspiring Talent. Shaping Tomorrow's Workforce.
-        </Typography>
-
-        <div className="button-row">
-          <Link to="/bookTickets" className="btn-link">
-            Schools 2027 Pre-Register
-          </Link>
-
-          <Link to="/exhibitorRegistration" className="btn-link">
-            Industry Opportunities
-          </Link>
-
-          <Link to="/contact" className="btn-link">
-            Contact Us
-          </Link>
+      <section className="live-stream-section" aria-labelledby="live-stream-title">
+        <div className="live-stream-heading">
+          <p className="section-eyebrow">Previous event</p>
+          <Typography variant="h2" component="h2" id="live-stream-title">
+            Explore AvCon 2026
+          </Typography>
+          <p>Explore the 2026 stream and event schedules.</p>
         </div>
+
+        <details className="home-archive">
+          <summary>View AvCon 2026 stream and schedules</summary>
+          <article className="stream-card stream-card--featured">
+            <div className="stream-card__content">
+              <p className="stream-card__description">
+                AvCon 2026 was streamed on YouTube. Schools could register to
+                submit questions during the broadcast.
+              </p>
+            </div>
+            <VideoEmbed
+              src="https://www.youtube.com/embed/R9WwaqI-8Lw"
+              title="AvCon 2026 live stream"
+            />
+            <div className="stream-links">
+              <a href="https://streamyard.com/watch/fXQZNAES3G5A" target="_blank" rel="noopener noreferrer" className="stream-link">
+                2026 school questions link
+              </a>
+              <a href="https://tyhub.ie/ty-podcast/" target="_blank" rel="noopener noreferrer" className="stream-link">
+                Also available on TY Hub
+              </a>
+            </div>
+            <div className="video-grid">
+              <a href={AVConSchedule} aria-label="Open the full-size AvCon 2026 event schedule">
+                <img src={AVConSchedule} alt="AvCon 2026 event schedule" className="schedule-image" />
+              </a>
+              <a href={AvConSpeakerSchedule} aria-label="Open the full-size AvCon 2026 speakers hub schedule">
+                <img src={AvConSpeakerSchedule} alt="AvCon 2026 speakers hub schedule" className="schedule-image" />
+              </a>
+            </div>
+          </article>
+        </details>
       </section>
     </main>
   );

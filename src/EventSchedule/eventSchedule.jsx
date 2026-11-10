@@ -30,17 +30,12 @@ export default function EventSchedule() {
     <main className="schedule-page">
       {/* Header */}
       <section className="schedule-header">
-        <h1>AvCon 2026 Event Experience</h1>
+        <h1>AvCon 2026 Event Archive</h1>
 
         <div className="schedule-introduction">
           <p>
-            Discover the experiences, speakers, demonstrations and opportunities
-            waiting for you at AvCon 2026.
-          </p>
-          <p>
-            Ireland's flagship aviation and aerospace careers event brings
-            together students, educators and industry leaders for a day of
-            inspiration, discovery and connection.
+            Explore the experiences, speakers, demonstrations and opportunities
+            from AvCon 2026.
           </p>
         </div>
       </section>
@@ -51,33 +46,29 @@ export default function EventSchedule() {
         aria-labelledby="schedule-overview-heading"
       >
         <div className="schedule-feature__content">
-          <p className="section-eyebrow">Plan your day</p>
+          <p className="section-eyebrow">Past event</p>
 
           <h2 id="schedule-overview-heading">AvCon 2026 event schedule</h2>
 
           <p>
-            Browse the day at a glance, then use the floor plan below to find
-            each stage, zone and activity.
+            Browse the 2026 schedule and floor plan to see the stages, zones and
+            activities from the event.
           </p>
         </div>
         <div className="schedule-image-frame">
-          <img
-            src={AVConSchedule}
-            alt="AvCon 2026 event schedule"
-            className="schedule-image"
-          />
-          <img
-            src={AvConSpeakerSchedule}
-            alt="AvCon 2026 speakers hub schedule"
-            className="schedule-image"
-          />
+          <a href={AVConSchedule} aria-label="Open the full-size AvCon 2026 event schedule">
+            <img src={AVConSchedule} alt="AvCon 2026 event schedule" className="schedule-image" />
+          </a>
+          <a href={AvConSpeakerSchedule} aria-label="Open the full-size AvCon 2026 speakers hub schedule">
+            <img src={AvConSpeakerSchedule} alt="AvCon 2026 speakers hub schedule" className="schedule-image" />
+          </a>
         </div>
       </section>
 
       {/* 2026 Experience */}
       <section className="experience-section">
         <div className="section-heading">
-          <p className="section-eyebrow">What to expect</p>
+          <p className="section-eyebrow">Looking back</p>
           <h2>AvCon 2026 Experience</h2>
         </div>
 
@@ -89,6 +80,7 @@ export default function EventSchedule() {
             loading="lazy"
           />
         </div>
+        <p><a href={AvConLivePanel}>Open the AvCon 2026 panel plan (PDF)</a></p>
 
         <div className="experience-grid">
           {experienceCards.map((card) => (
@@ -104,7 +96,7 @@ export default function EventSchedule() {
       {/* 2026 Floor Plan */}
       <section className="floor-plan-section">
         <div className="section-heading">
-          <p className="section-eyebrow">Find your way</p>
+          <p className="section-eyebrow">Past event</p>
           <h2>AvCon 2026 Floor Plan</h2>
         </div>
 
@@ -134,23 +126,19 @@ export default function EventSchedule() {
           </figcaption>
         </figure>
 
-        <p className="floor-plan-note">
-          Use your browser's zoom controls to explore the different areas of the
-          AvCon 2026 event space.
-        </p>
       </section>
 
       {/* Live Stream */}
       <section className="video-section" aria-labelledby="live-stream-heading">
+        <h2 id="live-stream-heading">AvCon Live archive</h2>
         {/* Featured 2026 Live Stream */}
         <div className="video-grid video-grid--featured">
           <article className="stream-card stream-card--featured">
-            <h3>Watch AvCon 2026 Live</h3>
+            <h3>AvCon 2026 Live Stream</h3>
 
             <p>
-              Join the AvCon 2026 live stream on YouTube. Schools can use the
-              education registration link below to submit questions during the
-              broadcast.
+              AvCon 2026 was streamed on YouTube. Schools could register to
+              submit questions during the broadcast.
             </p>
 
             <VideoEmbed
@@ -165,7 +153,7 @@ export default function EventSchedule() {
                 rel="noopener noreferrer"
                 className="stream-link"
               >
-                Schools: register to ask live questions
+                2026 school questions link
               </a>
 
               <a

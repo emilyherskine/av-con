@@ -1,0 +1,577 @@
+/* Shared page treatments for the AvCon design system. */
+.app-shell :is(.about-main, .convention-main, .schedule-page, .news-page, .sponsors-page) {
+  padding-block: clamp(3rem, 6vw, 6rem);
+}
+
+.app-shell :is(.about-hero, .convention-header, .schedule-header, .news-hero, .sponsors-intro) {
+  max-width: 70rem;
+  margin-inline: auto;
+  padding: clamp(2rem, 5vw, 4.5rem);
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-large);
+  background: linear-gradient(120deg, #103650, #071e32);
+  text-align: left;
+}
+
+.app-shell :is(.about-hero, .convention-header, .schedule-header, .news-hero, .sponsors-intro) h1 {
+  max-width: 18ch;
+  margin: 0 0 var(--space-4);
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  text-align: left;
+}
+
+.app-shell :is(.about-hero, .convention-header, .schedule-header, .news-hero, .sponsors-intro) p {
+  max-width: 52rem;
+  margin-inline: 0;
+  text-align: left;
+}
+
+.app-shell .convention-header::after {
+  display: none;
+}
+
+.app-shell .convention-tagline {
+  justify-content: flex-start;
+  color: #b7dff2;
+}
+
+.app-shell :is(.about-main, .convention-container, .schedule-page, .news-page, .sponsors-page) {
+  max-width: 90rem;
+}
+
+.app-shell :is(.event-page, .register-page, .app-page, .photo-gallery-page, .speakers-page)
+  :is(h2, h3) {
+  letter-spacing: -0.02em;
+}
+
+.app-shell :is(.event-section, .speakers-intro, .gallery-intro, .ezine-intro, .app-page > .intro-section) {
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.app-shell :is(.event-section, .speakers-intro, .gallery-intro, .app-page > .intro-section) {
+  text-align: left;
+}
+
+.app-shell :is(.speakers-intro, .gallery-intro, .app-page > .intro-section) p,
+.app-shell .gallery-intro h2 {
+  margin-inline: 0;
+}
+
+.app-shell .event-page .event-section:nth-of-type(even),
+.app-shell .app-page .pathway-section,
+.app-shell .speakers-page .speakers-section:nth-of-type(even) {
+  background: linear-gradient(135deg, #0b2a43, var(--avcon-primary-dark));
+}
+
+.app-shell .event-page .event-image {
+  max-height: 32rem;
+  object-fit: cover;
+  mix-blend-mode: normal;
+}
+
+.app-shell .event-closing > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: var(--space-2);
+  max-width: 70rem;
+  margin: 0 0 var(--space-7);
+  padding-left: var(--space-5);
+}
+
+.app-shell .event-closing > p {
+  max-width: 65rem;
+}
+
+.app-shell :is(
+  .initiative-card, .experience-card, .opportunity-card, .involvement-card,
+  .pathway-card, .partner-card, .contact-card, .contact-info, .ezine-card,
+  .featured-news, .social-card, .schedule-feature, .registration-section
+) {
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
+  background: linear-gradient(145deg, #103650, var(--avcon-surface));
+  box-shadow: var(--avcon-shadow);
+}
+
+.app-shell :is(.partner-card, .contact-card, .contact-info, .pathway-card) {
+  text-align: left;
+}
+
+.app-shell .contact-grid {
+  align-items: flex-start;
+}
+
+.app-shell .contact-grid a {
+  justify-content: flex-start;
+  max-width: 100%;
+  color: var(--avcon-text) !important;
+}
+
+.app-shell :is(.contact-button, .app-button, .sponsor-button) {
+  border-color: var(--avcon-action);
+  background: var(--avcon-action);
+  color: var(--avcon-white) !important;
+}
+
+.app-shell :is(.contact-button, .app-button, .sponsor-button):hover {
+  border-color: var(--avcon-accent-light);
+  background: var(--avcon-accent-light);
+}
+
+.app-shell :is(.registration-eyebrow, .section-eyebrow, .featured-news span, .ezine-year) {
+  color: #b7dff2;
+}
+
+.app-shell .register-page .grid-container {
+  padding-block: clamp(3rem, 5vw, 5rem);
+}
+
+.app-shell .register-page :is(.content-section, .corporate-section) {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
+  background: linear-gradient(145deg, #103650, var(--avcon-surface));
+}
+
+.app-shell .register-page .event-image {
+  mix-blend-mode: normal;
+}
+
+.app-shell .schedule-image-frame a {
+  display: block;
+  width: 100%;
+}
+
+.app-shell :is(.ezine-card > a, .experience-section > p a) {
+  display: inline-block;
+  margin-top: var(--space-3);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.app-shell .speaker-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--avcon-border);
+  border-radius: var(--avcon-radius-medium);
+  background: linear-gradient(145deg, #103650, var(--avcon-surface));
+  text-align: left;
+}
+
+.app-shell .speaker-image-wrapper {
+  display: grid;
+  place-items: center;
+  width: min(100%, 22rem);
+  aspect-ratio: 1;
+  margin-bottom: var(--space-4);
+  overflow: hidden;
+  border-radius: var(--avcon-radius-small);
+  background: var(--avcon-primary-dark);
+}
+
+.app-shell .speaker-photo-unavailable {
+  margin: 0;
+  padding: var(--space-3);
+  color: var(--avcon-text-muted);
+  text-align: center;
+}
+
+.app-shell .speaker-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app-shell .speaker-card h3 {
+  font-size: 1.25rem;
+}
+
+.app-shell .speaker-card p {
+  margin-bottom: var(--space-3);
+}
+
+@media (max-width: 767px) {
+  .app-shell :is(.about-hero, .convention-header, .schedule-header, .news-hero, .sponsors-intro) {
+    padding: var(--space-5);
+  }
+}
+
+  /* Editorial details shared across the site. */
+  .app-shell {
+    background:
+      radial-gradient(ellipse at 85% 0%, rgba(76, 154, 196, 0.1), transparent 35rem),
+      var(--avcon-primary-dark);
+  }
+
+  .app-shell .hero-overlay {
+    background:
+      linear-gradient(90deg, rgba(6, 27, 45, 0.98) 0%, rgba(6, 27, 45, 0.88) 35%, rgba(6, 27, 45, 0.3) 100%),
+      linear-gradient(0deg, var(--avcon-primary-dark), transparent 75%);
+  }
+
+  .app-shell .hero-content-position {
+    border-left: 3px solid var(--avcon-accent);
+    margin-left: var(--page-gutter);
+    padding-left: clamp(1.25rem, 3vw, 3rem);
+    padding-right: var(--page-gutter);
+    width: min(calc(100% - var(--page-gutter)), 58rem);
+  }
+
+  .app-shell .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .app-shell .hero-eyebrow::before {
+    content: "";
+    width: 2rem;
+    height: 1px;
+    background: currentColor;
+  }
+
+  .app-shell :is(.about-hero, .convention-header, .schedule-header, .news-hero, .sponsors-intro) {
+    position: relative;
+    overflow: hidden;
+    border-left: 3px solid var(--avcon-accent);
+    background:
+      radial-gradient(circle at 100% 0%, rgba(76, 154, 196, 0.22), transparent 55%),
+      linear-gradient(120deg, #103650, #071e32);
+  }
+
+  .app-shell :is(.initiative-card, .experience-card, .opportunity-card, .involvement-card,
+    .pathway-card, .partner-card, .speaker-card, .contact-card, .contact-info, .ezine-card) {
+    border-top: 3px solid var(--avcon-accent);
+  }
+
+  .app-shell :is(.event-closing, .about-section, .exhibitor-content, .convention-content) p {
+    max-width: 70ch;
+  }
+
+  .app-shell .home-pathways {
+    gap: 1rem;
+    padding: clamp(1.25rem, 3vw, 2.5rem) var(--page-gutter);
+    border: 0;
+    background: var(--avcon-primary-dark);
+  }
+
+  .app-shell .home-pathway {
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border: 1px solid var(--avcon-border);
+    border-top: 3px solid var(--avcon-accent);
+    border-radius: var(--avcon-radius-medium);
+    background: linear-gradient(135deg, #103650, #0a243b);
+  }
+
+  .app-shell .home-pathway:hover {
+    border-color: #b7dff2;
+    background: #103955;
+  }
+
+  .app-shell .home-pathway strong {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-3);
+  }
+
+  .app-shell :is(.event-page, .app-page, .photo-gallery-page, .speakers-page)
+    :is(.event-section, .pathway-section, .speakers-section, .gallery-container) h2 {
+    max-width: 28ch;
+    letter-spacing: -0.035em;
+  }
+
+  .app-shell :is(.event-section, .gallery-cta, .industry-callout, .contact-box) {
+    border-color: var(--avcon-border);
+  }
+
+  @media (max-width: 767px) {
+    .app-shell .hero-content-position {
+      margin-left: var(--page-gutter);
+      padding-left: var(--space-4);
+      padding-right: var(--space-3);
+    }
+
+    .app-shell .hero-overlay {
+      background: linear-gradient(90deg, rgba(6, 27, 45, 0.95), rgba(6, 27, 45, 0.72)),
+        linear-gradient(0deg, var(--avcon-primary-dark), transparent);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .app-shell :is(.about-hero, .convention-header, .schedule-header, .news-hero, .sponsors-intro) h1 {
+      font-size: clamp(2rem, 9vw, 3rem);
+    }
+
+    .app-shell .register-page :is(.content-section, .corporate-section) {
+      padding: var(--space-4);
+    }
+  }
+
+/* A consistent editorial rhythm across the home and interior pages. */
+.app-shell :is(.hero-wrapper, .about-hero, .convention-header, .schedule-header, .news-hero, .sponsors-intro) {
+  isolation: isolate;
+}
+
+.app-shell .hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(6, 27, 45, 0.96), rgba(6, 27, 45, 0.72) 42%, rgba(6, 27, 45, 0.2)),
+    linear-gradient(0deg, var(--avcon-primary-dark), transparent 55%);
+}
+
+.app-shell .hero-content-position {
+  align-self: center;
+  padding-block: clamp(4rem, 7vw, 7rem);
+}
+
+.app-shell .hero-content-position .title {
+  max-width: 16ch;
+  font-size: clamp(2.75rem, 5vw, 5rem);
+}
+
+.app-shell .hero-content-position .sub-title {
+  max-width: 33rem;
+  font-size: clamp(1.1rem, 1.65vw, 1.35rem);
+}
+
+.app-shell :is(.about-hero, .convention-header, .schedule-header, .news-hero, .sponsors-intro)::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -8rem;
+  right: -5rem;
+  width: 25rem;
+  aspect-ratio: 1;
+  border: 1px solid rgba(183, 223, 242, 0.2);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3rem rgba(76, 154, 196, 0.04), 0 0 0 6rem rgba(76, 154, 196, 0.04);
+}
+
+.app-shell :is(.info-card, .initiative-card, .experience-card, .opportunity-card, .involvement-card,
+  .pathway-card, .partner-card, .speaker-card, .contact-card, .contact-info, .ezine-card) {
+  border-top: 3px solid var(--avcon-accent);
+}
+
+.app-shell .home-page .info-card {
+  align-items: flex-start;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  text-align: left;
+}
+
+.app-shell .home-page .info-card h3 {
+  margin-bottom: var(--space-3);
+}
+
+.app-shell .home-page .home-image {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  mix-blend-mode: normal;
+}
+
+.app-shell .home-page :is(.section, .convention-section, .final-section, .live-stream-section),
+.app-shell :is(.event-section, .pathway-section, .speakers-section, .gallery-container) {
+  scroll-margin-top: 2rem;
+}
+
+.app-shell :is(.btn-link, .industry-button, .contact-button, .app-button, .sponsor-button) {
+  border-radius: 0.35rem;
+}
+
+@media (max-width: 767px) {
+  .app-shell .hero-overlay {
+    background: linear-gradient(90deg, rgba(6, 27, 45, 0.94), rgba(6, 27, 45, 0.65)),
+      linear-gradient(0deg, var(--avcon-primary-dark), transparent);
+  }
+
+  .app-shell .hero-content-position {
+    align-self: end;
+    padding-block: 4rem 2.5rem;
+  }
+
+  .app-shell .hero-content-position .title {
+    font-size: clamp(2.2rem, 9vw, 3.5rem);
+  }
+}
+
+/* Flight-line details and a lighter, more open editorial treatment. */
+.app-shell {
+  --avcon-radius-medium: 0.65rem;
+  --avcon-radius-large: 0.8rem;
+}
+
+.app-shell .header-container {
+  border-bottom-color: rgba(183, 223, 242, 0.2);
+}
+
+.app-shell .hero-wrapper {
+  min-height: clamp(32rem, 70svh, 44rem);
+}
+
+.app-shell .hero-overlay {
+  background:
+    linear-gradient(90deg, #061b2d 0%, rgba(6, 27, 45, 0.94) 27%, rgba(6, 27, 45, 0.56) 57%, rgba(6, 27, 45, 0.12) 100%),
+    linear-gradient(0deg, #061b2d 0%, transparent 35%);
+}
+
+.app-shell .hero-content-position {
+  border: 0;
+  margin-left: 0;
+  padding-left: var(--page-gutter);
+}
+
+.app-shell .hero-eyebrow {
+  color: #b7dff2;
+  letter-spacing: 0.16em;
+}
+
+.app-shell .hero-content-position .title {
+  max-width: 13ch;
+  font-size: clamp(3rem, 5.7vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.app-shell .hero-content-position .sub-title {
+  margin-block: 1.5rem 2rem;
+  color: #e0edf3;
+}
+
+.app-shell :is(.btn-link, .industry-button, .contact-button, .app-button, .sponsor-button),
+.app-shell .desktop-menu .button-highlight {
+  border: 1px solid #b7dff2;
+  border-radius: 0.25rem;
+  background: #b7dff2;
+  color: #061b2d !important;
+}
+
+.app-shell :is(.btn-link, .industry-button, .contact-button, .app-button, .sponsor-button):hover,
+.app-shell .desktop-menu .button-highlight:hover {
+  border-color: #fff;
+  background: #fff;
+  color: #061b2d !important;
+}
+
+.app-shell :is(.about-hero, .convention-header, .schedule-header, .news-hero, .sponsors-intro) {
+  max-width: none;
+  border: 0;
+  border-left: 2px solid #79bce0;
+  border-radius: 0;
+  background:
+    linear-gradient(120deg, rgba(16, 54, 80, 0.96), rgba(7, 30, 50, 0.94)),
+    var(--avcon-surface);
+}
+
+.app-shell :is(.about-hero, .convention-header, .schedule-header, .news-hero, .sponsors-intro)::before {
+  top: -11rem;
+  right: 4%;
+  width: 30rem;
+  border-color: rgba(183, 223, 242, 0.22);
+  box-shadow: 0 0 0 4rem rgba(76, 154, 196, 0.06), 0 0 0 8rem rgba(76, 154, 196, 0.04);
+}
+
+.app-shell :is(.info-card, .initiative-card, .experience-card, .opportunity-card, .involvement-card,
+  .pathway-card, .partner-card, .speaker-card, .contact-card, .contact-info, .ezine-card,
+  .featured-news, .social-card, .schedule-feature, .registration-section) {
+  border: 1px solid rgba(183, 223, 242, 0.22);
+  border-top: 2px solid #79bce0;
+  background: #0c2b43;
+  box-shadow: none;
+}
+
+.app-shell :is(.initiative-card, .experience-card, .opportunity-card, .involvement-card,
+  .pathway-card, .partner-card, .speaker-card, .info-card) h3 {
+  color: #e4f4fc;
+}
+
+.app-shell .home-pathways {
+  gap: 0;
+  padding-block: 0;
+  background: #0d314c;
+}
+
+.app-shell .home-pathway {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.app-shell .home-pathway + .home-pathway {
+  border-left: 1px solid rgba(183, 223, 242, 0.25);
+}
+
+.app-shell .home-pathway:hover {
+  background: #16415d;
+}
+
+.app-shell .home-pathway strong {
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+}
+
+.app-shell .home-page .intro-section {
+  background: #071e32;
+}
+
+.app-shell .home-page .intro-section h2,
+.app-shell .home-page .section > h2,
+.app-shell .home-page .final-section h2 {
+  font-size: clamp(2.2rem, 4vw, 3.75rem);
+}
+
+.app-shell .home-page .convention-section {
+  background: #103650;
+}
+
+.app-shell .home-page .highlight {
+  color: #e4f4fc;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+}
+
+.app-shell .home-page .final-section {
+  background: linear-gradient(120deg, #0d314c, #061b2d);
+}
+
+.app-shell .home-contact-link {
+  display: inline-block;
+  padding: 0.5rem;
+  color: #b7dff2;
+  font-weight: 700;
+  text-underline-offset: 0.25em;
+}
+
+.app-shell .footer {
+  padding-block: clamp(3rem, 5vw, 5rem);
+  border-top: 2px solid #4c9ac4;
+  background: #051523;
+}
+
+@media (max-width: 767px) {
+  .app-shell .hero-wrapper {
+    min-height: 31rem;
+  }
+
+  .app-shell .hero-overlay {
+    background: linear-gradient(90deg, rgba(6, 27, 45, 0.94), rgba(6, 27, 45, 0.65)),
+      linear-gradient(0deg, #061b2d, transparent 70%);
+  }
+
+  .app-shell .hero-content-position {
+    width: 100%;
+    margin-left: 0;
+    padding-inline: var(--page-gutter);
+  }
+
+  .app-shell .hero-content-position .title {
+    font-size: clamp(2.5rem, 10vw, 3.75rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .app-shell .home-pathway + .home-pathway {
+    border-top: 1px solid rgba(183, 223, 242, 0.25);
+    border-left: 0;
+  }
+}

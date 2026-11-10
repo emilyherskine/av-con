@@ -1,4 +1,5 @@
 import React from "react";
+import speakerEventPhoto from "../Home/HomePageImages/_HAN7086.JPG";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import HeroSection from "../CommonComponents/HeroSection/HeroSection";
@@ -244,29 +245,28 @@ export default function SpeakersPresentors({
     <main className="speakers-page">
       <HeroSection
         defaultTitle="Speakers and Presenters"
-        defaultSubtitle="Meet the inspiring industry leaders, innovators and professionals joining AvCon 2026."
+        defaultSubtitle="Meet industry leaders, innovators and professionals from AvCon 2026."
         smallScreenTitle="Speakers and Presenters"
-        smallScreenSubtitle="Discover the people shaping the future of aviation and aerospace."
+        smallScreenSubtitle="Meet the people who joined AvCon 2026."
+        eyebrow="From the 2026 event"
+        backgroundImage={speakerEventPhoto}
       />
 
       {/* Introduction */}
 
       <section className="speakers-intro">
         <p>
-          AvCon 2026 brings together inspiring voices from aviation, aerospace,
+          AvCon 2026 brought together voices from aviation, aerospace,
           engineering, defence, drones, space, sustainability and future
           mobility.
         </p>
 
         <p>
-          Our speakers and presenters will share their experiences, career
+          Speakers and presenters shared their experiences, career
           journeys and insights into the opportunities shaping the industries of
           tomorrow.
         </p>
 
-        <p>
-          New speakers and presenters will be announced throughout the year.
-        </p>
       </section>
 
       {/* ==========================
@@ -274,7 +274,7 @@ export default function SpeakersPresentors({
             ========================== */}
 
       <section className="speakers-section">
-        <h2>AvCon Presenters</h2>
+        <h2>AvCon 2026 Presenters</h2>
 
         <Box>
           <Grid container spacing={3}>
@@ -305,8 +305,7 @@ export default function SpeakersPresentors({
             ========================== */}
 
       <section className="speakers-section">
-        <h2>AvCon Speakers</h2>
-
+        <h2>Welcome from AvCon 2024</h2>
         <GOCHighlight
           SpeakerImage={GOC}
           SpeakerName="GOC, Brigadier General Rory O'Connor"
@@ -320,7 +319,9 @@ export default function SpeakersPresentors({
                         The sky is not the limit; it is just the beginning. Let this convention be the launchpad for your future in aviation.
                         Thank you, and enjoy the convention!" - GOC, Brigadier General Rory O'Connor`}
         />
-
+      </section>
+      <section className="speakers-section">
+        <h2>AvCon 2026 Speakers</h2>
         <Box>
           <Grid container spacing={3}>
             {/* Speakers are configured above. */}

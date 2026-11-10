@@ -44,8 +44,8 @@
   box-shadow: var(--avcon-shadow);
 }
 
-.contact-card h3,
-.contact-info h3 {
+.contact-card h2,
+.contact-info h2 {
   margin: 0 0 var(--space-3);
 
   color: var(--avcon-text);
@@ -187,8 +187,8 @@
     padding: var(--space-5);
   }
 
-  .contact-card h3,
-  .contact-info h3 {
+  .contact-card h2,
+  .contact-info h2 {
     font-size: 1.5rem;
   }
 }

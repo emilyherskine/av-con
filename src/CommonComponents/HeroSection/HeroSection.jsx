@@ -10,6 +10,8 @@ export default function HeroSection({
   smallScreenSubtitle,
   buttonText,
   buttonLink,
+  eyebrow,
+  backgroundImage,
 }) {
   const [title, setTitle] = useState(defaultTitle || "");
   const [subtitle, setSubtitle] = useState(defaultSubtitle || "");
@@ -19,9 +21,9 @@ export default function HeroSection({
       const screenWidth = window.innerWidth;
 
       if (screenWidth <= 600) {
-        setTitle(smallScreenTitle || "AvCon 2026");
+        setTitle(smallScreenTitle || defaultTitle || "");
         setSubtitle(
-          smallScreenSubtitle || "Welcome to the Future of Aviation!",
+          smallScreenSubtitle || defaultSubtitle || "",
         );
       } else {
         setTitle(defaultTitle);
@@ -38,11 +40,11 @@ export default function HeroSection({
   return (
     <div className="hero-wrapper">
       <picture className="hero-image-container">
-        <source media="(max-width: 600px)" srcSet={HeroMobile} />
-        <source media="(min-width: 600px)" srcSet={HeroImage} />
+        <source media="(max-width: 600px)" srcSet={backgroundImage || HeroMobile} />
+        <source media="(min-width: 600px)" srcSet={backgroundImage || HeroImage} />
         <img
-          src={HeroImage}
-          alt="AvCon24 PC-9"
+          src={backgroundImage || HeroImage}
+          alt=""
           className="hero-background-img"
         />
       </picture>
@@ -50,6 +52,7 @@ export default function HeroSection({
       <div className="hero-overlay" />
 
       <div className="hero-content-position">
+        {eyebrow && <p className="hero-eyebrow">{eyebrow}</p>}
         {title && <h1 className="title">{title}</h1>}
         {subtitle && <p className="sub-title">{subtitle}</p>}
 

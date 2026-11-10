@@ -5,6 +5,7 @@ import { RootLayout } from "./layouts";
 import { appRoutes } from "./config/routes";
 import "./App.module.css";
 import "./index.css";
+import "./site-refresh.css";
 
 const theme = createTheme({
   palette: {

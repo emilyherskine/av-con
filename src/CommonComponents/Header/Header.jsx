@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import { IMAGES, RESPONSIVE_BREAKPOINTS } from "../../constants";
+import { IMAGES } from "../../constants";
 import { debounce } from "../../utils";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
+
+const MOBILE_NAV_BREAKPOINT = 1200;
 
 /**
  * Header Component
@@ -14,17 +16,9 @@ export const Header = () => {
   const [showEventDropdown, setShowEventDropdown] = useState(false);
   const [showAboutDropdown, setShowAboutDropdown] = useState(false);
   const [isMobile, setIsMobile] = useState(
-    () => window.innerWidth < RESPONSIVE_BREAKPOINTS.tablet,
+    () => window.innerWidth < MOBILE_NAV_BREAKPOINT,
   );
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-
-  const handleEventDropdownToggle = () => {
-    setShowEventDropdown((prev) => !prev);
-  };
-
-  const handleAboutDropdownToggle = () => {
-    setShowAboutDropdown((prev) => !prev);
-  };
 
   const handleMobileToggle = () => {
     setShowMobileMenu((prev) => !prev);
@@ -36,7 +30,7 @@ export const Header = () => {
 
   useEffect(() => {
     const handleResize = debounce(() => {
-      setIsMobile(window.innerWidth < RESPONSIVE_BREAKPOINTS.tablet);
+      setIsMobile(window.innerWidth < MOBILE_NAV_BREAKPOINT);
       closeMobileMenu();
     }, 150);
 
@@ -72,9 +66,9 @@ export const Header = () => {
         ) : (
           <DesktopMenu
             showEventDropdown={showEventDropdown}
-            onEventDropdownToggle={handleEventDropdownToggle}
+            onEventDropdownChange={setShowEventDropdown}
             showAboutDropdown={showAboutDropdown}
-            onAboutDropdownToggle={handleAboutDropdownToggle}
+            onAboutDropdownChange={setShowAboutDropdown}
           />
         )}
       </div>

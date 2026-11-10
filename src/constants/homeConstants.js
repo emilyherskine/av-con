@@ -3,15 +3,15 @@
 export const ECOSYSTEM_DATA = [
   {
     title: "Student & Industry Convention",
-    text: "Ireland's flagship aviation and aerospace careers event connecting thousands of students with employers, educators and industry leaders.",
+    text: "Thousands of students meet employers, educators and industry leaders at Ireland's aviation and aerospace careers event.",
   },
   {
     title: "Afterburner Networking",
-    text: "Networking events bringing professionals, educators and government together to discuss the future of aviation and aerospace.",
+    text: "Professionals, educators and government connect to discuss the future of aviation and aerospace.",
   },
   {
     title: "Industry Network",
-    text: "A collaborative community supporting workforce development through partnerships, workshops and shared initiatives.",
+    text: "A community building the future workforce through partnerships, workshops and shared initiatives.",
   },
 ];
 
@@ -31,12 +31,11 @@ export const ACTION_LINKS = [
 ];
 
 export const HOME_CONFIG = {
-  heroTitle:
-    "Connecting Industry. Inspiring Talent. Shaping Tomorrow's Workforce.",
+  heroTitle: "The future of aviation starts here.",
   heroSubtitle:
-    "Ireland's aviation and aerospace ecosystem bringing together industry, education and government to create opportunities, inspire careers and build the workforce of the future.",
-  heroMobileTitle: "AvCon 2026",
+    "Connecting students, industry and education to shape Ireland's aviation and aerospace workforce.",
+  heroMobileTitle: "The future of aviation starts here.",
   heroMobileSubtitle:
-    "Connecting students, industry and the future of aviation.",
+    "Connecting students, industry and education to shape Ireland's aviation and aerospace workforce.",
   buttonText: "Schools Pre-Register 2027",
 };

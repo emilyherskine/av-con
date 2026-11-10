@@ -227,8 +227,75 @@
   .btn-link {
     transition: none;
   }
-
   .btn-link:hover {
     transform: none;
   }
 }
+
+/* Shared aviation-inspired hero treatment */
+  .hero-wrapper {
+    display: grid;
+    height: auto;
+    min-height: clamp(32rem, 72svh, 46rem);
+  }
+
+  .hero-image-container {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+  }
+
+  .hero-background-img {
+    mix-blend-mode: normal;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(90deg, rgba(6, 27, 45, 0.96), rgba(6, 27, 45, 0.6) 58%, rgba(6, 27, 45, 0.18)),
+      linear-gradient(0deg, var(--avcon-primary-dark), transparent 70%);
+  }
+
+  .hero-content-position {
+    position: relative;
+    align-self: end;
+    width: min(100%, 58rem);
+    padding-block: clamp(4rem, 6vw, 6rem) clamp(3rem, 5vw, 4rem);
+  }
+
+  .hero-content-position .title {
+    max-width: 21ch;
+    font-size: clamp(2.5rem, 4.5vw, 4.25rem);
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+  }
+
+  .hero-content-position .sub-title {
+    max-width: 38rem;
+    margin: var(--space-4) 0;
+  }
+
+  .hero-eyebrow {
+    margin: 0 0 var(--space-4);
+    color: #b7dff2;
+    font-size: var(--avcon-font-small);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 767px) {
+    .hero-wrapper {
+      min-height: 28rem;
+    }
+
+    .hero-image-container {
+      height: 100%;
+    }
+
+    .hero-content-position {
+      padding-block: 5rem 2.5rem;
+    }
+
+    .hero-content-position .title {
+      font-size: clamp(2.2rem, 9vw, 3.5rem);
+    }
+  }

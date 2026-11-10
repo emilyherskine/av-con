@@ -23,6 +23,11 @@
   background: var(--avcon-primary-dark);
 }
 
+.gallery-footer a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 /* =========================================
    GALLERY HEADER
    ========================================= */

@@ -5,6 +5,7 @@ import AdvertData from "./components/AdvertData";
 import PathwayCard from "./components/PathwayCard";
 import { Link } from "react-router-dom";
 import "./AvconPathwayPortal.css";
+import pathwayPhoto from "../Home/HomePageImages/_HAN6730.JPG";
 
 export default function AvconPathwayPortal() {
   return (
@@ -16,6 +17,8 @@ export default function AvconPathwayPortal() {
         smallScreenSubtitle="Discover your pathway into the aviation industry."
         buttonText="Explore Opportunities"
         buttonLink="#opportunities"
+        eyebrow="Find your pathway"
+        backgroundImage={pathwayPhoto}
       />
 
       <FirstImageAndText />
@@ -68,7 +71,7 @@ export default function AvconPathwayPortal() {
           or training opportunities with the AvCon community.
         </p>
 
-        <Link to="/ContactUs" className="app-button">
+        <Link to="/contact" className="app-button">
           Submit an Opportunity
         </Link>
       </section>

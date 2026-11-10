@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId, useRef } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown.svg";
 import "./Header.css";
@@ -15,33 +15,60 @@ export const DropdownLinksList = ({ links, onClick }) => (
   </>
 );
 
-const DesktopDropdown = ({ label, to, links, isOpen, onEnter, onLeave }) => (
-  <div
-    className="desktop-dropdown"
-    onMouseEnter={onEnter}
-    onMouseLeave={onLeave}
-  >
-    <Link
-      className="uppercase link-text"
-      to={to}
-      aria-haspopup="true"
-      aria-expanded={isOpen}
+const DesktopDropdown = ({ label, to, links, isOpen, onOpenChange }) => {
+  const menuId = useId();
+  const toggleRef = useRef(null);
+
+  return (
+    <div
+      className="desktop-dropdown"
+      onMouseEnter={() => onOpenChange(true)}
+      onMouseLeave={(event) => {
+        if (!event.currentTarget.contains(document.activeElement)) {
+          onOpenChange(false);
+        }
+      }}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) {
+          onOpenChange(false);
+        }
+      }}
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && isOpen) {
+          onOpenChange(false);
+          toggleRef.current.focus();
+        }
+      }}
     >
-      {label}
-    </Link>
-    <img src={Dropdown} alt="Dropdown" className="dropdown-icon" />
-    {isOpen && (
-      <div className="dropdown-content">
+      <Link className="uppercase link-text" to={to}>
+        {label}
+      </Link>
+      <button
+        ref={toggleRef}
+        type="button"
+        className="dropdown-toggle"
+        aria-label={`${label} submenu`}
+        aria-expanded={isOpen}
+        aria-controls={menuId}
+        onClick={() => onOpenChange(!isOpen)}
+      >
+        <img src={Dropdown} alt="" className="dropdown-icon" />
+      </button>
+      <div id={menuId} className="dropdown-content" hidden={!isOpen}>
         {links.map((childLink) => (
           <div key={childLink.label} className="dropdown-link-row">
-            <Link className="uppercase link-text" to={childLink.to}>
+            <Link
+              className="uppercase link-text"
+              to={childLink.to}
+              onClick={() => onOpenChange(false)}
+            >
               {childLink.label}
             </Link>
           </div>
         ))}
       </div>
-    )}
-  </div>
-);
+    </div>
+  );
+};
 
 export default DesktopDropdown;

@@ -58,22 +58,11 @@ export default function SponsorsPartners() {
 
                 <Typography paragraph>
 
-                    AvCon - The Future of Aviation is made possible through the
-                    incredible support of our sponsors, exhibitors and partners.
-
-                    Together, we bring industry, education and government together
-                    to inspire the next generation of aviation, aerospace and STEM
-                    professionals.
-
-                </Typography>
-
-
-                <Typography paragraph>
-
-                    Through collaboration with organisations such as the Irish Air
-                    Corps and TYHub.ie, AvCon creates meaningful opportunities for
-                    students to discover career pathways, experience innovation and
-                    connect with the people shaping the future of aviation.
+                    Our sponsors, exhibitors and partners, including the Irish
+                    Air Corps and TYHub.ie, bring industry, education and
+                    government together. Their support helps students explore
+                    aviation, aerospace and STEM careers, experience innovation
+                    and meet professionals.
 
                 </Typography>
 
@@ -85,10 +74,9 @@ export default function SponsorsPartners() {
 
             <section className="partner-section">
 
-                <Typography variant="h4">
+                <Typography variant="h4" component="h2">
                     Building The Future Together
                 </Typography>
-                <br />
 
 
 
@@ -110,7 +98,7 @@ export default function SponsorsPartners() {
             <section className="sponsors-section">
 
 
-                <Typography variant="h4">
+                <Typography variant="h4" component="h2">
                     Proudly Supported By
                 </Typography>
 
@@ -147,7 +135,7 @@ export default function SponsorsPartners() {
             <section className="collaboration-section">
 
 
-                <Typography variant="h4">
+                <Typography variant="h4" component="h2">
                     AvCon In Collaboration With
                 </Typography>
 
@@ -192,7 +180,7 @@ export default function SponsorsPartners() {
 
             <section className="sponsor-cta">
 
-                <Typography variant="h4">
+                <Typography variant="h4" component="h2">
                     Become Part Of The Future
                 </Typography>
 
