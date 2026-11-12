@@ -1,79 +1,107 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import HeroSection from "../CommonComponents/HeroSection/HeroSection";
-import FirstImageAndText from "./components/firstBlockOfText";
-import AdvertData from "./components/AdvertData";
-import PathwayCard from "./components/PathwayCard";
-import { Link } from "react-router-dom";
+import AdvancedSearch from "./components/AdvancedSearch";
+import PublicSubmissionForm from "./components/PublicSubmissionForm";
+import OrganisationArea from "./components/OrganisationArea";
+import OrganizationAuth from "./components/OrganizationAuth";
+import OrganizationDashboard from "./components/OrganizationDashboard";
+import AdminDashboard from "./components/AdminDashboard";
 import "./AvconPathwayPortal.css";
 import pathwayPhoto from "../Home/HomePageImages/_HAN6730.JPG";
 
 export default function AvconPathwayPortal() {
+  const [, setRevision] = useState(0);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    // Check if user is already logged in
+    const stored = sessionStorage.getItem("portalUser");
+    if (stored) {
+      try {
+        setUser(JSON.parse(stored));
+      } catch (err) {
+        sessionStorage.removeItem("portalUser");
+      }
+    }
+  }, []);
+
+  function handleLogout() {
+    sessionStorage.removeItem("portalUser");
+    setUser(null);
+  }
+
+  // Show admin dashboard if admin user is logged in
+  if (user && user.admin) {
+    return <AdminDashboard user={user} onLogout={handleLogout} />;
+  }
+
+  // Show organization dashboard if organization user is logged in
+  if (user) {
+    return <OrganizationDashboard user={user} onLogout={handleLogout} />;
+  }
+
   return (
     <div className="app-page">
       <HeroSection
-        defaultTitle="AVIATION PATHWAY PORTAL (A.P.P.)"
-        defaultSubtitle="Connecting students, graduates and professionals with opportunities across aviation, aerospace and space."
+        defaultTitle="Your pathway into aviation starts here."
+        defaultSubtitle="Discover careers, courses and opportunities across aviation, aerospace and space."
         smallScreenTitle="Aviation Pathway Portal"
-        smallScreenSubtitle="Discover your pathway into the aviation industry."
+        smallScreenSubtitle="Discover careers, courses and opportunities across aviation, aerospace and space."
         buttonText="Explore Opportunities"
         buttonLink="#opportunities"
-        eyebrow="Find your pathway"
+        eyebrow="AvCon Aviation Pathway Portal"
         backgroundImage={pathwayPhoto}
       />
 
-      <FirstImageAndText />
-
-      <section className="pathway-section">
-        <h2>Explore Aviation Pathways</h2>
-
-        <p>
-          Whether you're discovering aviation for the first time, preparing for
-          your career, or looking to develop new skills, A.P.P connects you with
-          opportunities across the aviation, aerospace and space industries.
-        </p>
-
-        <div className="pathway-grid">
-          {[
-            {
-              title: "Work Experience",
-              text: "Discover opportunities to gain real-world industry experience and explore aviation careers.",
-            },
-            {
-              title: "Internships",
-              text: "Find placements designed to develop practical skills and industry knowledge.",
-            },
-            {
-              title: "Graduate Programmes",
-              text: "Explore pathways helping graduates begin their professional journey.",
-            },
-            {
-              title: "Courses & Training",
-              text: "Access education, qualifications and professional development opportunities.",
-            },
-            {
-              title: "Career Development",
-              text: "Build your skills through workshops, resources and industry connections.",
-            },
-          ].map((item) => (
-            <PathwayCard key={item.title} {...item} />
-          ))}
+      <section className="portal-intro" aria-labelledby="portal-intro-title">
+        <div>
+          <p className="portal-kicker">Discover your next step</p>
+          <h2 id="portal-intro-title">A world of opportunities, one place to start.</h2>
         </div>
+        <p>
+          Whether you&apos;re a student exploring your options, a graduate
+          starting out or a professional building new skills, discover
+          pathways that connect you with the industry.
+        </p>
       </section>
 
-      <AdvertData />
+      <AdvancedSearch />
 
-      <section className="industry-callout">
-        <h2>Are You an Organisation Offering Opportunities?</h2>
-
-        <p>
-          Help shape the next generation of aviation professionals. Share your
-          work experience placements, courses, internships, graduate programmes
-          or training opportunities with the AvCon community.
+      <section className="industry-callout" id="organisation-access">
+        <div className="portal-organisation-intro">
+          <p className="portal-kicker">For organisations</p>
+          <h2>Help someone find their pathway.</h2>
+          <p>
+            Share your courses, work experience, training or other opportunities
+            with the AvCon community. Listings are reviewed by AvCon before
+            publication.
+          </p>
+        </div>
+        <PublicSubmissionForm onSubmitSuccess={() => setRevision((value) => value + 1)} />
+        <hr className="portal-divider" />
+        <h3>Manage Your Listings</h3>
+        <p className="portal-subtitle">
+          Already submitted? Login to your dashboard to view, edit, and manage all your listings.
         </p>
-
-        <Link to="/contact" className="app-button">
-          Submit an Opportunity
-        </Link>
+        <div style={{ marginBottom: "var(--space-4)" }}>
+          <button
+            onClick={() => setUser({ showAuth: true })}
+            style={{
+              padding: "var(--space-2) var(--space-4)",
+              background: "var(--avcon-primary)",
+              color: "white",
+              border: "none",
+              borderRadius: "var(--radius-sm)",
+              fontWeight: 600,
+              cursor: "pointer",
+              fontSize: "0.95rem",
+            }}
+          >
+            Organization Login
+          </button>
+        </div>
+        {user?.showAuth && <OrganizationAuth onAuthSuccess={(authUser) => setUser(authUser)} />}
+        <OrganisationArea onListingsChanged={() => setRevision((value) => value + 1)} />
       </section>
     </div>
   );

@@ -39,3 +39,39 @@ The app will usually be available at http://localhost:3000.
 
 The project is configured with a homepage of `http://avcon.ie/` and uses `gh-pages` for deployment from the `build` output.
 
+## Aviation Pathway Portal (in progress)
+
+The directory combines the existing AvCon-curated opportunities with listings
+managed through an in-house Node/Express API and SQLite. No Docker or Supabase
+is needed. Listings without an expiry date remain available; expired listings
+are hidden. Edits to approved listings require another review.
+
+### Local development
+
+1. Run `npm run start:portal-api` and, in a separate terminal, `npm start`.
+   The frontend uses `http://localhost:3001/api/portal` in development.
+2. Register a **test** organisation. To make an account an administrator,
+   run `npm run portal:make-admin -- test@example.com` with the registered
+   email, then sign out and back in.
+3. Run `npm run test:portal-api` for API tests. The database and uploaded files
+   are stored under `server/portal/data/` (ignored by Git). Set `PORTAL_DATA_DIR`
+   to an absolute path to use a different local directory. `PORTAL_PORT` and
+   `PORTAL_SITE_ORIGIN` change the API port and permitted frontend origin;
+   `REACT_APP_PORTAL_API_URL` sets the frontend's API URL.
+
+JPEG, PNG, WebP and PDF uploads are limited to 10 MiB, checked by file
+signature, and scanned using the locally installed `clamscan` executable.
+Install ClamAV and its current signature database separately. Uploads fail
+closed if scanning is unavailable, reports an error, or detects malware.
+There is no browser-side bypass. Save a draft before adding files. Changing
+files on a submitted or approved listing requires returning it to draft or
+pausing it and submitting it for review again.
+
+**Local testing only:** account email verification, password recovery,
+organisation administration, renewal reminders, durable hosting, backups,
+scanner updates and production security review are not implemented. Registration
+currently signs users in without verifying email. The API binds to loopback and
+refuses production mode; GitHub Pages cannot host the API. Do not expose it to
+the public or use real personal data until these gaps are addressed. The
+existing IAA and UCD listings are still maintained in code.
+
