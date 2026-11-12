@@ -453,16 +453,31 @@ function createApp({ db, directory, siteOrigin, scan = scanWithClamAV, secureCoo
 
   app.put(`${prefix}/listings/:id`, wrap(async (req, res) => {
     const user = requireUser(req);
-    const listing = db.prepare("select owner_id, status from listings where id = ?").get(req.params.id);
+    const listing = db.prepare("select * from listings where id = ?").get(req.params.id);
     if (!listing) throw failure(404, "Listing not found.");
-    if (!user.admin && listing.owner_id !== user.id) throw failure(403, "Not authorised.");
+    if (!user.admin && listing.owner_id !== user.id) throw failure(404, "Listing not found.");
 
     const newStatus = req.body.status || listing.status;
     if (!["draft", "pending", "approved", "rejected", "paused"].includes(newStatus)) {
       throw failure(400, "Invalid listing status.");
     }
 
+    // Check permissions for status changes
+    if (!(user.admin ? ["draft", "pending", "approved", "rejected", "paused"] : ["draft", "pending", "paused"]).includes(newStatus)) {
+      throw failure(403, "Only administrators can approve or reject listings.");
+    }
+
     const values = fields(req.body, newStatus);
+    
+    // Check that approved listings can only be paused or returned to pending for re-review
+    if (!user.admin && listing.status === "approved" && !["pending", "paused"].includes(newStatus)) {
+      throw failure(409, "Changes to an approved listing must be submitted for review.");
+    }
+    if (!user.admin && listing.status === "approved" && newStatus === "paused" &&
+        Object.keys(values).some((key) => values[key] !== listing[key])) {
+      throw failure(409, "Pause the listing before changing its details.");
+    }
+
     const now = new Date().toISOString();
     db.prepare(`update listings 
       set title=@title, description=@description, category=@category, sector=@sector,
@@ -470,27 +485,6 @@ function createApp({ db, directory, siteOrigin, scan = scanWithClamAV, secureCoo
           status=@status, updated_at=@updated_at
       where id=@id`)
       .run({ ...values, id: req.params.id, status: newStatus, updated_at: now });
-    res.json({ ok: true });
-  }));
-
-  app.put(`${prefix}/listings/:id`, wrap(async (req, res) => {
-    const user = requireUser(req);
-    const old = listingForUser(req.params.id, user);
-    const status = req.body.status;
-    if (!(user.admin ? ["draft", "pending", "approved", "rejected", "paused"] : ["draft", "pending", "paused"]).includes(status)) {
-      throw failure(403, "Only administrators can approve or reject listings.");
-    }
-    const values = fields(req.body, status);
-    if (!user.admin && old.status === "approved" && !["pending", "paused"].includes(status)) {
-      throw failure(409, "Changes to an approved listing must be submitted for review.");
-    }
-    if (!user.admin && old.status === "approved" && status === "paused" &&
-        Object.keys(values).some((key) => values[key] !== old[key])) {
-      throw failure(409, "Pause the listing before changing its details.");
-    }
-    db.prepare(`update listings set title=@title, description=@description, category=@category, sector=@sector,
-      location=@location, application_url=@application_url, expires_on=@expires_on, status=@status, updated_at=@updated_at where id=@id`)
-      .run({ ...values, status, updated_at: new Date().toISOString(), id: old.id });
     res.json({ ok: true });
   }));
 
