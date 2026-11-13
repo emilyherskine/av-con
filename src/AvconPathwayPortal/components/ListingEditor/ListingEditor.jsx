@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { categories, portalRequest, sectors } from "../../portalClient";
-import { validateListing, validateCategory, validateSector } from "../../taxonomyValidator";
+import { validateCategory, validateSector } from "../../taxonomyValidator";
 import AccessibleModal from "../AccessibleModal/AccessibleModal";
 import "../../AvconPathwayPortal.css";
 
