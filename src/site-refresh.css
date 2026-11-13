@@ -450,9 +450,9 @@
 
 .app-shell :is(.btn-link, .industry-button, .contact-button, .app-button, .sponsor-button):hover,
 .app-shell .desktop-menu .button-highlight:hover {
-  border-color: #fff;
-  background: #fff;
-  color: #061b2d !important;
+  border-color: var(--avcon-action);
+  background: var(--avcon-action);
+  color: var(--avcon-white) !important;
 }
 
 .app-shell :is(.about-hero, .convention-header, .schedule-header, .news-hero, .sponsors-intro) {

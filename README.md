@@ -41,10 +41,12 @@ The project is configured with a homepage of `http://avcon.ie/` and uses `gh-pag
 
 ## Aviation Pathway Portal (in progress)
 
-The directory combines the existing AvCon-curated opportunities with listings
-managed through an in-house Node/Express API and SQLite. No Docker or Supabase
-is needed. Listings without an expiry date remain available; expired listings
-are hidden. Edits to approved listings require another review.
+The public directory displays approved, unexpired listings managed through an
+in-house Node/Express API and SQLite. It does not include bundled sample
+opportunities; real listings must be submitted and approved before they appear.
+No Docker or Supabase is needed. Listings without an expiry date remain
+available; expired listings are hidden. Edits to approved listings require
+another review.
 
 ### Local development
 
@@ -72,6 +74,7 @@ organisation administration, renewal reminders, durable hosting, backups,
 scanner updates and production security review are not implemented. Registration
 currently signs users in without verifying email. The API binds to loopback and
 refuses production mode; GitHub Pages cannot host the API. Do not expose it to
-the public or use real personal data until these gaps are addressed. The
-existing IAA and UCD listings are still maintained in code.
+the public or use real personal data until these gaps are addressed. Any
+remaining listings in a local database are local test data, not production
+opportunities.
 

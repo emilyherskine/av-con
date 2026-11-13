@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
 import HeroSection from "../CommonComponents/HeroSection/HeroSection";
-import AdvancedSearch from "./components/AdvancedSearch";
-import PublicSubmissionForm from "./components/PublicSubmissionForm";
-import OrganisationArea from "./components/OrganisationArea";
-import OrganizationAuth from "./components/OrganizationAuth";
-import OrganizationDashboard from "./components/OrganizationDashboard";
-import AdminDashboard from "./components/AdminDashboard";
+import AdvertData from "./components/AdvertData/AdvertData";
+import PublicSubmissionForm from "./components/PublicSubmissionForm/PublicSubmissionForm";
+import OrganisationArea from "./components/OrganisationArea/OrganisationArea";
+import OrganizationDashboard from "./components/OrganizationDashboard/OrganizationDashboard";
+import AdminDashboard from "./components/AdminDashboard/AdminDashboard";
 import "./AvconPathwayPortal.css";
 import pathwayPhoto from "../Home/HomePageImages/_HAN6730.JPG";
 
 export default function AvconPathwayPortal() {
-  const [, setRevision] = useState(0);
+  const [revision, setRevision] = useState(0);
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -57,6 +56,9 @@ export default function AvconPathwayPortal() {
         <div>
           <p className="portal-kicker">Discover your next step</p>
           <h2 id="portal-intro-title">A world of opportunities, one place to start.</h2>
+          <a className="portal-inline-link" href="#organisation-access">
+            Share or manage an opportunity
+          </a>
         </div>
         <p>
           Whether you&apos;re a student exploring your options, a graduate
@@ -65,43 +67,38 @@ export default function AvconPathwayPortal() {
         </p>
       </section>
 
-      <AdvancedSearch />
+      <AdvertData revision={revision} />
 
-      <section className="industry-callout" id="organisation-access">
+      <section
+        className="industry-callout"
+        id="organisation-access"
+        aria-labelledby="organisation-access-title"
+      >
         <div className="portal-organisation-intro">
           <p className="portal-kicker">For organisations</p>
-          <h2>Help someone find their pathway.</h2>
+          <h2 id="organisation-access-title">Help someone find their pathway.</h2>
           <p>
             Share your courses, work experience, training or other opportunities
             with the AvCon community. Listings are reviewed by AvCon before
             publication.
           </p>
         </div>
-        <PublicSubmissionForm onSubmitSuccess={() => setRevision((value) => value + 1)} />
-        <hr className="portal-divider" />
-        <h3>Manage Your Listings</h3>
-        <p className="portal-subtitle">
-          Already submitted? Login to your dashboard to view, edit, and manage all your listings.
-        </p>
-        <div style={{ marginBottom: "var(--space-4)" }}>
-          <button
-            onClick={() => setUser({ showAuth: true })}
-            style={{
-              padding: "var(--space-2) var(--space-4)",
-              background: "var(--avcon-primary)",
-              color: "white",
-              border: "none",
-              borderRadius: "var(--radius-sm)",
-              fontWeight: 600,
-              cursor: "pointer",
-              fontSize: "0.95rem",
-            }}
-          >
-            Organization Login
-          </button>
+        <div className="portal-disclosures">
+          <details className="portal-disclosure" id="submit-opportunity">
+            <summary>
+              <span>Submit an opportunity</span>
+              <span className="portal-disclosure-hint">No account needed · AvCon review</span>
+            </summary>
+            <PublicSubmissionForm onSubmitSuccess={() => setRevision((value) => value + 1)} />
+          </details>
+          <details className="portal-disclosure">
+            <summary>
+              <span>Manage your listings</span>
+              <span className="portal-disclosure-hint">Sign in or create an organisation account</span>
+            </summary>
+            <OrganisationArea onListingsChanged={() => setRevision((value) => value + 1)} />
+          </details>
         </div>
-        {user?.showAuth && <OrganizationAuth onAuthSuccess={(authUser) => setUser(authUser)} />}
-        <OrganisationArea onListingsChanged={() => setRevision((value) => value + 1)} />
       </section>
     </div>
   );

@@ -135,7 +135,7 @@
   display: block;
   width: 100%;
   height: auto;
-  background: var(--avcon-white);
+  background: var(--avcon-surface);
 }
 
 .floor-plan-frame figcaption {

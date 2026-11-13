@@ -163,8 +163,8 @@ body {
   border: 2px solid var(--avcon-focus);
   border-radius: var(--avcon-radius-small);
 
-  background: var(--avcon-white);
-  color: var(--avcon-primary-dark) !important;
+  background: var(--avcon-primary);
+  color: var(--avcon-white) !important;
 
   font-weight: 700;
   text-decoration: none;
